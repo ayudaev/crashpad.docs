@@ -7,6 +7,7 @@ var searchData=
   ['kminidumpcpuarchitectureppc64',['kMinidumpCPUArchitecturePPC64',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a96f1b70341467cfcaabaac225345716b',1,'crashpad']]],
   ['kminidumpcpuarchitectureunknown',['kMinidumpCPUArchitectureUnknown',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a1d0ecd96474945b642af3568bc43ab92',1,'crashpad']]],
   ['kminidumpcpuarchitecturex86',['kMinidumpCPUArchitectureX86',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a667f84537acd054ce17f527bcd41c885',1,'crashpad']]],
+  ['kminidumpcpuarchitecturex86win64',['kMinidumpCPUArchitectureX86Win64',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a492f53b6303f91d08192bbfb9341e3cb',1,'crashpad']]],
   ['kminidumposandroid',['kMinidumpOSAndroid',['../namespacecrashpad.html#a9be77c6f7868f00c2f279006a1abe26aa071bb71519a869fa5cf7004114b979d9',1,'crashpad']]],
   ['kminidumposios',['kMinidumpOSiOS',['../namespacecrashpad.html#a9be77c6f7868f00c2f279006a1abe26aa093968e4c9c7704732760e9ce2916115',1,'crashpad']]],
   ['kminidumposlinux',['kMinidumpOSLinux',['../namespacecrashpad.html#a9be77c6f7868f00c2f279006a1abe26aa126dc921b6c301f5ce7d111a29b72d4f',1,'crashpad']]],

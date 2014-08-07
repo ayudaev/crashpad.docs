@@ -129,6 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Children()
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a32460b7fe2154fbabc3c58bf10dc7861">crashpad::internal::MinidumpWritable</a>
 , <a class="el" href="classcrashpad_1_1MinidumpFileWriter.html#a4a668939e980cb2b58931b3b7d2c155f">crashpad::MinidumpFileWriter</a>
+, <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a0c1f4d092efb955f3e6597343eec505d">crashpad::MinidumpSystemInfoWriter</a>
 </li>
 <li>Close()
 : <a class="el" href="classcrashpad_1_1FileWriter.html#ab469a8fea3e50378b4125c049911b355">crashpad::FileWriter</a>
@@ -152,6 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a561dc9ddd4e0a71845dbcdc12f47efe4">crashpad::internal::MinidumpStringWriter&lt; Traits &gt;</a>
 , <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a773db80946a99c6a3cc29c7d4dd77bd6">crashpad::internal::MinidumpWritable</a>
 , <a class="el" href="classcrashpad_1_1MinidumpFileWriter.html#a5592aa929693a02f7cb81797d07b1dd8">crashpad::MinidumpFileWriter</a>
+, <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a76bad6c5eedf1c4c65b89c04e96bc376">crashpad::MinidumpSystemInfoWriter</a>
 </li>
 </ul>
 
@@ -201,6 +203,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>set_string()
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a0a1ca4e29de41579469a40c7fa5a0908">crashpad::internal::MinidumpStringWriter&lt; Traits &gt;</a>
 </li>
+<li>SetCPUArchitecture()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#ada6151637d50c12566dd3afa33f124c9">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPUCount()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#acb3c080de35dfb482a53c52afb268ce9">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPULevelAndRevision()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a0cb76b350ee80735873d1cf62d811337">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPUOtherFeatures()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a0561355f80edb24148ea27bd6cc4abf3">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPUX86AMDExtendedFeatures()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a1704d982bb4407595baf8a8b556deaf0">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPUX86Vendor()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#aa0f52f0e9c6cb04580e9bd5d00e16ab7">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPUX86VendorString()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a7fccb529258d6de14ed4bf859169d473">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCPUX86VersionAndFeatures()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a651d0385b402086fc9f0c8bfca695c9d">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetCSDVersion()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a03097311660ac7960af16a4101cb7157">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetOS()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a23b777cb9fec25d87dbfe6f7f6eff2a5">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetOSType()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a06f104f12f85f75ce93e6d0b91e29f9a">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetOSVersion()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a0da71ce933e90133885f5e0880224fb3">crashpad::MinidumpSystemInfoWriter</a>
+</li>
+<li>SetSuiteMask()
+: <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a47dd82bcce181a0b417b41bfbdb52844">crashpad::MinidumpSystemInfoWriter</a>
+</li>
 <li>SetTimestamp()
 : <a class="el" href="classcrashpad_1_1MinidumpFileWriter.html#adceffe1f226fce650a0cbdf1a61a29e6">crashpad::MinidumpFileWriter</a>
 </li>
@@ -212,12 +253,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a3a80435e084246a8087aea516b8b40e6">crashpad::internal::MinidumpStringWriter&lt; Traits &gt;</a>
 , <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a1483275a3acbdfcecffb7f3c27cd2feb">crashpad::internal::MinidumpWritable</a>
 , <a class="el" href="classcrashpad_1_1MinidumpFileWriter.html#ad0a4247475f00ed32163757f3bc8071b">crashpad::MinidumpFileWriter</a>
+, <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#aeb06ceef2f8a02d196e78a2d7e9cb236">crashpad::MinidumpSystemInfoWriter</a>
 </li>
 <li>state()
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a665d2de47970d796e904f0dfce406814">crashpad::internal::MinidumpWritable</a>
 </li>
 <li>StreamType()
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStreamWriter.html#aa995c5f93ecfdeb13dbfc4b7fb107632">crashpad::internal::MinidumpStreamWriter</a>
+, <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a999958c694f5cb49dddc4d3d9b54e93b">crashpad::MinidumpSystemInfoWriter</a>
 </li>
 <li>string()
 : <a class="el" href="classcrashpad_1_1StringFileWriter.html#a8858da04066e58ceed2d8e5db79e7107">crashpad::StringFileWriter</a>
@@ -268,6 +311,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a8c9d56b1b0468a07effb67973369b913">crashpad::internal::MinidumpStringWriter&lt; Traits &gt;</a>
 , <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a2d3472b11ec3c12184f5d8f946fbb4a1">crashpad::internal::MinidumpWritable</a>
 , <a class="el" href="classcrashpad_1_1MinidumpFileWriter.html#abad1dd1348b1224b051014498070dd9e">crashpad::MinidumpFileWriter</a>
+, <a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#a703099c51937c32e4ab063badc858409">crashpad::MinidumpSystemInfoWriter</a>
 </li>
 <li>WritePaddingAndObject()
 : <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ab82b1e92ae0eced8b8e2efe957411773">crashpad::internal::MinidumpWritable</a>

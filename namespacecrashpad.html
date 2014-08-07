@@ -129,6 +129,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1MinidumpSimpleStringDictionaryEntry.html">MinidumpSimpleStringDictionaryEntry</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A key-value pair.  <a href="structcrashpad_1_1MinidumpSimpleStringDictionaryEntry.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html">MinidumpSystemInfoWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The writer for a <a class="el" href="structMINIDUMP__SYSTEM__INFO.html" title="Information about the system that hosted the process that the minidump file contains a snapshot of...">MINIDUMP_SYSTEM_INFO</a> stream in a minidump file.  <a href="classcrashpad_1_1MinidumpSystemInfoWriter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1MinidumpUTF8String.html">MinidumpUTF8String</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A variable-length UTF-8-encoded string carried within a minidump file.  <a href="structcrashpad_1_1MinidumpUTF8String.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,6 +225,10 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a98e532bb06fc5ffdd93e0ceb6d789eb1a74c0fcddcbf1502d7dedc7cd965550df"></a>kMinidumpCPUArchitectureAMD64&#160;</td><td class="fielddoc">
 <p>64-bit x86. </p>
 <p>These systems identify their CPUs as “x86_64”, “amd64”, or “x64”. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a98e532bb06fc5ffdd93e0ceb6d789eb1a492f53b6303f91d08192bbfb9341e3cb"></a>kMinidumpCPUArchitectureX86Win64&#160;</td><td class="fielddoc">
+<p>A 32-bit x86 process running on IA-64 (Itanium). </p>
+<dl class="section note"><dt>Note</dt><dd>This value is not used in minidump files for 32-bit x86 processes running on a 64-bit-capable x86 CPU and operating system. In that configuration, <a class="el" href="namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a667f84537acd054ce17f527bcd41c885" title="32-bit x86. ">kMinidumpCPUArchitectureX86</a> is used instead. </dd></dl>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a98e532bb06fc5ffdd93e0ceb6d789eb1a96f1b70341467cfcaabaac225345716b"></a>kMinidumpCPUArchitecturePPC64&#160;</td><td class="fielddoc">
 <p>64-bit PowerPC. </p>

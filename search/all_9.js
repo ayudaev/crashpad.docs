@@ -51,6 +51,7 @@ var searchData=
   ['minidumpstringwriter',['MinidumpStringWriter',['../classcrashpad_1_1internal_1_1MinidumpStringWriter.html',1,'crashpad::internal']]],
   ['minidumpstringwriter_3c_20minidumpstringwriterutf16traits_20_3e',['MinidumpStringWriter&lt; MinidumpStringWriterUTF16Traits &gt;',['../classcrashpad_1_1internal_1_1MinidumpStringWriter.html',1,'crashpad::internal']]],
   ['minidumpstringwriter_3c_20minidumpstringwriterutf8traits_20_3e',['MinidumpStringWriter&lt; MinidumpStringWriterUTF8Traits &gt;',['../classcrashpad_1_1internal_1_1MinidumpStringWriter.html',1,'crashpad::internal']]],
+  ['minidumpsysteminfowriter',['MinidumpSystemInfoWriter',['../classcrashpad_1_1MinidumpSystemInfoWriter.html',1,'crashpad']]],
   ['minidumputf16stringwriter',['MinidumpUTF16StringWriter',['../classcrashpad_1_1internal_1_1MinidumpUTF16StringWriter.html',1,'crashpad::internal']]],
   ['minidumputf8string',['MinidumpUTF8String',['../structcrashpad_1_1MinidumpUTF8String.html',1,'crashpad']]],
   ['minidumputf8stringwriter',['MinidumpUTF8StringWriter',['../classcrashpad_1_1internal_1_1MinidumpUTF8StringWriter.html',1,'crashpad::internal']]],
