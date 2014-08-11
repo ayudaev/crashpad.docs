@@ -39,6 +39,7 @@ var searchData=
   ['minidumpcpuarchitecture',['MinidumpCPUArchitecture',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1',1,'crashpad']]],
   ['minidumpcrashpadinfo',['MinidumpCrashpadInfo',['../structcrashpad_1_1MinidumpCrashpadInfo.html',1,'crashpad']]],
   ['minidumpfilewriter',['MinidumpFileWriter',['../classcrashpad_1_1MinidumpFileWriter.html',1,'crashpad']]],
+  ['minidumpmiscinfowriter',['MinidumpMiscInfoWriter',['../classcrashpad_1_1MinidumpMiscInfoWriter.html',1,'crashpad']]],
   ['minidumpmodulecodeviewrecordpdb20',['MinidumpModuleCodeViewRecordPDB20',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html',1,'crashpad']]],
   ['minidumpmodulecodeviewrecordpdb70',['MinidumpModuleCodeViewRecordPDB70',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html',1,'crashpad']]],
   ['minidumpnormal',['MiniDumpNormal',['../dbghelp_8h.html#a7580bc5aa0738de92a9766904fc7e79ba8be18b33190940c5ca447bd989eaf7c5',1,'dbghelp.h']]],
