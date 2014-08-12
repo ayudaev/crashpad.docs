@@ -97,6 +97,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9">VerifyMinidumpHeader</a> (const <a class="el" href="structMINIDUMP__HEADER.html">MINIDUMP_HEADER</a> *header, uint32_t streams, uint32_t timestamp)</td></tr>
+<tr class="memdesc:a5e604ee6a23070a89e2a0015eb2854a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__HEADER.html" title="The top-level structure identifying a minidump file. ">MINIDUMP_HEADER</a> contains expected values.  <a href="#a5e604ee6a23070a89e2a0015eb2854a9">More...</a><br /></td></tr>
+<tr class="separator:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9504862c089964763d7d362572c2ac6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6">ErrnoMessage</a> (int err, const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:ad9504862c089964763d7d362572c2ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an error message using an <code>errno</code> value.  <a href="#ad9504862c089964763d7d362572c2ac6">More...</a><br /></td></tr>
 <tr class="separator:ad9504862c089964763d7d362572c2ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,6 +252,41 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string of the format <code>"(os/kern) invalid address (1)"</code> if <em>mach_err</em> has the value <code>KERN_INVALID_ADDRESS</code> on a system where this is defined to be 1. If <em>base</em> is not empty, it will be prepended to this string, separated by a colon. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e604ee6a23070a89e2a0015eb2854a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::VerifyMinidumpHeader </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMINIDUMP__HEADER.html">MINIDUMP_HEADER</a> *&#160;</td>
+          <td class="paramname"><em>header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>streams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timestamp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__HEADER.html" title="The top-level structure identifying a minidump file. ">MINIDUMP_HEADER</a> contains expected values. </p>
+<p>All fields in the <a class="el" href="structMINIDUMP__HEADER.html" title="The top-level structure identifying a minidump file. ">MINIDUMP_HEADER</a> will be evaluated. Most are compared to their correct default values. <a class="el" href="structMINIDUMP__HEADER.html#ac64203d27bba37f630437048a0e19630" title="The number of MINIDUMP_DIRECTORY elements present in the directory referenced by StreamDirectoryRva. ">MINIDUMP_HEADER::NumberOfStreams</a> is compared to <em>streams</em>, and <a class="el" href="structMINIDUMP__HEADER.html#a5f3811a143f2a6405e721d03d8c86f1d" title="The time that the minidump file was generated, in time_t format, the number of seconds since the POSI...">MINIDUMP_HEADER::TimeDateStamp</a> is compared to <em>timestamp</em>. Most fields are checked with nonfatal EXPECT-style assertions, but <a class="el" href="structMINIDUMP__HEADER.html#ac64203d27bba37f630437048a0e19630" title="The number of MINIDUMP_DIRECTORY elements present in the directory referenced by StreamDirectoryRva. ">MINIDUMP_HEADER::NumberOfStreams</a> and <a class="el" href="structMINIDUMP__HEADER.html#afc88b1f46827fbeae6ef6e0718a23b57" title="A pointer to an array of MINIDUMP_DIRECTORY structures that identify all of the streams within this m...">MINIDUMP_HEADER::StreamDirectoryRva</a> are checked with fatal ASSERT-style assertions, because they must be correct in order for processing of the minidump to continue. </p>
 
 </div>
 </div>
