@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['signature',['signature',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a13f1da427501cfb3bfe4eca6763a9b6c',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::signature()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a05bae511e366085312963e7ec06721a6',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::signature()'],['../structMINIDUMP__HEADER.html#ae1c77644aa56ab70fd6f50c343eafda8',1,'MINIDUMP_HEADER::Signature()']]],
+  ['signature',['Signature',['../structMINIDUMP__HEADER.html#ae1c77644aa56ab70fd6f50c343eafda8',1,'MINIDUMP_HEADER::Signature()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a13f1da427501cfb3bfe4eca6763a9b6c',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::signature()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a05bae511e366085312963e7ec06721a6',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::signature()']]],
   ['simple_5fannotations',['simple_annotations',['../structcrashpad_1_1MinidumpCrashpadInfo.html#a8a6300d72ebb8dab13ca50947e37348f',1,'crashpad::MinidumpCrashpadInfo']]],
   ['size',['size',['../structcrashpad_1_1MinidumpCrashpadInfo.html#aacda220794b1a800ca6d8426fbf017b2',1,'crashpad::MinidumpCrashpadInfo']]],
   ['sizeofimage',['SizeOfImage',['../structMINIDUMP__MODULE.html#a701a839b502151638e18d66cc83445ee',1,'MINIDUMP_MODULE']]],
