@@ -9,6 +9,7 @@ var searchData=
   ['initializationstate',['InitializationState',['../classcrashpad_1_1InitializationState.html',1,'crashpad']]],
   ['initializationstatedcheck',['InitializationStateDcheck',['../classcrashpad_1_1InitializationStateDcheck.html',1,'crashpad']]],
   ['initializefrombytes',['InitializeFromBytes',['../structcrashpad_1_1UUID.html#adc8f2ac33af88d762a6b7575971cca58',1,'crashpad::UUID']]],
+  ['inrangecast',['InRangeCast',['../namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29',1,'crashpad']]],
   ['iov_5fbase',['iov_base',['../structcrashpad_1_1WritableIoVec.html#abcf5d801519cf50aa286c3baa8f55d05',1,'crashpad::WritableIoVec']]],
   ['iov_5flen',['iov_len',['../structcrashpad_1_1WritableIoVec.html#af1b5ee41c9beb80c82a6e815cbf473ee',1,'crashpad::WritableIoVec']]],
   ['is_5funinitialized',['is_uninitialized',['../classcrashpad_1_1InitializationState.html#aea6a1b93d6ebd73fb601ccc602698009',1,'crashpad::InitializationState']]],

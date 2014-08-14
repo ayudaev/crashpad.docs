@@ -207,6 +207,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memItemLeft" align="right" valign="top">launch_data_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c">CFPropertyToLaunchData</a> (CFPropertyListRef property_cf)</td></tr>
 <tr class="memdesc:a616ed0784021ecbd2f0f14b7e75c068c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>.  <a href="#a616ed0784021ecbd2f0f14b7e75c068c">More...</a><br /></td></tr>
 <tr class="separator:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplParams" colspan="2">template&lt;typename Destination , typename Source &gt; </td></tr>
+<tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplItemLeft" align="right" valign="top">Destination&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29">InRangeCast</a> (Source source, Destination default_value)</td></tr>
+<tr class="memdesc:a6e1b1c536af301cd418dad62348b1d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts to a different type if it can be done without data loss, logging a warning message and returing a default value otherwise.  <a href="#a6e1b1c536af301cd418dad62348b1d29">More...</a><br /></td></tr>
+<tr class="separator:a6e1b1c536af301cd418dad62348b1d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb040202b4562c8c4087b9c9db2ce430"><td class="memTemplParams" colspan="2">template&lt;typename Destination , typename Source &gt; </td></tr>
 <tr class="memitem:aeb040202b4562c8c4087b9c9db2ce430"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430">AssignIfInRange</a> (Destination *destination, Source source)</td></tr>
 <tr class="memdesc:aeb040202b4562c8c4087b9c9db2ce430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an assignment if it can be done safely, and signals if it cannot be done safely.  <a href="#aeb040202b4562c8c4087b9c9db2ce430">More...</a><br /></td></tr>
@@ -489,6 +493,44 @@ template&lt;typename Destination , typename Source &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted launchd-type <code>launch_data_t</code>. The caller takes ownership of the returned value. On error, returns <code>NULL</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function handles all <code>CFPropertyListRef</code> types except for <code>CFDateRef</code>, because there’s no <code>launch_data_type_t</code> analogue. Not all types supported in a launchd-type <code>launch_data_t</code> have <code>CFPropertyListRef</code> analogues. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6e1b1c536af301cd418dad62348b1d29"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Destination , typename Source &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Destination crashpad::InRangeCast </td>
+          <td>(</td>
+          <td class="paramtype">Source&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Destination&#160;</td>
+          <td class="paramname"><em>default_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Casts to a different type if it can be done without data loss, logging a warning message and returing a default value otherwise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>The value to convert and return. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>The default value to return, in the event that <em>source</em> cannot be represented in the destination type.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><em>source</em> if it can be represented in the destination type, otherwise <em>default_value</em>. </dd></dl>
 
 </div>
 </div>
