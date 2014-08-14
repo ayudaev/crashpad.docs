@@ -29,8 +29,12 @@ var searchData=
   ['kminidumpstreamtypethreadlist',['kMinidumpStreamTypeThreadList',['../namespacecrashpad.html#a88363a45a4af1a16f542a8c1ff522ab9af87c478a3f2ce198936d817e98d87531',1,'crashpad']]],
   ['kphaseearly',['kPhaseEarly',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9ac246ac0846defa468dde05d12974ac3e',1,'crashpad::internal::MinidumpWritable']]],
   ['kphaselate',['kPhaseLate',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9a24c2158c529d40ce6badca6e34b26853',1,'crashpad::internal::MinidumpWritable']]],
+  ['kstatedestroyed',['kStateDestroyed',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88a154e684eaf09255b9667c2f5a16862f1',1,'crashpad::InitializationState']]],
   ['kstatefrozen',['kStateFrozen',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7af98547144e0e8d4f878f725ef5c0d611',1,'crashpad::internal::MinidumpWritable']]],
+  ['kstateinvalid',['kStateInvalid',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88afc9011e885f6b0a93151818010eefdfc',1,'crashpad::InitializationState']]],
   ['kstatemutable',['kStateMutable',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665',1,'crashpad::internal::MinidumpWritable']]],
+  ['kstateuninitialized',['kStateUninitialized',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88ab86672ada53041ffcecfb379473bf353',1,'crashpad::InitializationState']]],
+  ['kstatevalid',['kStateValid',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88af8963ed6297bea7168911fe4ed87e163',1,'crashpad::InitializationState']]],
   ['kstatewritable',['kStateWritable',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a87483823ca30a8257b2a5fbd21805bcd',1,'crashpad::internal::MinidumpWritable']]],
   ['kstatewritten',['kStateWritten',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7af0d794ed29c320fcf35c71f40cc6a510',1,'crashpad::internal::MinidumpWritable']]]
 ];

@@ -5,6 +5,7 @@ var searchData=
   ['platformid',['PlatformId',['../structMINIDUMP__SYSTEM__INFO.html#a214e7bd61a89343a80a3c9a265fbbe96',1,'MINIDUMP_SYSTEM_INFO']]],
   ['priority',['Priority',['../structMINIDUMP__THREAD.html#a0a827e9473261cc0d4c69a28a243d635',1,'MINIDUMP_THREAD']]],
   ['priorityclass',['PriorityClass',['../structMINIDUMP__THREAD.html#a71433cd417ed888184cc1e6d812179e8',1,'MINIDUMP_THREAD']]],
+  ['processargumentsforpid',['ProcessArgumentsForPID',['../namespacecrashpad.html#ac7fc31e646135cd40892e03dfbb0f9b9',1,'crashpad']]],
   ['processcreatetime',['ProcessCreateTime',['../structMINIDUMP__MISC__INFO.html#a13779264ab943d939c2635717cd3f46c',1,'MINIDUMP_MISC_INFO']]],
   ['processexecuteflags',['ProcessExecuteFlags',['../structMINIDUMP__MISC__INFO__3.html#ae21da96b80d94a7055e07bfacd938dd7',1,'MINIDUMP_MISC_INFO_3']]],
   ['processid',['ProcessId',['../structMINIDUMP__MISC__INFO.html#a6f4a981f916984b74c6ad7d308915e4f',1,'MINIDUMP_MISC_INFO']]],

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uuid',['UUID',['../structcrashpad_1_1UUID.html#a8e9aa2f5c0496c220dfe05f9c64284b1',1,'crashpad::UUID::UUID()'],['../structcrashpad_1_1UUID.html#a3f009620a21ceead5be155368b261030',1,'crashpad::UUID::UUID(const uint8_t *bytes)']]]
+  ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html#ad5aa845bdd6f92a6bf4bddd0ba39e22b',1,'crashpad::TaskMemory']]],
+  ['tostring',['ToString',['../structcrashpad_1_1UUID.html#a1e4728f499a21c7f2f0037f514960165',1,'crashpad::UUID']]]
 ];

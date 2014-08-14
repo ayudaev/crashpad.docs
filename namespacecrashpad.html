@@ -111,6 +111,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1FileWriterInterface.html">FileWriterInterface</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface to write to files and other file-like objects with POSIX semantics.  <a href="classcrashpad_1_1FileWriterInterface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1InitializationState.html">InitializationState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks whether data are initialized.  <a href="classcrashpad_1_1InitializationState.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1InitializationStateDcheck.html">InitializationStateDcheck</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks whether data are initialized, triggering a DCHECK assertion on an invalid data access.  <a href="classcrashpad_1_1InitializationStateDcheck.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1MinidumpCrashpadInfo.html">MinidumpCrashpadInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional Crashpad-specific information carried within a minidump file.  <a href="structcrashpad_1_1MinidumpCrashpadInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,6 +211,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aeb040202b4562c8c4087b9c9db2ce430"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430">AssignIfInRange</a> (Destination *destination, Source source)</td></tr>
 <tr class="memdesc:aeb040202b4562c8c4087b9c9db2ce430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an assignment if it can be done safely, and signals if it cannot be done safely.  <a href="#aeb040202b4562c8c4087b9c9db2ce430">More...</a><br /></td></tr>
 <tr class="separator:aeb040202b4562c8c4087b9c9db2ce430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fc31e646135cd40892e03dfbb0f9b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac7fc31e646135cd40892e03dfbb0f9b9">ProcessArgumentsForPID</a> (pid_t pid, std::vector&lt; std::string &gt; *argv)</td></tr>
+<tr class="memdesc:ac7fc31e646135cd40892e03dfbb0f9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the arguments used to launch a process.  <a href="#ac7fc31e646135cd40892e03dfbb0f9b9">More...</a><br /></td></tr>
+<tr class="separator:ac7fc31e646135cd40892e03dfbb0f9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7c3ab35e044bf1a3b3f48e8b457a5429">c16lcpy</a> (char16 *destination, const char16 *source, size_t length)</td></tr>
 <tr class="memdesc:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a <code>NUL</code>-terminated char16-based string to a fixed-size buffer.  <a href="#a7c3ab35e044bf1a3b3f48e8b457a5429">More...</a><br /></td></tr>
 <tr class="separator:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -480,6 +489,43 @@ template&lt;typename Destination , typename Source &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The converted launchd-type <code>launch_data_t</code>. The caller takes ownership of the returned value. On error, returns <code>NULL</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function handles all <code>CFPropertyListRef</code> types except for <code>CFDateRef</code>, because there’s no <code>launch_data_type_t</code> analogue. Not all types supported in a launchd-type <code>launch_data_t</code> have <code>CFPropertyListRef</code> analogues. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7fc31e646135cd40892e03dfbb0f9b9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ProcessArgumentsForPID </td>
+          <td>(</td>
+          <td class="paramtype">pid_t&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; *&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtains the arguments used to launch a process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>The process ID of the process to examine. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">argv</td><td>The process’ arguments as passed to its <code>main()</code> function as the <em>argv</em> parameter, possibly modified by the process.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, with <em>argv</em> populated appropriately. Otherwise, <code>false</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function may spuriously return <code>false</code> when used to examine a process that it is calling <code>exec()</code>. If examining such a process, call this function in a retry loop with a small (100ns) delay to avoid an erroneous assumption that <em>pid</em> is not running. </dd></dl>
 
 </div>
 </div>
