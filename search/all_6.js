@@ -13,5 +13,6 @@ var searchData=
   ['iov_5fbase',['iov_base',['../structcrashpad_1_1WritableIoVec.html#abcf5d801519cf50aa286c3baa8f55d05',1,'crashpad::WritableIoVec']]],
   ['iov_5flen',['iov_len',['../structcrashpad_1_1WritableIoVec.html#af1b5ee41c9beb80c82a6e815cbf473ee',1,'crashpad::WritableIoVec']]],
   ['is_5funinitialized',['is_uninitialized',['../classcrashpad_1_1InitializationState.html#aea6a1b93d6ebd73fb601ccc602698009',1,'crashpad::InitializationState']]],
-  ['is_5fvalid',['is_valid',['../classcrashpad_1_1InitializationState.html#aac475fd15f19ed390e6518e091918361',1,'crashpad::InitializationState']]]
+  ['is_5fvalid',['is_valid',['../classcrashpad_1_1InitializationState.html#aac475fd15f19ed390e6518e091918361',1,'crashpad::InitializationState']]],
+  ['isvalid',['IsValid',['../classcrashpad_1_1CheckedRange.html#aa6fa53f8e83e9ad0ca1d2c7275c33095',1,'crashpad::CheckedRange']]]
 ];

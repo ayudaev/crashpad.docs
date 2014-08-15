@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['base',['base',['../classcrashpad_1_1CheckedRange.html#a7a1eed88055c8780fce3acaf9699bb76',1,'crashpad::CheckedRange']]],
   ['baseofimage',['BaseOfImage',['../structMINIDUMP__MODULE.html#af4b4a246ebfa54e57e4c953fb0c3dd31',1,'MINIDUMP_MODULE']]],
   ['bias',['Bias',['../structTIME__ZONE__INFORMATION.html#acf8f3a23cd1cabc4cdcf3c5c4b527b71',1,'TIME_ZONE_INFORMATION']]],
   ['bootstraperrormessage',['BootstrapErrorMessage',['../namespacecrashpad_1_1test.html#a8db2fa97998b00a8ee57398fa8c8b14e',1,'crashpad::test']]],
