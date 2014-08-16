@@ -2,6 +2,9 @@ var searchData=
 [
   ['mach_2eh',['mach.h',['../non__mac_2mach_2mach_8h.html',1,'']]],
   ['macherrormessage',['MachErrorMessage',['../namespacecrashpad_1_1test.html#a49a7a2461cf4e1f674eac147c19d9483',1,'crashpad::test']]],
+  ['macmodelandboard',['MacModelAndBoard',['../namespacecrashpad.html#a71c79500b827d06b190e30b7cc016c35',1,'crashpad']]],
+  ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
+  ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],
   ['majorversion',['MajorVersion',['../structMINIDUMP__SYSTEM__INFO.html#af657b2ed0798f5962ae59e459133d735',1,'MINIDUMP_SYSTEM_INFO']]],
   ['memory',['Memory',['../structMINIDUMP__MEMORY__DESCRIPTOR.html#a4ee410c410207ff4a18fddd82127a7e4',1,'MINIDUMP_MEMORY_DESCRIPTOR']]],
   ['memoryliststream',['MemoryListStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08a1511624630cd9150436de906ae033cbd',1,'dbghelp.h']]],

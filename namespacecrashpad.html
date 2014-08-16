@@ -210,6 +210,27 @@ Functions</h2></td></tr>
 <tr class="memitem:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memItemLeft" align="right" valign="top">launch_data_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c">CFPropertyToLaunchData</a> (CFPropertyListRef property_cf)</td></tr>
 <tr class="memdesc:a616ed0784021ecbd2f0f14b7e75c068c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>.  <a href="#a616ed0784021ecbd2f0f14b7e75c068c">More...</a><br /></td></tr>
 <tr class="separator:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba">MacOSXMinorVersion</a> ()</td></tr>
+<tr class="memdesc:ab05052e02f3c3605fd7bae0f006d2cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of the running operating system.  <a href="#ab05052e02f3c3605fd7bae0f006d2cba">More...</a><br /></td></tr>
+<tr class="separator:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a833f0c39ce203b49862367494a923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a99a833f0c39ce203b49862367494a923">MacOSXVersion</a> (int *major, int *minor, int *bugfix, std::string *build, bool *server, std::string *version_string)</td></tr>
+<tr class="memdesc:a99a833f0c39ce203b49862367494a923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of the running operating system.  <a href="#a99a833f0c39ce203b49862367494a923">More...</a><br /></td></tr>
+<tr class="separator:a99a833f0c39ce203b49862367494a923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c79500b827d06b190e30b7cc016c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a71c79500b827d06b190e30b7cc016c35">MacModelAndBoard</a> (std::string *model, std::string *board_id)</td></tr>
+<tr class="memdesc:a71c79500b827d06b190e30b7cc016c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model name and board ID of the running system.  <a href="#a71c79500b827d06b190e30b7cc016c35">More...</a><br /></td></tr>
+<tr class="separator:a71c79500b827d06b190e30b7cc016c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ebbbac4c7f27e2e3ba2b9c080ed0f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a97ebbbac4c7f27e2e3ba2b9c080ed0f3">ServiceManagementSubmitJob</a> (CFDictionaryRef job_cf)</td></tr>
+<tr class="memdesc:a97ebbbac4c7f27e2e3ba2b9c080ed0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a job to the user launchd domain as in <code>SMJobSubmit()</code>.  <a href="#a97ebbbac4c7f27e2e3ba2b9c080ed0f3">More...</a><br /></td></tr>
+<tr class="separator:a97ebbbac4c7f27e2e3ba2b9c080ed0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc130fecf996b7d7c76a56200afccb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a8cc130fecf996b7d7c76a56200afccb1">ServiceManagementRemoveJob</a> (const std::string &amp;label, bool wait)</td></tr>
+<tr class="memdesc:a8cc130fecf996b7d7c76a56200afccb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a job from the user launchd domain as in <code>SMJobRemove()</code>.  <a href="#a8cc130fecf996b7d7c76a56200afccb1">More...</a><br /></td></tr>
+<tr class="separator:a8cc130fecf996b7d7c76a56200afccb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead5f04bd94549956a7f2826aeccf495"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aead5f04bd94549956a7f2826aeccf495">ServiceManagementIsJobLoaded</a> (const std::string &amp;label)</td></tr>
+<tr class="memdesc:aead5f04bd94549956a7f2826aeccf495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a specified job is loaded in the user launchd domain.  <a href="#aead5f04bd94549956a7f2826aeccf495">More...</a><br /></td></tr>
+<tr class="separator:aead5f04bd94549956a7f2826aeccf495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc3a94386dd27968d48619f42154463"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3bc3a94386dd27968d48619f42154463">ServiceManagementIsJobRunning</a> (const std::string &amp;label)</td></tr>
+<tr class="memdesc:a3bc3a94386dd27968d48619f42154463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a specified job is running in the user launchd domain.  <a href="#a3bc3a94386dd27968d48619f42154463">More...</a><br /></td></tr>
+<tr class="separator:a3bc3a94386dd27968d48619f42154463"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplParams" colspan="2">template&lt;typename Destination , typename Source &gt; </td></tr>
 <tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplItemLeft" align="right" valign="top">Destination&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29">InRangeCast</a> (Source source, Destination default_value)</td></tr>
 <tr class="memdesc:a6e1b1c536af301cd418dad62348b1d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts to a different type if it can be done without data loss, logging a warning message and returing a default value otherwise.  <a href="#a6e1b1c536af301cd418dad62348b1d29">More...</a><br /></td></tr>
@@ -537,6 +558,126 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a71c79500b827d06b190e30b7cc016c35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MacModelAndBoard </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>board_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the model name and board ID of the running system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">model</td><td>The system’s model name. A mid-2012 15" MacBook Pro would report “MacBookPro10,1”. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">board_id</td><td>The system’s board ID. A mid-2012 15" MacBook Pro would report “Mac-C3EC7CD22292981F”.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If a value cannot be determined, its string is cleared. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab05052e02f3c3605fd7bae0f006d2cba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crashpad::MacOSXMinorVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the version of the running operating system. </p>
+<dl class="section return"><dt>Returns</dt><dd>The minor version of the operating system, such as <code>9</code> for Mac OS X 10.9.2.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is similar to the base::mac::IsOS*() family of functions, but is provided for situations where the caller needs to obtain version information beyond what is provided by Chromium’s base, or for when the caller needs the actual minor version value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99a833f0c39ce203b49862367494a923"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::MacOSXVersion </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>major</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>minor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>bugfix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>build</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>server</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>version_string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the version of the running operating system. </p>
+<p>All parameters are required. No parameter may be <code>NULL</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">major</td><td>The major version of the operating system, such as <code>10</code> for Mac OS X 10.9.2. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">minor</td><td>The major version of the operating system, such as <code>9</code> for Mac OS X 10.9.2. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">bugfix</td><td>The bugfix version of the operating system, such as <code>2</code> for Mac OS X 10.9.2. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">build</td><td>The operating system’s build string, such as "13C64" for Mac OS X 10.9.2. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">server</td><td><code>true</code> for a Mac OS X Server installation, <code>false</code> otherwise (for a desktop/laptop, client, or workstation system). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">version_string</td><td>A string representing the full operating system version, such as <code>"Mac OS X 10.9.2 (13C64)"</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, <code>false</code> on failure, with an error message logged. A failure is considered to have occurred if any element could not be determined. When this happens, their values will be untouched, but other values that could be determined will still be set properly. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac7fc31e646135cd40892e03dfbb0f9b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -608,6 +749,123 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>This function reads into <em>buffer</em>, stopping only when <em>size</em> bytes have been read or when <code>read()</code> returns 0, indicating that end-of-file has been reached.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes read and placed into <em>buffer</em>, or <code>-1</code> on error, with <code>errno</code> set appropriately. On error, a portion of <em>fd</em> may have been read into <em>buffer</em>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aead5f04bd94549956a7f2826aeccf495"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ServiceManagementIsJobLoaded </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether a specified job is loaded in the user launchd domain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>The label for the job to look up.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job is loaded, otherwise <code>false</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A loaded job is not necessarily presently running, nor has it necessarily ever run in the past. </dd>
+<dd>
+This function is provided because <code>SMJobCopyDictionary()</code> does not exist prior to Mac OS X 10.6, and on Mac OS X 10.10 DP5 14A314h, it fails to return a job dictionary immediately after a job is loaded (radar 17365104). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3bc3a94386dd27968d48619f42154463"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pid_t crashpad::ServiceManagementIsJobRunning </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether a specified job is running in the user launchd domain. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>The label for the job to look up.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The job’s process ID if running, otherwise <code>0</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobCopyDictionary()</code> does not exist prior to Mac OS X 10.6, and on Mac OS X 10.10 DP5 14A314h, it fails to return a job dictionary immediately after a job is loaded (radar 17365104). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8cc130fecf996b7d7c76a56200afccb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ServiceManagementRemoveJob </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a job from the user launchd domain as in <code>SMJobRemove()</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">label</td><td>The label for the job to remove. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wait</td><td><code>true</code> if this function should block, waiting for the job to be removed. <code>false</code> if the job may be removed asynchronously.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was removed successfully or if an asynchronous attempt to remove the job was started successfully, otherwise <code>false</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobRemove()</code> does not exist prior to Mac OS X 10.6, and when <em>wait</em> is true, blocks for far too long on Mac OS X 10.10 DP5 14A314h (radar 17365104; <code>_block_until_job_exits()</code> contains a one-second sleep() call). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a97ebbbac4c7f27e2e3ba2b9c080ed0f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ServiceManagementSubmitJob </td>
+          <td>(</td>
+          <td class="paramtype">CFDictionaryRef&#160;</td>
+          <td class="paramname"><em>job_cf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Submits a job to the user launchd domain as in <code>SMJobSubmit()</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">job_cf</td><td>A dictionary describing a job.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was submitted successfully, otherwise <code>false</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobSubmit()</code> does not exist prior to Mac OS X 10.6, and behaves flakily on Mac OS X 10.10 DP5 14A314h in that it hangs 25% of the time (radar 17365104). </dd></dl>
 
 </div>
 </div>

@@ -1,6 +1,10 @@
 var searchData=
 [
   ['seek',['Seek',['../classcrashpad_1_1FileWriterInterface.html#a16e675d536c3622be62591492b51fac8',1,'crashpad::FileWriterInterface::Seek()'],['../classcrashpad_1_1FileWriter.html#afca5910c1ad3d5adc2b236f27f7108c0',1,'crashpad::FileWriter::Seek()'],['../classcrashpad_1_1StringFileWriter.html#a4772b735b5df75d6a6d32b656cdd8b0f',1,'crashpad::StringFileWriter::Seek()']]],
+  ['servicemanagementisjobloaded',['ServiceManagementIsJobLoaded',['../namespacecrashpad.html#aead5f04bd94549956a7f2826aeccf495',1,'crashpad']]],
+  ['servicemanagementisjobrunning',['ServiceManagementIsJobRunning',['../namespacecrashpad.html#a3bc3a94386dd27968d48619f42154463',1,'crashpad']]],
+  ['servicemanagementremovejob',['ServiceManagementRemoveJob',['../namespacecrashpad.html#a8cc130fecf996b7d7c76a56200afccb1',1,'crashpad']]],
+  ['servicemanagementsubmitjob',['ServiceManagementSubmitJob',['../namespacecrashpad.html#a97ebbbac4c7f27e2e3ba2b9c080ed0f3',1,'crashpad']]],
   ['set_5finvalid',['set_invalid',['../classcrashpad_1_1InitializationState.html#adb1ebe6fb06d227da363dad2174a8316',1,'crashpad::InitializationState']]],
   ['set_5fstate',['set_state',['../classcrashpad_1_1InitializationState.html#a66966875ef1a543c9b25f9cad6ae44ea',1,'crashpad::InitializationState']]],
   ['set_5fstring',['set_string',['../classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a0a1ca4e29de41579469a40c7fa5a0908',1,'crashpad::internal::MinidumpStringWriter']]],
