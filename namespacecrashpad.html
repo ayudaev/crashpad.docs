@@ -231,6 +231,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3bc3a94386dd27968d48619f42154463"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3bc3a94386dd27968d48619f42154463">ServiceManagementIsJobRunning</a> (const std::string &amp;label)</td></tr>
 <tr class="memdesc:a3bc3a94386dd27968d48619f42154463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a specified job is running in the user launchd domain.  <a href="#a3bc3a94386dd27968d48619f42154463">More...</a><br /></td></tr>
 <tr class="separator:a3bc3a94386dd27968d48619f42154463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad34c73bd6ad5d4c9aff2d68b7f26b4c3">BootstrapCheckIn</a> (mach_port_t bp, const std::string &amp;service_name, mach_port_t *service_port)</td></tr>
+<tr class="memdesc:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <code>bootstrap_check_in()</code> to check in with the bootstrap server.  <a href="#ad34c73bd6ad5d4c9aff2d68b7f26b4c3">More...</a><br /></td></tr>
+<tr class="separator:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplParams" colspan="2">template&lt;typename Destination , typename Source &gt; </td></tr>
 <tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplItemLeft" align="right" valign="top">Destination&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29">InRangeCast</a> (Source source, Destination default_value)</td></tr>
 <tr class="memdesc:a6e1b1c536af301cd418dad62348b1d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts to a different type if it can be done without data loss, logging a warning message and returing a default value otherwise.  <a href="#a6e1b1c536af301cd418dad62348b1d29">More...</a><br /></td></tr>
@@ -447,6 +450,50 @@ template&lt;typename Destination , typename Source &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>source</em> is in the range supported by the type of <em>*destination</em>, with the assignment to <em>*destination</em> having been performed. <code>false</code> if the assignment cannot be completed safely because <em>source</em> is outside of this range. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad34c73bd6ad5d4c9aff2d68b7f26b4c3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kern_return_t crashpad::BootstrapCheckIn </td>
+          <td>(</td>
+          <td class="paramtype">mach_port_t&#160;</td>
+          <td class="paramname"><em>bp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>service_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_port_t *&#160;</td>
+          <td class="paramname"><em>service_port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls <code>bootstrap_check_in()</code> to check in with the bootstrap server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bp</td><td>The bootstrap server to check in with. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">service_name</td><td>The name of the service to check in. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">service_port</td><td>The receive right for the checked-in service.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>BOOTSTRAP_SUCCESS</code> on success, with <em>service_port</em> set appropriately. Otherwise, any error that might be returned by <code>bootstrap_check_in()</code>.</dd></dl>
+<p>This function is a wrapper around <code>bootstrap_check_in()</code>, checking in with the bootstrap server at <em>bp</em>. It exists primarily for compatibility with Mac OS X 10.5, where it is not possible to call <code>bootstrap_check_in()</code> for a <em>service_name</em> that has not already been registered with the bootstrap server using <code>bootstrap_register()</code>. <code>bootstrap_register()</code> was deprecated in Mac OS X 10.5. </p>
 
 </div>
 </div>
