@@ -1,6 +1,7 @@
 var searchData=
 [
   ['c16lcpy',['c16lcpy',['../namespacecrashpad.html#a7c3ab35e044bf1a3b3f48e8b457a5429',1,'crashpad']]],
+  ['capturecontext',['CaptureContext',['../namespacecrashpad.html#ac25486c6b4c38fc7c7868e978094edcf',1,'crashpad']]],
   ['cfpropertytolaunchdata',['CFPropertyToLaunchData',['../namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c',1,'crashpad']]],
   ['child',['Child',['../classcrashpad_1_1test_1_1MachMultiprocess.html#a9d3841165d327567e7e5c6020afc3177',1,'crashpad::test::MachMultiprocess']]],
   ['childpid',['ChildPID',['../classcrashpad_1_1test_1_1MachMultiprocess.html#ab01c4d39a592ebfa06dc00905f184f11',1,'crashpad::test::MachMultiprocess']]],

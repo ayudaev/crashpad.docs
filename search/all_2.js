@@ -1,6 +1,7 @@
 var searchData=
 [
   ['c16lcpy',['c16lcpy',['../namespacecrashpad.html#a7c3ab35e044bf1a3b3f48e8b457a5429',1,'crashpad']]],
+  ['capturecontext',['CaptureContext',['../namespacecrashpad.html#ac25486c6b4c38fc7c7868e978094edcf',1,'crashpad']]],
   ['cfpropertytolaunchdata',['CFPropertyToLaunchData',['../namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c',1,'crashpad']]],
   ['checkedrange',['CheckedRange',['../classcrashpad_1_1CheckedRange.html',1,'crashpad']]],
   ['checksum',['CheckSum',['../structMINIDUMP__HEADER.html#a007f6608822bbef3d289f0cb125c1d9a',1,'MINIDUMP_HEADER::CheckSum()'],['../structMINIDUMP__MODULE.html#a9e034dc1c99bf014191f44c90ebe7bd4',1,'MINIDUMP_MODULE::CheckSum()']]],

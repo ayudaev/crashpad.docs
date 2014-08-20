@@ -204,6 +204,9 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac25486c6b4c38fc7c7868e978094edcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac25486c6b4c38fc7c7868e978094edcf">CaptureContext</a> (NativeCPUContext *cpu_context)</td></tr>
+<tr class="memdesc:ac25486c6b4c38fc7c7868e978094edcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the CPU context.  <a href="#ac25486c6b4c38fc7c7868e978094edcf">More...</a><br /></td></tr>
+<tr class="separator:ac25486c6b4c38fc7c7868e978094edcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c787f550c9e9d966d9f7dddc0653b4"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4">ReadFD</a> (int fd, void *buffer, size_t size)</td></tr>
 <tr class="memdesc:a86c787f550c9e9d966d9f7dddc0653b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>read()</code>, retrying when interrupted or following a short read.  <a href="#a86c787f550c9e9d966d9f7dddc0653b4">More...</a><br /></td></tr>
 <tr class="separator:a86c787f550c9e9d966d9f7dddc0653b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -541,6 +544,34 @@ template&lt;typename Destination , typename Source &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The length of the <em>source</em> string in char16 units, not including its <code>NUL</code> terminator. When truncation occurs, the return value will be equal to or greater than than the <em>length</em> parameter. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac25486c6b4c38fc7c7868e978094edcf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CaptureContext </td>
+          <td>(</td>
+          <td class="paramtype">NativeCPUContext *&#160;</td>
+          <td class="paramname"><em>cpu_context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the CPU context. </p>
+<p>The CPU context will be captured as accurately and completely as possible, containing an atomic snapshot at the point of this function’s return. This function does not modify any registers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cpu_context</td><td>The structure to store the context in.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>On x86_64, the value for <code>%rdi</code> will be populated with the address of this function’s argument, as mandated by the ABI. If the value of <code>%rdi</code> prior to calling this function is needed, it must be obtained separately prior to calling this function. For example: <div class="fragment"><div class="line">uint64_t rdi;</div>
+<div class="line"><span class="keyword">asm</span>(<span class="stringliteral">&quot;movq %%rdi, %0&quot;</span> : <span class="stringliteral">&quot;=m&quot;</span>(rdi));</div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
