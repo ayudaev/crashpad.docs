@@ -13,5 +13,6 @@ var searchData=
   ['timezone',['TimeZone',['../structMINIDUMP__MISC__INFO__3.html#aed5a62e4763420e86a7477138f85f23d',1,'MINIDUMP_MISC_INFO_3']]],
   ['timezoneid',['TimeZoneId',['../structMINIDUMP__MISC__INFO__3.html#a65b9873189c3dad3f692b6792771f27b',1,'MINIDUMP_MISC_INFO_3']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
+  ['toolsupport',['ToolSupport',['../classcrashpad_1_1ToolSupport.html',1,'crashpad']]],
   ['tostring',['ToString',['../structcrashpad_1_1UUID.html#a1e4728f499a21c7f2f0037f514960165',1,'crashpad::UUID']]]
 ];
