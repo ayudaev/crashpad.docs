@@ -7,6 +7,8 @@ var searchData=
   ['registerlocationdescriptor',['RegisterLocationDescriptor',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#aed263c64ecb0597696d080e395af6400',1,'crashpad::internal::MinidumpWritable']]],
   ['registermemorydescriptor',['RegisterMemoryDescriptor',['../classcrashpad_1_1MinidumpMemoryWriter.html#aa770340c418ab7835a5c4a5a38f52e84',1,'crashpad::MinidumpMemoryWriter']]],
   ['registerrva',['RegisterRVA',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a686683d78f099a07e2a1df8e6b567d37',1,'crashpad::internal::MinidumpWritable']]],
+  ['remoteport',['RemotePort',['../classcrashpad_1_1test_1_1MachMultiprocess.html#a79e05cbef2959dcdc16d984ce7f8e9c8',1,'crashpad::test::MachMultiprocess']]],
   ['reset',['Reset',['../classcrashpad_1_1StringFileWriter.html#a52846d4b864ef90d65ff24bb1a1cfecf',1,'crashpad::StringFileWriter']]],
+  ['run',['Run',['../classcrashpad_1_1test_1_1MachMultiprocess.html#aef111a5ac2a266f37aa906b556f6fb27',1,'crashpad::test::MachMultiprocess']]],
   ['rva',['Rva',['../structMINIDUMP__LOCATION__DESCRIPTOR.html#ae877992492577366d7185721b8239877',1,'MINIDUMP_LOCATION_DESCRIPTOR::Rva()'],['../dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8',1,'RVA():&#160;dbghelp.h']]]
 ];

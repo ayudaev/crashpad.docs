@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['parent',['Parent',['../classcrashpad_1_1test_1_1MachMultiprocess.html#ac7c713ed5234b2c0ef1114feb4b30cb5',1,'crashpad::test::MachMultiprocess']]],
   ['pdb_5fname',['pdb_name',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a12f15e85410d19a6fcbe1beedbb3156b',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::pdb_name()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a7d46faf35e79580fbd16c3d5822c9330',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::pdb_name()']]],
   ['phase',['Phase',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9',1,'crashpad::internal::MinidumpWritable']]],
+  ['pipefd',['PipeFD',['../classcrashpad_1_1test_1_1MachMultiprocess.html#ad8c7d127395a6fe95669a3145628eab5',1,'crashpad::test::MachMultiprocess']]],
   ['platformid',['PlatformId',['../structMINIDUMP__SYSTEM__INFO.html#a214e7bd61a89343a80a3c9a265fbbe96',1,'MINIDUMP_SYSTEM_INFO']]],
   ['priority',['Priority',['../structMINIDUMP__THREAD.html#a0a827e9473261cc0d4c69a28a243d635',1,'MINIDUMP_THREAD']]],
   ['priorityclass',['PriorityClass',['../structMINIDUMP__THREAD.html#a71433cd417ed888184cc1e6d812179e8',1,'MINIDUMP_THREAD']]],

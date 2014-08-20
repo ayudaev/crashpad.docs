@@ -11,7 +11,7 @@ var indexSectionsWithContent =
   1: "cfimstuvw",
   2: "c",
   3: "dimvw",
-  4: "abcdefimoprstuvw",
+  4: "abcdefilmoprstuvw",
   5: "abcdefiklmnoprstuvwx",
   6: "mr",
   7: "mps",

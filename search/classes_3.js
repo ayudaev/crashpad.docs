@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
+  ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],
   ['minidump_5fdirectory',['MINIDUMP_DIRECTORY',['../structMINIDUMP__DIRECTORY.html',1,'']]],
   ['minidump_5fexception',['MINIDUMP_EXCEPTION',['../structMINIDUMP__EXCEPTION.html',1,'']]],
   ['minidump_5fexception_5fstream',['MINIDUMP_EXCEPTION_STREAM',['../structMINIDUMP__EXCEPTION__STREAM.html',1,'']]],

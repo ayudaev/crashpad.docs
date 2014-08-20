@@ -2,6 +2,8 @@ var searchData=
 [
   ['mach_2eh',['mach.h',['../non__mac_2mach_2mach_8h.html',1,'']]],
   ['macherrormessage',['MachErrorMessage',['../namespacecrashpad_1_1test.html#a49a7a2461cf4e1f674eac147c19d9483',1,'crashpad::test']]],
+  ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
+  ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],
   ['macmodelandboard',['MacModelAndBoard',['../namespacecrashpad.html#a71c79500b827d06b190e30b7cc016c35',1,'crashpad']]],
   ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
   ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['processargumentsforpid',['ProcessArgumentsForPID',['../namespacecrashpad.html#ac7fc31e646135cd40892e03dfbb0f9b9',1,'crashpad']]]
+  ['open',['Open',['../classcrashpad_1_1FileWriter.html#a50501a73c3a0915218f2446942fc35b7',1,'crashpad::FileWriter']]]
 ];
