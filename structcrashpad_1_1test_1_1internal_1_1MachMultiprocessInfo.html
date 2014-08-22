@@ -100,18 +100,27 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3992bd4f3b1d78a5c5c7d90c2c4bae9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3992bd4f3b1d78a5c5c7d90c2c4bae9c"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>service_name</b></td></tr>
 <tr class="separator:a3992bd4f3b1d78a5c5c7d90c2c4bae9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20303355fb2a27cf8faaeaf15bd53fa3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20303355fb2a27cf8faaeaf15bd53fa3"></a>
-base::ScopedFD&#160;</td><td class="memItemRight" valign="bottom"><b>read_pipe</b></td></tr>
-<tr class="separator:a20303355fb2a27cf8faaeaf15bd53fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba65e7e9ea577c5e68cc7444523e3e64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba65e7e9ea577c5e68cc7444523e3e64"></a>
-base::ScopedFD&#160;</td><td class="memItemRight" valign="bottom"><b>write_pipe</b></td></tr>
-<tr class="separator:aba65e7e9ea577c5e68cc7444523e3e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04be69f2264a8eda20d650adc143dd06"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04be69f2264a8eda20d650adc143dd06"></a>
+base::ScopedFD&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_c2p_read</b></td></tr>
+<tr class="separator:a04be69f2264a8eda20d650adc143dd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f147a9f551f02188c4e0bf956bd07f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f147a9f551f02188c4e0bf956bd07f6"></a>
+base::ScopedFD&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_c2p_write</b></td></tr>
+<tr class="separator:a9f147a9f551f02188c4e0bf956bd07f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ec58bd4c02fd869174f214c958b4f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59ec58bd4c02fd869174f214c958b4f7"></a>
+base::ScopedFD&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_p2c_read</b></td></tr>
+<tr class="separator:a59ec58bd4c02fd869174f214c958b4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85ddcb640a0ad003c5a61d755e486e05"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85ddcb640a0ad003c5a61d755e486e05"></a>
+base::ScopedFD&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_p2c_write</b></td></tr>
+<tr class="separator:a85ddcb640a0ad003c5a61d755e486e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8399084fb289a2affd257799029e37a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8399084fb289a2affd257799029e37a5"></a>
 pid_t&#160;</td><td class="memItemRight" valign="bottom"><b>child_pid</b></td></tr>
 <tr class="separator:a8399084fb289a2affd257799029e37a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab86285eb60aabbdfb7f197df40de1dde"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab86285eb60aabbdfb7f197df40de1dde"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_fd</b></td></tr>
-<tr class="separator:ab86285eb60aabbdfb7f197df40de1dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1521a9ae9326a7d858a7f5502239fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add1521a9ae9326a7d858a7f5502239fc"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>read_pipe_fd</b></td></tr>
+<tr class="separator:add1521a9ae9326a7d858a7f5502239fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e4fe09eacecc203570b79e6241fc00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5e4fe09eacecc203570b79e6241fc00"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>write_pipe_fd</b></td></tr>
+<tr class="separator:ac5e4fe09eacecc203570b79e6241fc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ba9beef3cc484bf12643f50ffc4b672"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ba9beef3cc484bf12643f50ffc4b672"></a>
 base::mac::ScopedMachReceiveRight&#160;</td><td class="memItemRight" valign="bottom"><b>local_port</b></td></tr>
 <tr class="separator:a4ba9beef3cc484bf12643f50ffc4b672"><td class="memSeparator" colspan="2">&#160;</td></tr>

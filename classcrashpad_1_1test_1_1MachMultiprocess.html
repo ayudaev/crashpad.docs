@@ -118,9 +118,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab01c4d39a592ebfa06dc00905f184f11"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#ab01c4d39a592ebfa06dc00905f184f11">ChildPID</a> () const </td></tr>
 <tr class="memdesc:ab01c4d39a592ebfa06dc00905f184f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the child process’ process ID.  <a href="#ab01c4d39a592ebfa06dc00905f184f11">More...</a><br /></td></tr>
 <tr class="separator:ab01c4d39a592ebfa06dc00905f184f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8c7d127395a6fe95669a3145628eab5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#ad8c7d127395a6fe95669a3145628eab5">PipeFD</a> () const </td></tr>
-<tr class="memdesc:ad8c7d127395a6fe95669a3145628eab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pipe’s file descriptor.  <a href="#ad8c7d127395a6fe95669a3145628eab5">More...</a><br /></td></tr>
-<tr class="separator:ad8c7d127395a6fe95669a3145628eab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2578358e0207175c2ac285dc07258f69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#a2578358e0207175c2ac285dc07258f69">ReadPipeFD</a> () const </td></tr>
+<tr class="memdesc:a2578358e0207175c2ac285dc07258f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the read pipe’s file descriptor.  <a href="#a2578358e0207175c2ac285dc07258f69">More...</a><br /></td></tr>
+<tr class="separator:a2578358e0207175c2ac285dc07258f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86c8aaa8f8ccb86aa15a338c1bd0f2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#aa86c8aaa8f8ccb86aa15a338c1bd0f2a">WritePipeFD</a> () const </td></tr>
+<tr class="memdesc:aa86c8aaa8f8ccb86aa15a338c1bd0f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the write pipe’s file descriptor.  <a href="#aa86c8aaa8f8ccb86aa15a338c1bd0f2a">More...</a><br /></td></tr>
+<tr class="separator:aa86c8aaa8f8ccb86aa15a338c1bd0f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a0faf644ecfd80a19485d6d7656474"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#a47a0faf644ecfd80a19485d6d7656474">LocalPort</a> () const </td></tr>
 <tr class="memdesc:a47a0faf644ecfd80a19485d6d7656474"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a receive right for the local port.  <a href="#a47a0faf644ecfd80a19485d6d7656474">More...</a><br /></td></tr>
 <tr class="separator:a47a0faf644ecfd80a19485d6d7656474"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,7 +136,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages a Mach-aware multiprocess test. </p>
-<p>These tests are <code>fork()</code>-based. The parent process has access to the child process’ task port. The parent and child processes are able to communicate via Mach IPC, and the child process can also send messages to the parent process via a POSIX pipe.</p>
+<p>These tests are <code>fork()</code>-based. The parent process has access to the child process’ task port. The parent and child processes are able to communicate via Mach IPC, and via a pair of POSIX pipes.</p>
 <p>Subclasses are expected to implement the parent and child by overriding the appropriate methods. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9d3841165d327567e7e5c6020afc3177"></a>
@@ -269,7 +272,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad8c7d127395a6fe95669a3145628eab5"></a>
+<a class="anchor" id="a2578358e0207175c2ac285dc07258f69"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -277,7 +280,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int crashpad::test::MachMultiprocess::PipeFD </td>
+          <td class="memname">int crashpad::test::MachMultiprocess::ReadPipeFD </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -290,8 +293,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the pipe’s file descriptor. </p>
-<p>This method may be called by either the parent or the child process. In the parent process, the pipe is read-only, and in the child process, it is write-only. </p>
+<p>Returns the read pipe’s file descriptor. </p>
+<p>This method may be called by either the parent or the child process. Anything written to the write pipe in the partner process will appear on the this file descriptor in this process. </p>
 
 </div>
 </div>
@@ -337,6 +340,32 @@ Protected Member Functions</h2></td></tr>
 <p>Runs the test. </p>
 <p>This method establishes the proper testing environment and calls RunParent() in the parent process and RunChild() in the child process.</p>
 <p>This method uses gtest assertions to validate the testing environment. If the testing environment cannot be set up properly, it is possible that <a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#ac7c713ed5234b2c0ef1114feb4b30cb5" title="The subclass-provided parent routine. ">Parent()</a> or <a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#a9d3841165d327567e7e5c6020afc3177" title="The subclass-provided child routine. ">Child()</a> will not be called. In the parent process, this method also waits for the child process to exit after <a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#ac7c713ed5234b2c0ef1114feb4b30cb5" title="The subclass-provided parent routine. ">Parent()</a> returns, and verifies that it exited cleanly with gtest assertions. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa86c8aaa8f8ccb86aa15a338c1bd0f2a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int crashpad::test::MachMultiprocess::WritePipeFD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the write pipe’s file descriptor. </p>
+<p>This method may be called by either the parent or the child process. Anything written to this file descriptor in this process will appear on the read pipe in the partner process. </p>
 
 </div>
 </div>

@@ -84,6 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -180,12 +181,22 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ToolSupport.html">ToolSupport</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common functions used by command line tools.  <a href="classcrashpad_1_1ToolSupport.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html">TSimpleStringDictionary</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map/dictionary collection implementation using a fixed amount of storage, so that it does not perform any dynamic allocations for its operations.  <a href="classcrashpad_1_1TSimpleStringDictionary.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1UUID.html">UUID</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A universally unique identifier (UUID).  <a href="structcrashpad_1_1UUID.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1WritableIoVec.html">WritableIoVec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A version of <code>iovec</code> with a <code>const</code> <a class="el" href="structcrashpad_1_1WritableIoVec.html#abcf5d801519cf50aa286c3baa8f55d05" title="The base address of a memory region for output. ">iov_base</a> field.  <a href="structcrashpad_1_1WritableIoVec.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:af25d0c4731619923ef6dba7abfca5498"><td class="memItemLeft" align="right" valign="top">typedef <br class="typebreak" />
+<a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html">TSimpleStringDictionary</a>&lt; 256, 256, 64 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#af25d0c4731619923ef6dba7abfca5498">SimpleStringDictionary</a></td></tr>
+<tr class="memdesc:af25d0c4731619923ef6dba7abfca5498"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html" title="A map/dictionary collection implementation using a fixed amount of storage, so that it does not perfo...">TSimpleStringDictionary</a> with default template parameters.  <a href="#af25d0c4731619923ef6dba7abfca5498">More...</a><br /></td></tr>
+<tr class="separator:af25d0c4731619923ef6dba7abfca5498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -257,7 +268,23 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main namespace. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="af25d0c4731619923ef6dba7abfca5498"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html">TSimpleStringDictionary</a>&lt;256, 256, 64&gt; <a class="el" href="namespacecrashpad.html#af25d0c4731619923ef6dba7abfca5498">crashpad::SimpleStringDictionary</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html" title="A map/dictionary collection implementation using a fixed amount of storage, so that it does not perfo...">TSimpleStringDictionary</a> with default template parameters. </p>
+<p>For historical reasons this specialized version is available with the same size factors as a previous implementation. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a98e532bb06fc5ffdd93e0ceb6d789eb1"></a>
 <div class="memitem">
 <div class="memproto">

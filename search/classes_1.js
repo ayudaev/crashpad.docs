@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['filewriter',['FileWriter',['../classcrashpad_1_1FileWriter.html',1,'crashpad']]],
-  ['filewriterinterface',['FileWriterInterface',['../classcrashpad_1_1FileWriterInterface.html',1,'crashpad']]]
+  ['entry',['Entry',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html',1,'crashpad::TSimpleStringDictionary']]]
 ];
