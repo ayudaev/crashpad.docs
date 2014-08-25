@@ -11,5 +11,6 @@ var searchData=
   ['codeview_5frecord',['codeview_record',['../classcrashpad_1_1internal_1_1MinidumpModuleCodeViewRecordPDBLinkWriter.html#a21655109744c291bf043086438d65f16',1,'crashpad::internal::MinidumpModuleCodeViewRecordPDBLinkWriter']]],
   ['containsrange',['ContainsRange',['../classcrashpad_1_1CheckedRange.html#af0da8b929c8420b154f91af5d5a05d67',1,'crashpad::CheckedRange']]],
   ['containsvalue',['ContainsValue',['../classcrashpad_1_1CheckedRange.html#a8534f7e6933e49753982551c81da3024',1,'crashpad::CheckedRange']]],
-  ['convertutf8toutf16',['ConvertUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#abd232020d5c34894ca7fd87809d5f895',1,'crashpad::internal::MinidumpWriterUtil']]]
+  ['convertutf8toutf16',['ConvertUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#abd232020d5c34894ca7fd87809d5f895',1,'crashpad::internal::MinidumpWriterUtil']]],
+  ['cputimes',['CPUTimes',['../classcrashpad_1_1ProcessReader.html#ab9f39aa4f34a949b3dce77544231b953',1,'crashpad::ProcessReader']]]
 ];

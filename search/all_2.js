@@ -17,6 +17,7 @@ var searchData=
   ['count',['count',['../structcrashpad_1_1MinidumpSimpleStringDictionary.html#aadf82c0a32523172d3ef4755331aa580',1,'crashpad::MinidumpSimpleStringDictionary']]],
   ['cpu',['Cpu',['../structMINIDUMP__SYSTEM__INFO.html#ad5e99c9f3240a6ffae813b3e7b3ddd29',1,'MINIDUMP_SYSTEM_INFO']]],
   ['cpu_5finformation',['CPU_INFORMATION',['../unionCPU__INFORMATION.html',1,'']]],
+  ['cputimes',['CPUTimes',['../classcrashpad_1_1ProcessReader.html#ab9f39aa4f34a949b3dce77544231b953',1,'crashpad::ProcessReader']]],
   ['crashpad',['crashpad',['../namespacecrashpad.html',1,'']]],
   ['csdversionrva',['CSDVersionRva',['../structMINIDUMP__SYSTEM__INFO.html#a36f5669d9d4f8dc7d5d3ab0132d60943',1,'MINIDUMP_SYSTEM_INFO']]],
   ['cvrecord',['CvRecord',['../structMINIDUMP__MODULE.html#acd07e35faf066880eeabea8a91aa887a',1,'MINIDUMP_MODULE']]],

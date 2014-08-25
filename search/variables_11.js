@@ -3,7 +3,7 @@ var searchData=
   ['value',['value',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html#af7fa75c478ce69d42354a046327fe658',1,'crashpad::TSimpleStringDictionary::Entry::value()'],['../structcrashpad_1_1MinidumpSimpleStringDictionaryEntry.html#a90c3c20c4ae9af6db225682427c1f314',1,'crashpad::MinidumpSimpleStringDictionaryEntry::value()']]],
   ['value_5fsize',['value_size',['../classcrashpad_1_1TSimpleStringDictionary.html#a1176a981ba33d55f9b0a5f22e7fe4171',1,'crashpad::TSimpleStringDictionary']]],
   ['vendorid',['VendorId',['../unionCPU__INFORMATION.html#af239b99d9ef6b86fb04ffeabd85831c6',1,'CPU_INFORMATION']]],
-  ['version',['version',['../structcrashpad_1_1MinidumpCrashpadInfo.html#a481042efad46164dc43d9c824df9e6cf',1,'crashpad::MinidumpCrashpadInfo::version()'],['../structMINIDUMP__HEADER.html#a7ea8d51f5ca990eec9eb0b3643c6b406',1,'MINIDUMP_HEADER::Version()']]],
+  ['version',['Version',['../structMINIDUMP__HEADER.html#a7ea8d51f5ca990eec9eb0b3643c6b406',1,'MINIDUMP_HEADER::Version()'],['../structcrashpad_1_1MinidumpCrashpadInfo.html#a481042efad46164dc43d9c824df9e6cf',1,'crashpad::MinidumpCrashpadInfo::version()']]],
   ['versioninfo',['VersionInfo',['../structMINIDUMP__MODULE.html#ac2babe58e6418124599ea2821f30bb84',1,'MINIDUMP_MODULE']]],
   ['versioninformation',['VersionInformation',['../unionCPU__INFORMATION.html#a6b072a6cae2e065111ef20acf21e355a',1,'CPU_INFORMATION']]]
 ];

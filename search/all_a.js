@@ -8,7 +8,7 @@ var searchData=
   ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
   ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],
   ['majorversion',['MajorVersion',['../structMINIDUMP__SYSTEM__INFO.html#af657b2ed0798f5962ae59e459133d735',1,'MINIDUMP_SYSTEM_INFO']]],
-  ['memory',['Memory',['../structMINIDUMP__MEMORY__DESCRIPTOR.html#a4ee410c410207ff4a18fddd82127a7e4',1,'MINIDUMP_MEMORY_DESCRIPTOR']]],
+  ['memory',['Memory',['../structMINIDUMP__MEMORY__DESCRIPTOR.html#a4ee410c410207ff4a18fddd82127a7e4',1,'MINIDUMP_MEMORY_DESCRIPTOR::Memory()'],['../classcrashpad_1_1ProcessReader.html#aec00777c3e77735f75fb176cb24f420d',1,'crashpad::ProcessReader::Memory()']]],
   ['memoryliststream',['MemoryListStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08a1511624630cd9150436de906ae033cbd',1,'dbghelp.h']]],
   ['memoryrangebaseaddress',['MemoryRangeBaseAddress',['../classcrashpad_1_1MinidumpMemoryWriter.html#ac55ff51ef6aecf63614b6a9e974d34c5',1,'crashpad::MinidumpMemoryWriter']]],
   ['memoryranges',['MemoryRanges',['../structMINIDUMP__MEMORY__LIST.html#a7c2359575a803000e228bcdef33b42d0',1,'MINIDUMP_MEMORY_LIST']]],
@@ -83,5 +83,5 @@ var searchData=
   ['miscrecord',['MiscRecord',['../structMINIDUMP__MODULE.html#a749bc0bb7492a1b9463631eec006b4d1',1,'MINIDUMP_MODULE']]],
   ['moduleliststream',['ModuleListStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08ad404c18554f01aa57ac0af1a7674060b',1,'dbghelp.h']]],
   ['modulenamerva',['ModuleNameRva',['../structMINIDUMP__MODULE.html#a8aa1ae48a9a32640573747cba5a00274',1,'MINIDUMP_MODULE']]],
-  ['modules',['Modules',['../structMINIDUMP__MODULE__LIST.html#aff6c222b00169e3135815e7c11e876c2',1,'MINIDUMP_MODULE_LIST']]]
+  ['modules',['Modules',['../structMINIDUMP__MODULE__LIST.html#aff6c222b00169e3135815e7c11e876c2',1,'MINIDUMP_MODULE_LIST::Modules()'],['../classcrashpad_1_1ProcessReader.html#ad9a75efe4d3d6419f3875960ea0746e7',1,'crashpad::ProcessReader::Modules()']]]
 ];
