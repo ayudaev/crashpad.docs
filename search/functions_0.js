@@ -5,6 +5,7 @@ var searchData=
   ['addmodule',['AddModule',['../classcrashpad_1_1MinidumpModuleListWriter.html#ae80c4f73234079da1a65fa5978641ad6',1,'crashpad::MinidumpModuleListWriter']]],
   ['addstream',['AddStream',['../classcrashpad_1_1MinidumpFileWriter.html#a6ccaa008cd4ecf1a90acc076edf9ba88',1,'crashpad::MinidumpFileWriter']]],
   ['alignment',['Alignment',['../classcrashpad_1_1MinidumpMemoryWriter.html#ab77268e3451a9927716f42541e53c4d1',1,'crashpad::MinidumpMemoryWriter::Alignment()'],['../classcrashpad_1_1internal_1_1MinidumpWritable.html#af4e92c46984eb73dbc1315ff5f4c7a9a',1,'crashpad::internal::MinidumpWritable::Alignment()']]],
+  ['arm',['Arm',['../classcrashpad_1_1ScopedForbidReturn.html#aa2e81b3c70f574d8be67d50cf5fc2951',1,'crashpad::ScopedForbidReturn']]],
   ['assignifinrange',['AssignIfInRange',['../namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430',1,'crashpad']]],
   ['assigntimet',['AssignTimeT',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#adf79feb4d657af5606d77a040b80c0a3',1,'crashpad::internal::MinidumpWriterUtil']]],
   ['assignutf8toutf16',['AssignUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a6f54dde78a0822cdf26efb59299ec8bd',1,'crashpad::internal::MinidumpWriterUtil']]]

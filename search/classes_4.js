@@ -46,5 +46,7 @@ var searchData=
   ['minidumputf8string',['MinidumpUTF8String',['../structcrashpad_1_1MinidumpUTF8String.html',1,'crashpad']]],
   ['minidumputf8stringwriter',['MinidumpUTF8StringWriter',['../classcrashpad_1_1internal_1_1MinidumpUTF8StringWriter.html',1,'crashpad::internal']]],
   ['minidumpwritable',['MinidumpWritable',['../classcrashpad_1_1internal_1_1MinidumpWritable.html',1,'crashpad::internal']]],
-  ['minidumpwriterutil',['MinidumpWriterUtil',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html',1,'crashpad::internal']]]
+  ['minidumpwriterutil',['MinidumpWriterUtil',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html',1,'crashpad::internal']]],
+  ['multiprocess',['Multiprocess',['../classcrashpad_1_1test_1_1Multiprocess.html',1,'crashpad::test']]],
+  ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]]
 ];

@@ -9,6 +9,7 @@ var searchData=
   ['dbgbldstr',['DbgBldStr',['../structMINIDUMP__MISC__INFO__4.html#a8f48fa73f388c540609863c26e969bb5',1,'MINIDUMP_MISC_INFO_4']]],
   ['dbghelp_2eh',['dbghelp.h',['../dbghelp_8h.html',1,'']]],
   ['directorylistentry',['DirectoryListEntry',['../classcrashpad_1_1internal_1_1MinidumpStreamWriter.html#a2c36492670110f546faaddd9e49d4344',1,'crashpad::internal::MinidumpStreamWriter']]],
+  ['disarm',['Disarm',['../classcrashpad_1_1ScopedForbidReturn.html#a5b5c04a646632f369c40d3e8f6d14ddd',1,'crashpad::ScopedForbidReturn']]],
   ['dwfiledatels',['dwFileDateLS',['../structVS__FIXEDFILEINFO.html#a9941cc13c4ebf36c267765bd62c16cd3',1,'VS_FIXEDFILEINFO']]],
   ['dwfiledatems',['dwFileDateMS',['../structVS__FIXEDFILEINFO.html#ab7d5db03c9f65acf75b2681a391ee341',1,'VS_FIXEDFILEINFO']]],
   ['dwfileflags',['dwFileFlags',['../structVS__FIXEDFILEINFO.html#a1ecf0351f90806354f987321c4d1ce0e',1,'VS_FIXEDFILEINFO']]],

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>Crashpad: crashpad::test::internal::MachMultiprocessInfo Struct Reference</title>
+<title>Crashpad: crashpad::ScopedForbidReturn Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,35 +83,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacecrashpad.html">crashpad</a></li><li class="navelem"><a class="el" href="namespacecrashpad_1_1test.html">test</a></li><li class="navelem"><b>internal</b></li><li class="navelem"><a class="el" href="structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html">MachMultiprocessInfo</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrashpad.html">crashpad</a></li><li class="navelem"><a class="el" href="classcrashpad_1_1ScopedForbidReturn.html">ScopedForbidReturn</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo-members.html">List of all members</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classcrashpad_1_1ScopedForbidReturn-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crashpad::test::internal::MachMultiprocessInfo Struct Reference</div>  </div>
+<div class="title">crashpad::ScopedForbidReturn Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Asserts that a scope must not be exited while unsafe.  
+ <a href="classcrashpad_1_1ScopedForbidReturn.html#details">More...</a></p>
+
+<p><code>#include &quot;util/misc/scoped_forbid_return.h&quot;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a3992bd4f3b1d78a5c5c7d90c2c4bae9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3992bd4f3b1d78a5c5c7d90c2c4bae9c"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>service_name</b></td></tr>
-<tr class="separator:a3992bd4f3b1d78a5c5c7d90c2c4bae9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ba9beef3cc484bf12643f50ffc4b672"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ba9beef3cc484bf12643f50ffc4b672"></a>
-base::mac::ScopedMachReceiveRight&#160;</td><td class="memItemRight" valign="bottom"><b>local_port</b></td></tr>
-<tr class="separator:a4ba9beef3cc484bf12643f50ffc4b672"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae280656a07b0a3cccf678c456da7f516"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae280656a07b0a3cccf678c456da7f516"></a>
-base::mac::ScopedMachSendRight&#160;</td><td class="memItemRight" valign="bottom"><b>remote_port</b></td></tr>
-<tr class="separator:ae280656a07b0a3cccf678c456da7f516"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49188ec2820ded1b004606c4418ecade"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49188ec2820ded1b004606c4418ecade"></a>
-base::mac::ScopedMachSendRight&#160;</td><td class="memItemRight" valign="bottom"><b>child_task</b></td></tr>
-<tr class="separator:a49188ec2820ded1b004606c4418ecade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aa2e81b3c70f574d8be67d50cf5fc2951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ScopedForbidReturn.html#aa2e81b3c70f574d8be67d50cf5fc2951">Arm</a> ()</td></tr>
+<tr class="memdesc:aa2e81b3c70f574d8be67d50cf5fc2951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arms the object so that it will abort execution when destroyed.  <a href="#aa2e81b3c70f574d8be67d50cf5fc2951">More...</a><br /></td></tr>
+<tr class="separator:aa2e81b3c70f574d8be67d50cf5fc2951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b5c04a646632f369c40d3e8f6d14ddd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ScopedForbidReturn.html#a5b5c04a646632f369c40d3e8f6d14ddd">Disarm</a> ()</td></tr>
+<tr class="memdesc:a5b5c04a646632f369c40d3e8f6d14ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arms the object so that it will abort execution when destroyed.  <a href="#a5b5c04a646632f369c40d3e8f6d14ddd">More...</a><br /></td></tr>
+<tr class="separator:a5b5c04a646632f369c40d3e8f6d14ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>util/test/mac/mach_multiprocess.cc</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Asserts that a scope must not be exited while unsafe. </p>
+<p>An object of this class has two states: armed and disarmed. A disarmed object is a harmless no-op. An armed object will abort execution upon destruction. Newly-constructed objects are armed by default.</p>
+<p>These objects may be used to assert that a scope not be exited while it is unsafe to do so. If it ever becomes safe to leave such a scope, an object can be disarmed. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aa2e81b3c70f574d8be67d50cf5fc2951"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::ScopedForbidReturn::Arm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Arms the object so that it will abort execution when destroyed. </p>
+<p>The most recent call to <a class="el" href="classcrashpad_1_1ScopedForbidReturn.html#aa2e81b3c70f574d8be67d50cf5fc2951" title="Arms the object so that it will abort execution when destroyed. ">Arm()</a> or <a class="el" href="classcrashpad_1_1ScopedForbidReturn.html#a5b5c04a646632f369c40d3e8f6d14ddd" title="Arms the object so that it will abort execution when destroyed. ">Disarm()</a> sets the state of the object. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5b5c04a646632f369c40d3e8f6d14ddd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::ScopedForbidReturn::Disarm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Arms the object so that it will abort execution when destroyed. </p>
+<p>The most recent call to <a class="el" href="classcrashpad_1_1ScopedForbidReturn.html#aa2e81b3c70f574d8be67d50cf5fc2951" title="Arms the object so that it will abort execution when destroyed. ">Arm()</a> or <a class="el" href="classcrashpad_1_1ScopedForbidReturn.html#a5b5c04a646632f369c40d3e8f6d14ddd" title="Arms the object so that it will abort execution when destroyed. ">Disarm()</a> sets the state of the object. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>util/misc/scoped_forbid_return.h</li>
+<li>util/misc/scoped_forbid_return.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

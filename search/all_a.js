@@ -83,5 +83,7 @@ var searchData=
   ['miscrecord',['MiscRecord',['../structMINIDUMP__MODULE.html#a749bc0bb7492a1b9463631eec006b4d1',1,'MINIDUMP_MODULE']]],
   ['moduleliststream',['ModuleListStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08ad404c18554f01aa57ac0af1a7674060b',1,'dbghelp.h']]],
   ['modulenamerva',['ModuleNameRva',['../structMINIDUMP__MODULE.html#a8aa1ae48a9a32640573747cba5a00274',1,'MINIDUMP_MODULE']]],
-  ['modules',['Modules',['../structMINIDUMP__MODULE__LIST.html#aff6c222b00169e3135815e7c11e876c2',1,'MINIDUMP_MODULE_LIST::Modules()'],['../classcrashpad_1_1ProcessReader.html#ad9a75efe4d3d6419f3875960ea0746e7',1,'crashpad::ProcessReader::Modules()']]]
+  ['modules',['Modules',['../structMINIDUMP__MODULE__LIST.html#aff6c222b00169e3135815e7c11e876c2',1,'MINIDUMP_MODULE_LIST::Modules()'],['../classcrashpad_1_1ProcessReader.html#ad9a75efe4d3d6419f3875960ea0746e7',1,'crashpad::ProcessReader::Modules()']]],
+  ['multiprocess',['Multiprocess',['../classcrashpad_1_1test_1_1Multiprocess.html',1,'crashpad::test']]],
+  ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]]
 ];
