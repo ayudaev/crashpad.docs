@@ -1,6 +1,7 @@
 var searchData=
 [
   ['featureinformation',['FeatureInformation',['../unionCPU__INFORMATION.html#a044a13c077ea0b3834dd33e4a48027cc',1,'CPU_INFORMATION']]],
+  ['fileoff',['fileoff',['../classcrashpad_1_1MachOImageSegmentReader.html#ac4a7d2fda6f9dec11ba50e7a68325539',1,'crashpad::MachOImageSegmentReader']]],
   ['filewriter',['FileWriter',['../classcrashpad_1_1FileWriter.html',1,'crashpad']]],
   ['filewriterinterface',['FileWriterInterface',['../classcrashpad_1_1FileWriterInterface.html',1,'crashpad']]],
   ['flags',['Flags',['../structMINIDUMP__HEADER.html#a052f2280538826d030c4cb5154963e27',1,'MINIDUMP_HEADER']]],

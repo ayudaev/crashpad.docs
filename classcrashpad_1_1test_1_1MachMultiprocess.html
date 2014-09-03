@@ -227,7 +227,7 @@ Protected Member Functions</h2></td></tr>
 <p>Subclasses that solely implement a test should not need to override this method. Subclasses that do not implement tests but instead implement additional testing features on top of this class may override this method provided that they call the superclass’ implementation first as follows:</p>
 <div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcrashpad_1_1test_1_1MachMultiprocess.html#aac4af4a4c943686538069de230fe7abe">PreFork</a>()<span class="keyword"> override </span>{</div>
 <div class="line">  <a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">Multiprocess::PreFork</a>();</div>
-<div class="line">  <span class="keywordflow">if</span> (testing::Test::HasFatalAssertions()) {</div>
+<div class="line">  <span class="keywordflow">if</span> (testing::Test::HasFatalFailure()) {</div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
 <div class="line"></div>

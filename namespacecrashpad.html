@@ -106,6 +106,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html">CheckedMachAddressRange</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that a range, composed of a base and a size, does not overflow the pointer type of the process it describes a range in.  <a href="classcrashpad_1_1CheckedMachAddressRange.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedRange.html">CheckedRange</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that a range, composed of a base and size, does not overflow its data type.  <a href="classcrashpad_1_1CheckedRange.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,6 +123,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1InitializationStateDcheck.html">InitializationStateDcheck</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks whether data are initialized, triggering a DCHECK assertion on an invalid data access.  <a href="classcrashpad_1_1InitializationStateDcheck.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html">MachOImageSegmentReader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reader for LC_SEGMENT or LC_SEGMENT_64 load commands in Mach-O images mapped into another process.  <a href="classcrashpad_1_1MachOImageSegmentReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1MinidumpCrashpadInfo.html">MinidumpCrashpadInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional Crashpad-specific information carried within a minidump file.  <a href="structcrashpad_1_1MinidumpCrashpadInfo.html#details">More...</a><br /></td></tr>
@@ -281,6 +287,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7c3ab35e044bf1a3b3f48e8b457a5429">c16lcpy</a> (char16 *destination, const char16 *source, size_t length)</td></tr>
 <tr class="memdesc:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a <code>NUL</code>-terminated char16-based string to a fixed-size buffer.  <a href="#a7c3ab35e044bf1a3b3f48e8b457a5429">More...</a><br /></td></tr>
 <tr class="separator:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8605dea4710c2630ccdd21439e05999"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac8605dea4710c2630ccdd21439e05999">strnlen</a> (const char *string, size_t max_length)</td></tr>
+<tr class="memdesc:ac8605dea4710c2630ccdd21439e05999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a string, not to exceed a maximum.  <a href="#ac8605dea4710c2630ccdd21439e05999">More...</a><br /></td></tr>
+<tr class="separator:ac8605dea4710c2630ccdd21439e05999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003f563ef0fe26081b4520012e0c1ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a003f563ef0fe26081b4520012e0c1ef8">CloseMultipleNowOrOnExec</a> (int fd, int preserve_fd)</td></tr>
+<tr class="memdesc:a003f563ef0fe26081b4520012e0c1ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close multiple file descriptors or mark them close-on-exec.  <a href="#a003f563ef0fe26081b4520012e0c1ef8">More...</a><br /></td></tr>
+<tr class="separator:a003f563ef0fe26081b4520012e0c1ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main namespace. </p>
@@ -644,6 +656,43 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a003f563ef0fe26081b4520012e0c1ef8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CloseMultipleNowOrOnExec </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>preserve_fd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close multiple file descriptors or mark them close-on-exec. </p>
+<p>This is similar to the BSD/Solaris-style <code>closefrom()</code> routine, which closes all open file descriptors equal to or higher than its <em>fd</em> argument. This function must not be called while other threads are active. It is intended to be used in a child process created by <code>fork()</code>, prior to calling an <code>exec()</code>-family function. This guarantees that a (possibly untrustworthy) child process does not inherit file descriptors that it has no need for.</p>
+<p>Unlike the BSD function, this function may not close file descriptors immediately, but may instead mark them as close-on-exec. The actual behavior chosen is specific to the operating system. On Mac OS X, file descriptors are marked close-on-exec instead of being closed outright in order to avoid raising <code>EXC_GUARD</code> exceptions for guarded file descriptors that are protected against <code>close()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>The lowest file descriptor to close or set as close-on-exec. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">preserve_fd</td><td>A file descriptor to preserve and not close (or set as close-on-exec), even if it is open and its value is greater than <em>fd</em>. To not preserve any file descriptor, pass <code>-1</code> for this parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a6e1b1c536af301cd418dad62348b1d29"></a>
 <div class="memitem">
 <div class="memproto">
@@ -990,6 +1039,51 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was submitted successfully, otherwise <code>false</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobSubmit()</code> does not exist prior to Mac OS X 10.6, and behaves flakily on Mac OS X 10.10 DP5 14A314h in that it hangs 25% of the time (radar 17365104). </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac8605dea4710c2630ccdd21439e05999"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t crashpad::strnlen </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the length of a string, not to exceed a maximum. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string whose length is to be calculated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_length</td><td>The maximum length to return.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The length of <em>string</em>, determined as the index of the first <code>NUL</code> byte found, not exceeding <em>max_length</em>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because it was introduced in POSIX.1-2008, and not all systems’ standard libraries provide an implementation. </dd></dl>
 
 </div>
 </div>

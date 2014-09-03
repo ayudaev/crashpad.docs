@@ -107,6 +107,7 @@ Inheritance diagram for crashpad::test::Multiprocess:</div>
   <img src="classcrashpad_1_1test_1_1Multiprocess.png" usemap="#crashpad::test::Multiprocess_map" alt=""/>
   <map id="crashpad::test::Multiprocess_map" name="crashpad::test::Multiprocess_map">
 <area href="classcrashpad_1_1test_1_1MachMultiprocess.html" title="Manages a Mach-aware multiprocess test. " alt="crashpad::test::MachMultiprocess" shape="rect" coords="0,56,200,80"/>
+<area href="classcrashpad_1_1test_1_1MultiprocessExec.html" title="Manages an exec()-based multiprocess test. " alt="crashpad::test::MultiprocessExec" shape="rect" coords="210,56,410,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -187,7 +188,7 @@ Protected Member Functions</h2></td></tr>
 <p>Subclasses that solely implement a test should not need to override this method. Subclasses that do not implement tests but instead implement additional testing features on top of this class may override this method provided that they call the superclass’ implementation first as follows:</p>
 <div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">PreFork</a>()<span class="keyword"> override </span>{</div>
 <div class="line">  <a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">Multiprocess::PreFork</a>();</div>
-<div class="line">  <span class="keywordflow">if</span> (testing::Test::HasFatalAssertions()) {</div>
+<div class="line">  <span class="keywordflow">if</span> (testing::Test::HasFatalFailure()) {</div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
 <div class="line"></div>
@@ -195,7 +196,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line">}</div>
 </div><!-- fragment --><p>Subclass implementations may signal failure by raising their own fatal gtest assertions. </p>
 
-<p>Reimplemented in <a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#aac4af4a4c943686538069de230fe7abe">crashpad::test::MachMultiprocess</a>.</p>
+<p>Reimplemented in <a class="el" href="classcrashpad_1_1test_1_1MultiprocessExec.html#a4fbe35bfe7dd75624b417c435ae2208b">crashpad::test::MultiprocessExec</a>, and <a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#aac4af4a4c943686538069de230fe7abe">crashpad::test::MachMultiprocess</a>.</p>
 
 </div>
 </div>

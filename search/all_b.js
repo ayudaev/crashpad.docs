@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['name',['Name',['../classcrashpad_1_1MachOImageSegmentReader.html#a91a34630f9a16d273ff4b1db1da5ceb6',1,'crashpad::MachOImageSegmentReader']]],
   ['next',['Next',['../classcrashpad_1_1TSimpleStringDictionary_1_1Iterator.html#afbc84491b65539ff4d250f9d7122a4c4',1,'crashpad::TSimpleStringDictionary::Iterator']]],
+  ['nsects',['nsects',['../classcrashpad_1_1MachOImageSegmentReader.html#af1c309fdd3cfbedb32535f6e75e954f5',1,'crashpad::MachOImageSegmentReader']]],
   ['num_5fentries',['num_entries',['../classcrashpad_1_1TSimpleStringDictionary.html#a7b3e25235f37f2ea7d0d05e37da6df13',1,'crashpad::TSimpleStringDictionary']]],
   ['numberofmemoryranges',['NumberOfMemoryRanges',['../structMINIDUMP__MEMORY__LIST.html#a10c9a4bb206872c102aaffac05a4d924',1,'MINIDUMP_MEMORY_LIST']]],
   ['numberofmodules',['NumberOfModules',['../structMINIDUMP__MODULE__LIST.html#a01eb8324809082c67f7374ca6e977c74',1,'MINIDUMP_MODULE_LIST']]],

@@ -4,6 +4,7 @@ var searchData=
   ['macherrormessage',['MachErrorMessage',['../namespacecrashpad_1_1test.html#a49a7a2461cf4e1f674eac147c19d9483',1,'crashpad::test']]],
   ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
   ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],
+  ['machoimagesegmentreader',['MachOImageSegmentReader',['../classcrashpad_1_1MachOImageSegmentReader.html',1,'crashpad']]],
   ['macmodelandboard',['MacModelAndBoard',['../namespacecrashpad.html#a71c79500b827d06b190e30b7cc016c35',1,'crashpad']]],
   ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
   ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],
@@ -85,5 +86,6 @@ var searchData=
   ['modulenamerva',['ModuleNameRva',['../structMINIDUMP__MODULE.html#a8aa1ae48a9a32640573747cba5a00274',1,'MINIDUMP_MODULE']]],
   ['modules',['Modules',['../structMINIDUMP__MODULE__LIST.html#aff6c222b00169e3135815e7c11e876c2',1,'MINIDUMP_MODULE_LIST::Modules()'],['../classcrashpad_1_1ProcessReader.html#ad9a75efe4d3d6419f3875960ea0746e7',1,'crashpad::ProcessReader::Modules()']]],
   ['multiprocess',['Multiprocess',['../classcrashpad_1_1test_1_1Multiprocess.html',1,'crashpad::test']]],
+  ['multiprocessexec',['MultiprocessExec',['../classcrashpad_1_1test_1_1MultiprocessExec.html',1,'crashpad::test']]],
   ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]]
 ];

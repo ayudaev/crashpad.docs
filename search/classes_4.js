@@ -2,6 +2,7 @@ var searchData=
 [
   ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
   ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],
+  ['machoimagesegmentreader',['MachOImageSegmentReader',['../classcrashpad_1_1MachOImageSegmentReader.html',1,'crashpad']]],
   ['minidump_5fdirectory',['MINIDUMP_DIRECTORY',['../structMINIDUMP__DIRECTORY.html',1,'']]],
   ['minidump_5fexception',['MINIDUMP_EXCEPTION',['../structMINIDUMP__EXCEPTION.html',1,'']]],
   ['minidump_5fexception_5fstream',['MINIDUMP_EXCEPTION_STREAM',['../structMINIDUMP__EXCEPTION__STREAM.html',1,'']]],
@@ -48,5 +49,6 @@ var searchData=
   ['minidumpwritable',['MinidumpWritable',['../classcrashpad_1_1internal_1_1MinidumpWritable.html',1,'crashpad::internal']]],
   ['minidumpwriterutil',['MinidumpWriterUtil',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html',1,'crashpad::internal']]],
   ['multiprocess',['Multiprocess',['../classcrashpad_1_1test_1_1Multiprocess.html',1,'crashpad::test']]],
+  ['multiprocessexec',['MultiprocessExec',['../classcrashpad_1_1test_1_1MultiprocessExec.html',1,'crashpad::test']]],
   ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]]
 ];
