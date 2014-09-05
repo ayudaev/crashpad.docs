@@ -9,5 +9,5 @@ var searchData=
   ['memoryrangesize',['MemoryRangeSize',['../classcrashpad_1_1MinidumpMemoryWriter.html#a5747ad90d9e9f4d6b2bc44231e677ea5',1,'crashpad::MinidumpMemoryWriter']]],
   ['minidumpmemorydescriptor',['MinidumpMemoryDescriptor',['../classcrashpad_1_1MinidumpMemoryWriter.html#aed2c11b4e81395533d93eb85a4563e18',1,'crashpad::MinidumpMemoryWriter']]],
   ['minidumpmodule',['MinidumpModule',['../classcrashpad_1_1MinidumpModuleWriter.html#a7c5c82d17dcb1f68353586df1876e1fe',1,'crashpad::MinidumpModuleWriter']]],
-  ['modules',['Modules',['../classcrashpad_1_1ProcessReader.html#ad9a75efe4d3d6419f3875960ea0746e7',1,'crashpad::ProcessReader']]]
+  ['modules',['Modules',['../classcrashpad_1_1ProcessReader.html#afcd874395af5ca91e28f9056f6c3fe5e',1,'crashpad::ProcessReader']]]
 ];
