@@ -2,6 +2,7 @@ var searchData=
 [
   ['parentprocessid',['ParentProcessID',['../classcrashpad_1_1ProcessReader.html#a3db9010774ceb72718ce24bdf210f8bd',1,'crashpad::ProcessReader']]],
   ['pdb_5fname',['pdb_name',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a12f15e85410d19a6fcbe1beedbb3156b',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::pdb_name()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a7d46faf35e79580fbd16c3d5822c9330',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::pdb_name()']]],
+  ['persistent',['Persistent',['../classcrashpad_1_1MachMessageServer.html#a737f51adaf8725883f1158ef2576aae8',1,'crashpad::MachMessageServer']]],
   ['phase',['Phase',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9',1,'crashpad::internal::MinidumpWritable']]],
   ['platformid',['PlatformId',['../structMINIDUMP__SYSTEM__INFO.html#a214e7bd61a89343a80a3c9a265fbbe96',1,'MINIDUMP_SYSTEM_INFO']]],
   ['pointercontainer',['PointerContainer',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],

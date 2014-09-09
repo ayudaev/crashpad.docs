@@ -2,6 +2,10 @@ var searchData=
 [
   ['mach_2eh',['mach.h',['../non__mac_2mach_2mach_8h.html',1,'']]],
   ['macherrormessage',['MachErrorMessage',['../namespacecrashpad_1_1test.html#a49a7a2461cf4e1f674eac147c19d9483',1,'crashpad::test']]],
+  ['machmessageserver',['MachMessageServer',['../classcrashpad_1_1MachMessageServer.html',1,'crashpad']]],
+  ['machmessageserverfunction',['MachMessageServerFunction',['../classcrashpad_1_1MachMessageServer_1_1Interface.html#abb38c2c9d59430d7cd73aba458b911bc',1,'crashpad::MachMessageServer::Interface']]],
+  ['machmessageserverreplysize',['MachMessageServerReplySize',['../classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5',1,'crashpad::MachMessageServer::Interface']]],
+  ['machmessageserverrequestsize',['MachMessageServerRequestSize',['../classcrashpad_1_1MachMessageServer_1_1Interface.html#a319dd9279e87b4407cee3c8feca405ab',1,'crashpad::MachMessageServer::Interface']]],
   ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
   ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],
   ['machoimagereader',['MachOImageReader',['../classcrashpad_1_1MachOImageReader.html',1,'crashpad']]],

@@ -11,5 +11,5 @@ var searchData=
   ['remoteport',['RemotePort',['../classcrashpad_1_1test_1_1MachMultiprocess.html#a79e05cbef2959dcdc16d984ce7f8e9c8',1,'crashpad::test::MachMultiprocess']]],
   ['removekey',['RemoveKey',['../classcrashpad_1_1TSimpleStringDictionary.html#ad50991fd8714c8bef7820482c7729efb',1,'crashpad::TSimpleStringDictionary']]],
   ['reset',['Reset',['../classcrashpad_1_1StringFileWriter.html#a52846d4b864ef90d65ff24bb1a1cfecf',1,'crashpad::StringFileWriter']]],
-  ['run',['Run',['../classcrashpad_1_1test_1_1Multiprocess.html#a801aa7a78b2254c31c3ef7e0b24208e3',1,'crashpad::test::Multiprocess']]]
+  ['run',['Run',['../classcrashpad_1_1MachMessageServer.html#aca8309cb5b4722d9f55bee54e0a1997d',1,'crashpad::MachMessageServer::Run()'],['../classcrashpad_1_1test_1_1Multiprocess.html#a801aa7a78b2254c31c3ef7e0b24208e3',1,'crashpad::test::Multiprocess::Run()']]]
 ];

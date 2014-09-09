@@ -3,6 +3,7 @@ var searchData=
   ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html',1,'crashpad']]],
   ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html#ad5aa845bdd6f92a6bf4bddd0ba39e22b',1,'crashpad::TaskMemory']]],
   ['teb',['Teb',['../structMINIDUMP__THREAD.html#a78e39b500ecbe680092406abd6aee3f3',1,'MINIDUMP_THREAD']]],
+  ['terminationreason',['TerminationReason',['../classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf',1,'crashpad::test::Multiprocess']]],
   ['thread',['Thread',['../structcrashpad_1_1ProcessReader_1_1Thread.html',1,'crashpad::ProcessReader']]],
   ['threadcontext',['ThreadContext',['../structMINIDUMP__THREAD.html#a4bea75c1a353e346689b97aeaea22184',1,'MINIDUMP_THREAD::ThreadContext()'],['../structMINIDUMP__EXCEPTION__STREAM.html#a5a49137fc0a19e8096504e16e954f351',1,'MINIDUMP_EXCEPTION_STREAM::ThreadContext()']]],
   ['threadid',['ThreadId',['../structMINIDUMP__THREAD.html#a1d2508187af6c3ec09e5836badb56fd2',1,'MINIDUMP_THREAD::ThreadId()'],['../structMINIDUMP__EXCEPTION__STREAM.html#a086c9170bbe85b667b65f90fca98bf95',1,'MINIDUMP_EXCEPTION_STREAM::ThreadId()']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['kblocking',['kBlocking',['../classcrashpad_1_1MachMessageServer.html#a6caf7e93fed4a790b6b453383de9e025a50d24ed4b26cc8ff92e33a271248c555',1,'crashpad::MachMessageServer']]],
   ['kminidumpcpuarchitectureamd64',['kMinidumpCPUArchitectureAMD64',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a74c0fcddcbf1502d7dedc7cd965550df',1,'crashpad']]],
   ['kminidumpcpuarchitecturearm',['kMinidumpCPUArchitectureARM',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1a8ab29cb3332c3c583c4d60b2c308361c',1,'crashpad']]],
   ['kminidumpcpuarchitecturearm64',['kMinidumpCPUArchitectureARM64',['../namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1aa58a9c127a74412bdcbce29f0ac6d9f5',1,'crashpad']]],
@@ -27,6 +28,9 @@ var searchData=
   ['kminidumpstreamtypemodulelist',['kMinidumpStreamTypeModuleList',['../namespacecrashpad.html#a88363a45a4af1a16f542a8c1ff522ab9a226cb7d075ec01c79f233d098e9a9e3f',1,'crashpad']]],
   ['kminidumpstreamtypesysteminfo',['kMinidumpStreamTypeSystemInfo',['../namespacecrashpad.html#a88363a45a4af1a16f542a8c1ff522ab9a57ae6ef428bb48fdc877d92bc8046bd3',1,'crashpad']]],
   ['kminidumpstreamtypethreadlist',['kMinidumpStreamTypeThreadList',['../namespacecrashpad.html#a88363a45a4af1a16f542a8c1ff522ab9af87c478a3f2ce198936d817e98d87531',1,'crashpad']]],
+  ['knonblocking',['kNonblocking',['../classcrashpad_1_1MachMessageServer.html#a6caf7e93fed4a790b6b453383de9e025aaf7da8b294a4bd4d32310bac8d35dc1a',1,'crashpad::MachMessageServer']]],
+  ['koneshot',['kOneShot',['../classcrashpad_1_1MachMessageServer.html#a737f51adaf8725883f1158ef2576aae8aa2c8263ef8e0afb54cc5d01c6ac3a735',1,'crashpad::MachMessageServer']]],
+  ['kpersistent',['kPersistent',['../classcrashpad_1_1MachMessageServer.html#a737f51adaf8725883f1158ef2576aae8a9f7aa4de8d84bd299a296d7b289c6047',1,'crashpad::MachMessageServer']]],
   ['kphaseearly',['kPhaseEarly',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9ac246ac0846defa468dde05d12974ac3e',1,'crashpad::internal::MinidumpWritable']]],
   ['kphaselate',['kPhaseLate',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9a24c2158c529d40ce6badca6e34b26853',1,'crashpad::internal::MinidumpWritable']]],
   ['kstatedestroyed',['kStateDestroyed',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88a154e684eaf09255b9667c2f5a16862f1',1,'crashpad::InitializationState']]],
@@ -36,5 +40,7 @@ var searchData=
   ['kstateuninitialized',['kStateUninitialized',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88ab86672ada53041ffcecfb379473bf353',1,'crashpad::InitializationState']]],
   ['kstatevalid',['kStateValid',['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88af8963ed6297bea7168911fe4ed87e163',1,'crashpad::InitializationState']]],
   ['kstatewritable',['kStateWritable',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a87483823ca30a8257b2a5fbd21805bcd',1,'crashpad::internal::MinidumpWritable']]],
-  ['kstatewritten',['kStateWritten',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7af0d794ed29c320fcf35c71f40cc6a510',1,'crashpad::internal::MinidumpWritable']]]
+  ['kstatewritten',['kStateWritten',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7af0d794ed29c320fcf35c71f40cc6a510',1,'crashpad::internal::MinidumpWritable']]],
+  ['kterminationnormal',['kTerminationNormal',['../classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bfa9ac04c5400b6051e164ef9bcbb8c111a',1,'crashpad::test::Multiprocess']]],
+  ['kterminationsignal',['kTerminationSignal',['../classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bfa4a97a5b85c823c3404d160ca615f491c',1,'crashpad::test::Multiprocess']]]
 ];

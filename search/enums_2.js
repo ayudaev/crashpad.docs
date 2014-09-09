@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['state',['State',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7',1,'crashpad::internal::MinidumpWritable::State()'],['../classcrashpad_1_1InitializationState.html#a044ea6d40e23683d6d1bb5ce30dafd88',1,'crashpad::InitializationState::State()']]]
+  ['persistent',['Persistent',['../classcrashpad_1_1MachMessageServer.html#a737f51adaf8725883f1158ef2576aae8',1,'crashpad::MachMessageServer']]],
+  ['phase',['Phase',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9',1,'crashpad::internal::MinidumpWritable']]]
 ];

@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classcrashpad_1_1test_1_1Multiprocess-members.html">List of all members</a>  </div>
@@ -111,11 +112,20 @@ Inheritance diagram for crashpad::test::Multiprocess:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:adedaaa5fbbb57de1ae5af8ef7c84b4bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf">TerminationReason</a> : bool </td></tr>
+<tr class="memdesc:adedaaa5fbbb57de1ae5af8ef7c84b4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The termination type for a child process.  <a href="classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf">More...</a><br /></td></tr>
+<tr class="separator:adedaaa5fbbb57de1ae5af8ef7c84b4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a801aa7a78b2254c31c3ef7e0b24208e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a801aa7a78b2254c31c3ef7e0b24208e3">Run</a> ()</td></tr>
 <tr class="memdesc:a801aa7a78b2254c31c3ef7e0b24208e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the test.  <a href="#a801aa7a78b2254c31c3ef7e0b24208e3">More...</a><br /></td></tr>
 <tr class="separator:a801aa7a78b2254c31c3ef7e0b24208e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619dd6b1fd2a909df6f3d6b2e1c75ad2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a619dd6b1fd2a909df6f3d6b2e1c75ad2">SetExpectedChildTermination</a> (<a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf">TerminationReason</a> reason, int code)</td></tr>
+<tr class="memdesc:a619dd6b1fd2a909df6f3d6b2e1c75ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the expected termination reason and code.  <a href="#a619dd6b1fd2a909df6f3d6b2e1c75ad2">More...</a><br /></td></tr>
+<tr class="separator:a619dd6b1fd2a909df6f3d6b2e1c75ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -136,7 +146,32 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>Manages a multiprocess test. </p>
 <p>These tests are <code>fork()</code>-based. The parent and child processes are able to communicate via a pair of POSIX pipes.</p>
 <p>Subclasses are expected to implement the parent and child by overriding the appropriate methods. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="adedaaa5fbbb57de1ae5af8ef7c84b4bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf">crashpad::test::Multiprocess::TerminationReason</a> : bool</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The termination type for a child process. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="adedaaa5fbbb57de1ae5af8ef7c84b4bfa9ac04c5400b6051e164ef9bcbb8c111a"></a>kTerminationNormal&#160;</td><td class="fielddoc">
+<p>The child terminated normally. </p>
+<p>A normal return happens when a test returns from RunChild(), or for tests that <code>exec()</code>, returns from <code>main()</code>. This also happens for tests that call <code>exit()</code> or <code>_exit()</code>. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="adedaaa5fbbb57de1ae5af8ef7c84b4bfa4a97a5b85c823c3404d160ca615f491c"></a>kTerminationSignal&#160;</td><td class="fielddoc">
+<p>The child terminated by signal. </p>
+<p>Signal termination happens as a result of a crash, a call to <code>abort()</code>, assertion failure (including gtest assertions), etc. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3fde053ad00979ca2f03810afd45b7ec"></a>
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +276,43 @@ Protected Member Functions</h2></td></tr>
 
 <p>Runs the test. </p>
 <p>This method establishes the proper testing environment by calling <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca" title="Establishes the proper testing environment prior to forking. ">PreFork()</a>, then calls <code>fork()</code>. In the parent process, it calls RunParent(), and in the child process, it calls RunChild().</p>
-<p>This method uses gtest assertions to validate the testing environment. If the testing environment cannot be set up properly, it is possible that MultiprocessParent() or MultiprocessChild() will not be called. In the parent process, this method also waits for the child process to exit after MultiprocessParent() returns, and verifies that it exited cleanly without raising any gtest assertions. </p>
+<p>This method uses gtest assertions to validate the testing environment. If the testing environment cannot be set up properly, it is possible that MultiprocessParent() or MultiprocessChild() will not be called. In the parent process, this method also waits for the child process to exit after MultiprocessParent() returns, and verifies that it exited in accordance with the expectations set by <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a619dd6b1fd2a909df6f3d6b2e1c75ad2" title="Sets the expected termination reason and code. ">SetExpectedChildTermination()</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a619dd6b1fd2a909df6f3d6b2e1c75ad2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::Multiprocess::SetExpectedChildTermination </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf">TerminationReason</a>&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the expected termination reason and code. </p>
+<p>The default expected termination reasaon is TerminationReason::kTerminationNormal, and the default expected termination code is <code>EXIT_SUCCESS</code> (<code>0</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reason</td><td>Whether to expect the child to terminate normally or as a result of a signal. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>If <em>reason</em> is TerminationReason::kTerminationNormal, this is the expected exit status of the child. If <em>reason</em> is TerminationReason::kTerminationSignal, this is the signal that is expected to kill the child. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
