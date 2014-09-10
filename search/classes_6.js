@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['pointercontainer',['PointerContainer',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],
-  ['pointercontainer_3c_20std_3a_3avector_3c_20crashpad_3a_3amachoimagesegmentreader_20_2a_20_3e_20_3e',['PointerContainer&lt; std::vector&lt; crashpad::MachOImageSegmentReader * &gt; &gt;',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],
-  ['pointercontainer_3c_20std_3a_3avector_3c_20t_20_2a_20_3e_20_3e',['PointerContainer&lt; std::vector&lt; T * &gt; &gt;',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],
-  ['pointervector',['PointerVector',['../classcrashpad_1_1PointerVector.html',1,'crashpad']]],
-  ['pointervector_3c_20crashpad_3a_3amachoimagesegmentreader_20_3e',['PointerVector&lt; crashpad::MachOImageSegmentReader &gt;',['../classcrashpad_1_1PointerVector.html',1,'crashpad']]],
-  ['processreader',['ProcessReader',['../classcrashpad_1_1ProcessReader.html',1,'crashpad']]]
+  ['scopedforbidreturn',['ScopedForbidReturn',['../classcrashpad_1_1ScopedForbidReturn.html',1,'crashpad']]],
+  ['simplifiedexcserver',['SimplifiedExcServer',['../classcrashpad_1_1internal_1_1SimplifiedExcServer.html',1,'crashpad::internal']]],
+  ['simplifiedmachexcserver',['SimplifiedMachExcServer',['../classcrashpad_1_1internal_1_1SimplifiedMachExcServer.html',1,'crashpad::internal']]],
+  ['stringfilewriter',['StringFileWriter',['../classcrashpad_1_1StringFileWriter.html',1,'crashpad']]],
+  ['symbolinformation',['SymbolInformation',['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html',1,'crashpad::MachOImageSymbolTableReader']]],
+  ['systemtime',['SYSTEMTIME',['../structSYSTEMTIME.html',1,'']]]
 ];

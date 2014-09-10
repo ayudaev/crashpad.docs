@@ -99,12 +99,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classcrashpad_1_1MachMessageServer_1_1Interface.html#details">More...</a></p>
 
 <p><code>#include &quot;util/mach/mach_message_server.h&quot;</code></p>
+<div class="dynheader">
+Inheritance diagram for crashpad::MachMessageServer::Interface:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classcrashpad_1_1MachMessageServer_1_1Interface.png" usemap="#crashpad::MachMessageServer::Interface_map" alt=""/>
+  <map id="crashpad::MachMessageServer::Interface_map" name="crashpad::MachMessageServer::Interface_map">
+<area href="classcrashpad_1_1internal_1_1ExcServer.html" title="A server interface for the exc Mach subsystem. " alt="crashpad::internal::ExcServer" shape="rect" coords="0,56,265,80"/>
+<area href="classcrashpad_1_1internal_1_1MachExcServer.html" title="A server interface for the mach_exc Mach subsystem. " alt="crashpad::internal::MachExcServer" shape="rect" coords="275,56,540,80"/>
+<area href="classcrashpad_1_1UniversalMachExcServer.html" title="A server interface for the exc and mach_exc Mach subsystems, unified to handle exceptions delivered t..." alt="crashpad::UniversalMachExcServer" shape="rect" coords="550,56,815,80"/>
+<area href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html" title="A server interface for the exc Mach subsystem, simplified to have only a single interface method need..." alt="crashpad::internal::SimplifiedExcServer" shape="rect" coords="0,112,265,136"/>
+<area href="classcrashpad_1_1internal_1_1SimplifiedMachExcServer.html" title="A server interface for the mach_exc Mach subsystem, simplified to have only a single interface method..." alt="crashpad::internal::SimplifiedMachExcServer" shape="rect" coords="275,112,540,136"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb38c2c9d59430d7cd73aba458b911bc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#abb38c2c9d59430d7cd73aba458b911bc">MachMessageServerFunction</a> (mach_msg_header_t *in, mach_msg_header_t *out, bool *destroy_complex_request)=0</td></tr>
-<tr class="memdesc:abb38c2c9d59430d7cd73aba458b911bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#abb38c2c9d59430d7cd73aba458b911bc">More...</a><br /></td></tr>
-<tr class="separator:abb38c2c9d59430d7cd73aba458b911bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1632cba188c113600abc94d1b45efe6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6">MachMessageServerFunction</a> (const mach_msg_header_t *in, mach_msg_header_t *out, bool *destroy_complex_request)=0</td></tr>
+<tr class="memdesc:ad1632cba188c113600abc94d1b45efe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#ad1632cba188c113600abc94d1b45efe6">More...</a><br /></td></tr>
+<tr class="separator:ad1632cba188c113600abc94d1b45efe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319dd9279e87b4407cee3c8feca405ab"><td class="memItemLeft" align="right" valign="top">virtual mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#a319dd9279e87b4407cee3c8feca405ab">MachMessageServerRequestSize</a> ()=0</td></tr>
 <tr class="separator:a319dd9279e87b4407cee3c8feca405ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4e6169aeb91074d573e77b9a47266c5"><td class="memItemLeft" align="right" valign="top">virtual mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5">MachMessageServerReplySize</a> ()=0</td></tr>
@@ -113,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A Mach RPC callback interface, called by <a class="el" href="classcrashpad_1_1MachMessageServer.html#aca8309cb5b4722d9f55bee54e0a1997d" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">Run()</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abb38c2c9d59430d7cd73aba458b911bc"></a>
+<a class="anchor" id="ad1632cba188c113600abc94d1b45efe6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -123,7 +136,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool crashpad::MachMessageServer::Interface::MachMessageServerFunction </td>
           <td>(</td>
-          <td class="paramtype">mach_msg_header_t *&#160;</td>
+          <td class="paramtype">const mach_msg_header_t *&#160;</td>
           <td class="paramname"><em>in</em>, </td>
         </tr>
         <tr>
@@ -155,13 +168,15 @@ Public Member Functions</h2></td></tr>
 <p>This method is a stand-in for a MIG-generated Mach RPC server “demux” function such as <code>exc_server()</code> and <code>mach_exc_server()</code>. Implementations may call such a function directly. This method is expected to behave exactly as these functions behave.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>The request message, received as a Mach message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>The request message, received as a Mach message. Note that this interface uses a <code>const</code> parameter for this purpose, whereas MIG-generated “demux” functions do not. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>The reply message. The caller allocates storage, and the callee is expected to populate the reply message appropriately. After returning, the caller will send this reply as a Mach message via the message’s reply port. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">destroy_complex_request</td><td><code>true</code> if a complex request message is to be destroyed even when handled successfully, <code>false</code> otherwise. The traditional behavior is <code>false</code>. In this case, the caller only destroys the request message in <em>in</em> when the reply message in <em>out</em> is not complex and when it indicates a return code other than <code>KERN_SUCCESS</code> or <code>MIG_NO_REPLY</code>. The assumption is that the rights or out-of-line data carried in a complex message may be retained by the server in this situation, and that it is the responsibility of the server to release these resources as needed. However, in many cases, these resources are not needed beyond the duration of a request-reply transaction, and in such cases, it is less error-prone to always have the caller, <a class="el" href="classcrashpad_1_1MachMessageServer.html#aca8309cb5b4722d9f55bee54e0a1997d" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">MachMessageServer::Run()</a>, destroy complex request messages. To choose this behavior, this parameter should be set to <code>true</code>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success and <code>false</code> on failure, although the caller ignores the return value. However, the return code to be included in the reply message should be set as <code>mig_reply_error_t::RetCode</code>. The non-<code>void</code> return value is used for increased compatibility with MIG-generated functions. </dd></dl>
+
+<p>Implemented in <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a113ce518d5412e2cf352eb7f857fa9fb">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a98b20535513ade68101a8ec8d455b766">crashpad::internal::MachExcServer</a>, and <a class="el" href="classcrashpad_1_1internal_1_1ExcServer.html#a6046b7a36f591ea73777a808ba1ef460">crashpad::internal::ExcServer</a>.</p>
 
 </div>
 </div>
@@ -185,7 +200,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#abb38c2c9d59430d7cd73aba458b911bc" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
+
+<p>Implemented in <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a1eeb93504e604f53fc5c9cf1c66d838c">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a9f4a8ecb78f249016dd07582ca4c0ea0">crashpad::internal::MachExcServer</a>, and <a class="el" href="classcrashpad_1_1internal_1_1ExcServer.html#a5c80a731b2a9576dc872d5edf18b0544">crashpad::internal::ExcServer</a>.</p>
 
 </div>
 </div>
@@ -209,7 +226,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The expected or maximum size, in bytes, of a request message to be received as the <em>in</em> parameter of <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#abb38c2c9d59430d7cd73aba458b911bc" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The expected or maximum size, in bytes, of a request message to be received as the <em>in</em> parameter of <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. </dd></dl>
+
+<p>Implemented in <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ae700d18241f2eb3c7d755ad8c909ecec">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a651d63a9e52824b6651a54599821e5f9">crashpad::internal::MachExcServer</a>, and <a class="el" href="classcrashpad_1_1internal_1_1ExcServer.html#a5874afbd3cf6dcca0eb0f65733b7ef19">crashpad::internal::ExcServer</a>.</p>
 
 </div>
 </div>

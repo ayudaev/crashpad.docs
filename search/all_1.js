@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['addextramemory',['AddExtraMemory',['../classcrashpad_1_1MinidumpMemoryListWriter.html#a13e55ac76770857b35f5b7f90eba33f8',1,'crashpad::MinidumpMemoryListWriter']]],
-  ['addmemory',['AddMemory',['../classcrashpad_1_1MinidumpMemoryListWriter.html#a37622d500995e3c09c5b83fe8150ba16',1,'crashpad::MinidumpMemoryListWriter']]],
-  ['addmodule',['AddModule',['../classcrashpad_1_1MinidumpModuleListWriter.html#ae80c4f73234079da1a65fa5978641ad6',1,'crashpad::MinidumpModuleListWriter']]],
-  ['address',['address',['../structcrashpad_1_1ProcessReader_1_1Module.html#ade2f225a961ac37e1e94942057606e71',1,'crashpad::ProcessReader::Module::address()'],['../classcrashpad_1_1MachOImageReader.html#addcef12944baa3bec948c770136feb68',1,'crashpad::MachOImageReader::Address()'],['../classcrashpad_1_1MachOImageSegmentReader.html#a3b56a8467e8968807b4ce54ae6a5789c',1,'crashpad::MachOImageSegmentReader::Address()']]],
-  ['addstream',['AddStream',['../classcrashpad_1_1MinidumpFileWriter.html#a6ccaa008cd4ecf1a90acc076edf9ba88',1,'crashpad::MinidumpFileWriter']]],
-  ['age',['age',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a9fa0b97abd4d7e0cba95845831777eec',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::age()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#aa93636fa8256e36d18832843e191e358',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::age()']]],
-  ['alignment',['Alignment',['../classcrashpad_1_1MinidumpMemoryWriter.html#ab77268e3451a9927716f42541e53c4d1',1,'crashpad::MinidumpMemoryWriter::Alignment()'],['../classcrashpad_1_1internal_1_1MinidumpWritable.html#af4e92c46984eb73dbc1315ff5f4c7a9a',1,'crashpad::internal::MinidumpWritable::Alignment()']]],
-  ['amdextendedcpufeatures',['AMDExtendedCpuFeatures',['../unionCPU__INFORMATION.html#a7e6d74246b12843a3c7ca78e5dc67a3a',1,'CPU_INFORMATION']]],
-  ['arm',['Arm',['../classcrashpad_1_1ScopedForbidReturn.html#aa2e81b3c70f574d8be67d50cf5fc2951',1,'crashpad::ScopedForbidReturn']]],
-  ['assignifinrange',['AssignIfInRange',['../namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430',1,'crashpad']]],
-  ['assigntimet',['AssignTimeT',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#adf79feb4d657af5606d77a040b80c0a3',1,'crashpad::internal::MinidumpWriterUtil']]],
-  ['assignutf8toutf16',['AssignUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a6f54dde78a0822cdf26efb59299ec8bd',1,'crashpad::internal::MinidumpWriterUtil']]]
+  ['base',['base',['../classcrashpad_1_1CheckedRange.html#a7a1eed88055c8780fce3acaf9699bb76',1,'crashpad::CheckedRange::base()'],['../classcrashpad_1_1CheckedMachAddressRange.html#a134ff55c2d60c0dc0c954007c5bdb8ea',1,'crashpad::CheckedMachAddressRange::Base()']]],
+  ['baseofimage',['BaseOfImage',['../structMINIDUMP__MODULE.html#af4b4a246ebfa54e57e4c953fb0c3dd31',1,'MINIDUMP_MODULE']]],
+  ['bias',['Bias',['../structTIME__ZONE__INFORMATION.html#acf8f3a23cd1cabc4cdcf3c5c4b527b71',1,'TIME_ZONE_INFORMATION']]],
+  ['bootstrapcheckin',['BootstrapCheckIn',['../namespacecrashpad.html#ad34c73bd6ad5d4c9aff2d68b7f26b4c3',1,'crashpad']]],
+  ['bootstraperrormessage',['BootstrapErrorMessage',['../namespacecrashpad_1_1test.html#a8db2fa97998b00a8ee57398fa8c8b14e',1,'crashpad::test']]],
+  ['buffer',['Buffer',['../structMINIDUMP__STRING.html#aed6a7223f530ed7589cf743d96f6e289',1,'MINIDUMP_STRING::Buffer()'],['../structcrashpad_1_1MinidumpUTF8String.html#a61f284e63d9bc6cf975acfb035efda12',1,'crashpad::MinidumpUTF8String::Buffer()']]],
+  ['buildnumber',['BuildNumber',['../structMINIDUMP__SYSTEM__INFO.html#a2d417f17d4a3c2d5616268288bf47521',1,'MINIDUMP_SYSTEM_INFO']]],
+  ['buildstring',['BuildString',['../structMINIDUMP__MISC__INFO__4.html#a8f19bd15deeb3431560b97c6cdc14a4f',1,'MINIDUMP_MISC_INFO_4']]]
 ];

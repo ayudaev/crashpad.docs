@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['end',['end',['../classcrashpad_1_1CheckedRange.html#a8a544c6a002bc2e0ba12b9d12f716a77',1,'crashpad::CheckedRange::end()'],['../classcrashpad_1_1CheckedMachAddressRange.html#a7d38a0f383f379414d8d86f4d9c7e705',1,'crashpad::CheckedMachAddressRange::End()']]],
-  ['entries',['entries',['../structcrashpad_1_1MinidumpSimpleStringDictionary.html#a09a4e7a0fb45b0b74cf0aacfb6445ba9',1,'crashpad::MinidumpSimpleStringDictionary']]],
-  ['entry',['Entry',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html',1,'crashpad::TSimpleStringDictionary']]],
-  ['errnomessage',['ErrnoMessage',['../namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6',1,'crashpad::test::ErrnoMessage(int err, const std::string &amp;base=std::string())'],['../namespacecrashpad_1_1test.html#a8d8e66fbc47a4f22a03710797f226238',1,'crashpad::test::ErrnoMessage(const std::string &amp;base=std::string())']]],
-  ['exception_5fmaximum_5fparameters',['EXCEPTION_MAXIMUM_PARAMETERS',['../winnt_8h.html#a3cd1c98b6babaa34a71c020782244ae2',1,'winnt.h']]],
-  ['exceptionaddress',['ExceptionAddress',['../structMINIDUMP__EXCEPTION.html#a90415942a28bed1cf46a96866713423a',1,'MINIDUMP_EXCEPTION']]],
-  ['exceptioncode',['ExceptionCode',['../structMINIDUMP__EXCEPTION.html#ab6a3e2b22e571abef6c879eed52d292e',1,'MINIDUMP_EXCEPTION']]],
-  ['exceptionflags',['ExceptionFlags',['../structMINIDUMP__EXCEPTION.html#a790cc793a96f090e848160f8d7757ce9',1,'MINIDUMP_EXCEPTION']]],
-  ['exceptioninformation',['ExceptionInformation',['../structMINIDUMP__EXCEPTION.html#a5a8ba606d8065108a3053c7bb339822a',1,'MINIDUMP_EXCEPTION']]],
-  ['exceptionrecord',['ExceptionRecord',['../structMINIDUMP__EXCEPTION.html#acfa95816daebbd4603b2423013761c05',1,'MINIDUMP_EXCEPTION::ExceptionRecord()'],['../structMINIDUMP__EXCEPTION__STREAM.html#a64d52a1f80f7f0a6f48d615bd1105c35',1,'MINIDUMP_EXCEPTION_STREAM::ExceptionRecord()']]],
-  ['exceptionstream',['ExceptionStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08a5ddc831e2440dfcfd112cb19401bbd60',1,'dbghelp.h']]],
-  ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]]
+  ['featureinformation',['FeatureInformation',['../unionCPU__INFORMATION.html#a044a13c077ea0b3834dd33e4a48027cc',1,'CPU_INFORMATION']]],
+  ['fileoff',['fileoff',['../classcrashpad_1_1MachOImageSegmentReader.html#ac4a7d2fda6f9dec11ba50e7a68325539',1,'crashpad::MachOImageSegmentReader']]],
+  ['filetype',['FileType',['../classcrashpad_1_1MachOImageReader.html#ad736a3c7949921796231f8cf6f02f93b',1,'crashpad::MachOImageReader']]],
+  ['filewriter',['FileWriter',['../classcrashpad_1_1FileWriter.html',1,'crashpad']]],
+  ['filewriterinterface',['FileWriterInterface',['../classcrashpad_1_1FileWriterInterface.html',1,'crashpad']]],
+  ['flags',['Flags',['../structMINIDUMP__HEADER.html#a052f2280538826d030c4cb5154963e27',1,'MINIDUMP_HEADER']]],
+  ['flags1',['Flags1',['../structMINIDUMP__MISC__INFO.html#ac1c8ca04b2a85e2070e1b43b26d26e47',1,'MINIDUMP_MISC_INFO']]],
+  ['freeze',['Freeze',['../classcrashpad_1_1MinidumpFileWriter.html#a5592aa929693a02f7cb81797d07b1dd8',1,'crashpad::MinidumpFileWriter::Freeze()'],['../classcrashpad_1_1MinidumpMemoryWriter.html#a8997151abbd2f6c1b44b819fb00d0002',1,'crashpad::MinidumpMemoryWriter::Freeze()'],['../classcrashpad_1_1MinidumpMemoryListWriter.html#a0573a2ec6a0ab9acfdd86026f9aaad83',1,'crashpad::MinidumpMemoryListWriter::Freeze()'],['../classcrashpad_1_1MinidumpMiscInfoWriter.html#a2302dcdd274fb64d38bf0cd718501eca',1,'crashpad::MinidumpMiscInfoWriter::Freeze()'],['../classcrashpad_1_1MinidumpModuleMiscDebugRecordWriter.html#a03027e96a7b5d09687d37e9d7bd3baa5',1,'crashpad::MinidumpModuleMiscDebugRecordWriter::Freeze()'],['../classcrashpad_1_1MinidumpModuleWriter.html#a9d6b00cee197c404e4ce93edd02acea2',1,'crashpad::MinidumpModuleWriter::Freeze()'],['../classcrashpad_1_1MinidumpModuleListWriter.html#ac0cbc8ac8324870386764df79563ae9f',1,'crashpad::MinidumpModuleListWriter::Freeze()'],['../classcrashpad_1_1internal_1_1MinidumpStreamWriter.html#a6bace0c62b1f29aa710974a2bbcb3e1c',1,'crashpad::internal::MinidumpStreamWriter::Freeze()'],['../classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a561dc9ddd4e0a71845dbcdc12f47efe4',1,'crashpad::internal::MinidumpStringWriter::Freeze()'],['../classcrashpad_1_1MinidumpSystemInfoWriter.html#a76bad6c5eedf1c4c65b89c04e96bc376',1,'crashpad::MinidumpSystemInfoWriter::Freeze()'],['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a773db80946a99c6a3cc29c7d4dd77bd6',1,'crashpad::internal::MinidumpWritable::Freeze()']]]
 ];
