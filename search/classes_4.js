@@ -8,6 +8,7 @@ var searchData=
   ['machoimagesegmentreader',['MachOImageSegmentReader',['../classcrashpad_1_1MachOImageSegmentReader.html',1,'crashpad']]],
   ['machoimagesymboltablereader',['MachOImageSymbolTableReader',['../classcrashpad_1_1MachOImageSymbolTableReader.html',1,'crashpad']]],
   ['machoimagesymboltablereaderinitializer',['MachOImageSymbolTableReaderInitializer',['../classcrashpad_1_1internal_1_1MachOImageSymbolTableReaderInitializer.html',1,'crashpad::internal']]],
+  ['mappedmemory',['MappedMemory',['../classcrashpad_1_1TaskMemory_1_1MappedMemory.html',1,'crashpad::TaskMemory']]],
   ['minidump_5fdirectory',['MINIDUMP_DIRECTORY',['../structMINIDUMP__DIRECTORY.html',1,'']]],
   ['minidump_5fexception',['MINIDUMP_EXCEPTION',['../structMINIDUMP__EXCEPTION.html',1,'']]],
   ['minidump_5fexception_5fstream',['MINIDUMP_EXCEPTION_STREAM',['../structMINIDUMP__EXCEPTION__STREAM.html',1,'']]],
