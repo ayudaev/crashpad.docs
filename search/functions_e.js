@@ -29,6 +29,7 @@ var searchData=
   ['setcsdversion',['SetCSDVersion',['../classcrashpad_1_1MinidumpSystemInfoWriter.html#a03097311660ac7960af16a4101cb7157',1,'crashpad::MinidumpSystemInfoWriter']]],
   ['setdata',['SetData',['../classcrashpad_1_1MinidumpModuleMiscDebugRecordWriter.html#ad5ceb6362678bb440b2d9ba9d4720255',1,'crashpad::MinidumpModuleMiscDebugRecordWriter']]],
   ['setdatatype',['SetDataType',['../classcrashpad_1_1MinidumpModuleMiscDebugRecordWriter.html#acca50ff02f9c09a4273404c4cee8c2f5',1,'crashpad::MinidumpModuleMiscDebugRecordWriter']]],
+  ['setexceptionport',['SetExceptionPort',['../classcrashpad_1_1ExceptionPorts.html#af2d883189f7e826c076f626b04fa5e95',1,'crashpad::ExceptionPorts']]],
   ['setexpectedchildtermination',['SetExpectedChildTermination',['../classcrashpad_1_1test_1_1Multiprocess.html#a619dd6b1fd2a909df6f3d6b2e1c75ad2',1,'crashpad::test::Multiprocess']]],
   ['setfileflagsandmask',['SetFileFlagsAndMask',['../classcrashpad_1_1MinidumpModuleWriter.html#a32baef9a5859710a92f7f3aa794f688d',1,'crashpad::MinidumpModuleWriter']]],
   ['setfileos',['SetFileOS',['../classcrashpad_1_1MinidumpModuleWriter.html#a863528c6397a10bfe17bd0c43bc46539',1,'crashpad::MinidumpModuleWriter']]],

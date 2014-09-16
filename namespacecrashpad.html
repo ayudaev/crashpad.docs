@@ -113,6 +113,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedRange.html">CheckedRange</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that a range, composed of a base and size, does not overflow its data type.  <a href="classcrashpad_1_1CheckedRange.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ExceptionPorts.html">ExceptionPorts</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A better interface to <code>*_get_exception_ports()</code> and <code>*_set_exception_ports()</code>.  <a href="classcrashpad_1_1ExceptionPorts.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1FileWriter.html">FileWriter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A file writer implementation that wraps traditional POSIX file operations on files accessed through the filesystem.  <a href="classcrashpad_1_1FileWriter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,7 +135,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reader for Mach-O images mapped into another process.  <a href="classcrashpad_1_1MachOImageReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html">MachOImageSegmentReader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reader for LC_SEGMENT or LC_SEGMENT_64 load commands in Mach-O images mapped into another process.  <a href="classcrashpad_1_1MachOImageSegmentReader.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reader for <code>LC_SEGMENT</code> or <code>LC_SEGMENT_64</code> load commands in Mach-O images mapped into another process.  <a href="classcrashpad_1_1MachOImageSegmentReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageSymbolTableReader.html">MachOImageSymbolTableReader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reader for symbol tables in Mach-O images mapped into another process.  <a href="classcrashpad_1_1MachOImageSymbolTableReader.html#details">More...</a><br /></td></tr>
@@ -267,9 +270,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a480d7affe0cf4c704f154084fb33f289"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289">WriteFD</a> (int fd, const void *buffer, size_t size)</td></tr>
 <tr class="memdesc:a480d7affe0cf4c704f154084fb33f289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>write()</code>, retrying when interrupted or following a short write.  <a href="#a480d7affe0cf4c704f154084fb33f289">More...</a><br /></td></tr>
 <tr class="separator:a480d7affe0cf4c704f154084fb33f289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memItemLeft" align="right" valign="top">launch_data_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c">CFPropertyToLaunchData</a> (CFPropertyListRef property_cf)</td></tr>
-<tr class="memdesc:a616ed0784021ecbd2f0f14b7e75c068c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>.  <a href="#a616ed0784021ecbd2f0f14b7e75c068c">More...</a><br /></td></tr>
-<tr class="separator:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba">MacOSXMinorVersion</a> ()</td></tr>
 <tr class="memdesc:ab05052e02f3c3605fd7bae0f006d2cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of the running operating system.  <a href="#ab05052e02f3c3605fd7bae0f006d2cba">More...</a><br /></td></tr>
 <tr class="separator:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,12 +291,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a3bc3a94386dd27968d48619f42154463"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3bc3a94386dd27968d48619f42154463">ServiceManagementIsJobRunning</a> (const std::string &amp;label)</td></tr>
 <tr class="memdesc:a3bc3a94386dd27968d48619f42154463"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether a specified job is running in the user launchd domain.  <a href="#a3bc3a94386dd27968d48619f42154463">More...</a><br /></td></tr>
 <tr class="separator:a3bc3a94386dd27968d48619f42154463"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad34c73bd6ad5d4c9aff2d68b7f26b4c3">BootstrapCheckIn</a> (mach_port_t bp, const std::string &amp;service_name, mach_port_t *service_port)</td></tr>
-<tr class="memdesc:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <code>bootstrap_check_in()</code> to check in with the bootstrap server.  <a href="#ad34c73bd6ad5d4c9aff2d68b7f26b4c3">More...</a><br /></td></tr>
-<tr class="separator:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2282be6585d4ade8ddc9621234553281"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281">UniversalExceptionRaise</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
 <tr class="memdesc:a2282be6585d4ade8ddc9621234553281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>.  <a href="#a2282be6585d4ade8ddc9621234553281">More...</a><br /></td></tr>
 <tr class="separator:a2282be6585d4ade8ddc9621234553281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea6434eb784ccde471620e9d79ba8c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#acea6434eb784ccde471620e9d79ba8c1">ExceptionBehaviorHasState</a> (exception_behavior_t behavior)</td></tr>
+<tr class="memdesc:acea6434eb784ccde471620e9d79ba8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <em>behavior</em> indicates an exception behavior that carries thread state information.  <a href="#acea6434eb784ccde471620e9d79ba8c1">More...</a><br /></td></tr>
+<tr class="separator:acea6434eb784ccde471620e9d79ba8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d424769dc3683b809a9783f9319d4ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a5d424769dc3683b809a9783f9319d4ab">ExceptionBehaviorHasIdentity</a> (exception_behavior_t behavior)</td></tr>
+<tr class="memdesc:a5d424769dc3683b809a9783f9319d4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <em>behavior</em> indicates an exception behavior that carries thread and task identities.  <a href="#a5d424769dc3683b809a9783f9319d4ab">More...</a><br /></td></tr>
+<tr class="separator:a5d424769dc3683b809a9783f9319d4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd35f65144317021b4ea09a2b779bfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a6cd35f65144317021b4ea09a2b779bfb">ExceptionBehaviorHasMachExceptionCodes</a> (exception_behavior_t behavior)</td></tr>
+<tr class="memdesc:a6cd35f65144317021b4ea09a2b779bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <em>behavior</em> indicates an exception behavior that carries 64-bit exception codes (“Mach exception codes”).  <a href="#a6cd35f65144317021b4ea09a2b779bfb">More...</a><br /></td></tr>
+<tr class="separator:a6cd35f65144317021b4ea09a2b779bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e26b5b9a8355ab15063b1c07fa6dff7"><td class="memItemLeft" align="right" valign="top">exception_behavior_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2e26b5b9a8355ab15063b1c07fa6dff7">ExceptionBehaviorBasic</a> (exception_behavior_t behavior)</td></tr>
+<tr class="memdesc:a2e26b5b9a8355ab15063b1c07fa6dff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the basic behavior value of <em>behavior</em>, its value without <code>MACH_EXCEPTION_CODES</code> set.  <a href="#a2e26b5b9a8355ab15063b1c07fa6dff7">More...</a><br /></td></tr>
+<tr class="separator:a2e26b5b9a8355ab15063b1c07fa6dff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac82391aeb9e950d80ad05ad0d035ca71"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac82391aeb9e950d80ad05ad0d035ca71">MachThreadSelf</a> ()</td></tr>
 <tr class="memdesc:ac82391aeb9e950d80ad05ad0d035ca71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code>mach_thread_self()</code>, but without the obligation to release the send right.  <a href="#ac82391aeb9e950d80ad05ad0d035ca71">More...</a><br /></td></tr>
 <tr class="separator:ac82391aeb9e950d80ad05ad0d035ca71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -661,50 +670,6 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad34c73bd6ad5d4c9aff2d68b7f26b4c3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">kern_return_t crashpad::BootstrapCheckIn </td>
-          <td>(</td>
-          <td class="paramtype">mach_port_t&#160;</td>
-          <td class="paramname"><em>bp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>service_name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">mach_port_t *&#160;</td>
-          <td class="paramname"><em>service_port</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calls <code>bootstrap_check_in()</code> to check in with the bootstrap server. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bp</td><td>The bootstrap server to check in with. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">service_name</td><td>The name of the service to check in. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">service_port</td><td>The receive right for the checked-in service.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>BOOTSTRAP_SUCCESS</code> on success, with <em>service_port</em> set appropriately. Otherwise, any error that might be returned by <code>bootstrap_check_in()</code>.</dd></dl>
-<p>This function is a wrapper around <code>bootstrap_check_in()</code>, checking in with the bootstrap server at <em>bp</em>. It exists primarily for compatibility with Mac OS X 10.5, where it is not possible to call <code>bootstrap_check_in()</code> for a <em>service_name</em> that has not already been registered with the bootstrap server using <code>bootstrap_register()</code>. <code>bootstrap_register()</code> was deprecated in Mac OS X 10.5. </p>
-
-</div>
-</div>
 <a class="anchor" id="a7c3ab35e044bf1a3b3f48e8b457a5429"></a>
 <div class="memitem">
 <div class="memproto">
@@ -777,32 +742,6 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a616ed0784021ecbd2f0f14b7e75c068c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">launch_data_t crashpad::CFPropertyToLaunchData </td>
-          <td>(</td>
-          <td class="paramtype">CFPropertyListRef&#160;</td>
-          <td class="paramname"><em>property_cf</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">property_cf</td><td>The Core Foundation-type property list to convert.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The converted launchd-type <code>launch_data_t</code>. The caller takes ownership of the returned value. On error, returns <code>NULL</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function handles all <code>CFPropertyListRef</code> types except for <code>CFDateRef</code>, because there’s no <code>launch_data_type_t</code> analogue. Not all types supported in a launchd-type <code>launch_data_t</code> have <code>CFPropertyListRef</code> analogues. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a003f563ef0fe26081b4520012e0c1ef8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -837,6 +776,112 @@ template&lt;typename Destination , typename Source &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e26b5b9a8355ab15063b1c07fa6dff7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exception_behavior_t crashpad::ExceptionBehaviorBasic </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the basic behavior value of <em>behavior</em>, its value without <code>MACH_EXCEPTION_CODES</code> set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>An exception behavior value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>EXCEPTION_DEFAULT</code>, <code>EXCEPTION_STATE</code>, or <code>EXCEPTION_STATE_IDENTITY</code>, assuming <em>behavior</em> was a correct exception behavior value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5d424769dc3683b809a9783f9319d4ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ExceptionBehaviorHasIdentity </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether <em>behavior</em> indicates an exception behavior that carries thread and task identities. </p>
+<p>When this function returns <code>true</code>, an exception message of <em>behavior</em> will carry thread and task identities in the form of send rights to the thread and task ports. Its <em>thread</em> and <em>task</em> fields will be valid. When this function returns <code>false</code>, these fields will not be valid.</p>
+<p>Exception behaviors that carry thread and task identity information are <code>EXCEPTION_DEFAULT</code> and <code>EXCEPTION_STATE_IDENTITY</code>. <code>MACH_EXCEPTION_CODES</code> may also be set. These behaviors correspond to <code>exception_raise()</code>, <code>exception_raise_state_identity()</code>, <code>mach_exception_raise()</code>, and <code>mach_exception_raise_state_identity()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>An exception behavior value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>behavior</em> is <code>EXCEPTION_DEFAULT</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6cd35f65144317021b4ea09a2b779bfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ExceptionBehaviorHasMachExceptionCodes </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether <em>behavior</em> indicates an exception behavior that carries 64-bit exception codes (“Mach exception codes”). </p>
+<p>When this function returns <code>true</code>, an exception message of <em>behavior</em> will carry 64-bit exception codes of type <code>mach_exception_code_t</code> in its <em>code</em> field. When this function returns <code>false</code>, the exception message will carry 32-bit exception codes of type <code>exception_data_type_t</code> in its <em>code</em> field.</p>
+<p>Exception behaviors that carry 64-bit exception codes are those that have <code>MACH_EXCEPTION_CODES</code> set. These behaviors correspond to <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>An exception behavior value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>MACH_EXCEPTION_CODES</code> is set in <em>behavior</em>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="acea6434eb784ccde471620e9d79ba8c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::ExceptionBehaviorHasState </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines whether <em>behavior</em> indicates an exception behavior that carries thread state information. </p>
+<p>When this function returns <code>true</code>, an exception message of <em>behavior</em> will carry thread state information. Its <em>flavor</em>, <em>old_state</em>, <em>old_state_count</em>, <em>new_state</em>, and <em>new_state_count</em> fields will be valid. When this function returns <code>false</code>, these fields will not be valid.</p>
+<p>Exception behaviors that carry thread state information are <code>EXCEPTION_STATE</code> and <code>EXCEPTION_STATE_IDENTITY</code>. <code>MACH_EXCEPTION_CODES</code> may also be set. These behaviors correspond to <code>exception_raise_state()</code>, <code>exception_raise_state_identity()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>An exception behavior value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>behavior</em> is <code>EXCEPTION_STATE</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. </dd></dl>
 
 </div>
 </div>
@@ -963,7 +1008,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 <p>The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time. </p>
 <p>The SDK’s definition of <code>EXC_MASK_ALL</code> has changed over time, with later versions containing more bits set than earlier versions. However, older kernels will reject exception masks that contain bits set that they don’t recognize. Calling this function will return a value for <code>EXC_MASK_ALL</code> appropriate for the system at run time.</p>
-<dl class="section note"><dt>Note</dt><dd><code>EXC_MASK_ALL</code> does not include the value of <code>EXC_MASK_CRASH</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>EXC_MASK_ALL</code> does not include the value of <code>EXC_MASK_CRASH</code>. Consumers that want <code>EXC_MASK_ALL</code> along with <code>EXC_MASK_CRASH</code> must use <a class="el" href="namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941" title="The value for EXC_MASK_ALL appropriate for the operating system at run time. ">ExcMaskAll()</a> | <code>EXC_MASK_CRASH</code> explicitly. </dd></dl>
 
 </div>
 </div>
@@ -1243,7 +1288,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job is loaded, otherwise <code>false</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>A loaded job is not necessarily presently running, nor has it necessarily ever run in the past. </dd>
 <dd>
-This function is provided because <code>SMJobCopyDictionary()</code> does not exist prior to Mac OS X 10.6, and on Mac OS X 10.10 DP5 14A314h, it fails to return a job dictionary immediately after a job is loaded (radar 17365104). </dd></dl>
+This function is provided because <code>SMJobCopyDictionary()</code> is deprecated in Mac OS X 10.10. It may or may not be implemented using <code>SMJobCopyDictionary()</code> from <code>ServiceManagement.framework</code>. </dd></dl>
 
 </div>
 </div>
@@ -1269,7 +1314,7 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The job’s process ID if running, otherwise <code>0</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobCopyDictionary()</code> does not exist prior to Mac OS X 10.6, and on Mac OS X 10.10 DP5 14A314h, it fails to return a job dictionary immediately after a job is loaded (radar 17365104). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobCopyDictionary()</code> is deprecated in Mac OS X 10.10. It may or may not be implemented using <code>SMJobCopyDictionary()</code> from <code>ServiceManagement.framework</code>. </dd></dl>
 
 </div>
 </div>
@@ -1305,8 +1350,8 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was removed successfully or if an asynchronous attempt to remove the job was started successfully, otherwise <code>false</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobRemove()</code> does not exist prior to Mac OS X 10.6, and when <em>wait</em> is true, blocks for far too long on Mac OS X 10.10 DP5 14A314h (radar 17365104; <code>_block_until_job_exits()</code> contains a one-second sleep() call). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was removed successfully or if an asynchronous attempt to remove the job was started successfully, otherwise <code>false</code>. Unlike previous systems, on Mac OS X 10.10, this function returns <code>true</code> even if <em>label</em> names a job that does not exist. This is filed as radar 18268941.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobRemove()</code> is deprecated in Mac OS X 10.10. It may or may not be implemented using <code>SMJobRemove()</code> from <code>ServiceManagement.framework</code>. </dd></dl>
 
 </div>
 </div>
@@ -1332,7 +1377,7 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was submitted successfully, otherwise <code>false</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobSubmit()</code> does not exist prior to Mac OS X 10.6, and behaves flakily on Mac OS X 10.10 DP5 14A314h in that it hangs 25% of the time (radar 17365104). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobSubmit()</code> is deprecated in Mac OS X 10.10. It may or may not be implemented using <code>SMJobSubmit()</code> from <code>ServiceManagement.framework</code>. </dd></dl>
 
 </div>
 </div>

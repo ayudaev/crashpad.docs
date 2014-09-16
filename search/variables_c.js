@@ -2,6 +2,7 @@ var searchData=
 [
   ['pdb_5fname',['pdb_name',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a12f15e85410d19a6fcbe1beedbb3156b',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::pdb_name()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a7d46faf35e79580fbd16c3d5822c9330',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::pdb_name()']]],
   ['platformid',['PlatformId',['../structMINIDUMP__SYSTEM__INFO.html#a214e7bd61a89343a80a3c9a265fbbe96',1,'MINIDUMP_SYSTEM_INFO']]],
+  ['port',['port',['../structcrashpad_1_1ExceptionPorts_1_1ExceptionHandler.html#a49e5ff609eb445e649fed720978c56d0',1,'crashpad::ExceptionPorts::ExceptionHandler']]],
   ['priority',['Priority',['../structMINIDUMP__THREAD.html#a0a827e9473261cc0d4c69a28a243d635',1,'MINIDUMP_THREAD']]],
   ['priorityclass',['PriorityClass',['../structMINIDUMP__THREAD.html#a71433cd417ed888184cc1e6d812179e8',1,'MINIDUMP_THREAD']]],
   ['processcreatetime',['ProcessCreateTime',['../structMINIDUMP__MISC__INFO.html#a13779264ab943d939c2635717cd3f46c',1,'MINIDUMP_MISC_INFO']]],

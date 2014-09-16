@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>A reader for LC_SEGMENT or LC_SEGMENT_64 load commands in Mach-O images mapped into another process.  
+<p>A reader for <code>LC_SEGMENT</code> or <code>LC_SEGMENT_64</code> load commands in Mach-O images mapped into another process.  
  <a href="classcrashpad_1_1MachOImageSegmentReader.html#details">More...</a></p>
 
 <p><code>#include &quot;util/mac/mach_o_image_segment_reader.h&quot;</code></p>
@@ -150,8 +150,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a3f607c8cc16a960a6638bf4b91965397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A reader for LC_SEGMENT or LC_SEGMENT_64 load commands in Mach-O images mapped into another process. </p>
-<p>This class is capable of reading both LC_SEGMENT and LC_SEGMENT_64 based on the bitness of the remote process.</p>
+<div class="textblock"><p>A reader for <code>LC_SEGMENT</code> or <code>LC_SEGMENT_64</code> load commands in Mach-O images mapped into another process. </p>
+<p>This class is capable of reading both <code>LC_SEGMENT</code> and <code>LC_SEGMENT_64</code> based on the bitness of the remote process.</p>
 <p>A <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html" title="A reader for LC_SEGMENT or LC_SEGMENT_64 load commands in Mach-O images mapped into another process...">MachOImageSegmentReader</a> will normally be instantiated by a <a class="el" href="classcrashpad_1_1MachOImageReader.html" title="A reader for Mach-O images mapped into another process. ">MachOImageReader</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3b56a8467e8968807b4ce54ae6a5789c"></a>
@@ -193,7 +193,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the file offset of the mapped segment in the file from which it was mapped. </p>
-<p>The file offset is the difference between the beginning of the <code>mach_header</code> or <code>mach_header_64</code> and the beginning of the segment’s mapped region. For segments that are not mapped from a file (such as <code>"__PAGEZERO"</code> segments), this will be <code>0</code>. </p>
+<p>The file offset is the difference between the beginning of the <code>mach_header</code> or <code>mach_header_64</code> and the beginning of the segment’s mapped region. For segments that are not mapped from a file (such as <code>__PAGEZERO</code> segments), this will be <code>0</code>. </p>
 
 </div>
 </div>
@@ -310,7 +310,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">process_reader</td><td>The reader for the remote process. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">load_command_address</td><td>The address, in the remote process’ address space, where the LC_SEGMENT or LC_SEGMENT_64 load command to be read is located. This address is determined by a Mach-O image reader, such as <a class="el" href="classcrashpad_1_1MachOImageReader.html" title="A reader for Mach-O images mapped into another process. ">MachOImageReader</a>, as it walks Mach-O load commands. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">load_command_address</td><td>The address, in the remote process’ address space, where the <code>LC_SEGMENT</code> or <code>LC_SEGMENT_64</code> load command to be read is located. This address is determined by a Mach-O image reader, such as <a class="el" href="classcrashpad_1_1MachOImageReader.html" title="A reader for Mach-O images mapped into another process. ">MachOImageReader</a>, as it walks Mach-O load commands. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">load_command_info</td><td>A string to be used in logged messages. This string is for diagnostic purposes only, and may be empty.</td></tr>
   </table>
   </dd>
@@ -359,7 +359,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
 </div><div class="memdoc">
 
 <p>Returns the number of sections in the segment. </p>
-<p>This will return <code>0</code> for a segment without any sections, typical for <code>"__PAGEZERO"</code> and <code>"__LINKEDIT"</code> segments.</p>
+<p>This will return <code>0</code> for a segment without any sections, typical for <code>__PAGEZERO</code> and <code>__LINKEDIT</code> segments.</p>
 <p>Although the Mach-O file format uses a <code>uint32_t</code> for this field, there is an overall limit of 255 sections in an entire Mach-O image file (not just in a single segment) imposed by the symbol table format. Symbols will not be able to reference anything in a section beyond the first 255 in a Mach-O image file. </p>
 
 </div>
@@ -468,7 +468,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
       </table>
 </div><div class="memdoc">
 <p>Returns whether the segment slides.</p>
-<p>Most segments slide, but the __PAGEZERO segment does not, it grows instead. This method identifies non-sliding segments in the same way that the kernel does. </p>
+<p>Most segments slide, but the <code>__PAGEZERO</code> segment does not, it grows instead. This method identifies non-sliding segments in the same way that the kernel does. </p>
 
 </div>
 </div>

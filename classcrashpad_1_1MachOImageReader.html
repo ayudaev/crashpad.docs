@@ -112,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:addcef12944baa3bec948c770136feb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Mach-O image’s load address.  <a href="#addcef12944baa3bec948c770136feb68">More...</a><br /></td></tr>
 <tr class="separator:addcef12944baa3bec948c770136feb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20dd2ca62bf4b6cb9576d74f5a7e93eb"><td class="memItemLeft" align="right" valign="top">mach_vm_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageReader.html#a20dd2ca62bf4b6cb9576d74f5a7e93eb">Size</a> () const </td></tr>
-<tr class="memdesc:a20dd2ca62bf4b6cb9576d74f5a7e93eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapped size of the Mach-O image’s __TEXT segment.  <a href="#a20dd2ca62bf4b6cb9576d74f5a7e93eb">More...</a><br /></td></tr>
+<tr class="memdesc:a20dd2ca62bf4b6cb9576d74f5a7e93eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapped size of the Mach-O image’s <code>__TEXT</code> segment.  <a href="#a20dd2ca62bf4b6cb9576d74f5a7e93eb">More...</a><br /></td></tr>
 <tr class="separator:a20dd2ca62bf4b6cb9576d74f5a7e93eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ea55d8226e67bcba2550ba9e2f7d96a"><td class="memItemLeft" align="right" valign="top">mach_vm_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageReader.html#a2ea55d8226e67bcba2550ba9e2f7d96a">Slide</a> () const </td></tr>
 <tr class="memdesc:a2ea55d8226e67bcba2550ba9e2f7d96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Mach-O image’s “slide,” the difference between its actual load address and its preferred load address.  <a href="#a2ea55d8226e67bcba2550ba9e2f7d96a">More...</a><br /></td></tr>
@@ -470,9 +470,9 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e
 </table>
 </div><div class="memdoc">
 
-<p>Returns the mapped size of the Mach-O image’s __TEXT segment. </p>
-<p>Note that this is returns only the size of the __TEXT segment, not of any other segment. This is because the interface only allows one load address and size to be reported, but Mach-O image files may consist of multiple discontiguous segments. By convention, the __TEXT segment is always mapped at the beginning of a Mach-O image file, and it is the most useful for the expected intended purpose of collecting data to obtain stack backtraces. The implementation insists during initialization that the __TEXT segment be mapped at the beginning of the file.</p>
-<p>In practice, discontiguous segments are only found for images that have loaded out of the dyld shared cache, but the __TEXT segment’s size is returned for modules that loaded with contiguous segments as well for consistency. </p>
+<p>Returns the mapped size of the Mach-O image’s <code>__TEXT</code> segment. </p>
+<p>Note that this is returns only the size of the <code>__TEXT</code> segment, not of any other segment. This is because the interface only allows one load address and size to be reported, but Mach-O image files may consist of multiple discontiguous segments. By convention, the <code>__TEXT</code> segment is always mapped at the beginning of a Mach-O image file, and it is the most useful for the expected intended purpose of collecting data to obtain stack backtraces. The implementation insists during initialization that the <code>__TEXT</code> segment be mapped at the beginning of the file.</p>
+<p>In practice, discontiguous segments are only found for images that have loaded out of the dyld shared cache, but the <code>__TEXT</code> segment’s size is returned for modules that loaded with contiguous segments as well for consistency. </p>
 
 </div>
 </div>
@@ -498,7 +498,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e
 </div><div class="memdoc">
 
 <p>Returns the Mach-O image’s “slide,” the difference between its actual load address and its preferred load address. </p>
-<p>“Slide” is computed by subtracting the __TEXT segment’s preferred load address from its actual load address. It will be reported as a positive offset when the actual load address is greater than the preferred load address. The preferred load address is taken to be the segment’s reported <code>vmaddr</code> value. </p>
+<p>“Slide” is computed by subtracting the <code>__TEXT</code> segment’s preferred load address from its actual load address. It will be reported as a positive offset when the actual load address is greater than the preferred load address. The preferred load address is taken to be the segment’s reported <code>vmaddr</code> value. </p>
 
 </div>
 </div>
