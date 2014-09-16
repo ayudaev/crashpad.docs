@@ -294,6 +294,39 @@ Functions</h2></td></tr>
 <tr class="memitem:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad34c73bd6ad5d4c9aff2d68b7f26b4c3">BootstrapCheckIn</a> (mach_port_t bp, const std::string &amp;service_name, mach_port_t *service_port)</td></tr>
 <tr class="memdesc:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <code>bootstrap_check_in()</code> to check in with the bootstrap server.  <a href="#ad34c73bd6ad5d4c9aff2d68b7f26b4c3">More...</a><br /></td></tr>
 <tr class="separator:ad34c73bd6ad5d4c9aff2d68b7f26b4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2282be6585d4ade8ddc9621234553281"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281">UniversalExceptionRaise</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
+<tr class="memdesc:a2282be6585d4ade8ddc9621234553281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>.  <a href="#a2282be6585d4ade8ddc9621234553281">More...</a><br /></td></tr>
+<tr class="separator:a2282be6585d4ade8ddc9621234553281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82391aeb9e950d80ad05ad0d035ca71"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac82391aeb9e950d80ad05ad0d035ca71">MachThreadSelf</a> ()</td></tr>
+<tr class="memdesc:ac82391aeb9e950d80ad05ad0d035ca71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code>mach_thread_self()</code>, but without the obligation to release the send right.  <a href="#ac82391aeb9e950d80ad05ad0d035ca71">More...</a><br /></td></tr>
+<tr class="separator:ac82391aeb9e950d80ad05ad0d035ca71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194e0575e09db56e4107e1c41b27c941"><td class="memItemLeft" align="right" valign="top">exception_mask_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941">ExcMaskAll</a> ()</td></tr>
+<tr class="memdesc:a194e0575e09db56e4107e1c41b27c941"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time.  <a href="#a194e0575e09db56e4107e1c41b27c941">More...</a><br /></td></tr>
+<tr class="separator:a194e0575e09db56e4107e1c41b27c941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05296bfd23550f42639067355410811e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a05296bfd23550f42639067355410811e">ExceptionToString</a> (exception_type_t exception, <a class="el" href="namespacecrashpad.html#aaf53d9bd2234d977d4bc296feab12e53">SymbolicConstantToStringOptions</a> options)</td></tr>
+<tr class="memdesc:a05296bfd23550f42639067355410811e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Mach exception value to a textual representation.  <a href="#a05296bfd23550f42639067355410811e">More...</a><br /></td></tr>
+<tr class="separator:a05296bfd23550f42639067355410811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229a9b5ddd24c6722e413e6132d0acf0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a229a9b5ddd24c6722e413e6132d0acf0">StringToException</a> (const base::StringPiece &amp;string, <a class="el" href="namespacecrashpad.html#a4c978b07b70dd48556ecc1934f2f14bf">StringToSymbolicConstantOptions</a> options, exception_type_t *exception)</td></tr>
+<tr class="memdesc:a229a9b5ddd24c6722e413e6132d0acf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to its corresponding Mach exception value.  <a href="#a229a9b5ddd24c6722e413e6132d0acf0">More...</a><br /></td></tr>
+<tr class="separator:a229a9b5ddd24c6722e413e6132d0acf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee31102507c0f75d82496dcd6f6b53b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a8ee31102507c0f75d82496dcd6f6b53b">ExceptionMaskToString</a> (exception_mask_t exception_mask, <a class="el" href="namespacecrashpad.html#aaf53d9bd2234d977d4bc296feab12e53">SymbolicConstantToStringOptions</a> options)</td></tr>
+<tr class="memdesc:a8ee31102507c0f75d82496dcd6f6b53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Mach exception mask value to a textual representation.  <a href="#a8ee31102507c0f75d82496dcd6f6b53b">More...</a><br /></td></tr>
+<tr class="separator:a8ee31102507c0f75d82496dcd6f6b53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab63868a738f3bfd4d2449e60607dec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7ab63868a738f3bfd4d2449e60607dec">StringToExceptionMask</a> (const base::StringPiece &amp;string, <a class="el" href="namespacecrashpad.html#a4c978b07b70dd48556ecc1934f2f14bf">StringToSymbolicConstantOptions</a> options, exception_mask_t *exception_mask)</td></tr>
+<tr class="memdesc:a7ab63868a738f3bfd4d2449e60607dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to its corresponding Mach exception mask value.  <a href="#a7ab63868a738f3bfd4d2449e60607dec">More...</a><br /></td></tr>
+<tr class="separator:a7ab63868a738f3bfd4d2449e60607dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53fd131112ba6eba0d81467733a7643a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a53fd131112ba6eba0d81467733a7643a">ExceptionBehaviorToString</a> (exception_behavior_t behavior, <a class="el" href="namespacecrashpad.html#aaf53d9bd2234d977d4bc296feab12e53">SymbolicConstantToStringOptions</a> options)</td></tr>
+<tr class="memdesc:a53fd131112ba6eba0d81467733a7643a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Mach exception behavior value to a textual representation.  <a href="#a53fd131112ba6eba0d81467733a7643a">More...</a><br /></td></tr>
+<tr class="separator:a53fd131112ba6eba0d81467733a7643a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957c7de6eb716bf1662c08333b1f7e21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a957c7de6eb716bf1662c08333b1f7e21">StringToExceptionBehavior</a> (const base::StringPiece &amp;string, <a class="el" href="namespacecrashpad.html#a4c978b07b70dd48556ecc1934f2f14bf">StringToSymbolicConstantOptions</a> options, exception_behavior_t *behavior)</td></tr>
+<tr class="memdesc:a957c7de6eb716bf1662c08333b1f7e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to its corresponding Mach exception behavior value.  <a href="#a957c7de6eb716bf1662c08333b1f7e21">More...</a><br /></td></tr>
+<tr class="separator:a957c7de6eb716bf1662c08333b1f7e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857f6b2f39cb21b22891242df26757e0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a857f6b2f39cb21b22891242df26757e0">ThreadStateFlavorToString</a> (thread_state_flavor_t flavor, <a class="el" href="namespacecrashpad.html#aaf53d9bd2234d977d4bc296feab12e53">SymbolicConstantToStringOptions</a> options)</td></tr>
+<tr class="memdesc:a857f6b2f39cb21b22891242df26757e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a thread state flavor value to a textual representation.  <a href="#a857f6b2f39cb21b22891242df26757e0">More...</a><br /></td></tr>
+<tr class="separator:a857f6b2f39cb21b22891242df26757e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fdb1f659a2813e80d5b644020a44208"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2fdb1f659a2813e80d5b644020a44208">StringToThreadStateFlavor</a> (const base::StringPiece &amp;string, <a class="el" href="namespacecrashpad.html#a4c978b07b70dd48556ecc1934f2f14bf">StringToSymbolicConstantOptions</a> options, thread_state_flavor_t *flavor)</td></tr>
+<tr class="memdesc:a2fdb1f659a2813e80d5b644020a44208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to its corresponding thread state flavor value.  <a href="#a2fdb1f659a2813e80d5b644020a44208">More...</a><br /></td></tr>
+<tr class="separator:a2fdb1f659a2813e80d5b644020a44208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplParams" colspan="2">template&lt;typename Destination , typename Source &gt; </td></tr>
 <tr class="memitem:a6e1b1c536af301cd418dad62348b1d29"><td class="memTemplItemLeft" align="right" valign="top">Destination&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29">InRangeCast</a> (Source source, Destination default_value)</td></tr>
 <tr class="memdesc:a6e1b1c536af301cd418dad62348b1d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts to a different type if it can be done without data loss, logging a warning message and returing a default value otherwise.  <a href="#a6e1b1c536af301cd418dad62348b1d29">More...</a><br /></td></tr>
@@ -333,6 +366,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a7c7b6c8b4f44c95c7f0fb70a56342277"><td class="memItemLeft" align="right" valign="top">const mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7c7b6c8b4f44c95c7f0fb70a56342277">kMachPortNull</a> = MACH_PORT_NULL</td></tr>
 <tr class="memdesc:a7c7b6c8b4f44c95c7f0fb70a56342277"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>MACH_PORT_NULL</code> with the correct type for a Mach port, <code>mach_port_t</code>.  <a href="#a7c7b6c8b4f44c95c7f0fb70a56342277">More...</a><br /></td></tr>
 <tr class="separator:a7c7b6c8b4f44c95c7f0fb70a56342277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dbcba9449a5dd47d2911b1f85bc1a58"><td class="memItemLeft" align="right" valign="top">const exception_behavior_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7dbcba9449a5dd47d2911b1f85bc1a58">kMachExceptionCodes</a> = MACH_EXCEPTION_CODES</td></tr>
+<tr class="memdesc:a7dbcba9449a5dd47d2911b1f85bc1a58"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>MACH_EXCEPTION_CODES</code> with the correct type for a Mach exception behavior, <code>exception_behavior_t</code>.  <a href="#a7dbcba9449a5dd47d2911b1f85bc1a58">More...</a><br /></td></tr>
+<tr class="separator:a7dbcba9449a5dd47d2911b1f85bc1a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad22bbde846a82173474ba002116c325c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad22bbde846a82173474ba002116c325c"></a>
 const exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad22bbde846a82173474ba002116c325c">kMachExceptionSimulated</a> = 'CPsx'</td></tr>
 <tr class="memdesc:ad22bbde846a82173474ba002116c325c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An exception type to use for simulated exceptions. <br /></td></tr>
@@ -804,6 +840,133 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a53fd131112ba6eba0d81467733a7643a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::ExceptionBehaviorToString </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SymbolicConstantToStringOptions&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a Mach exception behavior value to a textual representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The Mach exception behavior value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda18aa149c3471a5129274df2af6972f04" title="Use | to combine values in a bitfield. ">kUseOr</a> is ignored. <code>MACH_EXCEPTION_CODES</code> can always be ORed in, but no other values can be ORed with each other. For <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105edaf9da07820c9857c86422b70c3cc33c12" title="If no symbolic name is known for a given constant, return a numeric string. ">kUnknownIsNumeric</a>, the format is <code>"%#x"</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted string. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ee31102507c0f75d82496dcd6f6b53b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::ExceptionMaskToString </td>
+          <td>(</td>
+          <td class="paramtype">exception_mask_t&#160;</td>
+          <td class="paramname"><em>exception_mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SymbolicConstantToStringOptions&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a Mach exception mask value to a textual representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">exception_mask</td><td>The Mach exception mask value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda18aa149c3471a5129274df2af6972f04" title="Use | to combine values in a bitfield. ">kUseOr</a> is honored. For <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105edaf9da07820c9857c86422b70c3cc33c12" title="If no symbolic name is known for a given constant, return a numeric string. ">kUnknownIsNumeric</a>, the format is <code>"%#x"</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted string. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a05296bfd23550f42639067355410811e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::ExceptionToString </td>
+          <td>(</td>
+          <td class="paramtype">exception_type_t&#160;</td>
+          <td class="paramname"><em>exception</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SymbolicConstantToStringOptions&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a Mach exception value to a textual representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">exception</td><td>The Mach exception value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda18aa149c3471a5129274df2af6972f04" title="Use | to combine values in a bitfield. ">kUseOr</a> is ignored. For <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105edaf9da07820c9857c86422b70c3cc33c12" title="If no symbolic name is known for a given constant, return a numeric string. ">kUnknownIsNumeric</a>, the format is <code>"%d"</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted string. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a194e0575e09db56e4107e1c41b27c941"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exception_mask_t crashpad::ExcMaskAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time. </p>
+<p>The SDK’s definition of <code>EXC_MASK_ALL</code> has changed over time, with later versions containing more bits set than earlier versions. However, older kernels will reject exception masks that contain bits set that they don’t recognize. Calling this function will return a value for <code>EXC_MASK_ALL</code> appropriate for the system at run time.</p>
+<dl class="section note"><dt>Note</dt><dd><code>EXC_MASK_ALL</code> does not include the value of <code>EXC_MASK_CRASH</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6e1b1c536af301cd418dad62348b1d29"></a>
 <div class="memitem">
 <div class="memproto">
@@ -839,6 +1002,26 @@ template&lt;typename Destination , typename Source &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><em>source</em> if it can be represented in the destination type, otherwise <em>default_value</em>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac82391aeb9e950d80ad05ad0d035ca71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mach_port_t crashpad::MachThreadSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Like <code>mach_thread_self()</code>, but without the obligation to release the send right. </p>
+<p><code>mach_thread_self()</code> returns a send right to the current thread port, incrementing its reference count. This burdens the caller with maintaining this send right, and calling <code>mach_port_deallocate()</code> when it is no longer needed. This is burdensome, and is at odds with the normal operation of <code>mach_task_self()</code>, which does not increment the task port’s reference count whose result must not be deallocated.</p>
+<p>Callers can use this function in preference to <code>mach_thread_self()</code>. This function returns an extant reference to the current thread’s port without incrementing its reference count.</p>
+<dl class="section return"><dt>Returns</dt><dd>The value of <code>mach_thread_self()</code> without incrementing its reference count. The returned port must not be deallocated by <code>mach_port_deallocate()</code>. The returned value is valid as long as the thread continues to exist as a <code>pthread_t</code>. </dd></dl>
 
 </div>
 </div>
@@ -1189,6 +1372,135 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
 
 </div>
 </div>
+<a class="anchor" id="a229a9b5ddd24c6722e413e6132d0acf0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::StringToException </td>
+          <td>(</td>
+          <td class="paramtype">const base::StringPiece &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringToSymbolicConstantOptions&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_type_t *&#160;</td>
+          <td class="paramname"><em>exception</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a string to its corresponding Mach exception value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2ba060cbf403d47785a69b249e9c562f410" title="Allow | to combine values in a bitfield. ">kAllowOr</a> is ignored. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">exception</td><td>The converted Mach exception value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, <code>false</code> if <em>string</em> could not be converted as requested. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a957c7de6eb716bf1662c08333b1f7e21"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::StringToExceptionBehavior </td>
+          <td>(</td>
+          <td class="paramtype">const base::StringPiece &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringToSymbolicConstantOptions&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_behavior_t *&#160;</td>
+          <td class="paramname"><em>behavior</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a string to its corresponding Mach exception behavior value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2ba060cbf403d47785a69b249e9c562f410" title="Allow | to combine values in a bitfield. ">kAllowOr</a> is ignored. <code>MACH_EXCEPTION_CODES</code> can always be ORed in, but no other values can be ORed with each other. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">behavior</td><td>The converted Mach exception behavior value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, <code>false</code> if <em>string</em> could not be converted as requested. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ab63868a738f3bfd4d2449e60607dec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::StringToExceptionMask </td>
+          <td>(</td>
+          <td class="paramtype">const base::StringPiece &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringToSymbolicConstantOptions&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_mask_t *&#160;</td>
+          <td class="paramname"><em>exception_mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a string to its corresponding Mach exception mask value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2ba060cbf403d47785a69b249e9c562f410" title="Allow | to combine values in a bitfield. ">kAllowOr</a> is honored. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">exception_mask</td><td>The converted Mach exception mask value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, <code>false</code> if <em>string</em> could not be converted as requested. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ab269ab8edf326666ef7056a18f4a67c4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1308,6 +1620,49 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
 
 </div>
 </div>
+<a class="anchor" id="a2fdb1f659a2813e80d5b644020a44208"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::StringToThreadStateFlavor </td>
+          <td>(</td>
+          <td class="paramtype">const base::StringPiece &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StringToSymbolicConstantOptions&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_state_flavor_t *&#160;</td>
+          <td class="paramname"><em>flavor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a string to its corresponding thread state flavor value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2ba060cbf403d47785a69b249e9c562f410" title="Allow | to combine values in a bitfield. ">kAllowOr</a> is ignored. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">flavor</td><td>The converted thread state flavor value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, <code>false</code> if <em>string</em> could not be converted as requested. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac8605dea4710c2630ccdd21439e05999"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1353,6 +1708,143 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
 
 </div>
 </div>
+<a class="anchor" id="a857f6b2f39cb21b22891242df26757e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::ThreadStateFlavorToString </td>
+          <td>(</td>
+          <td class="paramtype">thread_state_flavor_t&#160;</td>
+          <td class="paramname"><em>flavor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SymbolicConstantToStringOptions&#160;</td>
+          <td class="paramname"><em>options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a thread state flavor value to a textual representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">flavor</td><td>The thread state flavor value to convert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>Options affecting the conversion. <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda18aa149c3471a5129274df2af6972f04" title="Use | to combine values in a bitfield. ">kUseOr</a> is ignored. For <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105edaf9da07820c9857c86422b70c3cc33c12" title="If no symbolic name is known for a given constant, return a numeric string. ">kUnknownIsNumeric</a>, the format is <code>"%d"</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted string. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2282be6585d4ade8ddc9621234553281"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kern_return_t crashpad::UniversalExceptionRaise </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_handler_t&#160;</td>
+          <td class="paramname"><em>exception_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_t&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">task_t&#160;</td>
+          <td class="paramname"><em>task</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_type_t&#160;</td>
+          <td class="paramname"><em>exception</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mach_exception_data_type_t *&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t&#160;</td>
+          <td class="paramname"><em>code_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_state_flavor_t *&#160;</td>
+          <td class="paramname"><em>flavor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramname"><em>old_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t&#160;</td>
+          <td class="paramname"><em>old_state_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_state_t&#160;</td>
+          <td class="paramname"><em>new_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t *&#160;</td>
+          <td class="paramname"><em>new_state_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>. </p>
+<p>The function called will be <code>exception_raise()</code> for <code>EXCEPTION_DEFAULT</code>, <code>exception_raise_state()</code> for <code>EXCEPTION_STATE</code>, or <code>exception_raise_state_identity()</code> for <code>EXCEPTION_STATE_IDENTITY</code>. If <code>MACH_EXCEPTION_CODES</code> is also set, the function called will instead be <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code> or <code>mach_exception_raise_state_identity()</code>, respectively.</p>
+<p>This function does not fetch the existing thread state for <em>behavior</em> values that require a thread state. The caller must provide the existing thread state in the <em>flavor</em>, <em>old_state</em>, and <em>old_state_count</em> parameters for <em>behavior</em> values that require a thread state. Thread states may be obtained by calling <code>thread_get_state()</code> if needed. Similarly, this function does not do anything with the new thread state returned for these <em>behavior</em> values. Callers that wish to make use of the new thread state may do so by using the returned <em>flavor</em>, <em>new_state</em>, and <em>new_state_count</em> values. Thread states may be set by calling <code>thread_set_state()</code> if needed.</p>
+<p><em>thread</em> and <em>task</em> are only used when <em>behavior</em> indicates that the exception message will carry identity information, when it has the value value <code>EXCEPTION_DEFAULT</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. In other cases, these parameters are unused and may be set to <code>MACH_PORT_NULL</code>.</p>
+<p><em>flavor</em>, <em>old_state</em>, <em>old_state_count</em>, <em>new_state</em>, and <em>new_state_count</em> are only used when <em>behavior</em> indicates that the exception message will carry thread state information, when it has the value <code>EXCEPTION_STATE</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. In other cases, these parameters are unused and may be set to <code>0</code> (<em>old_state_count</em>) or <code>NULL</code> (the remaining parameters).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The exception behavior, which dictates which function will be called. It is an error to call this function with an invalid value for <em>behavior</em>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>If  indicates a behavior without <code>MACH_EXCEPTION_CODES</code>, the elements of <em>code</em> will be truncated in order to be passed to the appropriate exception handler.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>All other parameters are treated equivalently to their treatment by the <code>*exception_raise*()</code> family of functions.</p>
+<dl class="section return"><dt>Returns</dt><dd>The return value of the function called. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a480d7affe0cf4c704f154084fb33f289"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1391,6 +1883,21 @@ This function is provided because <code>SMJobCopyDictionary()</code> does not ex
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a7dbcba9449a5dd47d2911b1f85bc1a58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const exception_behavior_t crashpad::kMachExceptionCodes = MACH_EXCEPTION_CODES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>MACH_EXCEPTION_CODES</code> with the correct type for a Mach exception behavior, <code>exception_behavior_t</code>. </p>
+<p>Signedness problems can occur when ORing <code>MACH_EXCEPTION_CODES</code> as a signed integer, because a signed integer overflow results. This constant can be used instead of <code>MACH_EXCEPTION_CODES</code> in such cases. </p>
+
+</div>
+</div>
 <a class="anchor" id="a7c7b6c8b4f44c95c7f0fb70a56342277"></a>
 <div class="memitem">
 <div class="memproto">

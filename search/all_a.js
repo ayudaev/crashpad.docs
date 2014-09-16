@@ -13,6 +13,7 @@ var searchData=
   ['machoimagesegmentreader',['MachOImageSegmentReader',['../classcrashpad_1_1MachOImageSegmentReader.html',1,'crashpad']]],
   ['machoimagesymboltablereader',['MachOImageSymbolTableReader',['../classcrashpad_1_1MachOImageSymbolTableReader.html',1,'crashpad']]],
   ['machoimagesymboltablereaderinitializer',['MachOImageSymbolTableReaderInitializer',['../classcrashpad_1_1internal_1_1MachOImageSymbolTableReaderInitializer.html',1,'crashpad::internal']]],
+  ['machthreadself',['MachThreadSelf',['../namespacecrashpad.html#ac82391aeb9e950d80ad05ad0d035ca71',1,'crashpad']]],
   ['macmodelandboard',['MacModelAndBoard',['../namespacecrashpad.html#a71c79500b827d06b190e30b7cc016c35',1,'crashpad']]],
   ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
   ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],
