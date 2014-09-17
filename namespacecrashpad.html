@@ -294,6 +294,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a2282be6585d4ade8ddc9621234553281"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281">UniversalExceptionRaise</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
 <tr class="memdesc:a2282be6585d4ade8ddc9621234553281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>.  <a href="#a2282be6585d4ade8ddc9621234553281">More...</a><br /></td></tr>
 <tr class="separator:a2282be6585d4ade8ddc9621234553281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77acc62e00f6524de1f0ab97fd4829f"><td class="memItemLeft" align="right" valign="top">exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae77acc62e00f6524de1f0ab97fd4829f">ExcCrashRecoverOriginalException</a> (mach_exception_data_type_t code_0, mach_exception_data_type_t *original_code_0, int *signal)</td></tr>
+<tr class="memdesc:ae77acc62e00f6524de1f0ab97fd4829f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recovers the original exception, first exception code, and signal from the encoded form of the first exception code delivered with <code>EXC_CRASH</code> exceptions.  <a href="#ae77acc62e00f6524de1f0ab97fd4829f">More...</a><br /></td></tr>
+<tr class="separator:ae77acc62e00f6524de1f0ab97fd4829f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e">ExcServerSuccessfulReturnValue</a> (exception_behavior_t behavior, bool set_thread_state)</td></tr>
+<tr class="memdesc:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an approriate successful return value for an exception handler function.  <a href="#ab510cfef9eacb24a21eefcc36dc44f6e">More...</a><br /></td></tr>
+<tr class="separator:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea6434eb784ccde471620e9d79ba8c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#acea6434eb784ccde471620e9d79ba8c1">ExceptionBehaviorHasState</a> (exception_behavior_t behavior)</td></tr>
 <tr class="memdesc:acea6434eb784ccde471620e9d79ba8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <em>behavior</em> indicates an exception behavior that carries thread state information.  <a href="#acea6434eb784ccde471620e9d79ba8c1">More...</a><br /></td></tr>
 <tr class="separator:acea6434eb784ccde471620e9d79ba8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -779,6 +785,50 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae77acc62e00f6524de1f0ab97fd4829f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exception_type_t crashpad::ExcCrashRecoverOriginalException </td>
+          <td>(</td>
+          <td class="paramtype">mach_exception_data_type_t&#160;</td>
+          <td class="paramname"><em>code_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_exception_data_type_t *&#160;</td>
+          <td class="paramname"><em>original_code_0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>signal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recovers the original exception, first exception code, and signal from the encoded form of the first exception code delivered with <code>EXC_CRASH</code> exceptions. </p>
+<p><code>EXC_CRASH</code> exceptions are generated when the kernel has committed to terminating a process as a result of a core-generating POSIX signal and, for hardware exceptions, an earlier Mach exception. Information about this earlier exception and signal is made available to the <code>EXC_CRASH</code> handler via its <code>code[0]</code> parameter. This function recovers the original exception, the value of <code>code[0]</code> from the original exception, and the value of the signal responsible for process termination.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">code_0</td><td>The first exception code (<code>code[0]</code>) passed to a Mach exception handler in an <code>EXC_CRASH</code> exception. It is invalid to call this function with an exception code from any exception other than <code>EXC_CRASH</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">original_code_0</td><td>The first exception code (<code>code[0]</code>) passed to the Mach exception handler for a hardware exception that resulted in the generation of a POSIX signal that caused process termination. If the signal that caused termination was not sent as a result of a hardware exception, this will be <code>0</code>. Callers that do not need this value may pass <code>NULL</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">signal</td><td>The POSIX signal that caused process termination. Callers that do not need this value may pass <code>NULL</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The original exception for a hardware exception that resulted in the generation of a POSIX signal that caused process termination. If the signal that caused termination was not sent as a result of a hardware exception, this will be <code>0</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a2e26b5b9a8355ab15063b1c07fa6dff7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1009,6 +1059,46 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time. </p>
 <p>The SDK’s definition of <code>EXC_MASK_ALL</code> has changed over time, with later versions containing more bits set than earlier versions. However, older kernels will reject exception masks that contain bits set that they don’t recognize. Calling this function will return a value for <code>EXC_MASK_ALL</code> appropriate for the system at run time.</p>
 <dl class="section note"><dt>Note</dt><dd><code>EXC_MASK_ALL</code> does not include the value of <code>EXC_MASK_CRASH</code>. Consumers that want <code>EXC_MASK_ALL</code> along with <code>EXC_MASK_CRASH</code> must use <a class="el" href="namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941" title="The value for EXC_MASK_ALL appropriate for the operating system at run time. ">ExcMaskAll()</a> | <code>EXC_MASK_CRASH</code> explicitly. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab510cfef9eacb24a21eefcc36dc44f6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">kern_return_t crashpad::ExcServerSuccessfulReturnValue </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>set_thread_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes an approriate successful return value for an exception handler function. </p>
+<p>For exception handlers that respond to state-carrying behaviors, when the handler is called by the kernel (as it is normally), the kernel will attempt to set a new thread state when the exception handler returns successfully. Other code that mimics the kernel’s exception-delivery semantics may implement the same or similar behavior. In some situations, it is undesirable to set a new thread state. If the exception handler were to return unsuccessfully, however, the kernel would continue searching for an exception handler at a wider (task or host) scope. This may also be undesirable.</p>
+<p>If such exception handlers return <code>MACH_RCV_PORT_DIED</code>, the kernel will not set a new thread state and will also not search for another exception handler. See 10.9.4 <code>xnu-2422.110.17/osfmk/kern/exception.c</code>. <code>exception_deliver()</code> will only set a new thread state if the handler’s return code was <code>MACH_MSG_SUCCESS</code> (a synonym for <code>KERN_SUCCESS</code>), and subsequently, <code>exception_triage()</code> will not search for a new handler if the handler’s return code was <code>KERN_SUCCESS</code> or <code>MACH_RCV_PORT_DIED</code>.</p>
+<p>This function allows exception handlers to compute an appropriate return code to influence their caller (the kernel) in the desired way with respect to setting a new thread state while suppressing the caller’s subsequent search for other exception handlers. An exception handler should return the value returned by this function.</p>
+<p>This function is useful even for <code>EXC_CRASH</code> handlers, where returning <code>KERN_SUCCESS</code> and allowing the kernel to set a new thread state has been observed to cause a perceptible and unnecessary waste of time. The victim task in an <code>EXC_CRASH</code> handler is already being terminated and is no longer schedulable, so there is no point in setting the states of any of its threads.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The behavior of the exception handler as invoked. This may be taken directly from the <em>behavior</em> parameter of <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer_1_1Interface.html#ae3623312dd5e1dcdac65638771d69ea3" title="Handles exceptions raised by exception_raise(), exception_raise_state(), and exception_raise_state_id...">internal::SimplifiedExcServer::Interface::CatchException()</a>, for example. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">set_thread_state</td><td><code>true</code> if the handler would like its caller to set the new thread state using the <em>flavor</em>, <em>new_state</em>, and <em>new_state_count</em> out parameters. This can only happen when <em>behavior</em> is a state-carrying behavior.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>KERN_SUCCESS</code> or <code>MACH_RCV_PORT_DIED</code>. <code>KERN_SUCCESS</code> is used when <em>behavior</em> is not a state-carrying behavior, or when it is a state-carrying behavior and <em>set_thread_state</em> is <code>true</code>. <code>MACH_RCV_PORT_DIED</code> is used when <em>behavior</em> is a state-carrying behavior and <em>set_thread_state</em> is <code>false</code>. </dd></dl>
 
 </div>
 </div>

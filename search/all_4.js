@@ -4,6 +4,7 @@ var searchData=
   ['entries',['entries',['../structcrashpad_1_1MinidumpSimpleStringDictionary.html#a09a4e7a0fb45b0b74cf0aacfb6445ba9',1,'crashpad::MinidumpSimpleStringDictionary']]],
   ['entry',['Entry',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html',1,'crashpad::TSimpleStringDictionary']]],
   ['errnomessage',['ErrnoMessage',['../namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6',1,'crashpad::test::ErrnoMessage(int err, const std::string &amp;base=std::string())'],['../namespacecrashpad_1_1test.html#a8d8e66fbc47a4f22a03710797f226238',1,'crashpad::test::ErrnoMessage(const std::string &amp;base=std::string())']]],
+  ['exccrashrecoveroriginalexception',['ExcCrashRecoverOriginalException',['../namespacecrashpad.html#ae77acc62e00f6524de1f0ab97fd4829f',1,'crashpad']]],
   ['exception_5fmaximum_5fparameters',['EXCEPTION_MAXIMUM_PARAMETERS',['../winnt_8h.html#a3cd1c98b6babaa34a71c020782244ae2',1,'winnt.h']]],
   ['exceptionaddress',['ExceptionAddress',['../structMINIDUMP__EXCEPTION.html#a90415942a28bed1cf46a96866713423a',1,'MINIDUMP_EXCEPTION']]],
   ['exceptionbehaviorbasic',['ExceptionBehaviorBasic',['../namespacecrashpad.html#a2e26b5b9a8355ab15063b1c07fa6dff7',1,'crashpad']]],
@@ -23,5 +24,6 @@ var searchData=
   ['exceptiontostring',['ExceptionToString',['../namespacecrashpad.html#a05296bfd23550f42639067355410811e',1,'crashpad']]],
   ['excmaskall',['ExcMaskAll',['../namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941',1,'crashpad']]],
   ['excserver',['ExcServer',['../classcrashpad_1_1internal_1_1ExcServer.html',1,'crashpad::internal']]],
+  ['excserversuccessfulreturnvalue',['ExcServerSuccessfulReturnValue',['../namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e',1,'crashpad']]],
   ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]]
 ];
