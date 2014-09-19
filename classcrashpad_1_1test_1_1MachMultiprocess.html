@@ -134,9 +134,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a79e05cbef2959dcdc16d984ce7f8e9c8"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#a79e05cbef2959dcdc16d984ce7f8e9c8">RemotePort</a> () const </td></tr>
 <tr class="memdesc:a79e05cbef2959dcdc16d984ce7f8e9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a send right for the remote port.  <a href="#a79e05cbef2959dcdc16d984ce7f8e9c8">More...</a><br /></td></tr>
 <tr class="separator:a79e05cbef2959dcdc16d984ce7f8e9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac987777a32b7f02286a423a3bf9c49c5"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#ac987777a32b7f02286a423a3bf9c49c5">ChildTask</a> () const </td></tr>
-<tr class="memdesc:ac987777a32b7f02286a423a3bf9c49c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a send right for the child’s task port.  <a href="#ac987777a32b7f02286a423a3bf9c49c5">More...</a><br /></td></tr>
-<tr class="separator:ac987777a32b7f02286a423a3bf9c49c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa9f07ca0cc97e9cfd1ead3d5eb269c"><td class="memItemLeft" align="right" valign="top">task_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MachMultiprocess.html#a6fa9f07ca0cc97e9cfd1ead3d5eb269c">ChildTask</a> () const </td></tr>
+<tr class="memdesc:a6fa9f07ca0cc97e9cfd1ead3d5eb269c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a send right for the child’s task port.  <a href="#a6fa9f07ca0cc97e9cfd1ead3d5eb269c">More...</a><br /></td></tr>
+<tr class="separator:a6fa9f07ca0cc97e9cfd1ead3d5eb269c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcrashpad_1_1test_1_1Multiprocess"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcrashpad_1_1test_1_1Multiprocess')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html">crashpad::test::Multiprocess</a></td></tr>
 <tr class="memitem:a3fde053ad00979ca2f03810afd45b7ec inherit pro_methods_classcrashpad_1_1test_1_1Multiprocess"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a3fde053ad00979ca2f03810afd45b7ec">ChildPID</a> () const </td></tr>
 <tr class="memdesc:a3fde053ad00979ca2f03810afd45b7ec inherit pro_methods_classcrashpad_1_1test_1_1Multiprocess"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the child process’ process ID.  <a href="#a3fde053ad00979ca2f03810afd45b7ec">More...</a><br /></td></tr>
@@ -160,7 +160,7 @@ Additional Inherited Members</h2></td></tr>
 <p>This is similar to the base <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html" title="Manages a multiprocess test. ">Multiprocess</a> test, but adds Mach features. The parent process has access to the child process’ task port. The parent and child processes are able to communicate via Mach IPC: each process has a receive right to its “local port” and a send right to a “remote port”, and messages sent to the remote port in one process can be received on the local port in the partner process.</p>
 <p>Subclasses are expected to implement the parent and child by overriding the appropriate methods. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac987777a32b7f02286a423a3bf9c49c5"></a>
+<a class="anchor" id="a6fa9f07ca0cc97e9cfd1ead3d5eb269c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -168,7 +168,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">mach_port_t crashpad::test::MachMultiprocess::ChildTask </td>
+          <td class="memname">task_t crashpad::test::MachMultiprocess::ChildTask </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

@@ -270,6 +270,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a480d7affe0cf4c704f154084fb33f289"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289">WriteFD</a> (int fd, const void *buffer, size_t size)</td></tr>
 <tr class="memdesc:a480d7affe0cf4c704f154084fb33f289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>write()</code>, retrying when interrupted or following a short write.  <a href="#a480d7affe0cf4c704f154084fb33f289">More...</a><br /></td></tr>
 <tr class="separator:a480d7affe0cf4c704f154084fb33f289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de81c40a75cca5b99b108a1b1fda599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599">CheckedReadFD</a> (int fd, void *buffer, size_t size)</td></tr>
+<tr class="memdesc:a3de81c40a75cca5b99b108a1b1fda599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that exactly <em>size</em> bytes are read.  <a href="#a3de81c40a75cca5b99b108a1b1fda599">More...</a><br /></td></tr>
+<tr class="separator:a3de81c40a75cca5b99b108a1b1fda599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9488e7217c47cc3cdcbe281ed5d9a83f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a9488e7217c47cc3cdcbe281ed5d9a83f">CheckedWriteFD</a> (int fd, const void *buffer, size_t size)</td></tr>
+<tr class="memdesc:a9488e7217c47cc3cdcbe281ed5d9a83f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a>, ensuring that exactly <em>size</em> bytes are written.  <a href="#a9488e7217c47cc3cdcbe281ed5d9a83f">More...</a><br /></td></tr>
+<tr class="separator:a9488e7217c47cc3cdcbe281ed5d9a83f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954515a7d1318ae79d54e2667a99a723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a954515a7d1318ae79d54e2667a99a723">CheckedReadFDAtEOF</a> (int fd)</td></tr>
+<tr class="memdesc:a954515a7d1318ae79d54e2667a99a723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that it indicates end-of-file.  <a href="#a954515a7d1318ae79d54e2667a99a723">More...</a><br /></td></tr>
+<tr class="separator:a954515a7d1318ae79d54e2667a99a723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba">MacOSXMinorVersion</a> ()</td></tr>
 <tr class="memdesc:ab05052e02f3c3605fd7bae0f006d2cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of the running operating system.  <a href="#ab05052e02f3c3605fd7bae0f006d2cba">More...</a><br /></td></tr>
 <tr class="separator:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -294,9 +303,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2282be6585d4ade8ddc9621234553281"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281">UniversalExceptionRaise</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
 <tr class="memdesc:a2282be6585d4ade8ddc9621234553281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>.  <a href="#a2282be6585d4ade8ddc9621234553281">More...</a><br /></td></tr>
 <tr class="separator:a2282be6585d4ade8ddc9621234553281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae77acc62e00f6524de1f0ab97fd4829f"><td class="memItemLeft" align="right" valign="top">exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae77acc62e00f6524de1f0ab97fd4829f">ExcCrashRecoverOriginalException</a> (mach_exception_data_type_t code_0, mach_exception_data_type_t *original_code_0, int *signal)</td></tr>
-<tr class="memdesc:ae77acc62e00f6524de1f0ab97fd4829f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recovers the original exception, first exception code, and signal from the encoded form of the first exception code delivered with <code>EXC_CRASH</code> exceptions.  <a href="#ae77acc62e00f6524de1f0ab97fd4829f">More...</a><br /></td></tr>
-<tr class="separator:ae77acc62e00f6524de1f0ab97fd4829f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a830c754edaa401f7d866e69369f76ae1"><td class="memItemLeft" align="right" valign="top">exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a830c754edaa401f7d866e69369f76ae1">ExcCrashRecoverOriginalException</a> (mach_exception_code_t code_0, mach_exception_code_t *original_code_0, int *signal)</td></tr>
+<tr class="memdesc:a830c754edaa401f7d866e69369f76ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recovers the original exception, first exception code, and signal from the encoded form of the first exception code delivered with <code>EXC_CRASH</code> exceptions.  <a href="#a830c754edaa401f7d866e69369f76ae1">More...</a><br /></td></tr>
+<tr class="separator:a830c754edaa401f7d866e69369f76ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e">ExcServerSuccessfulReturnValue</a> (exception_behavior_t behavior, bool set_thread_state)</td></tr>
 <tr class="memdesc:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an approriate successful return value for an exception handler function.  <a href="#ab510cfef9eacb24a21eefcc36dc44f6e">More...</a><br /></td></tr>
 <tr class="separator:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -312,9 +321,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2e26b5b9a8355ab15063b1c07fa6dff7"><td class="memItemLeft" align="right" valign="top">exception_behavior_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2e26b5b9a8355ab15063b1c07fa6dff7">ExceptionBehaviorBasic</a> (exception_behavior_t behavior)</td></tr>
 <tr class="memdesc:a2e26b5b9a8355ab15063b1c07fa6dff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the basic behavior value of <em>behavior</em>, its value without <code>MACH_EXCEPTION_CODES</code> set.  <a href="#a2e26b5b9a8355ab15063b1c07fa6dff7">More...</a><br /></td></tr>
 <tr class="separator:a2e26b5b9a8355ab15063b1c07fa6dff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82391aeb9e950d80ad05ad0d035ca71"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac82391aeb9e950d80ad05ad0d035ca71">MachThreadSelf</a> ()</td></tr>
-<tr class="memdesc:ac82391aeb9e950d80ad05ad0d035ca71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code>mach_thread_self()</code>, but without the obligation to release the send right.  <a href="#ac82391aeb9e950d80ad05ad0d035ca71">More...</a><br /></td></tr>
-<tr class="separator:ac82391aeb9e950d80ad05ad0d035ca71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ee9764b34c0267b58f54404946275a"><td class="memItemLeft" align="right" valign="top">thread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a79ee9764b34c0267b58f54404946275a">MachThreadSelf</a> ()</td></tr>
+<tr class="memdesc:a79ee9764b34c0267b58f54404946275a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <code>mach_thread_self()</code>, but without the obligation to release the send right.  <a href="#a79ee9764b34c0267b58f54404946275a">More...</a><br /></td></tr>
+<tr class="separator:a79ee9764b34c0267b58f54404946275a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a194e0575e09db56e4107e1c41b27c941"><td class="memItemLeft" align="right" valign="top">exception_mask_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941">ExcMaskAll</a> ()</td></tr>
 <tr class="memdesc:a194e0575e09db56e4107e1c41b27c941"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time.  <a href="#a194e0575e09db56e4107e1c41b27c941">More...</a><br /></td></tr>
 <tr class="separator:a194e0575e09db56e4107e1c41b27c941"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -748,6 +757,106 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a3de81c40a75cca5b99b108a1b1fda599"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CheckedReadFD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that exactly <em>size</em> bytes are read. </p>
+<p>If <em>size</em> is out of the range of possible <code>read()</code> return values, if the underlying <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a> fails, or if other than <em>size</em> bytes were read, this function causes execution to terminate without returning.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a9488e7217c47cc3cdcbe281ed5d9a83f" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">CheckedWriteFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a954515a7d1318ae79d54e2667a99a723" title="Wraps ReadFD(), ensuring that it indicates end-of-file. ">CheckedReadFDAtEOF</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a954515a7d1318ae79d54e2667a99a723"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CheckedReadFDAtEOF </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that it indicates end-of-file. </p>
+<p>Attempts to read a single byte from <em>fd</em>, expecting no data to be read. If the underlying <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a> fails, or if a byte actually is read, this function causes execution to terminate without returning.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">CheckedReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9488e7217c47cc3cdcbe281ed5d9a83f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CheckedWriteFD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a>, ensuring that exactly <em>size</em> bytes are written. </p>
+<p>If <em>size</em> is out of the range of possible <code>write()</code> return values, if the underlying <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a> fails, or if other than <em>size</em> bytes were written, this function causes execution to terminate without returning.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">CheckedReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a003f563ef0fe26081b4520012e0c1ef8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -785,20 +894,20 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ae77acc62e00f6524de1f0ab97fd4829f"></a>
+<a class="anchor" id="a830c754edaa401f7d866e69369f76ae1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">exception_type_t crashpad::ExcCrashRecoverOriginalException </td>
           <td>(</td>
-          <td class="paramtype">mach_exception_data_type_t&#160;</td>
+          <td class="paramtype">mach_exception_code_t&#160;</td>
           <td class="paramname"><em>code_0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">mach_exception_data_type_t *&#160;</td>
+          <td class="paramtype">mach_exception_code_t *&#160;</td>
           <td class="paramname"><em>original_code_0</em>, </td>
         </tr>
         <tr>
@@ -1140,12 +1249,12 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac82391aeb9e950d80ad05ad0d035ca71"></a>
+<a class="anchor" id="a79ee9764b34c0267b58f54404946275a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">mach_port_t crashpad::MachThreadSelf </td>
+          <td class="memname">thread_t crashpad::MachThreadSelf </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1350,7 +1459,11 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>Wraps <code>read()</code>, retrying when interrupted or following a short read. </p>
 <p>This function reads into <em>buffer</em>, stopping only when <em>size</em> bytes have been read or when <code>read()</code> returns 0, indicating that end-of-file has been reached.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes read and placed into <em>buffer</em>, or <code>-1</code> on error, with <code>errno</code> set appropriately. On error, a portion of <em>fd</em> may have been read into <em>buffer</em>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">CheckedReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a954515a7d1318ae79d54e2667a99a723" title="Wraps ReadFD(), ensuring that it indicates end-of-file. ">CheckedReadFDAtEOF</a> </dd></dl>
 
 </div>
 </div>
@@ -2013,7 +2126,9 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 <p>Wraps <code>write()</code>, retrying when interrupted or following a short write. </p>
 <p>This function writes to <em>fd</em>, stopping only when <em>size</em> bytes have been written.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes written from <em>buffer</em>, or <code>-1</code> on error, with <code>errno</code> set appropriately. On error, a portion of <em>buffer</em> may have been written to <em>fd</em>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a9488e7217c47cc3cdcbe281ed5d9a83f" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">CheckedWriteFD</a> </dd></dl>
 
 </div>
 </div>
