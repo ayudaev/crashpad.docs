@@ -3,6 +3,7 @@ var searchData=
   ['read',['Read',['../classcrashpad_1_1TaskMemory.html#a323d157824f62eb286e4c39f8d99e3a9',1,'crashpad::TaskMemory']]],
   ['readcstring',['ReadCString',['../classcrashpad_1_1TaskMemory_1_1MappedMemory.html#aaa82d4276500ce99fd7b3d251cee78a0',1,'crashpad::TaskMemory::MappedMemory::ReadCString()'],['../classcrashpad_1_1TaskMemory.html#a9365a798d8140094cda73606ec132e87',1,'crashpad::TaskMemory::ReadCString()']]],
   ['readcstringsizelimited',['ReadCStringSizeLimited',['../classcrashpad_1_1TaskMemory.html#a51092ce134b41d605a9a4ae470826eb6',1,'crashpad::TaskMemory']]],
+  ['reader',['reader',['../structcrashpad_1_1ProcessReader_1_1Module.html#a3be41f4fae388989c30bbb3046f2a854',1,'crashpad::ProcessReader::Module']]],
   ['readfd',['ReadFD',['../namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4',1,'crashpad']]],
   ['readmapped',['ReadMapped',['../classcrashpad_1_1TaskMemory.html#a17fe571f49eb7fef909b02937caff766',1,'crashpad::TaskMemory']]],
   ['readpipefd',['ReadPipeFD',['../classcrashpad_1_1test_1_1Multiprocess.html#ad51dda8c20fd42d92546d0fb4c3dc8c5',1,'crashpad::test::Multiprocess']]],

@@ -227,7 +227,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mask</td><td>The exception mask, containing the <code>EXC_MASK_*</code> values to be looked up and returned in <em>handlers</em>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">handlers</td><td>The exception handlers registered for <em>target_port</em> to handle exceptions indicated in <em>mask</em>. The caller must take ownership of the <em>port</em> members of the returned <a class="el" href="structcrashpad_1_1ExceptionPorts_1_1ExceptionHandler.html" title="Information about a registered exception handler. ">ExceptionHandler</a> objects. On failure, this argument is untouched.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">handlers</td><td>The exception handlers registered for <em>target_port</em> to handle exceptions indicated in <em>mask</em>. The caller must take ownership of the <em>port</em> members of the returned <a class="el" href="structcrashpad_1_1ExceptionPorts_1_1ExceptionHandler.html" title="Information about a registered exception handler. ">ExceptionHandler</a> objects. If no execption port is registered for a bit in <em>mask</em>, <em>handlers</em> will not contain an entry corresponding to that bit. This is a departure from the <code>*_get_exception_ports()</code> functions, which may return a handler whose port is set to <code>EXCEPTION_PORT_NULL</code> in this case. On failure, this argument is untouched.</td></tr>
   </table>
   </dd>
 </dl>

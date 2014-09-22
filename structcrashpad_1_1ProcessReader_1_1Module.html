@@ -106,10 +106,9 @@ Public Attributes</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1ProcessReader_1_1Module.html#af3802ec0731bda1cf066b050b23debf7">name</a></td></tr>
 <tr class="memdesc:af3802ec0731bda1cf066b050b23debf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pathname used to load the module from disk. <br /></td></tr>
 <tr class="separator:af3802ec0731bda1cf066b050b23debf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade2f225a961ac37e1e94942057606e71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade2f225a961ac37e1e94942057606e71"></a>
-mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1ProcessReader_1_1Module.html#ade2f225a961ac37e1e94942057606e71">address</a></td></tr>
-<tr class="memdesc:ade2f225a961ac37e1e94942057606e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">The address where the base of the module is loaded in the remote process. <br /></td></tr>
-<tr class="separator:ade2f225a961ac37e1e94942057606e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be41f4fae388989c30bbb3046f2a854"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcrashpad_1_1MachOImageReader.html">MachOImageReader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1ProcessReader_1_1Module.html#a3be41f4fae388989c30bbb3046f2a854">reader</a></td></tr>
+<tr class="memdesc:a3be41f4fae388989c30bbb3046f2a854"><td class="mdescLeft">&#160;</td><td class="mdescRight">An image reader for the module.  <a href="#a3be41f4fae388989c30bbb3046f2a854">More...</a><br /></td></tr>
+<tr class="separator:a3be41f4fae388989c30bbb3046f2a854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5283523fbb890bbb49d8dd61a3a294"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1ProcessReader_1_1Module.html#a6e5283523fbb890bbb49d8dd61a3a294">timestamp</a></td></tr>
 <tr class="memdesc:a6e5283523fbb890bbb49d8dd61a3a294"><td class="mdescLeft">&#160;</td><td class="mdescRight">The module’s timestamp.  <a href="#a6e5283523fbb890bbb49d8dd61a3a294">More...</a><br /></td></tr>
 <tr class="separator:a6e5283523fbb890bbb49d8dd61a3a294"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,6 +116,21 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains information about a module loaded into a process. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a3be41f4fae388989c30bbb3046f2a854"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcrashpad_1_1MachOImageReader.html">MachOImageReader</a>* crashpad::ProcessReader::Module::reader</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An image reader for the module. </p>
+<p>The lifetime of this <a class="el" href="classcrashpad_1_1MachOImageReader.html" title="A reader for Mach-O images mapped into another process. ">MachOImageReader</a> is scoped to the lifetime of the <a class="el" href="classcrashpad_1_1ProcessReader.html" title="Accesses information about another process, identified by a Mach task. ">ProcessReader</a> that created it. </p>
+
+</div>
+</div>
 <a class="anchor" id="a6e5283523fbb890bbb49d8dd61a3a294"></a>
 <div class="memitem">
 <div class="memproto">

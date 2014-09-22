@@ -279,6 +279,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a954515a7d1318ae79d54e2667a99a723"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a954515a7d1318ae79d54e2667a99a723">CheckedReadFDAtEOF</a> (int fd)</td></tr>
 <tr class="memdesc:a954515a7d1318ae79d54e2667a99a723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that it indicates end-of-file.  <a href="#a954515a7d1318ae79d54e2667a99a723">More...</a><br /></td></tr>
 <tr class="separator:a954515a7d1318ae79d54e2667a99a723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memItemLeft" align="right" valign="top">launch_data_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c">CFPropertyToLaunchData</a> (CFPropertyListRef property_cf)</td></tr>
+<tr class="memdesc:a616ed0784021ecbd2f0f14b7e75c068c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>.  <a href="#a616ed0784021ecbd2f0f14b7e75c068c">More...</a><br /></td></tr>
+<tr class="separator:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba">MacOSXMinorVersion</a> ()</td></tr>
 <tr class="memdesc:ab05052e02f3c3605fd7bae0f006d2cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the version of the running operating system.  <a href="#ab05052e02f3c3605fd7bae0f006d2cba">More...</a><br /></td></tr>
 <tr class="separator:ab05052e02f3c3605fd7bae0f006d2cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -754,6 +757,32 @@ template&lt;typename Destination , typename Source &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>On x86_64, the value for <code>%rdi</code> will be populated with the address of this function’s argument, as mandated by the ABI. If the value of <code>%rdi</code> prior to calling this function is needed, it must be obtained separately prior to calling this function. For example: <div class="fragment"><div class="line">uint64_t rdi;</div>
 <div class="line"><span class="keyword">asm</span>(<span class="stringliteral">&quot;movq %%rdi, %0&quot;</span> : <span class="stringliteral">&quot;=m&quot;</span>(rdi));</div>
 </div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a616ed0784021ecbd2f0f14b7e75c068c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">launch_data_t crashpad::CFPropertyToLaunchData </td>
+          <td>(</td>
+          <td class="paramtype">CFPropertyListRef&#160;</td>
+          <td class="paramname"><em>property_cf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">property_cf</td><td>The Core Foundation-type property list to convert.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted launchd-type <code>launch_data_t</code>. The caller takes ownership of the returned value. On error, returns <code>NULL</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function handles all <code>CFPropertyListRef</code> types except for <code>CFDateRef</code>, because there’s no <code>launch_data_type_t</code> analogue. Not all types supported in a launchd-type <code>launch_data_t</code> have <code>CFPropertyListRef</code> analogues. </dd></dl>
 
 </div>
 </div>
@@ -1553,8 +1582,8 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was removed successfully or if an asynchronous attempt to remove the job was started successfully, otherwise <code>false</code>. Unlike previous systems, on Mac OS X 10.10, this function returns <code>true</code> even if <em>label</em> names a job that does not exist. This is filed as radar 18268941.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobRemove()</code> is deprecated in Mac OS X 10.10. It may or may not be implemented using <code>SMJobRemove()</code> from <code>ServiceManagement.framework</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was removed successfully or if an asynchronous attempt to remove the job was started successfully, otherwise <code>false</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobRemove()</code> is deprecated in Mac OS X 10.10. On Mac OS X 10.10, observed in DP8 14A361c, it also blocks for far too long (<code>_block_until_job_exits()</code> contains a one-second <code>sleep()</code>, filed as radar 18398683) and does not signal failure via its return value when asked to remove a nonexistent job (filed as radar 18268941). </dd></dl>
 
 </div>
 </div>

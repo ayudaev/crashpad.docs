@@ -141,6 +141,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a960745cd720836f2fe56ca44cb19751d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a960745cd720836f2fe56ca44cb19751d">WritePipeFD</a> () const </td></tr>
 <tr class="memdesc:a960745cd720836f2fe56ca44cb19751d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the write pipe’s file descriptor.  <a href="#a960745cd720836f2fe56ca44cb19751d">More...</a><br /></td></tr>
 <tr class="separator:a960745cd720836f2fe56ca44cb19751d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ec1079c25eca71250ff3ccf8ec2b72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a89ec1079c25eca71250ff3ccf8ec2b72">CloseReadPipe</a> ()</td></tr>
+<tr class="memdesc:a89ec1079c25eca71250ff3ccf8ec2b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the read pipe.  <a href="#a89ec1079c25eca71250ff3ccf8ec2b72">More...</a><br /></td></tr>
+<tr class="separator:a89ec1079c25eca71250ff3ccf8ec2b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7a2037501f89d4d8aa3099285b7ae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a9d7a2037501f89d4d8aa3099285b7ae9">CloseWritePipe</a> ()</td></tr>
+<tr class="memdesc:a9d7a2037501f89d4d8aa3099285b7ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the write pipe.  <a href="#a9d7a2037501f89d4d8aa3099285b7ae9">More...</a><br /></td></tr>
+<tr class="separator:a9d7a2037501f89d4d8aa3099285b7ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Manages a multiprocess test. </p>
@@ -195,6 +201,58 @@ Protected Member Functions</h2></td></tr>
 
 <p>Returns the child process’ process ID. </p>
 <p>This method may only be called by the parent process. </p>
+
+</div>
+</div>
+<a class="anchor" id="a89ec1079c25eca71250ff3ccf8ec2b72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::Multiprocess::CloseReadPipe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the read pipe. </p>
+<p>This method may be called by either the parent or the child process. An attempt to write to the write pipe in the partner process will fail with <code>EPIPE</code> or <code>SIGPIPE</code>. <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#ad51dda8c20fd42d92546d0fb4c3dc8c5" title="Returns the read pipe’s file descriptor. ">ReadPipeFD()</a> must not be called after this. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d7a2037501f89d4d8aa3099285b7ae9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::Multiprocess::CloseWritePipe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Closes the write pipe. </p>
+<p>This method may be called by either the parent or the child process. An attempt to read from the read pipe in the partner process will indicate end-of-file. <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a960745cd720836f2fe56ca44cb19751d" title="Returns the write pipe’s file descriptor. ">WritePipeFD()</a> must not be called after this. </p>
 
 </div>
 </div>
@@ -257,7 +315,9 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the read pipe’s file descriptor. </p>
-<p>This method may be called by either the parent or the child process. Anything written to the write pipe in the partner process will appear on the this file descriptor in this process. </p>
+<p>This method may be called by either the parent or the child process. Anything written to the write pipe in the partner process will appear on the this file descriptor in this process.</p>
+<p>It is an error to call this after <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a89ec1079c25eca71250ff3ccf8ec2b72" title="Closes the read pipe. ">CloseReadPipe()</a> has been called.</p>
+<dl class="section return"><dt>Returns</dt><dd>The read pipe’s file descriptor. </dd></dl>
 
 </div>
 </div>
@@ -338,7 +398,9 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the write pipe’s file descriptor. </p>
-<p>This method may be called by either the parent or the child process. Anything written to this file descriptor in this process will appear on the read pipe in the partner process. </p>
+<p>This method may be called by either the parent or the child process. Anything written to this file descriptor in this process will appear on the read pipe in the partner process.</p>
+<p>It is an error to call this after <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html#a9d7a2037501f89d4d8aa3099285b7ae9" title="Closes the write pipe. ">CloseWritePipe()</a> has been called.</p>
+<dl class="section return"><dt>Returns</dt><dd>The write pipe’s file descriptor. </dd></dl>
 
 </div>
 </div>
