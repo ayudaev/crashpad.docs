@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nonblocking',['Nonblocking',['../classcrashpad_1_1MachMessageServer.html#a6caf7e93fed4a790b6b453383de9e025',1,'crashpad::MachMessageServer']]]
+  ['daylightsavingtimestatus',['DaylightSavingTimeStatus',['../classcrashpad_1_1SystemSnapshot.html#a28be27b27e7257818a9b13f121f0f472',1,'crashpad::SystemSnapshot']]]
 ];

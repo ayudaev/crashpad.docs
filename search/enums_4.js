@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['targettype',['TargetType',['../classcrashpad_1_1ExceptionPorts.html#af3bb7100d4bf2e8ead5115e187434fb0',1,'crashpad::ExceptionPorts']]],
-  ['terminationreason',['TerminationReason',['../classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf',1,'crashpad::test::Multiprocess']]]
+  ['operatingsystem',['OperatingSystem',['../classcrashpad_1_1SystemSnapshot.html#aa8ef4c8866899122bd8da279b3b2ab37',1,'crashpad::SystemSnapshot']]]
 ];
