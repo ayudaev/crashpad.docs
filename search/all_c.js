@@ -11,5 +11,5 @@ var searchData=
   ['numberofstreams',['NumberOfStreams',['../structMINIDUMP__HEADER.html#ac64203d27bba37f630437048a0e19630',1,'MINIDUMP_HEADER']]],
   ['numberofthreads',['NumberOfThreads',['../structMINIDUMP__THREAD__LIST.html#ad5be905c0b6b716c2e1b2b52447de11d',1,'MINIDUMP_THREAD_LIST']]],
   ['numberparameters',['NumberParameters',['../structMINIDUMP__EXCEPTION.html#a29c7d61cd5eddf5c4f493bae40cd2679',1,'MINIDUMP_EXCEPTION']]],
-  ['nxenabled',['NXEnabled',['../classcrashpad_1_1SystemSnapshot.html#ab347e8cf3f9cd790d94966a794c88e0c',1,'crashpad::SystemSnapshot']]]
+  ['nxenabled',['NXEnabled',['../classcrashpad_1_1SystemSnapshot.html#ab347e8cf3f9cd790d94966a794c88e0c',1,'crashpad::SystemSnapshot::NXEnabled()'],['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a6cf7a53f27f98f1bc2042326d179e582',1,'crashpad::internal::SystemSnapshotMac::NXEnabled()']]]
 ];

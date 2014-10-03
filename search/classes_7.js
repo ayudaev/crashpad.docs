@@ -7,5 +7,6 @@ var searchData=
   ['stringfilewriter',['StringFileWriter',['../classcrashpad_1_1StringFileWriter.html',1,'crashpad']]],
   ['symbolinformation',['SymbolInformation',['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html',1,'crashpad::MachOImageSymbolTableReader']]],
   ['systemsnapshot',['SystemSnapshot',['../classcrashpad_1_1SystemSnapshot.html',1,'crashpad']]],
+  ['systemsnapshotmac',['SystemSnapshotMac',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html',1,'crashpad::internal']]],
   ['systemtime',['SYSTEMTIME',['../structSYSTEMTIME.html',1,'']]]
 ];
