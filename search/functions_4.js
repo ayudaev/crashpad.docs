@@ -16,5 +16,8 @@ var searchData=
   ['exceptiontostring',['ExceptionToString',['../namespacecrashpad.html#a05296bfd23550f42639067355410811e',1,'crashpad']]],
   ['excmaskall',['ExcMaskAll',['../namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941',1,'crashpad']]],
   ['excserversuccessfulreturnvalue',['ExcServerSuccessfulReturnValue',['../namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e',1,'crashpad']]],
-  ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]]
+  ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]],
+  ['expectminidumpcontextamd64',['ExpectMinidumpContextAMD64',['../namespacecrashpad_1_1test.html#a5e538222db2dc763870f9ac9161f3a27',1,'crashpad::test']]],
+  ['expectminidumpcontextx86',['ExpectMinidumpContextX86',['../namespacecrashpad_1_1test.html#ace5ccb45c3787dd8e8c3eed0870ca228',1,'crashpad::test']]],
+  ['expectminidumpmemorydescriptorandcontents',['ExpectMinidumpMemoryDescriptorAndContents',['../namespacecrashpad_1_1test.html#a7bcb7b725b62a0058c18e0851a1adf5c',1,'crashpad::test']]]
 ];

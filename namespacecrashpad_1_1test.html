@@ -107,9 +107,15 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MultiprocessExec.html">MultiprocessExec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages an <code>exec()</code>-based multiprocess test.  <a href="classcrashpad_1_1test_1_1MultiprocessExec.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html">TestMinidumpMemoryWriter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> implementation used for testing.  <a href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a7bcb7b725b62a0058c18e0851a1adf5c">ExpectMinidumpMemoryDescriptorAndContents</a> (const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *expected, const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *observed, const std::string &amp;file_contents, uint8_t value, bool at_eof)</td></tr>
+<tr class="memdesc:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values, and that the memory region it points to contains expected values assuming it was written by a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a> object.  <a href="#a7bcb7b725b62a0058c18e0851a1adf5c">More...</a><br /></td></tr>
+<tr class="separator:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9">VerifyMinidumpHeader</a> (const <a class="el" href="structMINIDUMP__HEADER.html">MINIDUMP_HEADER</a> *header, uint32_t streams, uint32_t timestamp)</td></tr>
 <tr class="memdesc:a5e604ee6a23070a89e2a0015eb2854a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__HEADER.html" title="The top-level structure identifying a minidump file. ">MINIDUMP_HEADER</a> contains expected values.  <a href="#a5e604ee6a23070a89e2a0015eb2854a9">More...</a><br /></td></tr>
 <tr class="separator:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +135,20 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <tr class="memitem:a8db2fa97998b00a8ee57398fa8c8b14e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a8db2fa97998b00a8ee57398fa8c8b14e">BootstrapErrorMessage</a> (kern_return_t bootstrap_err, const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:a8db2fa97998b00a8ee57398fa8c8b14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a bootstrap error message.  <a href="#a8db2fa97998b00a8ee57398fa8c8b14e">More...</a><br /></td></tr>
 <tr class="separator:a8db2fa97998b00a8ee57398fa8c8b14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:afefac1494b6a67c50a254c75a8caccf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#afefac1494b6a67c50a254c75a8caccf1">InitializeMinidumpContextX86</a> (<a class="el" href="structcrashpad_1_1MinidumpContextX86.html">MinidumpContextX86</a> *context, uint32_t seed)</td></tr>
+<tr class="memdesc:afefac1494b6a67c50a254c75a8caccf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a context structure for testing.  <a href="#afefac1494b6a67c50a254c75a8caccf1">More...</a><br /></td></tr>
+<tr class="separator:afefac1494b6a67c50a254c75a8caccf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1dd7166c73ca082608b1ab21b5a395"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#afa1dd7166c73ca082608b1ab21b5a395">InitializeMinidumpContextAMD64</a> (<a class="el" href="structcrashpad_1_1MinidumpContextAMD64.html">MinidumpContextAMD64</a> *context, uint32_t seed)</td></tr>
+<tr class="memdesc:afa1dd7166c73ca082608b1ab21b5a395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a context structure for testing.  <a href="#afa1dd7166c73ca082608b1ab21b5a395">More...</a><br /></td></tr>
+<tr class="separator:afa1dd7166c73ca082608b1ab21b5a395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ace5ccb45c3787dd8e8c3eed0870ca228"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ace5ccb45c3787dd8e8c3eed0870ca228">ExpectMinidumpContextX86</a> (uint32_t expect_seed, const <a class="el" href="structcrashpad_1_1MinidumpContextX86.html">MinidumpContextX86</a> *observed)</td></tr>
+<tr class="memdesc:ace5ccb45c3787dd8e8c3eed0870ca228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a context structure contains expected values.  <a href="#ace5ccb45c3787dd8e8c3eed0870ca228">More...</a><br /></td></tr>
+<tr class="separator:ace5ccb45c3787dd8e8c3eed0870ca228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e538222db2dc763870f9ac9161f3a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5e538222db2dc763870f9ac9161f3a27">ExpectMinidumpContextAMD64</a> (uint32_t expect_seed, const <a class="el" href="structcrashpad_1_1MinidumpContextAMD64.html">MinidumpContextAMD64</a> *observed)</td></tr>
+<tr class="memdesc:a5e538222db2dc763870f9ac9161f3a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a context structure contains expected values.  <a href="#a5e538222db2dc763870f9ac9161f3a27">More...</a><br /></td></tr>
+<tr class="separator:a5e538222db2dc763870f9ac9161f3a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The testing namespace, for use in test code only. </p>
@@ -232,6 +252,203 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string of the format <code>"Operation not permitted (1)"</code> if <code>errno</code> has the value <code>EPERM</code> on a system where this is defined to be <code>1</code>. If <em>base</em> is not empty, it will be prepended to this string, separated by a colon. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e538222db2dc763870f9ac9161f3a27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::ExpectMinidumpContextAMD64 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>expect_seed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MinidumpContextAMD64 *&#160;</td>
+          <td class="paramname"><em>observed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies, via gtest assertions, that a context structure contains expected values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">expect_seed</td><td>The seed value used to initialize a context structure. This is the seed value used with InitializeMinidumpContext*(). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">observed</td><td>The context structure to check. All fields of this structure will be compared against the expected context structure, one initialized with <em>expect_seed</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ace5ccb45c3787dd8e8c3eed0870ca228"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::ExpectMinidumpContextX86 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>expect_seed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MinidumpContextX86 *&#160;</td>
+          <td class="paramname"><em>observed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies, via gtest assertions, that a context structure contains expected values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">expect_seed</td><td>The seed value used to initialize a context structure. This is the seed value used with InitializeMinidumpContext*(). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">observed</td><td>The context structure to check. All fields of this structure will be compared against the expected context structure, one initialized with <em>expect_seed</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7bcb7b725b62a0058c18e0851a1adf5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::ExpectMinidumpMemoryDescriptorAndContents </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *&#160;</td>
+          <td class="paramname"><em>observed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_contents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>at_eof</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values, and that the memory region it points to contains expected values assuming it was written by a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a> object. </p>
+<p>In <em>expected</em> and <em>observed</em>, <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html#ac6d589aa4a3b82315866f2a27bee770c" title="The base address of the memory region in the address space of the process that the minidump file cont...">MINIDUMP_MEMORY_DESCRIPTOR::StartOfMemoryRange</a> and <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html#ad83430521d4a8991d85e06be61525a92" title="The size of the referenced structure or union, in bytes. ">MINIDUMP_LOCATION_DESCRIPTOR::DataSize</a> are compared and must match. If <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html#ae877992492577366d7185721b8239877" title="The relative virtual address of the structure or union within the minidump file. ">MINIDUMP_LOCATION_DESCRIPTOR::Rva</a> is nonzero in <em>expected</em>, the same field in <em>observed</em> must match it, subject to a 16-byte alignment augmentation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">expected</td><td>A <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure containing expected values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">observed</td><td>A <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure containing observed values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_contents</td><td>The contents of the minidump file in which <em>observed</em> was found. The memory region referenced by <em>observed</em> will be read from this string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The <em>value</em> used to create a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a>. Each byte of memory in the region referenced by <em>observed</em> must be this value. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">at_eof</td><td>If <code>true</code>, the region referenced by <em>observed</em> must appear at the end of <em>file_contents</em>, without any data following it. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afa1dd7166c73ca082608b1ab21b5a395"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::InitializeMinidumpContextAMD64 </td>
+          <td>(</td>
+          <td class="paramtype">MinidumpContextAMD64 *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>seed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a context structure for testing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>The structure to initialize. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>The seed value. Initializing two context structures of the same type with identical seed values should produce identical context structures. Initialization with a different seed value should produce a different context structure. If <em>seed</em> is <code>0</code>, <em>context</em> is zeroed out entirely except for the flags field, which will identify the context type. If <em>seed</em> is nonzero <em>context</em> will be populated entirely with nonzero values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afefac1494b6a67c50a254c75a8caccf1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::InitializeMinidumpContextX86 </td>
+          <td>(</td>
+          <td class="paramtype">MinidumpContextX86 *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>seed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a context structure for testing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">context</td><td>The structure to initialize. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>The seed value. Initializing two context structures of the same type with identical seed values should produce identical context structures. Initialization with a different seed value should produce a different context structure. If <em>seed</em> is <code>0</code>, <em>context</em> is zeroed out entirely except for the flags field, which will identify the context type. If <em>seed</em> is nonzero <em>context</em> will be populated entirely with nonzero values. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

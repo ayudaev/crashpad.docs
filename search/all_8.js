@@ -12,6 +12,8 @@ var searchData=
   ['initializecpucontextx86',['InitializeCPUContextX86',['../namespacecrashpad_1_1internal.html#a2653688e7fc247528115a297be648fcd',1,'crashpad::internal']]],
   ['initializecpucontextx86_5f64',['InitializeCPUContextX86_64',['../namespacecrashpad_1_1internal.html#a6a0cfbd267c1609247d2d14e371b0408',1,'crashpad::internal']]],
   ['initializefrombytes',['InitializeFromBytes',['../structcrashpad_1_1UUID.html#adc8f2ac33af88d762a6b7575971cca58',1,'crashpad::UUID']]],
+  ['initializeminidumpcontextamd64',['InitializeMinidumpContextAMD64',['../namespacecrashpad_1_1test.html#afa1dd7166c73ca082608b1ab21b5a395',1,'crashpad::test']]],
+  ['initializeminidumpcontextx86',['InitializeMinidumpContextX86',['../namespacecrashpad_1_1test.html#afefac1494b6a67c50a254c75a8caccf1',1,'crashpad::test']]],
   ['inrangecast',['InRangeCast',['../namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29',1,'crashpad']]],
   ['instructionpointer',['InstructionPointer',['../structcrashpad_1_1CPUContext.html#af87233023c9ef6acadeb42b6ab093816',1,'crashpad::CPUContext']]],
   ['interface',['Interface',['../classcrashpad_1_1MachMessageServer_1_1Interface.html',1,'crashpad::MachMessageServer']]],
