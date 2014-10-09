@@ -15,5 +15,6 @@ var searchData=
   ['memorysnapshotdelegateread',['MemorySnapshotDelegateRead',['../classcrashpad_1_1MemorySnapshot_1_1Delegate.html#a844f77076dc607ce0cd8946aea75f73b',1,'crashpad::MemorySnapshot::Delegate']]],
   ['minidumpmemorydescriptor',['MinidumpMemoryDescriptor',['../classcrashpad_1_1MinidumpMemoryWriter.html#aed2c11b4e81395533d93eb85a4563e18',1,'crashpad::MinidumpMemoryWriter']]],
   ['minidumpmodule',['MinidumpModule',['../classcrashpad_1_1MinidumpModuleWriter.html#a7c5c82d17dcb1f68353586df1876e1fe',1,'crashpad::MinidumpModuleWriter']]],
+  ['minidumpthread',['MinidumpThread',['../classcrashpad_1_1MinidumpThreadWriter.html#ac1007d28b55737a2d6202fadc31d1715',1,'crashpad::MinidumpThreadWriter']]],
   ['modules',['Modules',['../classcrashpad_1_1ProcessSnapshot.html#ab121715bf3d05dcf38a97e8212920fd8',1,'crashpad::ProcessSnapshot::Modules()'],['../classcrashpad_1_1ProcessReader.html#afcd874395af5ca91e28f9056f6c3fe5e',1,'crashpad::ProcessReader::Modules()']]]
 ];

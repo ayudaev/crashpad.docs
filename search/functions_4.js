@@ -19,5 +19,6 @@ var searchData=
   ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]],
   ['expectminidumpcontextamd64',['ExpectMinidumpContextAMD64',['../namespacecrashpad_1_1test.html#a5e538222db2dc763870f9ac9161f3a27',1,'crashpad::test']]],
   ['expectminidumpcontextx86',['ExpectMinidumpContextX86',['../namespacecrashpad_1_1test.html#ace5ccb45c3787dd8e8c3eed0870ca228',1,'crashpad::test']]],
+  ['expectminidumpmemorydescriptor',['ExpectMinidumpMemoryDescriptor',['../namespacecrashpad_1_1test.html#a5d907f190db31282e6c8a08df38f7f3f',1,'crashpad::test']]],
   ['expectminidumpmemorydescriptorandcontents',['ExpectMinidumpMemoryDescriptorAndContents',['../namespacecrashpad_1_1test.html#a7bcb7b725b62a0058c18e0851a1adf5c',1,'crashpad::test']]]
 ];

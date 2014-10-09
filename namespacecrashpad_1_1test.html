@@ -113,12 +113,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a7bcb7b725b62a0058c18e0851a1adf5c">ExpectMinidumpMemoryDescriptorAndContents</a> (const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *expected, const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *observed, const std::string &amp;file_contents, uint8_t value, bool at_eof)</td></tr>
-<tr class="memdesc:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values, and that the memory region it points to contains expected values assuming it was written by a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a> object.  <a href="#a7bcb7b725b62a0058c18e0851a1adf5c">More...</a><br /></td></tr>
-<tr class="separator:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9">VerifyMinidumpHeader</a> (const <a class="el" href="structMINIDUMP__HEADER.html">MINIDUMP_HEADER</a> *header, uint32_t streams, uint32_t timestamp)</td></tr>
 <tr class="memdesc:a5e604ee6a23070a89e2a0015eb2854a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__HEADER.html" title="The top-level structure identifying a minidump file. ">MINIDUMP_HEADER</a> contains expected values.  <a href="#a5e604ee6a23070a89e2a0015eb2854a9">More...</a><br /></td></tr>
 <tr class="separator:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d907f190db31282e6c8a08df38f7f3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5d907f190db31282e6c8a08df38f7f3f">ExpectMinidumpMemoryDescriptor</a> (const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *expected, const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *observed)</td></tr>
+<tr class="memdesc:a5d907f190db31282e6c8a08df38f7f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values.  <a href="#a5d907f190db31282e6c8a08df38f7f3f">More...</a><br /></td></tr>
+<tr class="separator:a5d907f190db31282e6c8a08df38f7f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a7bcb7b725b62a0058c18e0851a1adf5c">ExpectMinidumpMemoryDescriptorAndContents</a> (const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *expected, const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *observed, const std::string &amp;file_contents, uint8_t value, bool at_eof)</td></tr>
+<tr class="memdesc:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values, and that the memory region it points to contains expected values assuming it was written by a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a> object.  <a href="#a7bcb7b725b62a0058c18e0851a1adf5c">More...</a><br /></td></tr>
+<tr class="separator:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9504862c089964763d7d362572c2ac6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6">ErrnoMessage</a> (int err, const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:ad9504862c089964763d7d362572c2ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an error message using an <code>errno</code> value.  <a href="#ad9504862c089964763d7d362572c2ac6">More...</a><br /></td></tr>
 <tr class="separator:ad9504862c089964763d7d362572c2ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,6 +328,42 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 
 </div>
 </div>
+<a class="anchor" id="a5d907f190db31282e6c8a08df38f7f3f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::ExpectMinidumpMemoryDescriptor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *&#160;</td>
+          <td class="paramname"><em>observed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values. </p>
+<p>In <em>expected</em> and <em>observed</em>, <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html#ac6d589aa4a3b82315866f2a27bee770c" title="The base address of the memory region in the address space of the process that the minidump file cont...">MINIDUMP_MEMORY_DESCRIPTOR::StartOfMemoryRange</a> and <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html#ad83430521d4a8991d85e06be61525a92" title="The size of the referenced structure or union, in bytes. ">MINIDUMP_LOCATION_DESCRIPTOR::DataSize</a> are compared and must match. If <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html#ae877992492577366d7185721b8239877" title="The relative virtual address of the structure or union within the minidump file. ">MINIDUMP_LOCATION_DESCRIPTOR::Rva</a> is nonzero in <em>expected</em>, the same field in <em>observed</em> must match it, subject to a 16-byte alignment augmentation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">expected</td><td>A <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure containing expected values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">observed</td><td>A <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure containing observed values. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a7bcb7b725b62a0058c18e0851a1adf5c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -368,7 +407,7 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </div><div class="memdoc">
 
 <p>Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values, and that the memory region it points to contains expected values assuming it was written by a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a> object. </p>
-<p>In <em>expected</em> and <em>observed</em>, <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html#ac6d589aa4a3b82315866f2a27bee770c" title="The base address of the memory region in the address space of the process that the minidump file cont...">MINIDUMP_MEMORY_DESCRIPTOR::StartOfMemoryRange</a> and <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html#ad83430521d4a8991d85e06be61525a92" title="The size of the referenced structure or union, in bytes. ">MINIDUMP_LOCATION_DESCRIPTOR::DataSize</a> are compared and must match. If <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html#ae877992492577366d7185721b8239877" title="The relative virtual address of the structure or union within the minidump file. ">MINIDUMP_LOCATION_DESCRIPTOR::Rva</a> is nonzero in <em>expected</em>, the same field in <em>observed</em> must match it, subject to a 16-byte alignment augmentation.</p>
+<p><em>expected</em> and <em>observed</em> are compared by <a class="el" href="namespacecrashpad_1_1test.html#a5d907f190db31282e6c8a08df38f7f3f" title="Verifies, via gtest assertions, that a MINIDUMP_MEMORY_DESCRIPTOR structure contains expected values...">ExpectMinidumpMemoryDescriptor()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">expected</td><td>A <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure containing expected values. </td></tr>
