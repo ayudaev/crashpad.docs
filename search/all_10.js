@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scopedforbidreturn',['ScopedForbidReturn',['../classcrashpad_1_1ScopedForbidReturn.html',1,'crashpad']]],
+  ['scopedtasksuspend',['ScopedTaskSuspend',['../classcrashpad_1_1ScopedTaskSuspend.html',1,'crashpad']]],
   ['section',['section',['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html#ab02e2ba00bda304ee3fcb47df8aab35c',1,'crashpad::MachOImageSymbolTableReader::SymbolInformation']]],
   ['sectionnamestring',['SectionNameString',['../classcrashpad_1_1MachOImageSegmentReader.html#ad9357dc5d34a7f09219f6e850694014b',1,'crashpad::MachOImageSegmentReader']]],
   ['seek',['Seek',['../classcrashpad_1_1FileWriterInterface.html#a16e675d536c3622be62591492b51fac8',1,'crashpad::FileWriterInterface::Seek()'],['../classcrashpad_1_1FileWriter.html#afca5910c1ad3d5adc2b236f27f7108c0',1,'crashpad::FileWriter::Seek()'],['../classcrashpad_1_1StringFileWriter.html#a4772b735b5df75d6a6d32b656cdd8b0f',1,'crashpad::StringFileWriter::Seek()']]],
@@ -94,7 +95,7 @@ var searchData=
   ['slide',['Slide',['../classcrashpad_1_1MachOImageReader.html#a2ea55d8226e67bcba2550ba9e2f7d96a',1,'crashpad::MachOImageReader']]],
   ['snapshottime',['SnapshotTime',['../classcrashpad_1_1ProcessSnapshot.html#a755c58effbbfb33b4d5be963bd81079f',1,'crashpad::ProcessSnapshot']]],
   ['sourceversion',['SourceVersion',['../classcrashpad_1_1ModuleSnapshot.html#a5ec8c62e1ff32421b01bf2677ad66761',1,'crashpad::ModuleSnapshot::SourceVersion()'],['../classcrashpad_1_1MachOImageReader.html#ac6b584da922b6c76c2c34f8e9f8e636c',1,'crashpad::MachOImageReader::SourceVersion()']]],
-  ['stack',['Stack',['../structMINIDUMP__THREAD.html#a4affab2d1a0995fdb085d302d78fbb81',1,'MINIDUMP_THREAD::Stack()'],['../classcrashpad_1_1MinidumpThreadWriter.html#aa8137c202e58bc0a9fccee464e508cd3',1,'crashpad::MinidumpThreadWriter::Stack()'],['../classcrashpad_1_1ThreadSnapshot.html#a4f0eadc03965ea69a6b0462f878dd628',1,'crashpad::ThreadSnapshot::Stack()']]],
+  ['stack',['Stack',['../structMINIDUMP__THREAD.html#a4affab2d1a0995fdb085d302d78fbb81',1,'MINIDUMP_THREAD::Stack()'],['../classcrashpad_1_1MinidumpThreadWriter.html#aa8137c202e58bc0a9fccee464e508cd3',1,'crashpad::MinidumpThreadWriter::Stack()'],['../classcrashpad_1_1ThreadSnapshot.html#a4f0eadc03965ea69a6b0462f878dd628',1,'crashpad::ThreadSnapshot::Stack()'],['../classcrashpad_1_1internal_1_1ThreadSnapshotMac.html#a5b63ca812f667219928f2f0dd3f9d846',1,'crashpad::internal::ThreadSnapshotMac::Stack()']]],
   ['standardbias',['StandardBias',['../structTIME__ZONE__INFORMATION.html#a8e7f32fd867379097bde8f2512652478',1,'TIME_ZONE_INFORMATION']]],
   ['standarddate',['StandardDate',['../structTIME__ZONE__INFORMATION.html#a841443a2a5fa7a3e3b768a823e8f8cfa',1,'TIME_ZONE_INFORMATION']]],
   ['standardname',['StandardName',['../structTIME__ZONE__INFORMATION.html#ac224901ad59ed90c4adac35028c54fb1',1,'TIME_ZONE_INFORMATION']]],
@@ -115,7 +116,7 @@ var searchData=
   ['stringtothreadstateflavor',['StringToThreadStateFlavor',['../namespacecrashpad.html#a2fdb1f659a2813e80d5b644020a44208',1,'crashpad']]],
   ['strnlen',['strnlen',['../namespacecrashpad.html#ac8605dea4710c2630ccdd21439e05999',1,'crashpad']]],
   ['suitemask',['SuiteMask',['../structMINIDUMP__SYSTEM__INFO.html#a8b9c73ce707c57a0280a395051f67945',1,'MINIDUMP_SYSTEM_INFO']]],
-  ['suspendcount',['SuspendCount',['../structMINIDUMP__THREAD.html#a3ab33039a1c9f00facc2a137a74cbc06',1,'MINIDUMP_THREAD::SuspendCount()'],['../classcrashpad_1_1ThreadSnapshot.html#abe00a7e9cbc55366a545700517762d5c',1,'crashpad::ThreadSnapshot::SuspendCount()']]],
+  ['suspendcount',['SuspendCount',['../structMINIDUMP__THREAD.html#a3ab33039a1c9f00facc2a137a74cbc06',1,'MINIDUMP_THREAD::SuspendCount()'],['../classcrashpad_1_1ThreadSnapshot.html#abe00a7e9cbc55366a545700517762d5c',1,'crashpad::ThreadSnapshot::SuspendCount()'],['../classcrashpad_1_1internal_1_1ThreadSnapshotMac.html#ab285ef89616ae6c9a48a9052bd917e37',1,'crashpad::internal::ThreadSnapshotMac::SuspendCount()']]],
   ['symbolic_5fconstants_5fcommon_2eh',['symbolic_constants_common.h',['../symbolic__constants__common_8h.html',1,'']]],
   ['symbolicconstanttostringoptionbits',['SymbolicConstantToStringOptionBits',['../namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed',1,'crashpad']]],
   ['symbolicconstanttostringoptions',['SymbolicConstantToStringOptions',['../namespacecrashpad.html#aaf53d9bd2234d977d4bc296feab12e53',1,'crashpad']]],
