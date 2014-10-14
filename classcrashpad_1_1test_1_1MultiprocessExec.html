@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4fbe35bfe7dd75624b417c435ae2208b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MultiprocessExec.html#a4fbe35bfe7dd75624b417c435ae2208b">PreFork</a> () override</td></tr>
+<tr class="memitem:a4fbe35bfe7dd75624b417c435ae2208b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MultiprocessExec.html#a4fbe35bfe7dd75624b417c435ae2208b">PreFork</a> () override</td></tr>
 <tr class="memdesc:a4fbe35bfe7dd75624b417c435ae2208b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establishes the proper testing environment prior to forking.  <a href="#a4fbe35bfe7dd75624b417c435ae2208b">More...</a><br /></td></tr>
 <tr class="separator:a4fbe35bfe7dd75624b417c435ae2208b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcrashpad_1_1test_1_1Multiprocess"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcrashpad_1_1test_1_1Multiprocess')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcrashpad_1_1test_1_1Multiprocess.html">crashpad::test::Multiprocess</a></td></tr>
@@ -180,7 +180,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Establishes the proper testing environment prior to forking. </p>
 <p>Subclasses that solely implement a test should not need to override this method. Subclasses that do not implement tests but instead implement additional testing features on top of this class may override this method provided that they call the superclass’ implementation first as follows:</p>
-<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcrashpad_1_1test_1_1MultiprocessExec.html#a4fbe35bfe7dd75624b417c435ae2208b">PreFork</a>()<span class="keyword"> override </span>{</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classcrashpad_1_1test_1_1MultiprocessExec.html#a4fbe35bfe7dd75624b417c435ae2208b">PreFork</a>()<span class="keyword"> override </span>{</div>
 <div class="line">  ASSERT_NO_FATAL_FAILURE(<a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">Multiprocess::PreFork</a>());</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// Place subclass-specific pre-fork code here.</span></div>
@@ -220,7 +220,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">command</td><td>The executable’s pathname. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">arguments</td><td>The command-line arguments to pass to the child process in its <code>argv[]</code> vector. This vector must begin at <code>argv[1]</code>, as <em>command</em> is implicitly used as <code>argv[0]</code>. This argument may be <code>NULL</code> if no command-line arguments are to be passed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">arguments</td><td>The command-line arguments to pass to the child process in its <code>argv[]</code> vector. This vector must begin at <code>argv[1]</code>, as <em>command</em> is implicitly used as <code>argv[0]</code>. This argument may be <code>nullptr</code> if no command-line arguments are to be passed. </td></tr>
   </table>
   </dd>
 </dl>

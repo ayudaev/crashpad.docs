@@ -138,21 +138,21 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5747ad90d9e9f4d6b2bc44231e677ea5"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a5747ad90d9e9f4d6b2bc44231e677ea5">MemoryRangeSize</a> () const =0</td></tr>
 <tr class="memdesc:a5747ad90d9e9f4d6b2bc44231e677ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the memory region in bytes.  <a href="#a5747ad90d9e9f4d6b2bc44231e677ea5">More...</a><br /></td></tr>
 <tr class="separator:a5747ad90d9e9f4d6b2bc44231e677ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8997151abbd2f6c1b44b819fb00d0002"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a8997151abbd2f6c1b44b819fb00d0002">Freeze</a> () override</td></tr>
+<tr class="memitem:a8997151abbd2f6c1b44b819fb00d0002"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a8997151abbd2f6c1b44b819fb00d0002">Freeze</a> () override</td></tr>
 <tr class="memdesc:a8997151abbd2f6c1b44b819fb00d0002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transitions the object from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a> to <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7af98547144e0e8d4f878f725ef5c0d611" title="The object is “frozen”. ">kStateFrozen</a>.  <a href="#a8997151abbd2f6c1b44b819fb00d0002">More...</a><br /></td></tr>
 <tr class="separator:a8997151abbd2f6c1b44b819fb00d0002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e608792cf4fc048d1003c17d36703b3"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a0e608792cf4fc048d1003c17d36703b3">SizeOfObject</a> () overridefinal</td></tr>
-<tr class="memdesc:a0e608792cf4fc048d1003c17d36703b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of space that this object will consume when written to a minidump file, in bytes, not including any leading or trailing padding necessary to maintain proper alignment.  <a href="#a0e608792cf4fc048d1003c17d36703b3">More...</a><br /></td></tr>
-<tr class="separator:a0e608792cf4fc048d1003c17d36703b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77268e3451a9927716f42541e53c4d1"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#ab77268e3451a9927716f42541e53c4d1">Alignment</a> () override</td></tr>
+<tr class="memitem:a546a1702c89f5ad8ae62f42f33764f78"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a546a1702c89f5ad8ae62f42f33764f78">SizeOfObject</a> () final</td></tr>
+<tr class="memdesc:a546a1702c89f5ad8ae62f42f33764f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of space that this object will consume when written to a minidump file, in bytes, not including any leading or trailing padding necessary to maintain proper alignment.  <a href="#a546a1702c89f5ad8ae62f42f33764f78">More...</a><br /></td></tr>
+<tr class="separator:a546a1702c89f5ad8ae62f42f33764f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77268e3451a9927716f42541e53c4d1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#ab77268e3451a9927716f42541e53c4d1">Alignment</a> () override</td></tr>
 <tr class="memdesc:ab77268e3451a9927716f42541e53c4d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object’s desired byte-boundary alignment.  <a href="#ab77268e3451a9927716f42541e53c4d1">More...</a><br /></td></tr>
 <tr class="separator:ab77268e3451a9927716f42541e53c4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bce3d767a18396f0507d4528c3d3ecf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a7bce3d767a18396f0507d4528c3d3ecf">WillWriteAtOffsetImpl</a> (off_t offset) override</td></tr>
+<tr class="memitem:a7bce3d767a18396f0507d4528c3d3ecf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#a7bce3d767a18396f0507d4528c3d3ecf">WillWriteAtOffsetImpl</a> (off_t offset) override</td></tr>
 <tr class="memdesc:a7bce3d767a18396f0507d4528c3d3ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called once an object’s writable file offset is determined, as it transitions into <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a87483823ca30a8257b2a5fbd21805bcd" title="The object is writable. ">kStateWritable</a>.  <a href="#a7bce3d767a18396f0507d4528c3d3ecf">More...</a><br /></td></tr>
 <tr class="separator:a7bce3d767a18396f0507d4528c3d3ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2962e487d9c4ac061544c0169341532"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9">Phase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#ad2962e487d9c4ac061544c0169341532">WritePhase</a> () overridefinal</td></tr>
-<tr class="memdesc:ad2962e487d9c4ac061544c0169341532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object’s desired write phase.  <a href="#ad2962e487d9c4ac061544c0169341532">More...</a><br /></td></tr>
-<tr class="separator:ad2962e487d9c4ac061544c0169341532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accab8e2d858dc5337c37acc2b13faf38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a009f007265d64a5fb416848480a00ae9">Phase</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html#accab8e2d858dc5337c37acc2b13faf38">WritePhase</a> () final</td></tr>
+<tr class="memdesc:accab8e2d858dc5337c37acc2b13faf38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object’s desired write phase.  <a href="#accab8e2d858dc5337c37acc2b13faf38">More...</a><br /></td></tr>
+<tr class="separator:accab8e2d858dc5337c37acc2b13faf38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcrashpad_1_1internal_1_1MinidumpWritable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcrashpad_1_1internal_1_1MinidumpWritable')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html">crashpad::internal::MinidumpWritable</a></td></tr>
 <tr class="memitem:a665d2de47970d796e904f0dfce406814 inherit pro_methods_classcrashpad_1_1internal_1_1MinidumpWritable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a665d2de47970d796e904f0dfce406814"></a>
 <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a665d2de47970d796e904f0dfce406814">state</a> () const </td></tr>
@@ -344,7 +344,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0e608792cf4fc048d1003c17d36703b3"></a>
+<a class="anchor" id="a546a1702c89f5ad8ae62f42f33764f78"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -360,7 +360,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -411,7 +411,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad2962e487d9c4ac061544c0169341532"></a>
+<a class="anchor" id="accab8e2d858dc5337c37acc2b13faf38"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -427,7 +427,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

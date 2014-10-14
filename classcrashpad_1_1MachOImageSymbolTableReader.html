@@ -175,7 +175,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">process_reader</td><td>The reader for the remote process. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">symtab_command</td><td>The <code>LC_SYMTAB</code> load command that identifies the symbol table. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dysymtab_command</td><td>The <code>LC_DYSYMTAB</code> load command that identifies dynamic symbol information within the symbol table. This load command is not present in all modules, and this parameter may be <code>NULL</code> for modules that do not have this information. When present, <em>dysymtab_command</em> is an optimization that allows the symbol table reader to only examine symbol table entries known to be relevant for its purposes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dysymtab_command</td><td>The <code>LC_DYSYMTAB</code> load command that identifies dynamic symbol information within the symbol table. This load command is not present in all modules, and this parameter may be <code>nullptr</code> for modules that do not have this information. When present, <em>dysymtab_command</em> is an optimization that allows the symbol table reader to only examine symbol table entries known to be relevant for its purposes. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">linkedit_segment</td><td>The <code>__LINKEDIT</code> segment. This segment should contain the data referenced by <em>symtab_command</em> and <em>dysymtab_command</em>. This may be any segment in the module, but by convention, the name <code>__LINKEDIT</code> is used for this purpose. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">module_info</td><td>A string to be used in logged messages. This string is for diagnostic purposes only, and may be empty.</td></tr>
   </table>
@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A SymbolInformation* object with information about the symbol if it was found, or <code>NULL</code> if the symbol was not found or if an error occurred. On error, a warning message will also be logged. The caller does not take ownership; the lifetime of the returned object is scoped to the lifetime of this <a class="el" href="classcrashpad_1_1MachOImageSymbolTableReader.html" title="A reader for symbol tables in Mach-O images mapped into another process. ">MachOImageSymbolTableReader</a> object.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A SymbolInformation* object with information about the symbol if it was found, or <code>nullptr</code> if the symbol was not found or if an error occurred. On error, a warning message will also be logged. The caller does not take ownership; the lifetime of the returned object is scoped to the lifetime of this <a class="el" href="classcrashpad_1_1MachOImageSymbolTableReader.html" title="A reader for symbol tables in Mach-O images mapped into another process. ">MachOImageSymbolTableReader</a> object.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Symbol values returned via this interface are not adjusted for “slide.” For slide-adjusted values, use the higher-level <a class="el" href="classcrashpad_1_1MachOImageReader.html#a67c826fd57d38b33dbd06966b97e5a08" title="Looks up a symbol in the image’s symbol table. ">MachOImageReader::LookUpExternalDefinedSymbol()</a> interface. </dd></dl>
 
 </div>

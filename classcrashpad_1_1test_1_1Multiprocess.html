@@ -279,7 +279,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Establishes the proper testing environment prior to forking. </p>
 <p>Subclasses that solely implement a test should not need to override this method. Subclasses that do not implement tests but instead implement additional testing features on top of this class may override this method provided that they call the superclass’ implementation first as follows:</p>
-<div class="fragment"><div class="line"><span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">PreFork</a>()<span class="keyword"> override </span>{</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">PreFork</a>()<span class="keyword"> override </span>{</div>
 <div class="line">  ASSERT_NO_FATAL_FAILURE(<a class="code" href="classcrashpad_1_1test_1_1Multiprocess.html#a122d18401346cf600a4f6ab63d83c8ca">Multiprocess::PreFork</a>());</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">// Place subclass-specific pre-fork code here.</span></div>

@@ -1019,7 +1019,7 @@ template&lt;typename Destination , typename Source &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The converted launchd-type <code>launch_data_t</code>. The caller takes ownership of the returned value. On error, returns <code>NULL</code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The converted launchd-type <code>launch_data_t</code>. The caller takes ownership of the returned value. On error, returns <code>nullptr</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function handles all <code>CFPropertyListRef</code> types except for <code>CFDateRef</code>, because there’s no <code>launch_data_type_t</code> analogue. Not all types supported in a launchd-type <code>launch_data_t</code> have <code>CFPropertyListRef</code> analogues. </dd></dl>
 
 </div>
@@ -1215,8 +1215,8 @@ template&lt;typename Destination , typename Source &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">code_0</td><td>The first exception code (<code>code[0]</code>) passed to a Mach exception handler in an <code>EXC_CRASH</code> exception. It is invalid to call this function with an exception code from any exception other than <code>EXC_CRASH</code>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">original_code_0</td><td>The first exception code (<code>code[0]</code>) passed to the Mach exception handler for a hardware exception that resulted in the generation of a POSIX signal that caused process termination. If the signal that caused termination was not sent as a result of a hardware exception, this will be <code>0</code>. Callers that do not need this value may pass <code>NULL</code>. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">signal</td><td>The POSIX signal that caused process termination. Callers that do not need this value may pass <code>NULL</code>.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">original_code_0</td><td>The first exception code (<code>code[0]</code>) passed to the Mach exception handler for a hardware exception that resulted in the generation of a POSIX signal that caused process termination. If the signal that caused termination was not sent as a result of a hardware exception, this will be <code>0</code>. Callers that do not need this value may pass <code>nullptr</code>. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">signal</td><td>The POSIX signal that caused process termination. Callers that do not need this value may pass <code>nullptr</code>.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1659,7 +1659,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns the version of the running operating system. </p>
-<p>All parameters are required. No parameter may be <code>NULL</code>.</p>
+<p>All parameters are required. No parameter may be <code>nullptr</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">major</td><td>The major version of the operating system, such as <code>10</code> for Mac OS X 10.9.2. </td></tr>
@@ -2391,7 +2391,7 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 <p>The function called will be <code>exception_raise()</code> for <code>EXCEPTION_DEFAULT</code>, <code>exception_raise_state()</code> for <code>EXCEPTION_STATE</code>, or <code>exception_raise_state_identity()</code> for <code>EXCEPTION_STATE_IDENTITY</code>. If <code>MACH_EXCEPTION_CODES</code> is also set, the function called will instead be <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code> or <code>mach_exception_raise_state_identity()</code>, respectively.</p>
 <p>This function does not fetch the existing thread state for <em>behavior</em> values that require a thread state. The caller must provide the existing thread state in the <em>flavor</em>, <em>old_state</em>, and <em>old_state_count</em> parameters for <em>behavior</em> values that require a thread state. Thread states may be obtained by calling <code>thread_get_state()</code> if needed. Similarly, this function does not do anything with the new thread state returned for these <em>behavior</em> values. Callers that wish to make use of the new thread state may do so by using the returned <em>flavor</em>, <em>new_state</em>, and <em>new_state_count</em> values. Thread states may be set by calling <code>thread_set_state()</code> if needed.</p>
 <p><em>thread</em> and <em>task</em> are only used when <em>behavior</em> indicates that the exception message will carry identity information, when it has the value value <code>EXCEPTION_DEFAULT</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. In other cases, these parameters are unused and may be set to <code>THREAD_NULL</code> and <code>TASK_NULL</code>, respectively.</p>
-<p><em>flavor</em>, <em>old_state</em>, <em>old_state_count</em>, <em>new_state</em>, and <em>new_state_count</em> are only used when <em>behavior</em> indicates that the exception message will carry thread state information, when it has the value <code>EXCEPTION_STATE</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. In other cases, these parameters are unused and may be set to <code>0</code> (<em>old_state_count</em>) or <code>NULL</code> (the remaining parameters).</p>
+<p><em>flavor</em>, <em>old_state</em>, <em>old_state_count</em>, <em>new_state</em>, and <em>new_state_count</em> are only used when <em>behavior</em> indicates that the exception message will carry thread state information, when it has the value <code>EXCEPTION_STATE</code> or <code>EXCEPTION_STATE_IDENTITY</code>, possibly with <code>MACH_EXCEPTION_CODES</code> also set. In other cases, these parameters are unused and may be set to <code>0</code> (<em>old_state_count</em>) or <code>nullptr</code> (the remaining parameters).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The exception behavior, which dictates which function will be called. It is an error to call this function with an invalid value for <em>behavior</em>. </td></tr>

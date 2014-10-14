@@ -190,11 +190,11 @@ template&lt;size_t KeySize = 256, size_t ValueSize = 256, size_t NumEntries = 64
 <p>Given <em>key</em>, returns its corresponding value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to look up. This must not be <code>NULL</code>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to look up. This must not be <code>nullptr</code>.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The corresponding value for <em>key</em>, or if <em>key</em> is not found, <code>NULL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding value for <em>key</em>, or if <em>key</em> is not found, <code>nullptr</code>. </dd></dl>
 
 </div>
 </div>
@@ -223,10 +223,10 @@ template&lt;size_t KeySize = 256, size_t ValueSize = 256, size_t NumEntries = 64
 </div><div class="memdoc">
 
 <p>Removes <em>key</em> from the map. </p>
-<p>If the key is not found, this is a no-op.</p>
+<p>If <em>key</em> is not found, this is a no-op.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key of the entry to remove. This must not be <code>NULL</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key of the entry to remove. This must not be <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -297,11 +297,11 @@ template&lt;size_t KeySize = 256, size_t ValueSize = 256, size_t NumEntries = 64
 </div><div class="memdoc">
 
 <p>Stores <em>value</em> into <em>key</em>, replacing the existing value if <em>key</em> is already present. </p>
-<p>If there <em>key</em> is not yet in the map and the map is already full (containing <em>NumEntries</em> active entries), this operation silently fails.</p>
+<p>If <em>key</em> is not yet in the map and the map is already full (containing <em>NumEntries</em> active entries), this operation silently fails.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to store. This must not be <code>NULL</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value to store. If <code>NULL</code>, <em>key</em> is removed from the map. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>The key to store. This must not be <code>nullptr</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value to store. If <code>nullptr</code>, <em>key</em> is removed from the map. </td></tr>
   </table>
   </dd>
 </dl>
