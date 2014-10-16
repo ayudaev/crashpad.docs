@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['universalexceptionraise',['UniversalExceptionRaise',['../namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281',1,'crashpad']]],
-  ['usagehint',['UsageHint',['../classcrashpad_1_1ToolSupport.html#a3c77b3d1dd6ed4ac5f4022a6de2ddbcd',1,'crashpad::ToolSupport']]],
-  ['usagetail',['UsageTail',['../classcrashpad_1_1ToolSupport.html#a7fb0d86380fee44d2089bbf82bd22d27',1,'crashpad::ToolSupport']]],
-  ['uuid',['UUID',['../classcrashpad_1_1ModuleSnapshot.html#abe496c52eb77c0dced87a644331ea9b1',1,'crashpad::ModuleSnapshot::UUID()'],['../classcrashpad_1_1MachOImageReader.html#ae3478d0dd59d9a226b525529968f2f04',1,'crashpad::MachOImageReader::UUID()'],['../structcrashpad_1_1UUID.html#a8e9aa2f5c0496c220dfe05f9c64284b1',1,'crashpad::UUID::UUID()'],['../structcrashpad_1_1UUID.html#a3f009620a21ceead5be155368b261030',1,'crashpad::UUID::UUID(const uint8_t *bytes)']]]
+  ['targettypename',['TargetTypeName',['../classcrashpad_1_1ExceptionPorts.html#af32c01e11a29a684f82eea9fd5fefd6a',1,'crashpad::ExceptionPorts']]],
+  ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html#aa285dd7fa791444753783c5ec03696a1',1,'crashpad::TaskMemory']]],
+  ['threadid',['ThreadID',['../classcrashpad_1_1ExceptionSnapshot.html#aef11b2d8ffb00bb38688e09c0b62ac51',1,'crashpad::ExceptionSnapshot::ThreadID()'],['../classcrashpad_1_1internal_1_1ExceptionSnapshotMac.html#a3685b418dfcf4bafc81b81dbb8b80db9',1,'crashpad::internal::ExceptionSnapshotMac::ThreadID()'],['../classcrashpad_1_1ThreadSnapshot.html#a3c953575fadb934cd5f163560df149da',1,'crashpad::ThreadSnapshot::ThreadID()'],['../classcrashpad_1_1internal_1_1ThreadSnapshotMac.html#a081cae888e8e625929cfdda333eb9966',1,'crashpad::internal::ThreadSnapshotMac::ThreadID()']]],
+  ['threads',['Threads',['../classcrashpad_1_1ProcessSnapshot.html#a90f301f9e6cc169c47c254636ddacb1d',1,'crashpad::ProcessSnapshot::Threads()'],['../classcrashpad_1_1ProcessReader.html#a02fdb7d5933eafaa596d4872ff95841d',1,'crashpad::ProcessReader::Threads()']]],
+  ['threadspecificdataaddress',['ThreadSpecificDataAddress',['../classcrashpad_1_1ThreadSnapshot.html#a53ede314313e2a7045c828ea3c6e7e27',1,'crashpad::ThreadSnapshot::ThreadSpecificDataAddress()'],['../classcrashpad_1_1internal_1_1ThreadSnapshotMac.html#a546b936d58eb2ba4dec71914e41dd742',1,'crashpad::internal::ThreadSnapshotMac::ThreadSpecificDataAddress()']]],
+  ['threadstateflavortostring',['ThreadStateFlavorToString',['../namespacecrashpad.html#a857f6b2f39cb21b22891242df26757e0',1,'crashpad']]],
+  ['timestamp',['Timestamp',['../classcrashpad_1_1ModuleSnapshot.html#a061dbd6816d0524396af0063e6976adb',1,'crashpad::ModuleSnapshot']]],
+  ['timezone',['TimeZone',['../classcrashpad_1_1SystemSnapshot.html#ab3af063628dcf35890ca77c19bb71ccf',1,'crashpad::SystemSnapshot::TimeZone()'],['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a44c833dd1344a4020ff36fbe2fe33e87',1,'crashpad::internal::SystemSnapshotMac::TimeZone()']]],
+  ['tostring',['ToString',['../structcrashpad_1_1UUID.html#a1e4728f499a21c7f2f0037f514960165',1,'crashpad::UUID']]],
+  ['tsimplestringdictionary',['TSimpleStringDictionary',['../classcrashpad_1_1TSimpleStringDictionary.html#a0a13b2f67b82411fc1d07f9fb6677b4b',1,'crashpad::TSimpleStringDictionary']]]
 ];

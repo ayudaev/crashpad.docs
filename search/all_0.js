@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['addentry',['AddEntry',['../classcrashpad_1_1MinidumpSimpleStringDictionaryWriter.html#a4270fff08c732de8b3167482f9c142e6',1,'crashpad::MinidumpSimpleStringDictionaryWriter']]],
   ['addextramemory',['AddExtraMemory',['../classcrashpad_1_1MinidumpMemoryListWriter.html#a13e55ac76770857b35f5b7f90eba33f8',1,'crashpad::MinidumpMemoryListWriter']]],
   ['addmemory',['AddMemory',['../classcrashpad_1_1MinidumpMemoryListWriter.html#a37622d500995e3c09c5b83fe8150ba16',1,'crashpad::MinidumpMemoryListWriter']]],
   ['addmodule',['AddModule',['../classcrashpad_1_1MinidumpModuleListWriter.html#ae80c4f73234079da1a65fa5978641ad6',1,'crashpad::MinidumpModuleListWriter']]],

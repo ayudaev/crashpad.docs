@@ -137,9 +137,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8c9d56b1b0468a07effb67973369b913"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a8c9d56b1b0468a07effb67973369b913">WriteObject</a> (<a class="el" href="classcrashpad_1_1FileWriterInterface.html">FileWriterInterface</a> *file_writer) override</td></tr>
 <tr class="memdesc:a8c9d56b1b0468a07effb67973369b913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the object’s content.  <a href="#a8c9d56b1b0468a07effb67973369b913">More...</a><br /></td></tr>
 <tr class="separator:a8c9d56b1b0468a07effb67973369b913"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a1ca4e29de41579469a40c7fa5a0908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a0a1ca4e29de41579469a40c7fa5a0908">set_string</a> (const StringType &amp;string)</td></tr>
+<tr class="memitem:a0a1ca4e29de41579469a40c7fa5a0908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#a0a1ca4e29de41579469a40c7fa5a0908">set_string</a> (const StringType &amp;<a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#aee04f05cb91b1f47d1c0e9e969043ec2">string</a>)</td></tr>
 <tr class="memdesc:a0a1ca4e29de41579469a40c7fa5a0908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the string to be written.  <a href="#a0a1ca4e29de41579469a40c7fa5a0908">More...</a><br /></td></tr>
 <tr class="separator:a0a1ca4e29de41579469a40c7fa5a0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee04f05cb91b1f47d1c0e9e969043ec2"><td class="memItemLeft" align="right" valign="top">const StringType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html#aee04f05cb91b1f47d1c0e9e969043ec2">string</a> () const </td></tr>
+<tr class="memdesc:aee04f05cb91b1f47d1c0e9e969043ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the string to be written.  <a href="#aee04f05cb91b1f47d1c0e9e969043ec2">More...</a><br /></td></tr>
+<tr class="separator:aee04f05cb91b1f47d1c0e9e969043ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classcrashpad_1_1internal_1_1MinidumpWritable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classcrashpad_1_1internal_1_1MinidumpWritable')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html">crashpad::internal::MinidumpWritable</a></td></tr>
 <tr class="memitem:a665d2de47970d796e904f0dfce406814 inherit pro_methods_classcrashpad_1_1internal_1_1MinidumpWritable"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a665d2de47970d796e904f0dfce406814"></a>
 <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a665d2de47970d796e904f0dfce406814">state</a> () const </td></tr>
@@ -276,6 +279,34 @@ template&lt;typename Traits &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7af98547144e0e8d4f878f725ef5c0d611" title="The object is “frozen”. ">kStateFrozen</a> or any subsequent state. </dd></dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a1483275a3acbdfcecffb7f3c27cd2feb">crashpad::internal::MinidumpWritable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee04f05cb91b1f47d1c0e9e969043ec2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Traits&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const StringType&amp; <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStringWriter.html">crashpad::internal::MinidumpStringWriter</a>&lt; Traits &gt;::string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the string to be written. </p>
+<dl class="section note"><dt>Note</dt><dd>Valid in any state. </dd></dl>
 
 </div>
 </div>
