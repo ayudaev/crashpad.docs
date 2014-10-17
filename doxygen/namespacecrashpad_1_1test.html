@@ -122,6 +122,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a7bcb7b725b62a0058c18e0851a1adf5c">ExpectMinidumpMemoryDescriptorAndContents</a> (const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *expected, const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *observed, const std::string &amp;file_contents, uint8_t value, bool at_eof)</td></tr>
 <tr class="memdesc:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values, and that the memory region it points to contains expected values assuming it was written by a <a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html" title="A MinidumpMemoryWriter implementation used for testing. ">TestMinidumpMemoryWriter</a> object.  <a href="#a7bcb7b725b62a0058c18e0851a1adf5c">More...</a><br /></td></tr>
 <tr class="separator:a7bcb7b725b62a0058c18e0851a1adf5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547365466ca6610501baf2f83ff755cd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a547365466ca6610501baf2f83ff755cd">MinidumpUTF8StringAtRVA</a> (const <a class="el" href="classcrashpad_1_1StringFileWriter.html">StringFileWriter</a> &amp;file_writer, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
+<tr class="memdesc:a547365466ca6610501baf2f83ff755cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of a <a class="el" href="structcrashpad_1_1MinidumpUTF8String.html" title="A variable-length UTF-8-encoded string carried within a minidump file. ">MinidumpUTF8String</a>.  <a href="#a547365466ca6610501baf2f83ff755cd">More...</a><br /></td></tr>
+<tr class="separator:a547365466ca6610501baf2f83ff755cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9504862c089964763d7d362572c2ac6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6">ErrnoMessage</a> (int err, const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:ad9504862c089964763d7d362572c2ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an error message using an <code>errno</code> value.  <a href="#ad9504862c089964763d7d362572c2ac6">More...</a><br /></td></tr>
 <tr class="separator:ad9504862c089964763d7d362572c2ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -525,6 +528,43 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string of the format <code>"(os/kern) invalid address (1)"</code> if <em>mach_err</em> has the value <code>KERN_INVALID_ADDRESS</code> on a system where this is defined to be 1. If <em>base</em> is not empty, it will be prepended to this string, separated by a colon. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a547365466ca6610501baf2f83ff755cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::test::MinidumpUTF8StringAtRVA </td>
+          <td>(</td>
+          <td class="paramtype">const StringFileWriter &amp;&#160;</td>
+          <td class="paramname"><em>file_writer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a>&#160;</td>
+          <td class="paramname"><em>rva</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the contents of a <a class="el" href="structcrashpad_1_1MinidumpUTF8String.html" title="A variable-length UTF-8-encoded string carried within a minidump file. ">MinidumpUTF8String</a>. </p>
+<p>If <em>rva</em> points outside of the range of <em>file_writer</em>, or if any of the string data would lie outside of the range of <em>file_writer</em>, this function will fail.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_writer</td><td>A <a class="el" href="classcrashpad_1_1StringFileWriter.html" title="A file writer backed by a virtual file, as opposed to a file on disk or other operating system file d...">StringFileWriter</a> into which MinidumpWritable objects have been written. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rva</td><td>An offset in <em>file_writer</em> at which to find the desired string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the string read from <em>file_writer</em> at offset <em>rva</em>. On failure, returns an empty string, with a nonfatal assertion logged to gtest. </dd></dl>
 
 </div>
 </div>

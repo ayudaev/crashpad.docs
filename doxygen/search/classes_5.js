@@ -35,6 +35,7 @@ var searchData=
   ['minidumpcontextx86',['MinidumpContextX86',['../structcrashpad_1_1MinidumpContextX86.html',1,'crashpad']]],
   ['minidumpcontextx86writer',['MinidumpContextX86Writer',['../classcrashpad_1_1MinidumpContextX86Writer.html',1,'crashpad']]],
   ['minidumpcrashpadinfo',['MinidumpCrashpadInfo',['../structcrashpad_1_1MinidumpCrashpadInfo.html',1,'crashpad']]],
+  ['minidumpcrashpadinfowriter',['MinidumpCrashpadInfoWriter',['../classcrashpad_1_1MinidumpCrashpadInfoWriter.html',1,'crashpad']]],
   ['minidumpexceptionwriter',['MinidumpExceptionWriter',['../classcrashpad_1_1MinidumpExceptionWriter.html',1,'crashpad']]],
   ['minidumpfilewriter',['MinidumpFileWriter',['../classcrashpad_1_1MinidumpFileWriter.html',1,'crashpad']]],
   ['minidumpmemorylistwriter',['MinidumpMemoryListWriter',['../classcrashpad_1_1MinidumpMemoryListWriter.html',1,'crashpad']]],
