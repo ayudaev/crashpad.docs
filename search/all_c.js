@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../structcrashpad_1_1ProcessReader_1_1Module.html#af3802ec0731bda1cf066b050b23debf7',1,'crashpad::ProcessReader::Module::name()'],['../classcrashpad_1_1ModuleSnapshot.html#aa0ab6a719fbb6f63d73e05086fe4a314',1,'crashpad::ModuleSnapshot::Name()'],['../classcrashpad_1_1MachOImageSegmentReader.html#a91a34630f9a16d273ff4b1db1da5ceb6',1,'crashpad::MachOImageSegmentReader::Name()']]],
+  ['name',['Name',['../classcrashpad_1_1MachOImageSegmentReader.html#a91a34630f9a16d273ff4b1db1da5ceb6',1,'crashpad::MachOImageSegmentReader::Name()'],['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html#a445022c35e9f2d196c24172208b0dab6',1,'crashpad::internal::ModuleSnapshotMac::Name()'],['../classcrashpad_1_1ModuleSnapshot.html#aa0ab6a719fbb6f63d73e05086fe4a314',1,'crashpad::ModuleSnapshot::Name()'],['../structcrashpad_1_1ProcessReader_1_1Module.html#af3802ec0731bda1cf066b050b23debf7',1,'crashpad::ProcessReader::Module::name()']]],
   ['next',['Next',['../classcrashpad_1_1TSimpleStringDictionary_1_1Iterator.html#afbc84491b65539ff4d250f9d7122a4c4',1,'crashpad::TSimpleStringDictionary::Iterator']]],
   ['nonblocking',['Nonblocking',['../classcrashpad_1_1MachMessageServer.html#a6caf7e93fed4a790b6b453383de9e025',1,'crashpad::MachMessageServer']]],
   ['nsects',['nsects',['../classcrashpad_1_1MachOImageSegmentReader.html#af1c309fdd3cfbedb32535f6e75e954f5',1,'crashpad::MachOImageSegmentReader']]],
@@ -11,5 +11,5 @@ var searchData=
   ['numberofstreams',['NumberOfStreams',['../structMINIDUMP__HEADER.html#ac64203d27bba37f630437048a0e19630',1,'MINIDUMP_HEADER']]],
   ['numberofthreads',['NumberOfThreads',['../structMINIDUMP__THREAD__LIST.html#ad5be905c0b6b716c2e1b2b52447de11d',1,'MINIDUMP_THREAD_LIST']]],
   ['numberparameters',['NumberParameters',['../structMINIDUMP__EXCEPTION.html#a29c7d61cd5eddf5c4f493bae40cd2679',1,'MINIDUMP_EXCEPTION']]],
-  ['nxenabled',['NXEnabled',['../classcrashpad_1_1SystemSnapshot.html#ab347e8cf3f9cd790d94966a794c88e0c',1,'crashpad::SystemSnapshot::NXEnabled()'],['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a6cf7a53f27f98f1bc2042326d179e582',1,'crashpad::internal::SystemSnapshotMac::NXEnabled()']]]
+  ['nxenabled',['NXEnabled',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a6cf7a53f27f98f1bc2042326d179e582',1,'crashpad::internal::SystemSnapshotMac::NXEnabled()'],['../classcrashpad_1_1SystemSnapshot.html#ab347e8cf3f9cd790d94966a794c88e0c',1,'crashpad::SystemSnapshot::NXEnabled()']]]
 ];

@@ -98,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>A reader for Mach-O images mapped into another process.  
  <a href="classcrashpad_1_1MachOImageReader.html#details">More...</a></p>
 
-<p><code>#include &quot;util/mac/mach_o_image_reader.h&quot;</code></p>
+<p><code>#include &quot;snapshot/mac/mach_o_image_reader.h&quot;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -144,7 +144,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A reader for Mach-O images mapped into another process. </p>
-<p>This class is capable of reading both 32-bit (<code>mach_header</code>/<code>MH_MAGIC</code>) and 64-bit (<code>mach_header_64</code>/<code>MH_MAGIC_64</code>) images based on the bitness of the remote process. </p>
+<p>This class is capable of reading both 32-bit (<code>mach_header</code>/<code>MH_MAGIC</code>) and 64-bit (<code>mach_header_64</code>/<code>MH_MAGIC_64</code>) images based on the bitness of the remote process.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcrashpad_1_1MachOImageAnnotationsReader.html" title="A reader for annotations stored in a Mach-O image mapped into another process. ">MachOImageAnnotationsReader</a> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="addcef12944baa3bec948c770136feb68"></a>
 <div class="memitem">
@@ -396,7 +397,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">process_reader</td><td>The reader for the remote process. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>The address, in the remote process’ address space, where the <code>mach_header</code> or <code>mach_header_64</code> at the beginning of the image to be read is located. This address can be determined by reading the remote process’ dyld information (see util/mac/process_types/dyld_images.proctype). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>The address, in the remote process’ address space, where the <code>mach_header</code> or <code>mach_header_64</code> at the beginning of the image to be read is located. This address can be determined by reading the remote process’ dyld information (see snapshot/mac/process_types/dyld_images.proctype). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The module’s name, a string to be used in logged messages. This string is for diagnostic purposes only, and may be empty.</td></tr>
   </table>
   </dd>
@@ -548,8 +549,8 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>util/mac/mach_o_image_reader.h</li>
-<li>util/mac/mach_o_image_reader.cc</li>
+<li>snapshot/mac/mach_o_image_reader.h</li>
+<li>snapshot/mac/mach_o_image_reader.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

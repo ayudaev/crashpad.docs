@@ -2,6 +2,7 @@ var searchData=
 [
   ['value',['value',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html#af7fa75c478ce69d42354a046327fe658',1,'crashpad::TSimpleStringDictionary::Entry::value()'],['../structcrashpad_1_1MinidumpSimpleStringDictionaryEntry.html#a90c3c20c4ae9af6db225682427c1f314',1,'crashpad::MinidumpSimpleStringDictionaryEntry::value()'],['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html#a91405f79a8b62e3fb3de4e8c66fee952',1,'crashpad::MachOImageSymbolTableReader::SymbolInformation::value()']]],
   ['value_5fsize',['value_size',['../classcrashpad_1_1TSimpleStringDictionary.html#a1176a981ba33d55f9b0a5f22e7fe4171',1,'crashpad::TSimpleStringDictionary']]],
+  ['vector',['Vector',['../classcrashpad_1_1MachOImageAnnotationsReader.html#a937a51a14181f6496b8d4bda2e828761',1,'crashpad::MachOImageAnnotationsReader']]],
   ['vendorid',['VendorId',['../unionCPU__INFORMATION.html#af239b99d9ef6b86fb04ffeabd85831c6',1,'CPU_INFORMATION']]],
   ['verifyminidumpheader',['VerifyMinidumpHeader',['../namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9',1,'crashpad::test']]],
   ['verrsrc_2eh',['verrsrc.h',['../verrsrc_8h.html',1,'']]],

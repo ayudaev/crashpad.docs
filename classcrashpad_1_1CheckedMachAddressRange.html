@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48262431b7a608505f112331fb901683"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#a48262431b7a608505f112331fb901683">CheckedMachAddressRange</a> ()</td></tr>
 <tr class="memdesc:a48262431b7a608505f112331fb901683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a default range.  <a href="#a48262431b7a608505f112331fb901683">More...</a><br /></td></tr>
 <tr class="separator:a48262431b7a608505f112331fb901683"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fbb3a97f0d9d325d5cc0826c0d5c533"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#a6fbb3a97f0d9d325d5cc0826c0d5c533">CheckedMachAddressRange</a> (const <a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *process_reader, mach_vm_address_t base, mach_vm_size_t size)</td></tr>
-<tr class="memdesc:a6fbb3a97f0d9d325d5cc0826c0d5c533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a range.  <a href="#a6fbb3a97f0d9d325d5cc0826c0d5c533">More...</a><br /></td></tr>
-<tr class="separator:a6fbb3a97f0d9d325d5cc0826c0d5c533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec675c295588193d44cbc5c4dfd98d1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#aec675c295588193d44cbc5c4dfd98d1e">SetRange</a> (const <a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *process_reader, mach_vm_address_t base, mach_vm_size_t size)</td></tr>
-<tr class="memdesc:aec675c295588193d44cbc5c4dfd98d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a range’s fields.  <a href="#aec675c295588193d44cbc5c4dfd98d1e">More...</a><br /></td></tr>
-<tr class="separator:aec675c295588193d44cbc5c4dfd98d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bcc3637a40569f756ae7174ce69fd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#ae2bcc3637a40569f756ae7174ce69fd2">CheckedMachAddressRange</a> (bool is_64_bit, mach_vm_address_t base, mach_vm_size_t size)</td></tr>
+<tr class="memdesc:ae2bcc3637a40569f756ae7174ce69fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a range.  <a href="#ae2bcc3637a40569f756ae7174ce69fd2">More...</a><br /></td></tr>
+<tr class="separator:ae2bcc3637a40569f756ae7174ce69fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b4e4d2032dd32f0670bd087c110f24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#ac4b4e4d2032dd32f0670bd087c110f24">SetRange</a> (bool is_64_bit, mach_vm_address_t base, mach_vm_size_t size)</td></tr>
+<tr class="memdesc:ac4b4e4d2032dd32f0670bd087c110f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a range’s fields.  <a href="#ac4b4e4d2032dd32f0670bd087c110f24">More...</a><br /></td></tr>
+<tr class="separator:ac4b4e4d2032dd32f0670bd087c110f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a134ff55c2d60c0dc0c954007c5bdb8ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a134ff55c2d60c0dc0c954007c5bdb8ea"></a>
 mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#a134ff55c2d60c0dc0c954007c5bdb8ea">Base</a> () const </td></tr>
 <tr class="memdesc:a134ff55c2d60c0dc0c954007c5bdb8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The range’s base address. <br /></td></tr>
@@ -135,7 +135,7 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Ensures that a range, composed of a base and a size, does not overflow the pointer type of the process it describes a range in. </p>
-<p>This class checks bases of type <code>mach_vm_address_t</code> and sizes of type <code>mach_vm_address_t</code> against a process whose pointer type can be determined from its <a class="el" href="classcrashpad_1_1ProcessReader.html" title="Accesses information about another process, identified by a Mach task. ">ProcessReader</a>.</p>
+<p>This class checks bases of type <code>mach_vm_address_t</code> and sizes of type <code>mach_vm_address_t</code> against a process whose pointer type is either 32 or 64 bits wide.</p>
 <p>Aside from varying the overall range on the basis of a process’ pointer type width, this class functions very similarly to <a class="el" href="classcrashpad_1_1CheckedRange.html" title="Ensures that a range, composed of a base and size, does not overflow its data type. ">CheckedRange</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a48262431b7a608505f112331fb901683"></a>
@@ -156,15 +156,15 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 
 </div>
 </div>
-<a class="anchor" id="a6fbb3a97f0d9d325d5cc0826c0d5c533"></a>
+<a class="anchor" id="ae2bcc3637a40569f756ae7174ce69fd2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">crashpad::CheckedMachAddressRange::CheckedMachAddressRange </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *&#160;</td>
-          <td class="paramname"><em>process_reader</em>, </td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_64_bit</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -187,7 +187,7 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 </div><div class="memdoc">
 
 <p>Initializes a range. </p>
-<p>See <a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#aec675c295588193d44cbc5c4dfd98d1e" title="Sets a range’s fields. ">SetRange()</a>. </p>
+<p>See <a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#ac4b4e4d2032dd32f0670bd087c110f24" title="Sets a range’s fields. ">SetRange()</a>. </p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>this</code> address range, the containing address range, contains <em>that</em>, the contained address range. <code>false</code> otherwise.</dd></dl>
 <p>An address range contains another address range when the contained address range’s base is greater than or equal to the containing address range’s base, and the contained address range’s end is less than or equal to the containing address range’s end.</p>
-<p>This method should only be called on two <a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html" title="Ensures that a range, composed of a base and a size, does not overflow the pointer type of the proces...">CheckedMachAddressRange</a> objects sharing the same <a class="el" href="classcrashpad_1_1ProcessReader.html" title="Accesses information about another process, identified by a Mach task. ">ProcessReader</a>.</p>
+<p>This method should only be called on two <a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html" title="Ensures that a range, composed of a base and a size, does not overflow the pointer type of the proces...">CheckedMachAddressRange</a> objects representing address ranges in the same process.</p>
 <p>This method must only be called if <a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html#aa62ba813fa0c4b2a619250e0655096ce" title="Returns the validity of the address range. ">IsValid()</a> would return <code>true</code> for both <a class="el" href="classcrashpad_1_1CheckedMachAddressRange.html" title="Ensures that a range, composed of a base and a size, does not overflow the pointer type of the proces...">CheckedMachAddressRange</a> objects involved. </p>
 
 </div>
@@ -266,15 +266,15 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 
 </div>
 </div>
-<a class="anchor" id="aec675c295588193d44cbc5c4dfd98d1e"></a>
+<a class="anchor" id="ac4b4e4d2032dd32f0670bd087c110f24"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void crashpad::CheckedMachAddressRange::SetRange </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *&#160;</td>
-          <td class="paramname"><em>process_reader</em>, </td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_64_bit</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -299,7 +299,7 @@ mach_vm_address_t&#160;</td><td class="memItemRight" valign="bottom"><a class="e
 <p>Sets a range’s fields. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">process_reader</td><td>The <a class="el" href="classcrashpad_1_1ProcessReader.html" title="Accesses information about another process, identified by a Mach task. ">ProcessReader</a> that can read the process that <em>base</em> is a pointer to. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_64_bit</td><td><code>true</code> if <em>base</em> and <em>size</em> refer to addresses in a 64-bit process; <code>false</code> if they refer to addresses in a 32-bit process. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">base</td><td>The range’s base address. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>The range’s size. </td></tr>
   </table>

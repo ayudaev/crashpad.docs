@@ -11,7 +11,6 @@ var searchData=
   ['dbghelp_2eh',['dbghelp.h',['../dbghelp_8h.html',1,'']]],
   ['debug_5fcontrol',['debug_control',['../structcrashpad_1_1MinidumpContextAMD64.html#a65f302dd9d5ad77f4fca9cb0b176ac91',1,'crashpad::MinidumpContextAMD64']]],
   ['delegate',['Delegate',['../classcrashpad_1_1MemorySnapshot_1_1Delegate.html',1,'crashpad::MemorySnapshot']]],
-  ['diagnosticmessages',['DiagnosticMessages',['../classcrashpad_1_1ModuleSnapshot.html#a3a086564624a8dcc88300dace699a66d',1,'crashpad::ModuleSnapshot']]],
   ['directorylistentry',['DirectoryListEntry',['../classcrashpad_1_1internal_1_1MinidumpStreamWriter.html#a2c36492670110f546faaddd9e49d4344',1,'crashpad::internal::MinidumpStreamWriter']]],
   ['disarm',['Disarm',['../classcrashpad_1_1ScopedForbidReturn.html#a5b5c04a646632f369c40d3e8f6d14ddd',1,'crashpad::ScopedForbidReturn']]],
   ['dwfiledatels',['dwFileDateLS',['../structVS__FIXEDFILEINFO.html#a9941cc13c4ebf36c267765bd62c16cd3',1,'VS_FIXEDFILEINFO']]],

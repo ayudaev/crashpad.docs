@@ -4,6 +4,7 @@ var searchData=
   ['machmessageserver',['MachMessageServer',['../classcrashpad_1_1MachMessageServer.html',1,'crashpad']]],
   ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
   ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],
+  ['machoimageannotationsreader',['MachOImageAnnotationsReader',['../classcrashpad_1_1MachOImageAnnotationsReader.html',1,'crashpad']]],
   ['machoimagereader',['MachOImageReader',['../classcrashpad_1_1MachOImageReader.html',1,'crashpad']]],
   ['machoimagesegmentreader',['MachOImageSegmentReader',['../classcrashpad_1_1MachOImageSegmentReader.html',1,'crashpad']]],
   ['machoimagesymboltablereader',['MachOImageSymbolTableReader',['../classcrashpad_1_1MachOImageSymbolTableReader.html',1,'crashpad']]],
@@ -68,6 +69,7 @@ var searchData=
   ['minidumpwriterutil',['MinidumpWriterUtil',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html',1,'crashpad::internal']]],
   ['module',['Module',['../structcrashpad_1_1ProcessReader_1_1Module.html',1,'crashpad::ProcessReader']]],
   ['modulesnapshot',['ModuleSnapshot',['../classcrashpad_1_1ModuleSnapshot.html',1,'crashpad']]],
+  ['modulesnapshotmac',['ModuleSnapshotMac',['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html',1,'crashpad::internal']]],
   ['multiprocess',['Multiprocess',['../classcrashpad_1_1test_1_1Multiprocess.html',1,'crashpad::test']]],
   ['multiprocessexec',['MultiprocessExec',['../classcrashpad_1_1test_1_1MultiprocessExec.html',1,'crashpad::test']]],
   ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]]
