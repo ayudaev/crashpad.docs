@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>exception_port_tool</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div xml:lang="en" class="refentry" lang="en"><a></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>exception_port_tool — Show and change Mach exception ports</p></div><div class="refsynopsisdiv"><a id="_synopsis"></a><h2>Synopsis</h2><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p><span class="strong"><strong>exception_port_tool</strong></span> [<span class="emphasis"><em>OPTION…</em></span>] [<span class="emphasis"><em>COMMAND</em></span> [<span class="emphasis"><em>ARG…</em></span>]]</p></div></blockquote></div></div><div class="refsect1"><a id="_description"></a><h2>Description</h2><p>Shows Mach exception ports registered for a thread, task, or host target with a
+<span class="strong"><strong>--show_*</strong></span> option, changes Mach exception ports with <span class="strong"><strong>--set_handler</strong></span>, shows
+changes with a <span class="strong"><strong>--show_new_*</strong></span> option, and executes <span class="emphasis"><em>COMMAND</em></span> along with any
+arguments specified (<span class="emphasis"><em>ARG…</em></span>) with the changed exception ports in effect.</p></div><div class="refsect1"><a id="_options"></a><h2>Options</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong"><strong>-s</strong></span>, <span class="strong"><strong>--set_handler</strong></span>=<span class="emphasis"><em>DESCRIPTION</em></span>
+</span></dt><dd><p class="simpara">
+Set an exception port to <span class="emphasis"><em>DESCRIPTION</em></span>. This option may appear zero, one, or
+more times.
+</p><p class="simpara"><span class="emphasis"><em>DESCRIPTION</em></span> is formatted as a comma-separated sequence of tokens, where each
+token consists of a key and value separated by an equals sign. These keys are
+recognized:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong"><strong>target</strong></span>=<span class="emphasis"><em>TARGET</em></span>
+</span></dt><dd>
+<span class="emphasis"><em>TARGET</em></span> defines which target’s exception ports to set: <span class="strong"><strong>host</strong></span>, <span class="strong"><strong>task</strong></span>, or
+<span class="strong"><strong>thread</strong></span>. The default value of <span class="emphasis"><em>TARGET</em></span> is <span class="strong"><strong>task</strong></span>. Operations on <span class="strong"><strong>host</strong></span> are
+restricted to the superuser.
+</dd><dt><span class="term">
+<span class="strong"><strong>mask</strong></span>=<span class="emphasis"><em>MASK</em></span>
+</span></dt><dd>
+<span class="emphasis"><em>MASK</em></span> defines the mask of exception types to handle, from
+<code class="literal">&lt;mach/exception_types.h&gt;</code>. This can be <span class="strong"><strong>BAD_ACCESS</strong></span>, <span class="strong"><strong>BAD_INSTRUCTION</strong></span>,
+<span class="strong"><strong>ARITHMETIC</strong></span>, <span class="strong"><strong>EMULATION</strong></span>, <span class="strong"><strong>SOFTWARE</strong></span>, <span class="strong"><strong>BREAKPOINT</strong></span>, <span class="strong"><strong>SYSCALL</strong></span>, <span class="strong"><strong>MACH_SYSCALL</strong></span>,
+<span class="strong"><strong>RPC_ALERT</strong></span>, <span class="strong"><strong>CRASH</strong></span>, <span class="strong"><strong>RESOURCE</strong></span>, <span class="strong"><strong>GUARD</strong></span>, or <span class="strong"><strong>CRASH</strong></span>. Different exception types
+may be combined by combining them with pipe characters (<span class="strong"><strong>|</strong></span>). The special value
+<span class="strong"><strong>ALL</strong></span> includes each exception type except for <span class="strong"><strong>CRASH</strong></span>. To truly specify all
+exception types including <span class="strong"><strong>CRASH</strong></span>, use <span class="strong"><strong>ALL|CRASH</strong></span>. The default value of <span class="emphasis"><em>MASK</em></span>
+is <span class="strong"><strong>CRASH</strong></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>behavior</strong></span>=<span class="emphasis"><em>BEHAVIOR</em></span>
+</span></dt><dd>
+<span class="emphasis"><em>BEHAVIOR</em></span> defines the specific exception handler routine to be called when an
+exception occurs. This can be <span class="strong"><strong>DEFAULT</strong></span>, <span class="strong"><strong>STATE</strong></span>, or <span class="strong"><strong>STATE_IDENTITY</strong></span>. <span class="strong"><strong>MACH</strong></span>
+may also be specified by combining them with pipe characters (<span class="strong"><strong>|</strong></span>). The most
+complete set of exception information is provided with <span class="strong"><strong>STATE_IDENTITY|MACH</strong></span>.
+Not all exception servers implement all possible behaviors. The default value of
+<span class="emphasis"><em>BEHAVIOR</em></span> is <span class="strong"><strong>DEFAULT|MACH</strong></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>flavor</strong></span>=<span class="emphasis"><em>FLAVOR</em></span>
+</span></dt><dd>
+For state-carrying values of <span class="emphasis"><em>BEHAVIOR</em></span> (those including <span class="strong"><strong>STATE</strong></span> or
+<span class="strong"><strong>STATE_IDENTITY</strong></span>), <span class="emphasis"><em>FLAVOR</em></span> specifies the architecture-specific thread state
+flavor to be provided to the exception handler. For the x86 family, this can be
+<span class="strong"><strong>THREAD</strong></span>, <span class="strong"><strong>THREAD32</strong></span>, <span class="strong"><strong>THREAD64</strong></span>, <span class="strong"><strong>FLOAT</strong></span>, <span class="strong"><strong>FLOAT32</strong></span>, <span class="strong"><strong>FLOAT64</strong></span>, <span class="strong"><strong>DEBUG</strong></span>,
+<span class="strong"><strong>DEBUG32</strong></span>, or <span class="strong"><strong>DEBUG64</strong></span>. The default value of <span class="emphasis"><em>FLAVOR</em></span> is <span class="strong"><strong>NONE</strong></span>, which is not
+valid for state-carrying values of <span class="emphasis"><em>BEHAVIOR</em></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>handler</strong></span>=<span class="emphasis"><em>HANDLER</em></span>
+</span></dt><dd>
+<span class="emphasis"><em>HANDLER</em></span> defines the exception handler. <span class="strong"><strong>NULL</strong></span> indicates that any existing
+exception port should be cleared. <span class="emphasis"><em>HANDLER</em></span> may also take the form
+<span class="strong"><strong>bootstrap</strong></span>:<span class="emphasis"><em>SERVICE</em></span>, which will look <span class="emphasis"><em>SERVICE</em></span> up with the bootstrap server
+and set that service as the exception handler. The default value of <span class="emphasis"><em>HANDLER</em></span> is
+<span class="strong"><strong>NULL</strong></span>.
+</dd></dl></div></dd><dt><span class="term">
+<span class="strong"><strong>--show_bootstrap</strong></span>=<span class="emphasis"><em>SERVICE</em></span>
+</span></dt><dd>
+Looks up <span class="emphasis"><em>SERVICE</em></span> with the bootstrap server and shows it. Normally, the handler
+port values displayed by the other <span class="strong"><strong>--show_*</strong></span> options are meaningless
+handles, but by comparing them to the port values for known bootstrap services,
+it is possible to verify that they are set as intended.
+</dd><dt><span class="term">
+<span class="strong"><strong>-p</strong></span>, <span class="strong"><strong>--pid</strong></span>=<span class="emphasis"><em>PID</em></span>
+</span></dt><dd>
+For operations on the task target, including <span class="strong"><strong>--set_handler</strong></span> with <span class="emphasis"><em>TARGET</em></span> set
+to <span class="strong"><strong>task</strong></span>, <span class="strong"><strong>--show_task</strong></span>, and <span class="strong"><strong>--show_new_task</strong></span>, operates on the task associated
+with process id <span class="emphasis"><em>PID</em></span> instead of the current task associated with the tool. This
+option may be restricted to use by the superuser or processes permitted by
+taskgated(8) to use <code class="literal">task_for_pid()</code>. When this option is supplied, <span class="emphasis"><em>COMMAND</em></span>
+must not be specified.
+</dd><dt><span class="term">
+<span class="strong"><strong>-h</strong></span>, <span class="strong"><strong>--show_host</strong></span>
+</span></dt><dd>
+Shows the original host exception ports before making any changes requested by
+<span class="strong"><strong>--set_handler</strong></span>. This option is restricted to the superuser.
+</dd><dt><span class="term">
+<span class="strong"><strong>-t</strong></span>, <span class="strong"><strong>--show_task</strong></span>
+</span></dt><dd>
+Shows the original task exception ports before making any changes requested by
+<span class="strong"><strong>--set_handler</strong></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>--show_thread</strong></span>
+</span></dt><dd>
+Shows the original thread exception ports before making any changes requested by
+<span class="strong"><strong>--set_handler</strong></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>-H</strong></span>, <span class="strong"><strong>--show_new_host</strong></span>
+</span></dt><dd>
+Shows the modified host exception ports after making any changes requested by
+<span class="strong"><strong>--set_handler</strong></span>. This option is restricted to the superuser.
+</dd><dt><span class="term">
+<span class="strong"><strong>-T</strong></span>, <span class="strong"><strong>--show_new_task</strong></span>
+</span></dt><dd>
+Shows the modified task exception ports after making any changes requested by
+<span class="strong"><strong>--set_handler</strong></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>--show_new_thread</strong></span>
+</span></dt><dd>
+Shows the modified thread exception ports after making any changes requested by
+<span class="strong"><strong>--set_handler</strong></span>.
+</dd><dt><span class="term">
+<span class="strong"><strong>-n</strong></span>, <span class="strong"><strong>--numeric</strong></span>
+</span></dt><dd>
+For <span class="strong"><strong>--show_*</strong></span> options, all values will be displayed numerically only. The
+default is to decode numeric values and display them symbolically as well.
+</dd><dt><span class="term">
+<span class="strong"><strong>--help</strong></span>
+</span></dt><dd>
+Display help and exit.
+</dd><dt><span class="term">
+<span class="strong"><strong>--version</strong></span>
+</span></dt><dd>
+Output version information and exit.
+</dd></dl></div></div><div class="refsect1"><a id="_examples"></a><h2>Examples</h2><p>Sets a new task-level exception handler for <code class="literal">EXC_CRASH</code>-type exceptions to the
+handler registered with the bootstrap server as <code class="literal">svc</code>, showing the task-level
+exception ports before and after the change. The old and new exception handlers
+are verified by their service names as registered with the bootstrap server.
+With the new task-level exception ports in effect, a program is run.</p><pre class="screen">$ <span class="strong"><strong>exception_port_tool --show_task --show_new_task \
+      --show_bootstrap=com.apple.ReportCrash --show_bootstrap=svc \
+      --set_handler=behavior=DEFAULT,handler=bootstrap:svc crash</strong></span>
+service com.apple.ReportCrash 0xe03
+service svc 0x1003
+task exception port 0, mask 0x400 (CRASH), port 0xe03,
+behavior 0x80000003 (STATE_IDENTITY|MACH), flavor 7 (THREAD)
+new task exception port 0, mask 0x400 (CRASH), port 0x1003,
+behavior 0x1 (DEFAULT), flavor 13 (NONE)
+Illegal instruction: 4</pre><p>Shows the task-level exception ports for the process with PID 1234. This
+requires superuser permissions or the approval of taskgated(8).</p><pre class="screen"># <span class="strong"><strong>exception_port_tool --pid=1234 --show_task</strong></span>
+task exception port 0, mask 0x4e
+(BAD_ACCESS|BAD_INSTRUCTION|ARITHMETIC|BREAKPOINT), port 0x1503,
+behavior 0x1 (DEFAULT), flavor 13 (NONE)
+task exception port 1, mask 0x1c00 (CRASH|RESOURCE|GUARD),
+port 0x1403, behavior 0x80000003 (STATE_IDENTITY|MACH),
+flavor 7 (THREAD)</pre></div><div class="refsect1"><a id="_exit_status"></a><h2>Exit Status</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong"><strong>0</strong></span>
+</span></dt><dd>
+Success.
+</dd><dt><span class="term">
+<span class="strong"><strong>125</strong></span>
+</span></dt><dd>
+Failure, with a message printed to the standard error stream.
+</dd><dt><span class="term">
+<span class="strong"><strong>126</strong></span>
+</span></dt><dd>
+The program specified by <span class="emphasis"><em>COMMAND</em></span> was found, but could not be invoked.
+</dd><dt><span class="term">
+<span class="strong"><strong>127</strong></span>
+</span></dt><dd>
+The program specified by <span class="emphasis"><em>COMMAND</em></span> could not be found.
+</dd></dl></div></div><div class="refsect1"><a id="_see_also"></a><h2>See Also</h2><p>exception_port_tool(1),
+on_demand_service_tool(1)</p></div><div class="refsect1"><a id="_resources"></a><h2>Resources</h2><p>Crashpad home page: <a class="ulink" href="https://crashpad.googlecode.com/" target="_top">https://crashpad.googlecode.com/</a>.</p><p>Report bugs at <a class="ulink" href="https://code.google.com/p/crashpad/issues/entry" target="_top">https://code.google.com/p/crashpad/issues/entry</a>.</p></div><div class="refsect1"><a id="_copyright"></a><h2>Copyright</h2><p>Copyright 2014
+<a class="ulink" href="https://chromium.googlesource.com/crashpad/crashpad/+/master/AUTHORS" target="_top">The
+Crashpad Authors</a>.</p></div><div class="refsect1"><a id="_license"></a><h2>License</h2><p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p><pre class="literallayout"><a class="ulink" href="http://www.apache.org/licenses/LICENSE-2.0" target="_top">http://www.apache.org/licenses/LICENSE-2.0</a></pre><p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p></div></div></body></html>
