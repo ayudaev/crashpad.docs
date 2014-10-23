@@ -67,6 +67,7 @@ var searchData=
   ['minidumputf8string',['MinidumpUTF8String',['../structcrashpad_1_1MinidumpUTF8String.html',1,'crashpad']]],
   ['minidumputf8stringwriter',['MinidumpUTF8StringWriter',['../classcrashpad_1_1internal_1_1MinidumpUTF8StringWriter.html',1,'crashpad::internal']]],
   ['minidumpwritable',['MinidumpWritable',['../classcrashpad_1_1internal_1_1MinidumpWritable.html',1,'crashpad::internal']]],
+  ['minidumpwritabletraits',['MinidumpWritableTraits',['../structcrashpad_1_1test_1_1MinidumpWritableTraits.html',1,'crashpad::test']]],
   ['minidumpwriterutil',['MinidumpWriterUtil',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html',1,'crashpad::internal']]],
   ['module',['Module',['../structcrashpad_1_1ProcessReader_1_1Module.html',1,'crashpad::ProcessReader']]],
   ['modulesnapshot',['ModuleSnapshot',['../classcrashpad_1_1ModuleSnapshot.html',1,'crashpad']]],
