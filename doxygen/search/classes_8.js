@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html',1,'crashpad']]],
-  ['testminidumpmemorywriter',['TestMinidumpMemoryWriter',['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html',1,'crashpad::test']]],
-  ['thread',['Thread',['../structcrashpad_1_1ProcessReader_1_1Thread.html',1,'crashpad::ProcessReader']]],
-  ['threadsnapshot',['ThreadSnapshot',['../classcrashpad_1_1ThreadSnapshot.html',1,'crashpad']]],
-  ['threadsnapshotmac',['ThreadSnapshotMac',['../classcrashpad_1_1internal_1_1ThreadSnapshotMac.html',1,'crashpad::internal']]],
-  ['time_5fzone_5finformation',['TIME_ZONE_INFORMATION',['../structTIME__ZONE__INFORMATION.html',1,'']]],
-  ['toolsupport',['ToolSupport',['../classcrashpad_1_1ToolSupport.html',1,'crashpad']]],
-  ['tsimplestringdictionary',['TSimpleStringDictionary',['../classcrashpad_1_1TSimpleStringDictionary.html',1,'crashpad']]]
+  ['scopedforbidreturn',['ScopedForbidReturn',['../classcrashpad_1_1ScopedForbidReturn.html',1,'crashpad']]],
+  ['scopedtasksuspend',['ScopedTaskSuspend',['../classcrashpad_1_1ScopedTaskSuspend.html',1,'crashpad']]],
+  ['semaphore',['Semaphore',['../classcrashpad_1_1Semaphore.html',1,'crashpad']]],
+  ['simplifiedexcserver',['SimplifiedExcServer',['../classcrashpad_1_1internal_1_1SimplifiedExcServer.html',1,'crashpad::internal']]],
+  ['simplifiedmachexcserver',['SimplifiedMachExcServer',['../classcrashpad_1_1internal_1_1SimplifiedMachExcServer.html',1,'crashpad::internal']]],
+  ['stringfilewriter',['StringFileWriter',['../classcrashpad_1_1StringFileWriter.html',1,'crashpad']]],
+  ['stringhttpbodystream',['StringHTTPBodyStream',['../classcrashpad_1_1StringHTTPBodyStream.html',1,'crashpad']]],
+  ['symbolinformation',['SymbolInformation',['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html',1,'crashpad::MachOImageSymbolTableReader']]],
+  ['systemsnapshot',['SystemSnapshot',['../classcrashpad_1_1SystemSnapshot.html',1,'crashpad']]],
+  ['systemsnapshotmac',['SystemSnapshotMac',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html',1,'crashpad::internal']]],
+  ['systemtime',['SYSTEMTIME',['../structSYSTEMTIME.html',1,'']]]
 ];

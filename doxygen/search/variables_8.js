@@ -7,5 +7,6 @@ var searchData=
   ['kmachexceptioncodes',['kMachExceptionCodes',['../namespacecrashpad.html#a7dbcba9449a5dd47d2911b1f85bc1a58',1,'crashpad']]],
   ['kmachexceptionsimulated',['kMachExceptionSimulated',['../namespacecrashpad.html#ad22bbde846a82173474ba002116c325c',1,'crashpad']]],
   ['kmachportnull',['kMachPortNull',['../namespacecrashpad.html#a7c7b6c8b4f44c95c7f0fb70a56342277',1,'crashpad']]],
-  ['ksignature',['kSignature',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#ab177423ce6cf7c0874b5e8841380648a',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::kSignature()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a040f3dc17a9e89ee2130a936ccc9155d',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::kSignature()']]]
+  ['ksignature',['kSignature',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#ab177423ce6cf7c0874b5e8841380648a',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::kSignature()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a040f3dc17a9e89ee2130a936ccc9155d',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::kSignature()']]],
+  ['kversion',['kVersion',['../structcrashpad_1_1MinidumpModuleCrashpadInfo.html#a18fb60c0add35baf294f4faadc697963',1,'crashpad::MinidumpModuleCrashpadInfo::kVersion()'],['../structcrashpad_1_1MinidumpCrashpadInfo.html#a69d7f1d4aaa3626731c87dbb93502c79',1,'crashpad::MinidumpCrashpadInfo::kVersion()']]]
 ];

@@ -6,7 +6,7 @@ var searchData=
   ['vendorid',['VendorId',['../unionCPU__INFORMATION.html#af239b99d9ef6b86fb04ffeabd85831c6',1,'CPU_INFORMATION']]],
   ['verifyminidumpheader',['VerifyMinidumpHeader',['../namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9',1,'crashpad::test']]],
   ['verrsrc_2eh',['verrsrc.h',['../verrsrc_8h.html',1,'']]],
-  ['version',['Version',['../structMINIDUMP__HEADER.html#a7ea8d51f5ca990eec9eb0b3643c6b406',1,'MINIDUMP_HEADER::Version()'],['../classcrashpad_1_1ToolSupport.html#ab9d46f634c4fdd9b23a572e7db69661c',1,'crashpad::ToolSupport::Version()'],['../structcrashpad_1_1MinidumpCrashpadInfo.html#a481042efad46164dc43d9c824df9e6cf',1,'crashpad::MinidumpCrashpadInfo::version()']]],
+  ['version',['version',['../structcrashpad_1_1MinidumpModuleCrashpadInfo.html#ace07d8872cdaa53ca20a04513deb56c3',1,'crashpad::MinidumpModuleCrashpadInfo::version()'],['../structcrashpad_1_1MinidumpCrashpadInfo.html#a481042efad46164dc43d9c824df9e6cf',1,'crashpad::MinidumpCrashpadInfo::version()'],['../structMINIDUMP__HEADER.html#a7ea8d51f5ca990eec9eb0b3643c6b406',1,'MINIDUMP_HEADER::Version()'],['../classcrashpad_1_1ToolSupport.html#ab9d46f634c4fdd9b23a572e7db69661c',1,'crashpad::ToolSupport::Version()']]],
   ['versioninfo',['VersionInfo',['../structMINIDUMP__MODULE.html#ac2babe58e6418124599ea2821f30bb84',1,'MINIDUMP_MODULE']]],
   ['versioninformation',['VersionInformation',['../unionCPU__INFORMATION.html#a6b072a6cae2e065111ef20acf21e355a',1,'CPU_INFORMATION']]],
   ['vmaddr',['vmaddr',['../classcrashpad_1_1MachOImageSegmentReader.html#aa8f6959eb785b54ee34911011c52a5c2',1,'crashpad::MachOImageSegmentReader']]],

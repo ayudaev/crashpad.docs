@@ -98,5 +98,6 @@ var searchData=
   ['kunknownisnumeric',['kUnknownIsNumeric',['../namespacecrashpad.html#a7856b82b71167792ea6103debb5105edaf9da07820c9857c86422b70c3cc33c12',1,'crashpad']]],
   ['kusefullname',['kUseFullName',['../namespacecrashpad.html#a7856b82b71167792ea6103debb5105edad497286630d39fe9b19c950a85c56db7',1,'crashpad']]],
   ['kuseor',['kUseOr',['../namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda18aa149c3471a5129274df2af6972f04',1,'crashpad']]],
-  ['kuseshortname',['kUseShortName',['../namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda127e077880ede5d2f87b87873d46ea55',1,'crashpad']]]
+  ['kuseshortname',['kUseShortName',['../namespacecrashpad.html#a7856b82b71167792ea6103debb5105eda127e077880ede5d2f87b87873d46ea55',1,'crashpad']]],
+  ['kversion',['kVersion',['../structcrashpad_1_1MinidumpModuleCrashpadInfo.html#a18fb60c0add35baf294f4faadc697963',1,'crashpad::MinidumpModuleCrashpadInfo::kVersion()'],['../structcrashpad_1_1MinidumpCrashpadInfo.html#a69d7f1d4aaa3626731c87dbb93502c79',1,'crashpad::MinidumpCrashpadInfo::kVersion()']]]
 ];

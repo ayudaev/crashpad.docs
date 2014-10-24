@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writableiovec',['WritableIoVec',['../structcrashpad_1_1WritableIoVec.html',1,'crashpad']]]
+  ['vs_5ffixedfileinfo',['VS_FIXEDFILEINFO',['../structVS__FIXEDFILEINFO.html',1,'']]]
 ];

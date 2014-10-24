@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name',['name',['../structcrashpad_1_1ProcessReader_1_1Module.html#af3802ec0731bda1cf066b050b23debf7',1,'crashpad::ProcessReader::Module::name()'],['../classcrashpad_1_1MachOImageSegmentReader.html#a91a34630f9a16d273ff4b1db1da5ceb6',1,'crashpad::MachOImageSegmentReader::Name()'],['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html#a445022c35e9f2d196c24172208b0dab6',1,'crashpad::internal::ModuleSnapshotMac::Name()'],['../classcrashpad_1_1ModuleSnapshot.html#aa0ab6a719fbb6f63d73e05086fe4a314',1,'crashpad::ModuleSnapshot::Name()']]],
+  ['name',['Name',['../classcrashpad_1_1MachOImageSegmentReader.html#a91a34630f9a16d273ff4b1db1da5ceb6',1,'crashpad::MachOImageSegmentReader::Name()'],['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html#a445022c35e9f2d196c24172208b0dab6',1,'crashpad::internal::ModuleSnapshotMac::Name()'],['../classcrashpad_1_1ModuleSnapshot.html#aa0ab6a719fbb6f63d73e05086fe4a314',1,'crashpad::ModuleSnapshot::Name()'],['../structcrashpad_1_1ProcessReader_1_1Module.html#af3802ec0731bda1cf066b050b23debf7',1,'crashpad::ProcessReader::Module::name()']]],
   ['next',['Next',['../classcrashpad_1_1TSimpleStringDictionary_1_1Iterator.html#afbc84491b65539ff4d250f9d7122a4c4',1,'crashpad::TSimpleStringDictionary::Iterator']]],
   ['nonblocking',['Nonblocking',['../classcrashpad_1_1MachMessageServer.html#a6caf7e93fed4a790b6b453383de9e025',1,'crashpad::MachMessageServer']]],
   ['nsects',['nsects',['../classcrashpad_1_1MachOImageSegmentReader.html#af1c309fdd3cfbedb32535f6e75e954f5',1,'crashpad::MachOImageSegmentReader']]],
