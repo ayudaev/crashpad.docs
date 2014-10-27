@@ -113,9 +113,9 @@ Inheritance diagram for crashpad::MinidumpModuleListWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae80c4f73234079da1a65fa5978641ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpModuleListWriter.html#ae80c4f73234079da1a65fa5978641ad6">AddModule</a> (<a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html">MinidumpModuleWriter</a> *module)</td></tr>
-<tr class="memdesc:ae80c4f73234079da1a65fa5978641ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html" title="The writer for a MINIDUMP_MODULE object in a minidump file. ">MinidumpModuleWriter</a> to the <a class="el" href="structMINIDUMP__MODULE__LIST.html" title="Information about all modules loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE_LIST</a>.  <a href="#ae80c4f73234079da1a65fa5978641ad6">More...</a><br /></td></tr>
-<tr class="separator:ae80c4f73234079da1a65fa5978641ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeebf6fcbc3154b92830313355279b51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpModuleListWriter.html#afeebf6fcbc3154b92830313355279b51">AddModule</a> (scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html">MinidumpModuleWriter</a> &gt; module)</td></tr>
+<tr class="memdesc:afeebf6fcbc3154b92830313355279b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html" title="The writer for a MINIDUMP_MODULE object in a minidump file. ">MinidumpModuleWriter</a> to the <a class="el" href="structMINIDUMP__MODULE__LIST.html" title="Information about all modules loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE_LIST</a>.  <a href="#afeebf6fcbc3154b92830313355279b51">More...</a><br /></td></tr>
+<tr class="separator:afeebf6fcbc3154b92830313355279b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcrashpad_1_1internal_1_1MinidumpStreamWriter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcrashpad_1_1internal_1_1MinidumpStreamWriter')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStreamWriter.html">crashpad::internal::MinidumpStreamWriter</a></td></tr>
 <tr class="memitem:a2c36492670110f546faaddd9e49d4344 inherit pub_methods_classcrashpad_1_1internal_1_1MinidumpStreamWriter"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structMINIDUMP__DIRECTORY.html">MINIDUMP_DIRECTORY</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpStreamWriter.html#a2c36492670110f546faaddd9e49d4344">DirectoryListEntry</a> () const </td></tr>
 <tr class="memdesc:a2c36492670110f546faaddd9e49d4344 inherit pub_methods_classcrashpad_1_1internal_1_1MinidumpStreamWriter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structMINIDUMP__DIRECTORY.html" title="A pointer to a stream within a minidump file. ">MINIDUMP_DIRECTORY</a> entry that serves as a pointer to this stream.  <a href="#a2c36492670110f546faaddd9e49d4344">More...</a><br /></td></tr>
@@ -190,14 +190,14 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The writer for a <a class="el" href="structMINIDUMP__MODULE__LIST.html" title="Information about all modules loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE_LIST</a> stream in a minidump file, containing a list of <a class="el" href="structMINIDUMP__MODULE.html" title="Information about a specific module loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE</a> objects. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae80c4f73234079da1a65fa5978641ad6"></a>
+<a class="anchor" id="afeebf6fcbc3154b92830313355279b51"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void crashpad::MinidumpModuleListWriter::AddModule </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html">MinidumpModuleWriter</a> *&#160;</td>
+          <td class="paramtype">scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html">MinidumpModuleWriter</a> &gt;&#160;</td>
           <td class="paramname"><em>module</em></td><td>)</td>
           <td></td>
         </tr>
@@ -205,7 +205,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds a <a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html" title="The writer for a MINIDUMP_MODULE object in a minidump file. ">MinidumpModuleWriter</a> to the <a class="el" href="structMINIDUMP__MODULE__LIST.html" title="Information about all modules loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE_LIST</a>. </p>
-<p><em>module</em> will become a child of this object in the overall tree of <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> objects.</p>
+<p>This object takes ownership of <em>module</em> and becomes its parent in the overall tree of <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> objects.</p>
 <dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. </dd></dl>
 
 </div>

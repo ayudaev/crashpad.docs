@@ -113,9 +113,9 @@ Inheritance diagram for crashpad::MinidumpExceptionWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adbaab7b118333c93bdbfccc7b89e6472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpExceptionWriter.html#adbaab7b118333c93bdbfccc7b89e6472">SetContext</a> (<a class="el" href="classcrashpad_1_1MinidumpContextWriter.html">MinidumpContextWriter</a> *context)</td></tr>
-<tr class="memdesc:adbaab7b118333c93bdbfccc7b89e6472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arranges for <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html#a5a49137fc0a19e8096504e16e954f351" title="A pointer to a CPU-specific CONTEXT structure containing the thread’s context at the time the except...">MINIDUMP_EXCEPTION_STREAM::ThreadContext</a> to point to the CPU context to be written by <em>context</em>.  <a href="#adbaab7b118333c93bdbfccc7b89e6472">More...</a><br /></td></tr>
-<tr class="separator:adbaab7b118333c93bdbfccc7b89e6472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3163e1c9a929bcd13de9364d14035ff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpExceptionWriter.html#a3163e1c9a929bcd13de9364d14035ff2">SetContext</a> (scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpContextWriter.html">MinidumpContextWriter</a> &gt; context)</td></tr>
+<tr class="memdesc:a3163e1c9a929bcd13de9364d14035ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arranges for <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html#a5a49137fc0a19e8096504e16e954f351" title="A pointer to a CPU-specific CONTEXT structure containing the thread’s context at the time the except...">MINIDUMP_EXCEPTION_STREAM::ThreadContext</a> to point to the CPU context to be written by <em>context</em>.  <a href="#a3163e1c9a929bcd13de9364d14035ff2">More...</a><br /></td></tr>
+<tr class="separator:a3163e1c9a929bcd13de9364d14035ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412c5d56704048436a84d11736211840"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a412c5d56704048436a84d11736211840"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpExceptionWriter.html#a412c5d56704048436a84d11736211840">SetThreadID</a> (uint32_t thread_id)</td></tr>
 <tr class="memdesc:a412c5d56704048436a84d11736211840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html#a086c9170bbe85b667b65f90fca98bf95" title="The ID of the thread that caused the exception. ">MINIDUMP_EXCEPTION_STREAM::ThreadId</a>. <br /></td></tr>
@@ -270,14 +270,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adbaab7b118333c93bdbfccc7b89e6472"></a>
+<a class="anchor" id="a3163e1c9a929bcd13de9364d14035ff2"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void crashpad::MinidumpExceptionWriter::SetContext </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcrashpad_1_1MinidumpContextWriter.html">MinidumpContextWriter</a> *&#160;</td>
+          <td class="paramtype">scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpContextWriter.html">MinidumpContextWriter</a> &gt;&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
           <td></td>
         </tr>
@@ -286,7 +286,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Arranges for <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html#a5a49137fc0a19e8096504e16e954f351" title="A pointer to a CPU-specific CONTEXT structure containing the thread’s context at the time the except...">MINIDUMP_EXCEPTION_STREAM::ThreadContext</a> to point to the CPU context to be written by <em>context</em>. </p>
 <p>A context is required in all <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html" title="Information about the exception that triggered a minidump file’s generation. ">MINIDUMP_EXCEPTION_STREAM</a> objects.</p>
-<p><em>context</em> will become a child of this object in the overall tree of <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> objects.</p>
+<p>This object takes ownership of <em>context</em> and becomes its parent in the overall tree of <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> objects.</p>
 <dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. </dd></dl>
 
 </div>
