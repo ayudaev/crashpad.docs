@@ -5,6 +5,8 @@ var searchData=
   ['initializecpucontextx86_5f64',['InitializeCPUContextX86_64',['../namespacecrashpad_1_1internal.html#a6a0cfbd267c1609247d2d14e371b0408',1,'crashpad::internal']]],
   ['initializeexception',['InitializeException',['../classcrashpad_1_1ProcessSnapshotMac.html#aa4f32a8cc7954685d760b75712db21c0',1,'crashpad::ProcessSnapshotMac']]],
   ['initializefrombytes',['InitializeFromBytes',['../structcrashpad_1_1UUID.html#adc8f2ac33af88d762a6b7575971cca58',1,'crashpad::UUID']]],
+  ['initializefrommap',['InitializeFromMap',['../classcrashpad_1_1MinidumpSimpleStringDictionaryWriter.html#a9f84928de4e5b92dd7ffe169128829ac',1,'crashpad::MinidumpSimpleStringDictionaryWriter']]],
+  ['initializefromsnapshot',['InitializeFromSnapshot',['../classcrashpad_1_1MinidumpModuleCrashpadInfoWriter.html#a40da490fff566f6c9ced8b0d3b3c7e20',1,'crashpad::MinidumpModuleCrashpadInfoWriter::InitializeFromSnapshot()'],['../classcrashpad_1_1MinidumpModuleCrashpadInfoListWriter.html#a9701335f9ec35f32f2de2324958b73a5',1,'crashpad::MinidumpModuleCrashpadInfoListWriter::InitializeFromSnapshot()']]],
   ['initializeminidumpcontextamd64',['InitializeMinidumpContextAMD64',['../namespacecrashpad_1_1test.html#afa1dd7166c73ca082608b1ab21b5a395',1,'crashpad::test']]],
   ['initializeminidumpcontextx86',['InitializeMinidumpContextX86',['../namespacecrashpad_1_1test.html#afefac1494b6a67c50a254c75a8caccf1',1,'crashpad::test']]],
   ['inrangecast',['InRangeCast',['../namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29',1,'crashpad']]],
@@ -13,5 +15,6 @@ var searchData=
   ['is_5factive',['is_active',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html#ac98f42b00809b4d3f8fad202343119c7',1,'crashpad::TSimpleStringDictionary::Entry']]],
   ['is_5funinitialized',['is_uninitialized',['../classcrashpad_1_1InitializationState.html#aea6a1b93d6ebd73fb601ccc602698009',1,'crashpad::InitializationState']]],
   ['is_5fvalid',['is_valid',['../classcrashpad_1_1InitializationState.html#aac475fd15f19ed390e6518e091918361',1,'crashpad::InitializationState']]],
+  ['isuseful',['IsUseful',['../classcrashpad_1_1MinidumpModuleCrashpadInfoWriter.html#a686d0539295b16678b2740fb4dea4432',1,'crashpad::MinidumpModuleCrashpadInfoWriter::IsUseful()'],['../classcrashpad_1_1MinidumpSimpleStringDictionaryWriter.html#a464adf3f0c4a762f86947d9803ec6567',1,'crashpad::MinidumpSimpleStringDictionaryWriter::IsUseful()']]],
   ['isvalid',['IsValid',['../classcrashpad_1_1CheckedMachAddressRange.html#aa62ba813fa0c4b2a619250e0655096ce',1,'crashpad::CheckedMachAddressRange::IsValid()'],['../classcrashpad_1_1CheckedRange.html#aa6fa53f8e83e9ad0ca1d2c7275c33095',1,'crashpad::CheckedRange::IsValid()']]]
 ];

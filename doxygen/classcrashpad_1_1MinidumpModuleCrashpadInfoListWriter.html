@@ -112,6 +112,9 @@ Inheritance diagram for crashpad::MinidumpModuleCrashpadInfoListWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9701335f9ec35f32f2de2324958b73a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpModuleCrashpadInfoListWriter.html#a9701335f9ec35f32f2de2324958b73a5">InitializeFromSnapshot</a> (const std::vector&lt; const <a class="el" href="classcrashpad_1_1ModuleSnapshot.html">ModuleSnapshot</a> * &gt; &amp;module_snapshots)</td></tr>
+<tr class="memdesc:a9701335f9ec35f32f2de2324958b73a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an initialized <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfo.html" title="Additional Crashpad-specific information about a module carried within a minidump file...">MinidumpModuleCrashpadInfo</a> for modules in <em>module_snapshots</em> to the <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfoList.html" title="Additional Crashpad-specific information about modules carried within a minidump file. ">MinidumpModuleCrashpadInfoList</a>.  <a href="#a9701335f9ec35f32f2de2324958b73a5">More...</a><br /></td></tr>
+<tr class="separator:a9701335f9ec35f32f2de2324958b73a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade7e99132da5900a816ad09468ffe703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpModuleCrashpadInfoListWriter.html#ade7e99132da5900a816ad09468ffe703">AddModule</a> (scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpModuleCrashpadInfoWriter.html">MinidumpModuleCrashpadInfoWriter</a> &gt; module)</td></tr>
 <tr class="memdesc:ade7e99132da5900a816ad09468ffe703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfo.html" title="Additional Crashpad-specific information about a module carried within a minidump file...">MinidumpModuleCrashpadInfo</a> to the <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfoList.html" title="Additional Crashpad-specific information about modules carried within a minidump file. ">MinidumpModuleCrashpadInfoList</a>.  <a href="#ade7e99132da5900a816ad09468ffe703">More...</a><br /></td></tr>
 <tr class="separator:ade7e99132da5900a816ad09468ffe703"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -252,6 +255,32 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. <code>false</code> on failure, with an appropriate message logged. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a773db80946a99c6a3cc29c7d4dd77bd6">crashpad::internal::MinidumpWritable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9701335f9ec35f32f2de2324958b73a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MinidumpModuleCrashpadInfoListWriter::InitializeFromSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="classcrashpad_1_1ModuleSnapshot.html">ModuleSnapshot</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>module_snapshots</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an initialized <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfo.html" title="Additional Crashpad-specific information about a module carried within a minidump file...">MinidumpModuleCrashpadInfo</a> for modules in <em>module_snapshots</em> to the <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfoList.html" title="Additional Crashpad-specific information about modules carried within a minidump file. ">MinidumpModuleCrashpadInfoList</a>. </p>
+<p>Only modules in <em>module_snapshots</em> that would produce a useful <a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfo.html" title="Additional Crashpad-specific information about a module carried within a minidump file...">MinidumpModuleCrashpadInfo</a> structure are included. Usefulness is determined by <a class="el" href="classcrashpad_1_1MinidumpModuleCrashpadInfoWriter.html#a686d0539295b16678b2740fb4dea4432" title="Determines whether the object is useful. ">MinidumpModuleCrashpadInfoWriter::IsUseful()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">module_snapshots</td><td>The module snapshots to use as source data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. No mutator methods may be called before this method, and it is not normally necessary to call any mutator methods after this method. </dd></dl>
 
 </div>
 </div>
