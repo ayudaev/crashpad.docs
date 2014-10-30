@@ -113,6 +113,9 @@ Inheritance diagram for crashpad::MinidumpMemoryListWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae40e485eff3dd7eb224cdd13eb333dd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryListWriter.html#ae40e485eff3dd7eb224cdd13eb333dd7">AddFromSnapshot</a> (const std::vector&lt; const <a class="el" href="classcrashpad_1_1MemorySnapshot.html">MemorySnapshot</a> * &gt; &amp;memory_snapshots)</td></tr>
+<tr class="memdesc:ae40e485eff3dd7eb224cdd13eb333dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a concrete initialized <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> for each memory snapshot in <em>memory_snapshots</em> to the <a class="el" href="structMINIDUMP__MEMORY__LIST.html" title="Information about memory regions within the process. ">MINIDUMP_MEMORY_LIST</a>.  <a href="#ae40e485eff3dd7eb224cdd13eb333dd7">More...</a><br /></td></tr>
+<tr class="separator:ae40e485eff3dd7eb224cdd13eb333dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae78274cf4453a01907e31289c6517509"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMemoryListWriter.html#ae78274cf4453a01907e31289c6517509">AddMemory</a> (scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html">MinidumpMemoryWriter</a> &gt; memory_writer)</td></tr>
 <tr class="memdesc:ae78274cf4453a01907e31289c6517509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> to the <a class="el" href="structMINIDUMP__MEMORY__LIST.html" title="Information about memory regions within the process. ">MINIDUMP_MEMORY_LIST</a>.  <a href="#ae78274cf4453a01907e31289c6517509">More...</a><br /></td></tr>
 <tr class="separator:ae78274cf4453a01907e31289c6517509"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,6 +213,32 @@ Additional Inherited Members</h2></td></tr>
 <p>Adds a <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> that’s a child of another <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> object to the <a class="el" href="structMINIDUMP__MEMORY__LIST.html" title="Information about memory regions within the process. ">MINIDUMP_MEMORY_LIST</a>. </p>
 <p><em>memory_writer</em> does not become a child of this object, but the <a class="el" href="structMINIDUMP__MEMORY__LIST.html" title="Information about memory regions within the process. ">MINIDUMP_MEMORY_LIST</a> will still contain a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> for it. <em>memory_writer</em> must be a child of another object in the <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> tree.</p>
 <p>This method exists to be called by objects that have their own <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> children but wish for them to also appear in the minidump file’s <a class="el" href="structMINIDUMP__MEMORY__LIST.html" title="Information about memory regions within the process. ">MINIDUMP_MEMORY_LIST</a>. <a class="el" href="classcrashpad_1_1MinidumpThreadWriter.html" title="The writer for a MINIDUMP_THREAD object in a minidump file. ">MinidumpThreadWriter</a>, which has a <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> for thread stack memory, is an example.</p>
+<dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae40e485eff3dd7eb224cdd13eb333dd7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MinidumpMemoryListWriter::AddFromSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const <a class="el" href="classcrashpad_1_1MemorySnapshot.html">MemorySnapshot</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>memory_snapshots</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a concrete initialized <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> for each memory snapshot in <em>memory_snapshots</em> to the <a class="el" href="structMINIDUMP__MEMORY__LIST.html" title="Information about memory regions within the process. ">MINIDUMP_MEMORY_LIST</a>. </p>
+<p>Memory snapshots are added in the fashion of <a class="el" href="classcrashpad_1_1MinidumpMemoryListWriter.html#ae78274cf4453a01907e31289c6517509" title="Adds a MinidumpMemoryWriter to the MINIDUMP_MEMORY_LIST. ">AddMemory()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">memory_snapshots</td><td>The memory snapshots to use as source data.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. </dd></dl>
 
 </div>

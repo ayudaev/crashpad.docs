@@ -112,6 +112,9 @@ Inheritance diagram for crashpad::MinidumpModuleWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3bd0e6057335838b253c37d7c3a0bff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html#a3bd0e6057335838b253c37d7c3a0bff4">InitializeFromSnapshot</a> (const <a class="el" href="classcrashpad_1_1ModuleSnapshot.html">ModuleSnapshot</a> *module_snapshot)</td></tr>
+<tr class="memdesc:a3bd0e6057335838b253c37d7c3a0bff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="structMINIDUMP__MODULE.html" title="Information about a specific module loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE</a> based on <em>module_snapshot</em>.  <a href="#a3bd0e6057335838b253c37d7c3a0bff4">More...</a><br /></td></tr>
+<tr class="separator:a3bd0e6057335838b253c37d7c3a0bff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c5c82d17dcb1f68353586df1876e1fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structMINIDUMP__MODULE.html">MINIDUMP_MODULE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpModuleWriter.html#a7c5c82d17dcb1f68353586df1876e1fe">MinidumpModule</a> () const </td></tr>
 <tr class="memdesc:a7c5c82d17dcb1f68353586df1876e1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structMINIDUMP__MODULE.html" title="Information about a specific module loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE</a> referencing this object’s data.  <a href="#a7c5c82d17dcb1f68353586df1876e1fe">More...</a><br /></td></tr>
 <tr class="separator:a7c5c82d17dcb1f68353586df1876e1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,6 +277,31 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. <code>false</code> on failure, with an appropriate message logged. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a773db80946a99c6a3cc29c7d4dd77bd6">crashpad::internal::MinidumpWritable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3bd0e6057335838b253c37d7c3a0bff4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MinidumpModuleWriter::InitializeFromSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcrashpad_1_1ModuleSnapshot.html">ModuleSnapshot</a> *&#160;</td>
+          <td class="paramname"><em>module_snapshot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="structMINIDUMP__MODULE.html" title="Information about a specific module loaded within the process at the time the snapshot was taken...">MINIDUMP_MODULE</a> based on <em>module_snapshot</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">module_snapshot</td><td>The module snapshot to use as source data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. No mutator methods may be called before this method, and it is not normally necessary to call any mutator methods after this method. </dd></dl>
 
 </div>
 </div>

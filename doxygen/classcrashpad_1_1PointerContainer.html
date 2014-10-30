@@ -93,6 +93,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">crashpad::PointerContainer&lt; ContainerType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Allows a standard container to “own” pointer elements stored in it.  
+ <a href="classcrashpad_1_1PointerContainer.html#details">More...</a></p>
+
+<p><code>#include &quot;util/stdlib/pointer_container.h&quot;</code></p>
 <div class="dynheader">
 Inheritance diagram for crashpad::PointerContainer&lt; ContainerType &gt;:</div>
 <div class="dyncontent">
@@ -101,7 +106,14 @@ Inheritance diagram for crashpad::PointerContainer&lt; ContainerType &gt;:</div>
   <map id="crashpad::PointerContainer&lt; ContainerType &gt;_map" name="crashpad::PointerContainer&lt; ContainerType &gt;_map">
 </map>
  </div></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename ContainerType&gt;<br />
+class crashpad::PointerContainer&lt; ContainerType &gt;</h3>
+
+<p>Allows a standard container to “own” pointer elements stored in it. </p>
+<p>When the container is destroyed, <code>delete</code> will be called on its pointer elements.</p>
+<dl class="section note"><dt>Note</dt><dd>No attempt is made to <code>delete</code> elements that are removed from the container by other means, such as replacement or <code>clear()</code>. </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>util/stdlib/pointer_container.h</li>
 </ul>
 </div><!-- contents -->

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getbodystream',['GetBodyStream',['../classcrashpad_1_1HTTPMultipartBuilder.html#a44bee6ddacb6b526b1a170e893d6b2b4',1,'crashpad::HTTPMultipartBuilder']]],
   ['getbytesbuffer',['GetBytesBuffer',['../classcrashpad_1_1HTTPBodyStream.html#a1bb6a644866c3e01f15818be23bde9ef',1,'crashpad::HTTPBodyStream::GetBytesBuffer()'],['../classcrashpad_1_1StringHTTPBodyStream.html#aef52b9001e6111900c7836d601dee2b3',1,'crashpad::StringHTTPBodyStream::GetBytesBuffer()'],['../classcrashpad_1_1FileHTTPBodyStream.html#af6774ed1f81fe667da00cd071b32a9c6',1,'crashpad::FileHTTPBodyStream::GetBytesBuffer()'],['../classcrashpad_1_1CompositeHTTPBodyStream.html#a8ed6efc6155915b464f0b8a02d67605b',1,'crashpad::CompositeHTTPBodyStream::GetBytesBuffer()']]],
   ['getcount',['GetCount',['../classcrashpad_1_1TSimpleStringDictionary.html#abea7cde3c95c514e0d74622182ab8eff',1,'crashpad::TSimpleStringDictionary']]],
   ['getcpuarchitecture',['GetCPUArchitecture',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a6edc3a4f2ecc2008d70d3f7349f31053',1,'crashpad::internal::SystemSnapshotMac::GetCPUArchitecture()'],['../classcrashpad_1_1SystemSnapshot.html#a648208544d9aae4bed72731cfcb9c170',1,'crashpad::SystemSnapshot::GetCPUArchitecture()']]],

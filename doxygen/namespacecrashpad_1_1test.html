@@ -110,11 +110,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1MultiprocessExec.html">MultiprocessExec</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages an <code>exec()</code>-based multiprocess test.  <a href="classcrashpad_1_1test_1_1MultiprocessExec.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestMemorySnapshot.html">TestMemorySnapshot</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A test <a class="el" href="classcrashpad_1_1MemorySnapshot.html" title="An abstract interface to a snapshot representing a region of memory present in a snapshot process...">MemorySnapshot</a> that can carry arbitrary data for testing purposes.  <a href="classcrashpad_1_1test_1_1TestMemorySnapshot.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html">TestMinidumpMemoryWriter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classcrashpad_1_1MinidumpMemoryWriter.html" title="The base class for writers of memory ranges pointed to by MINIDUMP_MEMORY_DESCRIPTOR objects in a min...">MinidumpMemoryWriter</a> implementation used for testing.  <a href="classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestModuleSnapshot.html">TestModuleSnapshot</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A test <a class="el" href="classcrashpad_1_1ModuleSnapshot.html" title="An abstract interface to a snapshot representing a code module (binary image) loaded into a snapshot ...">ModuleSnapshot</a> that can carries arbitrary data for testing purposes.  <a href="classcrashpad_1_1test_1_1TestModuleSnapshot.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A test <a class="el" href="classcrashpad_1_1ModuleSnapshot.html" title="An abstract interface to a snapshot representing a code module (binary image) loaded into a snapshot ...">ModuleSnapshot</a> that can carry arbitrary data for testing purposes.  <a href="classcrashpad_1_1test_1_1TestModuleSnapshot.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -237,6 +240,12 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a0e98915fad73c8628924c3a900732fc0"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a0e98915fad73c8628924c3a900732fc0">MinidumpWritableAtLocationDescriptor</a> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location)</td></tr>
 <tr class="memdesc:a0e98915fad73c8628924c3a900732fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a typed minidump object located within a minidump file’s contents, where the offset and size of the object are known.  <a href="#a0e98915fad73c8628924c3a900732fc0">More...</a><br /></td></tr>
 <tr class="separator:a0e98915fad73c8628924c3a900732fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35412b33d0a275fa43e8633296059534"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a35412b33d0a275fa43e8633296059534">ReadStreamToString</a> (<a class="el" href="classcrashpad_1_1HTTPBodyStream.html">HTTPBodyStream</a> *stream)</td></tr>
+<tr class="memdesc:a35412b33d0a275fa43e8633296059534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> to a string. If an error occurs, adds a test failure and returns an empty string.  <a href="#a35412b33d0a275fa43e8633296059534">More...</a><br /></td></tr>
+<tr class="separator:a35412b33d0a275fa43e8633296059534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861ba97c72a60c7e1802c39395d1d1fe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a861ba97c72a60c7e1802c39395d1d1fe">ReadStreamToString</a> (<a class="el" href="classcrashpad_1_1HTTPBodyStream.html">HTTPBodyStream</a> *stream, size_t buffer_size)</td></tr>
+<tr class="memdesc:a861ba97c72a60c7e1802c39395d1d1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> to a string. If an error occurs, adds a test failure and returns an empty string.  <a href="#a861ba97c72a60c7e1802c39395d1d1fe">More...</a><br /></td></tr>
+<tr class="separator:a861ba97c72a60c7e1802c39395d1d1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9504862c089964763d7d362572c2ac6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6">ErrnoMessage</a> (int err, const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:ad9504862c089964763d7d362572c2ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an error message using an <code>errno</code> value.  <a href="#ad9504862c089964763d7d362572c2ac6">More...</a><br /></td></tr>
 <tr class="separator:ad9504862c089964763d7d362572c2ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1006,6 +1015,67 @@ template&lt;typename T &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>If <em>rva</em> is within the range of <em>file_contents</em>, returns a pointer into <em>file_contents</em> at offset <em>rva</em>. Otherwise, raises a gtest assertion failure and returns <code>nullptr</code>.</dd></dl>
 <p>Do not call this function. Use the typed version, <a class="el" href="namespacecrashpad_1_1test.html#a5b3e635fd21c8c642d41ceb2072e7d08" title="Returns a typed minidump object located within a minidump file’s contents, where the offset of the o...">MinidumpWritableAtRVA&lt;&gt;()</a>, or another type-specific function.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a5cbb750966dcd4d580ba9eeb51a45fc6" title="Returns an untyped minidump object located within a minidump file’s contents, where the offset and s...">MinidumpWritableAtLocationDescriptorInternal()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a35412b33d0a275fa43e8633296059534"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::test::ReadStreamToString </td>
+          <td>(</td>
+          <td class="paramtype">HTTPBodyStream *&#160;</td>
+          <td class="paramname"><em>stream</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads a <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> to a string. If an error occurs, adds a test failure and returns an empty string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stream</td><td>The stream from which to read.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The contents of the stream, or an empty string on failure. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a861ba97c72a60c7e1802c39395d1d1fe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::test::ReadStreamToString </td>
+          <td>(</td>
+          <td class="paramtype">HTTPBodyStream *&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buffer_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reads a <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> to a string. If an error occurs, adds a test failure and returns an empty string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">stream</td><td>The stream from which to read. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer_size</td><td>The size of the buffer to use when reading from the stream.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The contents of the stream, or an empty string on failure. </dd></dl>
 
 </div>
 </div>

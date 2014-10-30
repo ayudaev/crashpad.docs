@@ -6,6 +6,7 @@ var searchData=
   ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html#aa285dd7fa791444753783c5ec03696a1',1,'crashpad::TaskMemory']]],
   ['teb',['Teb',['../structMINIDUMP__THREAD.html#a78e39b500ecbe680092406abd6aee3f3',1,'MINIDUMP_THREAD']]],
   ['terminationreason',['TerminationReason',['../classcrashpad_1_1test_1_1Multiprocess.html#adedaaa5fbbb57de1ae5af8ef7c84b4bf',1,'crashpad::test::Multiprocess']]],
+  ['testmemorysnapshot',['TestMemorySnapshot',['../classcrashpad_1_1test_1_1TestMemorySnapshot.html',1,'crashpad::test']]],
   ['testminidumpmemorywriter',['TestMinidumpMemoryWriter',['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html',1,'crashpad::test']]],
   ['testmodulesnapshot',['TestModuleSnapshot',['../classcrashpad_1_1test_1_1TestModuleSnapshot.html',1,'crashpad::test']]],
   ['thread',['Thread',['../structcrashpad_1_1ProcessReader_1_1Thread.html',1,'crashpad::ProcessReader']]],
