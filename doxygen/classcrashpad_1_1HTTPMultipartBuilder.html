@@ -112,10 +112,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44bee6ddacb6b526b1a170e893d6b2b4"><td class="memItemLeft" align="right" valign="top">scoped_ptr&lt; <a class="el" href="classcrashpad_1_1HTTPBodyStream.html">HTTPBodyStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1HTTPMultipartBuilder.html#a44bee6ddacb6b526b1a170e893d6b2b4">GetBodyStream</a> ()</td></tr>
 <tr class="memdesc:a44bee6ddacb6b526b1a170e893d6b2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> for the data currently supplied to the builder.  <a href="#a44bee6ddacb6b526b1a170e893d6b2b4">More...</a><br /></td></tr>
 <tr class="separator:a44bee6ddacb6b526b1a170e893d6b2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff7398f2c0510372127c4c6d0509029"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ff7398f2c0510372127c4c6d0509029"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1HTTPMultipartBuilder.html#a5ff7398f2c0510372127c4c6d0509029">boundary</a> () const </td></tr>
-<tr class="memdesc:a5ff7398f2c0510372127c4c6d0509029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the boundary that will be used in <a class="el" href="classcrashpad_1_1HTTPMultipartBuilder.html#a44bee6ddacb6b526b1a170e893d6b2b4" title="Generates the HTTPBodyStream for the data currently supplied to the builder. ">GetBodyStream()</a>. <br /></td></tr>
-<tr class="separator:a5ff7398f2c0510372127c4c6d0509029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058686dbdc9e3703dd3190dc38d96e94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a058686dbdc9e3703dd3190dc38d96e94"></a>
+HTTPHeaders::value_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1HTTPMultipartBuilder.html#a058686dbdc9e3703dd3190dc38d96e94">GetContentType</a> () const </td></tr>
+<tr class="memdesc:a058686dbdc9e3703dd3190dc38d96e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the header pair for <code>"Content-Type"</code>. <br /></td></tr>
+<tr class="separator:a058686dbdc9e3703dd3190dc38d96e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is used to build a MIME multipart message, conforming to RFC 2046, for use as a HTTP request body. </p>

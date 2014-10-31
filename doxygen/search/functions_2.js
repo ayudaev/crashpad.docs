@@ -41,5 +41,6 @@ var searchData=
   ['cpux86leaf7features',['CPUX86Leaf7Features',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#adbc7cbac6e5d7acd8a8ebe5004a9175b',1,'crashpad::internal::SystemSnapshotMac::CPUX86Leaf7Features()'],['../classcrashpad_1_1SystemSnapshot.html#a6bc4988ded49fb7044e6a08bc2a359e1',1,'crashpad::SystemSnapshot::CPUX86Leaf7Features()']]],
   ['cpux86signature',['CPUX86Signature',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a114a1cc323ae501d498685e002d42d2f',1,'crashpad::internal::SystemSnapshotMac::CPUX86Signature()'],['../classcrashpad_1_1SystemSnapshot.html#a3370fa9291053c60e9dc9beddb6123ac',1,'crashpad::SystemSnapshot::CPUX86Signature()']]],
   ['cpux86supportsdaz',['CPUX86SupportsDAZ',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a448cb3fea147006e1f8828f226dc6642',1,'crashpad::internal::SystemSnapshotMac::CPUX86SupportsDAZ()'],['../classcrashpad_1_1SystemSnapshot.html#ae6ab89c5f075da4fa5040106527cf281',1,'crashpad::SystemSnapshot::CPUX86SupportsDAZ()']]],
+  ['create',['Create',['../classcrashpad_1_1HTTPTransport.html#af29868cd955aeedd5f17dcd8a9e7f03a',1,'crashpad::HTTPTransport']]],
   ['createfromsnapshot',['CreateFromSnapshot',['../classcrashpad_1_1MinidumpMemoryWriter.html#ac9adde79751ab836d190bdfd4b778712',1,'crashpad::MinidumpMemoryWriter']]]
 ];

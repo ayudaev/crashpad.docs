@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rva',['RVA',['../dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8',1,'dbghelp.h']]]
+  ['minidump_5fmisc_5finfo_5fn',['MINIDUMP_MISC_INFO_N',['../dbghelp_8h.html#a4c9d49c36069b21d0c01cd6133e55914',1,'dbghelp.h']]]
 ];

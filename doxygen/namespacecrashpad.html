@@ -149,6 +149,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1HTTPMultipartBuilder.html">HTTPMultipartBuilder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is used to build a MIME multipart message, conforming to RFC 2046, for use as a HTTP request body.  <a href="classcrashpad_1_1HTTPMultipartBuilder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1HTTPTransport.html">HTTPTransport</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classcrashpad_1_1HTTPTransport.html" title="HTTPTransport executes a HTTP request using the specified URL, HTTP method, headers, and body. This class can only issue a synchronous HTTP request. ">HTTPTransport</a> executes a HTTP request using the specified URL, HTTP method, headers, and body. This class can only issue a synchronous HTTP request.  <a href="classcrashpad_1_1HTTPTransport.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1InitializationState.html">InitializationState</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tracks whether data are initialized.  <a href="classcrashpad_1_1InitializationState.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -344,6 +347,10 @@ typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class
 typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a4c978b07b70dd48556ecc1934f2f14bf">StringToSymbolicConstantOptions</a></td></tr>
 <tr class="memdesc:a4c978b07b70dd48556ecc1934f2f14bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bitfield containing values of <a class="el" href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2b" title="Options for various StringTo* functions in symbolic_constants_* files. ">StringToSymbolicConstantOptionBits</a>. <br /></td></tr>
 <tr class="separator:a4c978b07b70dd48556ecc1934f2f14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ffe10a8131fab8d1f8de60d9a812f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6ffe10a8131fab8d1f8de60d9a812f9"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#af6ffe10a8131fab8d1f8de60d9a812f9">HTTPHeaders</a> = std::map&lt; std::string, std::string &gt;</td></tr>
+<tr class="memdesc:af6ffe10a8131fab8d1f8de60d9a812f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map of HTTP header fields to their values. <br /></td></tr>
+<tr class="separator:af6ffe10a8131fab8d1f8de60d9a812f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -534,6 +541,14 @@ Variables</h2></td></tr>
 const exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad22bbde846a82173474ba002116c325c">kMachExceptionSimulated</a> = 'CPsx'</td></tr>
 <tr class="memdesc:ad22bbde846a82173474ba002116c325c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An exception type to use for simulated exceptions. <br /></td></tr>
 <tr class="separator:ad22bbde846a82173474ba002116c325c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0af855b48de54cc50ef186da37cb769"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0af855b48de54cc50ef186da37cb769"></a>
+const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae0af855b48de54cc50ef186da37cb769">kContentType</a> [] = &quot;Content-Type&quot;</td></tr>
+<tr class="memdesc:ae0af855b48de54cc50ef186da37cb769"><td class="mdescLeft">&#160;</td><td class="mdescRight">The header name <code>"Content-Type"</code>. <br /></td></tr>
+<tr class="separator:ae0af855b48de54cc50ef186da37cb769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281b3c75cd8b0ae8ba3c9658a60bf2b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a281b3c75cd8b0ae8ba3c9658a60bf2b3"></a>
+const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a281b3c75cd8b0ae8ba3c9658a60bf2b3">kContentLength</a> [] = &quot;Content-Length&quot;</td></tr>
+<tr class="memdesc:a281b3c75cd8b0ae8ba3c9658a60bf2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The header name <code>"Content-Length"</code>. <br /></td></tr>
+<tr class="separator:a281b3c75cd8b0ae8ba3c9658a60bf2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main namespace. </p>

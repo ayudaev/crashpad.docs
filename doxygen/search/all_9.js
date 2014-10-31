@@ -6,6 +6,8 @@ var searchData=
   ['kallowoversizeddata',['kAllowOversizedData',['../structcrashpad_1_1test_1_1MinidumpWritableTraits.html#a2d3ce0be9fa795fd033dba2462a33c43',1,'crashpad::test::MinidumpWritableTraits']]],
   ['kallowshortname',['kAllowShortName',['../namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2ba56cf2e379949ef54954bf3d23ca38e85',1,'crashpad']]],
   ['kblocking',['kBlocking',['../classcrashpad_1_1MachMessageServer.html#a6caf7e93fed4a790b6b453383de9e025a50d24ed4b26cc8ff92e33a271248c555',1,'crashpad::MachMessageServer']]],
+  ['kcontentlength',['kContentLength',['../namespacecrashpad.html#a281b3c75cd8b0ae8ba3c9658a60bf2b3',1,'crashpad']]],
+  ['kcontenttype',['kContentType',['../namespacecrashpad.html#ae0af855b48de54cc50ef186da37cb769',1,'crashpad']]],
   ['kcpuarchitectureunknown',['kCPUArchitectureUnknown',['../namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71a4a3c395099ca8e31f9bd9511e058c73c',1,'crashpad']]],
   ['kcpuarchitecturex86',['kCPUArchitectureX86',['../namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71a35adbd1bc0b19ef37c520d078cf0df15',1,'crashpad']]],
   ['kcpuarchitecturex86_5f64',['kCPUArchitectureX86_64',['../namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71addee685df867aea490719783e56baf0a',1,'crashpad']]],
