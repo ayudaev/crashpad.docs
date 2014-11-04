@@ -339,6 +339,9 @@ Typedefs</h2></td></tr>
 <a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html">TSimpleStringDictionary</a>&lt; 256, 256, 64 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#af25d0c4731619923ef6dba7abfca5498">SimpleStringDictionary</a></td></tr>
 <tr class="memdesc:af25d0c4731619923ef6dba7abfca5498"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classcrashpad_1_1TSimpleStringDictionary.html" title="A map/dictionary collection implementation using a fixed amount of storage, so that it does not perfo...">TSimpleStringDictionary</a> with default template parameters.  <a href="#af25d0c4731619923ef6dba7abfca5498">More...</a><br /></td></tr>
 <tr class="separator:af25d0c4731619923ef6dba7abfca5498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae426d8c91f5448aaf543f91478d831da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da">MinidumpThreadIDMap</a> = std::map&lt; uint64_t, uint32_t &gt;</td></tr>
+<tr class="memdesc:ae426d8c91f5448aaf543f91478d831da"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map that connects 64-bit snapshot thread IDs to 32-bit minidump thread IDs.  <a href="#ae426d8c91f5448aaf543f91478d831da">More...</a><br /></td></tr>
+<tr class="separator:ae426d8c91f5448aaf543f91478d831da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf53d9bd2234d977d4bc296feab12e53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf53d9bd2234d977d4bc296feab12e53"></a>
 typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aaf53d9bd2234d977d4bc296feab12e53">SymbolicConstantToStringOptions</a></td></tr>
 <tr class="memdesc:aaf53d9bd2234d977d4bc296feab12e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bitfield containing values of <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed" title="Options for various *ToString functions in symbolic_constants_* files. ">SymbolicConstantToStringOptionBits</a>. <br /></td></tr>
@@ -393,6 +396,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a022902840a0224b9599fc14b0b19e7cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a022902840a0224b9599fc14b0b19e7cf">SimulateCrash</a> (const NativeCPUContext *cpu_context)</td></tr>
 <tr class="memdesc:a022902840a0224b9599fc14b0b19e7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a exception without crashing.  <a href="#a022902840a0224b9599fc14b0b19e7cf">More...</a><br /></td></tr>
 <tr class="separator:a022902840a0224b9599fc14b0b19e7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58169a74e32daa2888614fcd2f2381ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a58169a74e32daa2888614fcd2f2381ce">BuildMinidumpThreadIDMap</a> (const std::vector&lt; const <a class="el" href="classcrashpad_1_1ThreadSnapshot.html">ThreadSnapshot</a> * &gt; &amp;thread_snapshots, <a class="el" href="namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da">MinidumpThreadIDMap</a> *thread_id_map)</td></tr>
+<tr class="memdesc:a58169a74e32daa2888614fcd2f2381ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a MinidumpThreadIDMap for a group of <a class="el" href="classcrashpad_1_1ThreadSnapshot.html" title="An abstract interface to a snapshot representing a thread (lightweight process) present in a snapshot...">ThreadSnapshot</a> objects.  <a href="#a58169a74e32daa2888614fcd2f2381ce">More...</a><br /></td></tr>
+<tr class="separator:a58169a74e32daa2888614fcd2f2381ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c787f550c9e9d966d9f7dddc0653b4"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4">ReadFD</a> (int fd, void *buffer, size_t size)</td></tr>
 <tr class="memdesc:a86c787f550c9e9d966d9f7dddc0653b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>read()</code>, retrying when interrupted or following a short read.  <a href="#a86c787f550c9e9d966d9f7dddc0653b4">More...</a><br /></td></tr>
 <tr class="separator:a86c787f550c9e9d966d9f7dddc0653b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -553,6 +559,22 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main namespace. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="ae426d8c91f5448aaf543f91478d831da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da">crashpad::MinidumpThreadIDMap</a> = typedef std::map&lt;uint64_t, uint32_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A map that connects 64-bit snapshot thread IDs to 32-bit minidump thread IDs. </p>
+<p>64-bit snapshot thread IDs are obtained from <a class="el" href="classcrashpad_1_1ThreadSnapshot.html#a3c953575fadb934cd5f163560df149da" title="Returns the thread’s identifier. ">ThreadSnapshot::ThreadID()</a>. 32-bit minidump thread IDs are stored in <a class="el" href="structMINIDUMP__THREAD.html#a1d2508187af6c3ec09e5836badb56fd2" title="The thread’s ID. This may be referenced by MINIDUMP_EXCEPTION_STREAM::ThreadId. ">MINIDUMP_THREAD::ThreadId</a>.</p>
+<p>A ThreadIDMap ensures that there are no collisions among the set of 32-bit minidump thread IDs. </p>
+
+</div>
+</div>
 <a class="anchor" id="af25d0c4731619923ef6dba7abfca5498"></a>
 <div class="memitem">
 <div class="memproto">
@@ -994,6 +1016,42 @@ template&lt;typename Destination , typename Source &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>source</em> is in the range supported by the type of <em>*destination</em>, with the assignment to <em>*destination</em> having been performed. <code>false</code> if the assignment cannot be completed safely because <em>source</em> is outside of this range. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a58169a74e32daa2888614fcd2f2381ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::BuildMinidumpThreadIDMap </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const ThreadSnapshot * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>thread_snapshots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MinidumpThreadIDMap *&#160;</td>
+          <td class="paramname"><em>thread_id_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Builds a MinidumpThreadIDMap for a group of <a class="el" href="classcrashpad_1_1ThreadSnapshot.html" title="An abstract interface to a snapshot representing a thread (lightweight process) present in a snapshot...">ThreadSnapshot</a> objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_snapshots</td><td>The thread snapshots to use as source data. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">thread_id_map</td><td>A MinidumpThreadIDMap to be built by this method. This map must be empty when this function is called.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The map ensures that for any unique 64-bit thread ID found in a <a class="el" href="classcrashpad_1_1ThreadSnapshot.html" title="An abstract interface to a snapshot representing a thread (lightweight process) present in a snapshot...">ThreadSnapshot</a>, the 32-bit thread ID used in a minidump file will also be unique. </p>
 
 </div>
 </div>

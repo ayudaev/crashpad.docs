@@ -100,8 +100,8 @@ var searchData=
   ['minidumpos',['MinidumpOS',['../namespacecrashpad.html#a9be77c6f7868f00c2f279006a1abe26a',1,'crashpad']]],
   ['minidumpostype',['MinidumpOSType',['../namespacecrashpad.html#a3bf5a6562c9ccee9b4ef3ae4d9ac0be7',1,'crashpad']]],
   ['minidumpsimplestringdictionary',['MinidumpSimpleStringDictionary',['../structcrashpad_1_1MinidumpSimpleStringDictionary.html',1,'crashpad']]],
-  ['minidumpsimplestringdictionaryentry',['MinidumpSimpleStringDictionaryEntry',['../classcrashpad_1_1MinidumpSimpleStringDictionaryEntryWriter.html#a6390e4f477f8b486f3189e0c2a097bc0',1,'crashpad::MinidumpSimpleStringDictionaryEntryWriter']]],
   ['minidumpsimplestringdictionaryentry',['MinidumpSimpleStringDictionaryEntry',['../structcrashpad_1_1MinidumpSimpleStringDictionaryEntry.html',1,'crashpad']]],
+  ['minidumpsimplestringdictionaryentry',['MinidumpSimpleStringDictionaryEntry',['../classcrashpad_1_1MinidumpSimpleStringDictionaryEntryWriter.html#a6390e4f477f8b486f3189e0c2a097bc0',1,'crashpad::MinidumpSimpleStringDictionaryEntryWriter']]],
   ['minidumpsimplestringdictionaryentrywriter',['MinidumpSimpleStringDictionaryEntryWriter',['../classcrashpad_1_1MinidumpSimpleStringDictionaryEntryWriter.html',1,'crashpad']]],
   ['minidumpsimplestringdictionarywriter',['MinidumpSimpleStringDictionaryWriter',['../classcrashpad_1_1MinidumpSimpleStringDictionaryWriter.html',1,'crashpad']]],
   ['minidumpstreamtype',['MinidumpStreamType',['../namespacecrashpad.html#a88363a45a4af1a16f542a8c1ff522ab9',1,'crashpad']]],
@@ -113,6 +113,7 @@ var searchData=
   ['minidumpstringwriter_3c_20minidumpstringwriterutf8traits_20_3e',['MinidumpStringWriter&lt; MinidumpStringWriterUTF8Traits &gt;',['../classcrashpad_1_1internal_1_1MinidumpStringWriter.html',1,'crashpad::internal']]],
   ['minidumpsysteminfowriter',['MinidumpSystemInfoWriter',['../classcrashpad_1_1MinidumpSystemInfoWriter.html',1,'crashpad']]],
   ['minidumpthread',['MinidumpThread',['../classcrashpad_1_1MinidumpThreadWriter.html#ac1007d28b55737a2d6202fadc31d1715',1,'crashpad::MinidumpThreadWriter']]],
+  ['minidumpthreadidmap',['MinidumpThreadIDMap',['../namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da',1,'crashpad']]],
   ['minidumpthreadlistwriter',['MinidumpThreadListWriter',['../classcrashpad_1_1MinidumpThreadListWriter.html',1,'crashpad']]],
   ['minidumpthreadwriter',['MinidumpThreadWriter',['../classcrashpad_1_1MinidumpThreadWriter.html',1,'crashpad']]],
   ['minidumputf16stringwriter',['MinidumpUTF16StringWriter',['../classcrashpad_1_1internal_1_1MinidumpUTF16StringWriter.html',1,'crashpad::internal']]],
@@ -140,5 +141,6 @@ var searchData=
   ['moduletype',['ModuleType',['../classcrashpad_1_1ModuleSnapshot.html#a7fd77f711ef04d87ece6e04d48d219f7',1,'crashpad::ModuleSnapshot']]],
   ['multiprocess',['Multiprocess',['../classcrashpad_1_1test_1_1Multiprocess.html',1,'crashpad::test']]],
   ['multiprocessexec',['MultiprocessExec',['../classcrashpad_1_1test_1_1MultiprocessExec.html',1,'crashpad::test']]],
-  ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]]
+  ['multiprocessinfo',['MultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MultiprocessInfo.html',1,'crashpad::test::internal']]],
+  ['mutablecontext',['MutableContext',['../classcrashpad_1_1test_1_1TestExceptionSnapshot.html#a420112342e12f9b96c1d7748627ea56d',1,'crashpad::test::TestExceptionSnapshot::MutableContext()'],['../classcrashpad_1_1test_1_1TestThreadSnapshot.html#a9703c478f207a285d732821be657b50f',1,'crashpad::test::TestThreadSnapshot::MutableContext()']]]
 ];

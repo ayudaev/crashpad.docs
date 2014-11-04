@@ -113,6 +113,9 @@ Inheritance diagram for crashpad::MinidumpExceptionWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4b07c9f63baccf0102b0b85988cd88c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpExceptionWriter.html#a4b07c9f63baccf0102b0b85988cd88c4">InitializeFromSnapshot</a> (const <a class="el" href="classcrashpad_1_1ExceptionSnapshot.html">ExceptionSnapshot</a> *exception_snapshot, const <a class="el" href="namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da">MinidumpThreadIDMap</a> *thread_id_map)</td></tr>
+<tr class="memdesc:a4b07c9f63baccf0102b0b85988cd88c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html" title="Information about the exception that triggered a minidump file’s generation. ">MINIDUMP_EXCEPTION_STREAM</a> based on <em>exception_snapshot</em>.  <a href="#a4b07c9f63baccf0102b0b85988cd88c4">More...</a><br /></td></tr>
+<tr class="separator:a4b07c9f63baccf0102b0b85988cd88c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3163e1c9a929bcd13de9364d14035ff2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpExceptionWriter.html#a3163e1c9a929bcd13de9364d14035ff2">SetContext</a> (scoped_ptr&lt; <a class="el" href="classcrashpad_1_1MinidumpContextWriter.html">MinidumpContextWriter</a> &gt; context)</td></tr>
 <tr class="memdesc:a3163e1c9a929bcd13de9364d14035ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arranges for <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html#a5a49137fc0a19e8096504e16e954f351" title="A pointer to a CPU-specific CONTEXT structure containing the thread’s context at the time the except...">MINIDUMP_EXCEPTION_STREAM::ThreadContext</a> to point to the CPU context to be written by <em>context</em>.  <a href="#a3163e1c9a929bcd13de9364d14035ff2">More...</a><br /></td></tr>
 <tr class="separator:a3163e1c9a929bcd13de9364d14035ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,6 +270,42 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. <code>false</code> on failure, with an appropriate message logged. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a773db80946a99c6a3cc29c7d4dd77bd6">crashpad::internal::MinidumpWritable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4b07c9f63baccf0102b0b85988cd88c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MinidumpExceptionWriter::InitializeFromSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcrashpad_1_1ExceptionSnapshot.html">ExceptionSnapshot</a> *&#160;</td>
+          <td class="paramname"><em>exception_snapshot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da">MinidumpThreadIDMap</a> *&#160;</td>
+          <td class="paramname"><em>thread_id_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the <a class="el" href="structMINIDUMP__EXCEPTION__STREAM.html" title="Information about the exception that triggered a minidump file’s generation. ">MINIDUMP_EXCEPTION_STREAM</a> based on <em>exception_snapshot</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">exception_snapshot</td><td>The exception snapshot to use as source data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id_map</td><td>A MinidumpThreadIDMap to be consulted to determine the 32-bit minidump thread ID to use for the thread identified by <em>exception_snapshot</em>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. No mutator methods may be called before this method, and it is not normally necessary to call any mutator methods after this method. </dd></dl>
 
 </div>
 </div>
