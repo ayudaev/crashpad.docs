@@ -113,10 +113,13 @@ Inheritance diagram for crashpad::MinidumpMiscInfoWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4099d6d789a8d2f3a0309d4d3cafb65e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4099d6d789a8d2f3a0309d4d3cafb65e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMiscInfoWriter.html#a4099d6d789a8d2f3a0309d4d3cafb65e">SetProcessId</a> (uint32_t process_id)</td></tr>
-<tr class="memdesc:a4099d6d789a8d2f3a0309d4d3cafb65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the field referenced by <a class="el" href="dbghelp_8h.html#a7c45d36c41d28289bb5966da1eb4df1e" title="MINIDUMP_MISC_INFO::ProcessId is valid. ">MINIDUMP_MISC1_PROCESS_ID</a>. <br /></td></tr>
-<tr class="separator:a4099d6d789a8d2f3a0309d4d3cafb65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ccb6770c07d55f1d1756d04a9d42e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMiscInfoWriter.html#a25ccb6770c07d55f1d1756d04a9d42e9">InitializeFromSnapshot</a> (const <a class="el" href="classcrashpad_1_1ProcessSnapshot.html">ProcessSnapshot</a> *process_snapshot)</td></tr>
+<tr class="memdesc:a25ccb6770c07d55f1d1756d04a9d42e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes MINIDUMP_MISC_INFO_N based on <em>process_snapshot</em>.  <a href="#a25ccb6770c07d55f1d1756d04a9d42e9">More...</a><br /></td></tr>
+<tr class="separator:a25ccb6770c07d55f1d1756d04a9d42e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5df42dd8537208f1c92b34cc161b0ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5df42dd8537208f1c92b34cc161b0ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMiscInfoWriter.html#ab5df42dd8537208f1c92b34cc161b0ae">SetProcessID</a> (uint32_t process_id)</td></tr>
+<tr class="memdesc:ab5df42dd8537208f1c92b34cc161b0ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the field referenced by <a class="el" href="dbghelp_8h.html#a7c45d36c41d28289bb5966da1eb4df1e" title="MINIDUMP_MISC_INFO::ProcessId is valid. ">MINIDUMP_MISC1_PROCESS_ID</a>. <br /></td></tr>
+<tr class="separator:ab5df42dd8537208f1c92b34cc161b0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648daff5be008580b0f2281bae9fa253"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a648daff5be008580b0f2281bae9fa253"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpMiscInfoWriter.html#a648daff5be008580b0f2281bae9fa253">SetProcessTimes</a> (time_t process_create_time, uint32_t process_user_time, uint32_t process_kernel_time)</td></tr>
 <tr class="memdesc:a648daff5be008580b0f2281bae9fa253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the fields referenced by <a class="el" href="dbghelp_8h.html#ab3edfa814438bfee50c43b21693ca121" title="The time-related fields in MINIDUMP_MISC_INFO are valid. ">MINIDUMP_MISC1_PROCESS_TIMES</a>. <br /></td></tr>
@@ -247,6 +250,31 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. <code>false</code> on failure, with an appropriate message logged. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#a773db80946a99c6a3cc29c7d4dd77bd6">crashpad::internal::MinidumpWritable</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a25ccb6770c07d55f1d1756d04a9d42e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MinidumpMiscInfoWriter::InitializeFromSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcrashpad_1_1ProcessSnapshot.html">ProcessSnapshot</a> *&#160;</td>
+          <td class="paramname"><em>process_snapshot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes MINIDUMP_MISC_INFO_N based on <em>process_snapshot</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">process_snapshot</td><td>The process snapshot to use as source data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. No mutator methods may be called before this method, and it is not normally necessary to call any mutator methods after this method. </dd></dl>
 
 </div>
 </div>

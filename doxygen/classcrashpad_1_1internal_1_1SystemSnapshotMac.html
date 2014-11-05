@@ -249,7 +249,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the snapshot system’s CPU revision. </p>
-<p>For x86-family CPUs (including x86_64 and 32-bit x86), this is the CPU family ID value from <code>cpuid 1</code> <code>eax</code>, adjusted to take the extended family ID into account.</p>
+<p>For x86-family CPUs (including x86_64 and 32-bit x86), this is the CPU family, model, and stepping ID values from <code>cpuid 1</code> <code>eax</code>. The family and model values are adjusted to take the extended family and model IDs into account. These values are encoded in this method’s return value with the family in the high high 16 bits, the model in the next 8 bits, and the stepping in the low 8 bits.</p>
 <dl class="section return"><dt>Returns</dt><dd>A CPU architecture-specific value identifying the CPU revision. </dd></dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1SystemSnapshot.html#a75192dc6dcca51b759576141fe69a9b7">crashpad::SystemSnapshot</a>.</p>

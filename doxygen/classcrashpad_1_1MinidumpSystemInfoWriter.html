@@ -113,6 +113,9 @@ Inheritance diagram for crashpad::MinidumpSystemInfoWriter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ad0222dd0c83b9e871e9e3d38bf7c6e35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#ad0222dd0c83b9e871e9e3d38bf7c6e35">InitializeFromSnapshot</a> (const <a class="el" href="classcrashpad_1_1SystemSnapshot.html">SystemSnapshot</a> *system_snapshot)</td></tr>
+<tr class="memdesc:ad0222dd0c83b9e871e9e3d38bf7c6e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes <a class="el" href="structMINIDUMP__SYSTEM__INFO.html" title="Information about the system that hosted the process that the minidump file contains a snapshot of...">MINIDUMP_SYSTEM_INFO</a> based on <em>system_snapshot</em>.  <a href="#ad0222dd0c83b9e871e9e3d38bf7c6e35">More...</a><br /></td></tr>
+<tr class="separator:ad0222dd0c83b9e871e9e3d38bf7c6e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada6151637d50c12566dd3afa33f124c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada6151637d50c12566dd3afa33f124c9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MinidumpSystemInfoWriter.html#ada6151637d50c12566dd3afa33f124c9">SetCPUArchitecture</a> (<a class="el" href="namespacecrashpad.html#a98e532bb06fc5ffdd93e0ceb6d789eb1">MinidumpCPUArchitecture</a> processor_architecture)</td></tr>
 <tr class="memdesc:ada6151637d50c12566dd3afa33f124c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <a class="el" href="structMINIDUMP__SYSTEM__INFO.html#adc85b29d7df8943baf1a96af23051ca8" title="The system’s CPU architecture. This may be a PROCESSOR_ARCHITECTURE_* value, or a member of crashpad...">MINIDUMP_SYSTEM_INFO::ProcessorArchitecture</a>. <br /></td></tr>
@@ -283,6 +286,31 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. <code>false</code> on failure, with an appropriate message logged. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="classcrashpad_1_1internal_1_1MinidumpStreamWriter.html#a6bace0c62b1f29aa710974a2bbcb3e1c">crashpad::internal::MinidumpStreamWriter</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad0222dd0c83b9e871e9e3d38bf7c6e35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::MinidumpSystemInfoWriter::InitializeFromSnapshot </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcrashpad_1_1SystemSnapshot.html">SystemSnapshot</a> *&#160;</td>
+          <td class="paramname"><em>system_snapshot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes <a class="el" href="structMINIDUMP__SYSTEM__INFO.html" title="Information about the system that hosted the process that the minidump file contains a snapshot of...">MINIDUMP_SYSTEM_INFO</a> based on <em>system_snapshot</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">system_snapshot</td><td>The system snapshot to use as source data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Valid in <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html#ac14e05f291f5fa713b5ec82a208fa7c7a18337604dcbdbdb23ed51810f0587665" title="The object’s properties can be modified. ">kStateMutable</a>. No mutator methods may be called before this method, and it is not normally necessary to call any mutator methods after this method. </dd></dl>
 
 </div>
 </div>

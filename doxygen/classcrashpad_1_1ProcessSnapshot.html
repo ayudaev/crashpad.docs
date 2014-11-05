@@ -105,7 +105,8 @@ Inheritance diagram for crashpad::ProcessSnapshot:</div>
  <div class="center">
   <img src="classcrashpad_1_1ProcessSnapshot.png" usemap="#crashpad::ProcessSnapshot_map" alt=""/>
   <map id="crashpad::ProcessSnapshot_map" name="crashpad::ProcessSnapshot_map">
-<area href="classcrashpad_1_1ProcessSnapshotMac.html" title="A ProcessSnapshot of a running (or crashed) process running on a Mac OS X system. ..." alt="crashpad::ProcessSnapshotMac" shape="rect" coords="0,56,194,80"/>
+<area href="classcrashpad_1_1ProcessSnapshotMac.html" title="A ProcessSnapshot of a running (or crashed) process running on a Mac OS X system. ..." alt="crashpad::ProcessSnapshotMac" shape="rect" coords="0,56,217,80"/>
+<area href="classcrashpad_1_1test_1_1TestProcessSnapshot.html" title="A test ProcessSnapshot that can carry arbitrary data for testing purposes. " alt="crashpad::test::TestProcessSnapshot" shape="rect" coords="227,56,444,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -171,7 +172,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Returns an <a class="el" href="classcrashpad_1_1ExceptionSnapshot.html" title="An abstract interface to a snapshot representing an exception that a snapshot process sustained and t...">ExceptionSnapshot</a> reflecting the exception that the snapshot process sustained to trigger the snapshot being taken. </p>
 <dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="classcrashpad_1_1ExceptionSnapshot.html" title="An abstract interface to a snapshot representing an exception that a snapshot process sustained and t...">ExceptionSnapshot</a> object. The caller does not take ownership of this object, it is scoped to the lifetime of the <a class="el" href="classcrashpad_1_1ProcessSnapshot.html" title="An abstract interface to a snapshot representing the state of a process. ">ProcessSnapshot</a> object that it was obtained from. If the snapshot is not a result of an exception, returns <code>nullptr</code>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a6a889e857ccd0e06ae1279c9ca708c50">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#aa0d8839f1e8c482bd9d7794e7475a541">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a6a889e857ccd0e06ae1279c9ca708c50">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>
@@ -199,7 +200,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Returns <a class="el" href="classcrashpad_1_1ModuleSnapshot.html" title="An abstract interface to a snapshot representing a code module (binary image) loaded into a snapshot ...">ModuleSnapshot</a> objects reflecting the code modules (binary images) loaded into the snapshot process at the time of the snapshot. </p>
 <dl class="section return"><dt>Returns</dt><dd>A vector of <a class="el" href="classcrashpad_1_1ModuleSnapshot.html" title="An abstract interface to a snapshot representing a code module (binary image) loaded into a snapshot ...">ModuleSnapshot</a> objects. The caller does not take ownership of these objects, they are scoped to the lifetime of the <a class="el" href="classcrashpad_1_1ProcessSnapshot.html" title="An abstract interface to a snapshot representing the state of a process. ">ProcessSnapshot</a> object that they were obtained from. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a1d75af2f52a59b61569916c968e33612">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a43275d7a32de7b074d9483e845911577">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a1d75af2f52a59b61569916c968e33612">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>
@@ -244,7 +245,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#aa692352db6f4dec570dd9294e5204e78">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#ad608647c26f108ba2712b791b4365589">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#aa692352db6f4dec570dd9294e5204e78">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>
@@ -279,7 +280,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#ac319ebbd8ec9b81c3861c70afe9403d1">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a32792c433f88bf0f2499c00d9769e5aa">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#ac319ebbd8ec9b81c3861c70afe9403d1">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>
@@ -313,7 +314,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a8f1dae20abda51a69fa9fb0b2704f638">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#abc33336e0959720987626da836e87259">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a8f1dae20abda51a69fa9fb0b2704f638">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>
@@ -341,7 +342,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Returns a <a class="el" href="classcrashpad_1_1SystemSnapshot.html" title="An abstract interface to a snapshot representing the state of a system, comprising an operating syste...">SystemSnapshot</a> reflecting the characteristics of the system that ran the snapshot process at the time of the snapshot. </p>
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classcrashpad_1_1SystemSnapshot.html" title="An abstract interface to a snapshot representing the state of a system, comprising an operating syste...">SystemSnapshot</a> object. The caller does not take ownership of this object, it is scoped to the lifetime of the <a class="el" href="classcrashpad_1_1ProcessSnapshot.html" title="An abstract interface to a snapshot representing the state of a process. ">ProcessSnapshot</a> object that it was obtained from. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#ae64058411487e5dd08469382424a24c5">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a61e52051b302138d1aae28d8d36c9bfd">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#ae64058411487e5dd08469382424a24c5">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>
@@ -369,7 +370,7 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Returns <a class="el" href="classcrashpad_1_1ThreadSnapshot.html" title="An abstract interface to a snapshot representing a thread (lightweight process) present in a snapshot...">ThreadSnapshot</a> objects reflecting the threads (lightweight processes) existing in the snapshot process at the time of the snapshot. </p>
 <dl class="section return"><dt>Returns</dt><dd>A vector of <a class="el" href="classcrashpad_1_1ThreadSnapshot.html" title="An abstract interface to a snapshot representing a thread (lightweight process) present in a snapshot...">ThreadSnapshot</a> objects. The caller does not take ownership of these objects, they are scoped to the lifetime of the <a class="el" href="classcrashpad_1_1ProcessSnapshot.html" title="An abstract interface to a snapshot representing the state of a process. ">ProcessSnapshot</a> object that they were obtained from. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a195ed470a23bf6959f63734b8b5ebe13">crashpad::ProcessSnapshotMac</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#aa90fabf794e8aa436dc637de4a7e8bba">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a195ed470a23bf6959f63734b8b5ebe13">crashpad::ProcessSnapshotMac</a>.</p>
 
 </div>
 </div>

@@ -13,7 +13,7 @@ var indexSectionsWithContent =
   3: "dimsvw",
   4: "abcdefghiklmnoprstuvw",
   5: "abcdefhiklmnoprstuvwx",
-  6: "hmrs",
+  6: "hmprs",
   7: "cdmnopst",
   8: "ekmst",
   9: "ceimv",

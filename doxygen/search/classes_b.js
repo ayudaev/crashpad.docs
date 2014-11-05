@@ -5,6 +5,8 @@ var searchData=
   ['testmemorysnapshot',['TestMemorySnapshot',['../classcrashpad_1_1test_1_1TestMemorySnapshot.html',1,'crashpad::test']]],
   ['testminidumpmemorywriter',['TestMinidumpMemoryWriter',['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html',1,'crashpad::test']]],
   ['testmodulesnapshot',['TestModuleSnapshot',['../classcrashpad_1_1test_1_1TestModuleSnapshot.html',1,'crashpad::test']]],
+  ['testprocesssnapshot',['TestProcessSnapshot',['../classcrashpad_1_1test_1_1TestProcessSnapshot.html',1,'crashpad::test']]],
+  ['testsystemsnapshot',['TestSystemSnapshot',['../classcrashpad_1_1test_1_1TestSystemSnapshot.html',1,'crashpad::test']]],
   ['testthreadsnapshot',['TestThreadSnapshot',['../classcrashpad_1_1test_1_1TestThreadSnapshot.html',1,'crashpad::test']]],
   ['thread',['Thread',['../structcrashpad_1_1ProcessReader_1_1Thread.html',1,'crashpad::ProcessReader']]],
   ['threadsnapshot',['ThreadSnapshot',['../classcrashpad_1_1ThreadSnapshot.html',1,'crashpad']]],
