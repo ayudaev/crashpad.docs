@@ -15,6 +15,7 @@ var searchData=
   ['memoryrangesize',['MemoryRangeSize',['../classcrashpad_1_1MinidumpMemoryWriter.html#a5747ad90d9e9f4d6b2bc44231e677ea5',1,'crashpad::MinidumpMemoryWriter::MemoryRangeSize()'],['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html#a26617ee61b232ea4099300bbbe1460e7',1,'crashpad::test::TestMinidumpMemoryWriter::MemoryRangeSize()']]],
   ['memorysnapshotdelegateread',['MemorySnapshotDelegateRead',['../classcrashpad_1_1MemorySnapshot_1_1Delegate.html#a844f77076dc607ce0cd8946aea75f73b',1,'crashpad::MemorySnapshot::Delegate']]],
   ['minidumpheaderatstart',['MinidumpHeaderAtStart',['../namespacecrashpad_1_1test.html#a68bb97f184e9e5a41356a960fdaf3320',1,'crashpad::test']]],
+  ['minidumplocationdescriptorlistatstart',['MinidumpLocationDescriptorListAtStart',['../namespacecrashpad_1_1test.html#ab62583a8655f8734bc1c4c22d7a0f796',1,'crashpad::test']]],
   ['minidumpmemorydescriptor',['MinidumpMemoryDescriptor',['../classcrashpad_1_1MinidumpMemoryWriter.html#aed2c11b4e81395533d93eb85a4563e18',1,'crashpad::MinidumpMemoryWriter']]],
   ['minidumpmiscinfodebugbuildstring',['MinidumpMiscInfoDebugBuildString',['../namespacecrashpad_1_1internal.html#a55cbb2f61a8a593e5861e0634eb7a4ee',1,'crashpad::internal']]],
   ['minidumpmodule',['MinidumpModule',['../classcrashpad_1_1MinidumpModuleWriter.html#a7c5c82d17dcb1f68353586df1876e1fe',1,'crashpad::MinidumpModuleWriter']]],
@@ -27,7 +28,6 @@ var searchData=
   ['minidumpwritableatlocationdescriptor',['MinidumpWritableAtLocationDescriptor',['../namespacecrashpad_1_1test.html#a0e98915fad73c8628924c3a900732fc0',1,'crashpad::test']]],
   ['minidumpwritableatlocationdescriptorinternal',['MinidumpWritableAtLocationDescriptorInternal',['../namespacecrashpad_1_1test.html#a5cbb750966dcd4d580ba9eeb51a45fc6',1,'crashpad::test']]],
   ['minidumpwritableatrva',['MinidumpWritableAtRVA',['../namespacecrashpad_1_1test.html#a5b3e635fd21c8c642d41ceb2072e7d08',1,'crashpad::test']]],
-  ['minidumpwritableatrvainternal',['MinidumpWritableAtRVAInternal',['../namespacecrashpad_1_1test.html#ad6d2eab250d06a7f694aa9d4ce96afa3',1,'crashpad::test']]],
   ['modules',['Modules',['../classcrashpad_1_1ProcessReader.html#afcd874395af5ca91e28f9056f6c3fe5e',1,'crashpad::ProcessReader::Modules()'],['../classcrashpad_1_1ProcessSnapshotMac.html#a1d75af2f52a59b61569916c968e33612',1,'crashpad::ProcessSnapshotMac::Modules()'],['../classcrashpad_1_1ProcessSnapshot.html#ab121715bf3d05dcf38a97e8212920fd8',1,'crashpad::ProcessSnapshot::Modules()'],['../classcrashpad_1_1test_1_1TestProcessSnapshot.html#a43275d7a32de7b074d9483e845911577',1,'crashpad::test::TestProcessSnapshot::Modules()']]],
   ['mutablecontext',['MutableContext',['../classcrashpad_1_1test_1_1TestExceptionSnapshot.html#a420112342e12f9b96c1d7748627ea56d',1,'crashpad::test::TestExceptionSnapshot::MutableContext()'],['../classcrashpad_1_1test_1_1TestThreadSnapshot.html#a9703c478f207a285d732821be657b50f',1,'crashpad::test::TestThreadSnapshot::MutableContext()']]]
 ];

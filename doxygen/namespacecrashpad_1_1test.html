@@ -140,6 +140,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9">VerifyMinidumpHeader</a> (const <a class="el" href="structMINIDUMP__HEADER.html">MINIDUMP_HEADER</a> *header, uint32_t streams, uint32_t timestamp)</td></tr>
 <tr class="memdesc:a5e604ee6a23070a89e2a0015eb2854a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__HEADER.html" title="The top-level structure identifying a minidump file. ">MINIDUMP_HEADER</a> contains expected values.  <a href="#a5e604ee6a23070a89e2a0015eb2854a9">More...</a><br /></td></tr>
 <tr class="separator:a5e604ee6a23070a89e2a0015eb2854a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62583a8655f8734bc1c4c22d7a0f796"><td class="memItemLeft" align="right" valign="top">const <br class="typebreak" />
+<a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html">MinidumpLocationDescriptorList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ab62583a8655f8734bc1c4c22d7a0f796">MinidumpLocationDescriptorListAtStart</a> (const std::string &amp;file_contents, size_t count)</td></tr>
+<tr class="memdesc:ab62583a8655f8734bc1c4c22d7a0f796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html" title="A list of MINIDUMP_LOCATION_DESCRIPTOR objects. ">MinidumpLocationDescriptorList</a> at the start of a minidump file.  <a href="#ab62583a8655f8734bc1c4c22d7a0f796">More...</a><br /></td></tr>
+<tr class="separator:ab62583a8655f8734bc1c4c22d7a0f796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d907f190db31282e6c8a08df38f7f3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5d907f190db31282e6c8a08df38f7f3f">ExpectMinidumpMemoryDescriptor</a> (const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *expected, const <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html">MINIDUMP_MEMORY_DESCRIPTOR</a> *observed)</td></tr>
 <tr class="memdesc:a5d907f190db31282e6c8a08df38f7f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies, via gtest assertions, that a <a class="el" href="structMINIDUMP__MEMORY__DESCRIPTOR.html" title="A pointer to a snapshot of a region of memory contained within a minidump file. ">MINIDUMP_MEMORY_DESCRIPTOR</a> structure contains expected values.  <a href="#a5d907f190db31282e6c8a08df38f7f3f">More...</a><br /></td></tr>
 <tr class="separator:a5d907f190db31282e6c8a08df38f7f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +162,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d8f1de3f021881b6464a1fedbddf956"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a4d8f1de3f021881b6464a1fedbddf956">MinidumpUTF8StringAtRVAAsString</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
 <tr class="memdesc:a4d8f1de3f021881b6464a1fedbddf956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of a <a class="el" href="structcrashpad_1_1MinidumpUTF8String.html" title="A variable-length UTF-8-encoded string carried within a minidump file. ">MinidumpUTF8String</a> as a <code>std::string</code>.  <a href="#a4d8f1de3f021881b6464a1fedbddf956">More...</a><br /></td></tr>
 <tr class="separator:a4d8f1de3f021881b6464a1fedbddf956"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d2eab250d06a7f694aa9d4ce96afa3"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#ad6d2eab250d06a7f694aa9d4ce96afa3">MinidumpWritableAtRVAInternal</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
-<tr class="memdesc:ad6d2eab250d06a7f694aa9d4ce96afa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an untyped minidump object located within a minidump file’s contents, where the offset of the object is known.  <a href="#ad6d2eab250d06a7f694aa9d4ce96afa3">More...</a><br /></td></tr>
-<tr class="separator:ad6d2eab250d06a7f694aa9d4ce96afa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cbb750966dcd4d580ba9eeb51a45fc6"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5cbb750966dcd4d580ba9eeb51a45fc6">MinidumpWritableAtLocationDescriptorInternal</a> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location, size_t expected_size, bool allow_oversized_data)</td></tr>
 <tr class="memdesc:a5cbb750966dcd4d580ba9eeb51a45fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an untyped minidump object located within a minidump file’s contents, where the offset and size of the object are known.  <a href="#a5cbb750966dcd4d580ba9eeb51a45fc6">More...</a><br /></td></tr>
 <tr class="separator:a5cbb750966dcd4d580ba9eeb51a45fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,11 +185,11 @@ template&lt;&gt; </td></tr>
 template&lt;&gt; </td></tr>
 <tr class="memitem:af5ac3245d9630d709dda9d852bbb3594"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structMINIDUMP__THREAD__LIST.html">MINIDUMP_THREAD_LIST</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>MinidumpWritableAtLocationDescriptor&lt; MINIDUMP_THREAD_LIST &gt;</b> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location)</td></tr>
 <tr class="separator:af5ac3245d9630d709dda9d852bbb3594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ca9502c6765e74527d0a890588aabf"><td class="memTemplParams" colspan="2"><a class="anchor" id="ae1ca9502c6765e74527d0a890588aabf"></a>
+<tr class="memitem:aff5ce4d58f2ca0fa5c01ac4f15caf665"><td class="memTemplParams" colspan="2"><a class="anchor" id="aff5ce4d58f2ca0fa5c01ac4f15caf665"></a>
 template&lt;&gt; </td></tr>
-<tr class="memitem:ae1ca9502c6765e74527d0a890588aabf"><td class="memTemplItemLeft" align="right" valign="top">const <br class="typebreak" />
-<a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfoList.html">MinidumpModuleCrashpadInfoList</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>MinidumpWritableAtLocationDescriptor&lt; MinidumpModuleCrashpadInfoList &gt;</b> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location)</td></tr>
-<tr class="separator:ae1ca9502c6765e74527d0a890588aabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5ce4d58f2ca0fa5c01ac4f15caf665"><td class="memTemplItemLeft" align="right" valign="top">const <br class="typebreak" />
+<a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html">MinidumpLocationDescriptorList</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><b>MinidumpWritableAtLocationDescriptor&lt; MinidumpLocationDescriptorList &gt;</b> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location)</td></tr>
+<tr class="separator:aff5ce4d58f2ca0fa5c01ac4f15caf665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e69ddf4143c3bf004ae589fd7566f88"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7e69ddf4143c3bf004ae589fd7566f88"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:a7e69ddf4143c3bf004ae589fd7566f88"><td class="memTemplItemLeft" align="right" valign="top">const <br class="typebreak" />
@@ -216,9 +217,9 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a62b5b9ccf411a827569d2ef7705203a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62b5b9ccf411a827569d2ef7705203a4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MINIDUMP_ALLOW_OVERSIZED_DATA</b> (<a class="el" href="structMINIDUMP__THREAD__LIST.html">MINIDUMP_THREAD_LIST</a>)</td></tr>
 <tr class="separator:a62b5b9ccf411a827569d2ef7705203a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b1a5769138fd33b721795773deea6ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b1a5769138fd33b721795773deea6ce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MINIDUMP_ALLOW_OVERSIZED_DATA</b> (<a class="el" href="structcrashpad_1_1MinidumpModuleCrashpadInfoList.html">MinidumpModuleCrashpadInfoList</a>)</td></tr>
-<tr class="separator:a7b1a5769138fd33b721795773deea6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458c90fb4f97f455294d9ef19a77fee5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a458c90fb4f97f455294d9ef19a77fee5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MINIDUMP_ALLOW_OVERSIZED_DATA</b> (<a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html">MinidumpLocationDescriptorList</a>)</td></tr>
+<tr class="separator:a458c90fb4f97f455294d9ef19a77fee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302566ec2aa6e6771db3b4be4e6aa682"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a302566ec2aa6e6771db3b4be4e6aa682"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MINIDUMP_ALLOW_OVERSIZED_DATA</b> (<a class="el" href="structcrashpad_1_1MinidumpSimpleStringDictionary.html">MinidumpSimpleStringDictionary</a>)</td></tr>
 <tr class="separator:a302566ec2aa6e6771db3b4be4e6aa682"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,10 +241,6 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a7b4ed41a7f2c94d294e1c1bca34a3e15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b4ed41a7f2c94d294e1c1bca34a3e15"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MINIDUMP_ALLOW_OVERSIZED_DATA</b> (uint8_t)</td></tr>
 <tr class="separator:a7b4ed41a7f2c94d294e1c1bca34a3e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5b3e635fd21c8c642d41ceb2072e7d08">MinidumpWritableAtRVA</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
-<tr class="memdesc:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a typed minidump object located within a minidump file’s contents, where the offset of the object is known.  <a href="#a5b3e635fd21c8c642d41ceb2072e7d08">More...</a><br /></td></tr>
-<tr class="separator:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abda65d4c6e9c710f32fcbd9af6a03357"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:abda65d4c6e9c710f32fcbd9af6a03357"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#abda65d4c6e9c710f32fcbd9af6a03357">TMinidumpWritableAtLocationDescriptor</a> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location)</td></tr>
 <tr class="memdesc:abda65d4c6e9c710f32fcbd9af6a03357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a typed minidump object located within a minidump file’s contents, where the offset and size of the object are known.  <a href="#abda65d4c6e9c710f32fcbd9af6a03357">More...</a><br /></td></tr>
@@ -252,6 +249,10 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a0e98915fad73c8628924c3a900732fc0"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a0e98915fad73c8628924c3a900732fc0">MinidumpWritableAtLocationDescriptor</a> (const std::string &amp;file_contents, const <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html">MINIDUMP_LOCATION_DESCRIPTOR</a> &amp;location)</td></tr>
 <tr class="memdesc:a0e98915fad73c8628924c3a900732fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a typed minidump object located within a minidump file’s contents, where the offset and size of the object are known.  <a href="#a0e98915fad73c8628924c3a900732fc0">More...</a><br /></td></tr>
 <tr class="separator:a0e98915fad73c8628924c3a900732fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a5b3e635fd21c8c642d41ceb2072e7d08">MinidumpWritableAtRVA</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
+<tr class="memdesc:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a typed minidump object located within a minidump file’s contents, where the offset of the object is known.  <a href="#a5b3e635fd21c8c642d41ceb2072e7d08">More...</a><br /></td></tr>
+<tr class="separator:a5b3e635fd21c8c642d41ceb2072e7d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35412b33d0a275fa43e8633296059534"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a35412b33d0a275fa43e8633296059534">ReadStreamToString</a> (<a class="el" href="classcrashpad_1_1HTTPBodyStream.html">HTTPBodyStream</a> *stream)</td></tr>
 <tr class="memdesc:a35412b33d0a275fa43e8633296059534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> to a string. If an error occurs, adds a test failure and returns an empty string.  <a href="#a35412b33d0a275fa43e8633296059534">More...</a><br /></td></tr>
 <tr class="separator:a35412b33d0a275fa43e8633296059534"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -873,6 +874,42 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 
 </div>
 </div>
+<a class="anchor" id="ab62583a8655f8734bc1c4c22d7a0f796"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html">MinidumpLocationDescriptorList</a> * crashpad::test::MinidumpLocationDescriptorListAtStart </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_contents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html" title="A list of MINIDUMP_LOCATION_DESCRIPTOR objects. ">MinidumpLocationDescriptorList</a> at the start of a minidump file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_contents</td><td>The contents of the minidump file. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>The number of <a class="el" href="structMINIDUMP__LOCATION__DESCRIPTOR.html" title="A pointer to a structure or union within a minidump file. ">MINIDUMP_LOCATION_DESCRIPTOR</a> objects expected in the <a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html" title="A list of MINIDUMP_LOCATION_DESCRIPTOR objects. ">MinidumpLocationDescriptorList</a>. This function will only be successful if exactly this many objects are present, and if space for them exists in <em>file_contents</em>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, the <a class="el" href="structcrashpad_1_1MinidumpLocationDescriptorList.html" title="A list of MINIDUMP_LOCATION_DESCRIPTOR objects. ">MinidumpLocationDescriptorList</a> at the beginning of the file. On failure, raises a gtest assertion and returns <code>nullptr</code>. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a527731a826e40dd36ac112e7cd3dfcd2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1120,8 +1157,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>If the size of <em>location</em> is agrees with <em>expected_size</em>, and if <em>location</em> is within the range of <em>file_contents</em>, returns a pointer into <em>file_contents</em> at offset <em>rva</em>. Otherwise, raises a gtest assertion failure and returns <code>nullptr</code>.</dd></dl>
-<p>Do not call this function. Use the typed version, <a class="el" href="namespacecrashpad_1_1test.html#a0e98915fad73c8628924c3a900732fc0" title="Returns a typed minidump object located within a minidump file’s contents, where the offset and size...">MinidumpWritableAtLocationDescriptor&lt;&gt;()</a>, or another type-specific function.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#ad6d2eab250d06a7f694aa9d4ce96afa3" title="Returns an untyped minidump object located within a minidump file’s contents, where the offset of th...">MinidumpWritableAtRVAInternal()</a> </dd></dl>
+<p>Do not call this function. Use the typed version, <a class="el" href="namespacecrashpad_1_1test.html#a0e98915fad73c8628924c3a900732fc0" title="Returns a typed minidump object located within a minidump file’s contents, where the offset and size...">MinidumpWritableAtLocationDescriptor&lt;&gt;()</a>, or another type-specific function. </p>
 
 </div>
 </div>
@@ -1159,46 +1195,8 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>If <em>rva</em> is within the range of <em>file_contents</em>, returns a pointer into <em>file_contents</em> at offset <em>rva</em>. Otherwise, raises a gtest assertion failure and returns <code>nullptr</code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>If <em>rva</em> plus the size of an object of type <em>T</em> is within the range of <em>file_contents</em>, returns a pointer into <em>file_contents</em> at offset <em>rva</em>. Otherwise, raises a gtest assertion failure and returns <code>nullptr</code>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a0e98915fad73c8628924c3a900732fc0" title="Returns a typed minidump object located within a minidump file’s contents, where the offset and size...">MinidumpWritableAtLocationDescriptor&lt;&gt;()</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ad6d2eab250d06a7f694aa9d4ce96afa3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const void * crashpad::test::MinidumpWritableAtRVAInternal </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>file_contents</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a>&#160;</td>
-          <td class="paramname"><em>rva</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an untyped minidump object located within a minidump file’s contents, where the offset of the object is known. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file_contents</td><td>The contents of the minidump file. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rva</td><td>The offset within the minidump file of the desired object.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>If <em>rva</em> is within the range of <em>file_contents</em>, returns a pointer into <em>file_contents</em> at offset <em>rva</em>. Otherwise, raises a gtest assertion failure and returns <code>nullptr</code>.</dd></dl>
-<p>Do not call this function. Use the typed version, <a class="el" href="namespacecrashpad_1_1test.html#a5b3e635fd21c8c642d41ceb2072e7d08" title="Returns a typed minidump object located within a minidump file’s contents, where the offset of the o...">MinidumpWritableAtRVA&lt;&gt;()</a>, or another type-specific function.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a5cbb750966dcd4d580ba9eeb51a45fc6" title="Returns an untyped minidump object located within a minidump file’s contents, where the offset and s...">MinidumpWritableAtLocationDescriptorInternal()</a> </dd></dl>
 
 </div>
 </div>

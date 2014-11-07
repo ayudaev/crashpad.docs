@@ -17,6 +17,7 @@ var searchData=
   ['is_5factive',['is_active',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html#ac98f42b00809b4d3f8fad202343119c7',1,'crashpad::TSimpleStringDictionary::Entry']]],
   ['is_5funinitialized',['is_uninitialized',['../classcrashpad_1_1InitializationState.html#aea6a1b93d6ebd73fb601ccc602698009',1,'crashpad::InitializationState']]],
   ['is_5fvalid',['is_valid',['../classcrashpad_1_1InitializationState.html#aac475fd15f19ed390e6518e091918361',1,'crashpad::InitializationState']]],
+  ['isempty',['IsEmpty',['../classcrashpad_1_1MinidumpLocationDescriptorListWriter.html#a1f48be1f9eb99075d4a314ee02c01dca',1,'crashpad::MinidumpLocationDescriptorListWriter']]],
   ['isuseful',['IsUseful',['../classcrashpad_1_1MinidumpModuleCrashpadInfoWriter.html#a686d0539295b16678b2740fb4dea4432',1,'crashpad::MinidumpModuleCrashpadInfoWriter::IsUseful()'],['../classcrashpad_1_1MinidumpSimpleStringDictionaryWriter.html#a464adf3f0c4a762f86947d9803ec6567',1,'crashpad::MinidumpSimpleStringDictionaryWriter::IsUseful()']]],
   ['isvalid',['IsValid',['../classcrashpad_1_1CheckedMachAddressRange.html#aa62ba813fa0c4b2a619250e0655096ce',1,'crashpad::CheckedMachAddressRange::IsValid()'],['../classcrashpad_1_1CheckedRange.html#aa6fa53f8e83e9ad0ca1d2c7275c33095',1,'crashpad::CheckedRange::IsValid()']]]
 ];
