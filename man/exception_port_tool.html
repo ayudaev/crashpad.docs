@@ -61,14 +61,16 @@ handles, but by comparing them to the port values for known bootstrap services,
 it is possible to verify that they are set as intended.
 </dd><dt><span class="term">
 <span class="strong"><strong>-p</strong></span>, <span class="strong"><strong>--pid</strong></span>=<span class="emphasis"><em>PID</em></span>
-</span></dt><dd>
+</span></dt><dd><p class="simpara">
 For operations on the task target, including <span class="strong"><strong>--set_handler</strong></span> with <span class="emphasis"><em>TARGET</em></span> set
 to <span class="strong"><strong>task</strong></span>, <span class="strong"><strong>--show_task</strong></span>, and <span class="strong"><strong>--show_new_task</strong></span>, operates on the task associated
-with process id <span class="emphasis"><em>PID</em></span> instead of the current task associated with the tool. This
-option may be restricted to use by the superuser or processes permitted by
-taskgated(8) to use <code class="literal">task_for_pid()</code>. When this option is supplied, <span class="emphasis"><em>COMMAND</em></span>
-must not be specified.
-</dd><dt><span class="term">
+with process id <span class="emphasis"><em>PID</em></span> instead of the current task associated with the tool. When
+this option is supplied, <span class="emphasis"><em>COMMAND</em></span> must not be specified.
+</p><p class="simpara">This option uses <code class="literal">task_for_pid()</code> to access the process’ task port. This
+operation may be restricted to use by the superuser or processes permitted by
+taskgated(8). Consequently, this program must normally be invoked by root to use
+this option. It is possible to install this program as a setuid root executable
+to overcome this limitation.</p></dd><dt><span class="term">
 <span class="strong"><strong>-h</strong></span>, <span class="strong"><strong>--show_host</strong></span>
 </span></dt><dd>
 Shows the original host exception ports before making any changes requested by
@@ -147,7 +149,7 @@ The program specified by <span class="emphasis"><em>COMMAND</em></span> was foun
 <span class="strong"><strong>127</strong></span>
 </span></dt><dd>
 The program specified by <span class="emphasis"><em>COMMAND</em></span> could not be found.
-</dd></dl></div></div><div class="refsect1"><a id="_see_also"></a><h2>See Also</h2><p>exception_port_tool(1),
+</dd></dl></div></div><div class="refsect1"><a id="_see_also"></a><h2>See Also</h2><p>catch_exception_tool(1),
 on_demand_service_tool(1)</p></div><div class="refsect1"><a id="_resources"></a><h2>Resources</h2><p>Crashpad home page: <a class="ulink" href="https://crashpad.googlecode.com/" target="_top">https://crashpad.googlecode.com/</a>.</p><p>Report bugs at <a class="ulink" href="https://code.google.com/p/crashpad/issues/entry" target="_top">https://code.google.com/p/crashpad/issues/entry</a>.</p></div><div class="refsect1"><a id="_copyright"></a><h2>Copyright</h2><p>Copyright 2014
 <a class="ulink" href="https://chromium.googlesource.com/crashpad/crashpad/+/master/AUTHORS" target="_top">The
 Crashpad Authors</a>.</p></div><div class="refsect1"><a id="_license"></a><h2>License</h2><p>Licensed under the Apache License, Version 2.0 (the “License”);

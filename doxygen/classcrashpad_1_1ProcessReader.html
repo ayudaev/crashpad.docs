@@ -122,8 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3db9010774ceb72718ce24bdf210f8bd"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessReader.html#a3db9010774ceb72718ce24bdf210f8bd">ParentProcessID</a> () const </td></tr>
 <tr class="separator:a3db9010774ceb72718ce24bdf210f8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac48f413de66e80699710f864def6db83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessReader.html#ac48f413de66e80699710f864def6db83">StartTime</a> (timeval *start_time) const </td></tr>
+<tr class="memdesc:ac48f413de66e80699710f864def6db83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the target process’ start time.  <a href="#ac48f413de66e80699710f864def6db83">More...</a><br /></td></tr>
 <tr class="separator:ac48f413de66e80699710f864def6db83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9f39aa4f34a949b3dce77544231b953"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessReader.html#ab9f39aa4f34a949b3dce77544231b953">CPUTimes</a> (timeval *user_time, timeval *system_time) const </td></tr>
+<tr class="memdesc:ab9f39aa4f34a949b3dce77544231b953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the target process’ execution time.  <a href="#ab9f39aa4f34a949b3dce77544231b953">More...</a><br /></td></tr>
 <tr class="separator:ab9f39aa4f34a949b3dce77544231b953"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec00777c3e77735f75fb176cb24f420d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcrashpad_1_1TaskMemory.html">TaskMemory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessReader.html#aec00777c3e77735f75fb176cb24f420d">Memory</a> ()</td></tr>
 <tr class="separator:aec00777c3e77735f75fb176cb24f420d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +160,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Determines the target process’ execution time. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">user_time</td><td>The amount of time the process has executed code in user mode. </td></tr>
@@ -309,6 +313,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="ac48f413de66e80699710f864def6db83"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void crashpad::ProcessReader::StartTime </td>
@@ -318,7 +325,14 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Determines the target process’ start time. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">start_time</td><td>The time that the process started. </td></tr>

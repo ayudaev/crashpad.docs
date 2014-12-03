@@ -11,10 +11,10 @@ var indexSectionsWithContent =
   1: "cdefhimpstuvwx",
   2: "c",
   3: "dimsvw",
-  4: "abcdefgiklmnoprstuvw",
+  4: "abcdefghiklmnoprstuvw",
   5: "abcdefhiklmnoprstuvwx",
   6: "hmprs",
-  7: "cdmnopst",
+  7: "cdmnoprst",
   8: "ekmst",
   9: "ceimv",
   10: "t"

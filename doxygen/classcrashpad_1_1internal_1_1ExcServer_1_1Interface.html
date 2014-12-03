@@ -111,20 +111,20 @@ Inheritance diagram for crashpad::internal::ExcServer::Interface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abf8cf39ddcf6faddea0457fd89d5f327"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#abf8cf39ddcf6faddea0457fd89d5f327">CatchExceptionRaise</a> (exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, bool *destroy_request)=0</td></tr>
-<tr class="memdesc:abf8cf39ddcf6faddea0457fd89d5f327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise()</code>.  <a href="#abf8cf39ddcf6faddea0457fd89d5f327">More...</a><br /></td></tr>
-<tr class="separator:abf8cf39ddcf6faddea0457fd89d5f327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1562c7258be7d5a09f11ad98ee499d69"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#a1562c7258be7d5a09f11ad98ee499d69">CatchExceptionRaiseState</a> (exception_handler_t exception_port, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)=0</td></tr>
-<tr class="memdesc:a1562c7258be7d5a09f11ad98ee499d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise_state()</code>.  <a href="#a1562c7258be7d5a09f11ad98ee499d69">More...</a><br /></td></tr>
-<tr class="separator:a1562c7258be7d5a09f11ad98ee499d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad3eff8bbb70ec3355a4ea81eb047803"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#aad3eff8bbb70ec3355a4ea81eb047803">CatchExceptionRaiseStateIdentity</a> (exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, bool *destroy_request)=0</td></tr>
-<tr class="memdesc:aad3eff8bbb70ec3355a4ea81eb047803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise_state_identity()</code>.  <a href="#aad3eff8bbb70ec3355a4ea81eb047803">More...</a><br /></td></tr>
-<tr class="separator:aad3eff8bbb70ec3355a4ea81eb047803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf41f87460bf0f632e94f4cc46234984"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#aaf41f87460bf0f632e94f4cc46234984">CatchExceptionRaise</a> (exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, const mach_msg_trailer_t *trailer, bool *destroy_request)=0</td></tr>
+<tr class="memdesc:aaf41f87460bf0f632e94f4cc46234984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise()</code>.  <a href="#aaf41f87460bf0f632e94f4cc46234984">More...</a><br /></td></tr>
+<tr class="separator:aaf41f87460bf0f632e94f4cc46234984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acedd7d4a459949f4e001983ed84357b3"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#acedd7d4a459949f4e001983ed84357b3">CatchExceptionRaiseState</a> (exception_handler_t exception_port, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer)=0</td></tr>
+<tr class="memdesc:acedd7d4a459949f4e001983ed84357b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise_state()</code>.  <a href="#acedd7d4a459949f4e001983ed84357b3">More...</a><br /></td></tr>
+<tr class="separator:acedd7d4a459949f4e001983ed84357b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a932ab543428026ffd85a720ae21018"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#a0a932ab543428026ffd85a720ae21018">CatchExceptionRaiseStateIdentity</a> (exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer, bool *destroy_request)=0</td></tr>
+<tr class="memdesc:a0a932ab543428026ffd85a720ae21018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise_state_identity()</code>.  <a href="#a0a932ab543428026ffd85a720ae21018">More...</a><br /></td></tr>
+<tr class="separator:a0a932ab543428026ffd85a720ae21018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface that the different request messages that are a part of the <code>exc</code> Mach subsystem can be dispatched to. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abf8cf39ddcf6faddea0457fd89d5f327"></a>
+<a class="anchor" id="aaf41f87460bf0f632e94f4cc46234984"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,6 +170,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const mach_msg_trailer_t *&#160;</td>
+          <td class="paramname"><em>trailer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool *&#160;</td>
           <td class="paramname"><em>destroy_request</em>&#160;</td>
         </tr>
@@ -190,16 +196,17 @@ Public Member Functions</h2></td></tr>
 <p>This behaves equivalently to a <code>catch_exception_raise()</code> function used with <code>exc_server()</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trailer</td><td>The trailer received with the request message. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">destroy_request</td><td><code>true</code> if the request message is to be destroyed even when this method returns success. See <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html" title="A Mach RPC callback interface, called by Run(). ">MachMessageServer::Interface</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html#acfbd036637da36679d25c059b67180dc">crashpad::internal::SimplifiedExcServer</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html#a93fb97cbb9b76ce688d83d8f489fb699">crashpad::internal::SimplifiedExcServer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1562c7258be7d5a09f11ad98ee499d69"></a>
+<a class="anchor" id="acedd7d4a459949f4e001983ed84357b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -258,7 +265,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">mach_msg_type_number_t *&#160;</td>
-          <td class="paramname"><em>new_state_count</em>&#160;</td>
+          <td class="paramname"><em>new_state_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mach_msg_trailer_t *&#160;</td>
+          <td class="paramname"><em>trailer</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -275,13 +288,19 @@ Public Member Functions</h2></td></tr>
 
 <p>Handles exceptions raised by <code>exception_raise_state()</code>. </p>
 <p>This behaves equivalently to a <code>catch_exception_raise_state()</code> function used with <code>exc_server()</code>.</p>
-<p>There is no <em>destroy_request</em> parameter because, unlike <a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#abf8cf39ddcf6faddea0457fd89d5f327" title="Handles exceptions raised by exception_raise(). ">CatchExceptionRaise()</a> and <a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#aad3eff8bbb70ec3355a4ea81eb047803" title="Handles exceptions raised by exception_raise_state_identity(). ">CatchExceptionRaiseStateIdentity()</a>, the request message is not complex (it does not carry the <em>thread</em> or <em>task</em> port rights) and thus there is nothing to destroy. </p>
+<p>There is no <em>destroy_request</em> parameter because, unlike <a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#aaf41f87460bf0f632e94f4cc46234984" title="Handles exceptions raised by exception_raise(). ">CatchExceptionRaise()</a> and <a class="el" href="classcrashpad_1_1internal_1_1ExcServer_1_1Interface.html#a0a932ab543428026ffd85a720ae21018" title="Handles exceptions raised by exception_raise_state_identity(). ">CatchExceptionRaiseStateIdentity()</a>, the request message is not complex (it does not carry the <em>thread</em> or <em>task</em> port rights) and thus there is nothing to destroy.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trailer</td><td>The trailer received with the request message. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html#a5e8725236a8fa84cc1f43f24ee75270e">crashpad::internal::SimplifiedExcServer</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html#a89a1ed234a46f75fdca0125ac0216326">crashpad::internal::SimplifiedExcServer</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aad3eff8bbb70ec3355a4ea81eb047803"></a>
+<a class="anchor" id="a0a932ab543428026ffd85a720ae21018"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -357,6 +376,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const mach_msg_trailer_t *&#160;</td>
+          <td class="paramname"><em>trailer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool *&#160;</td>
           <td class="paramname"><em>destroy_request</em>&#160;</td>
         </tr>
@@ -377,12 +402,13 @@ Public Member Functions</h2></td></tr>
 <p>This behaves equivalently to a <code>catch_exception_raise_state_identity()</code> function used with <code>exc_server()</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trailer</td><td>The trailer received with the request message. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">destroy_request</td><td><code>true</code> if the request message is to be destroyed even when this method returns success. See <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html" title="A Mach RPC callback interface, called by Run(). ">MachMessageServer::Interface</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html#ab8d015ed8dea1f985d8e77c5ccc5a1fc">crashpad::internal::SimplifiedExcServer</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer.html#a04a1b55cd6dac6762abab8891914fb36">crashpad::internal::SimplifiedExcServer</a>.</p>
 
 </div>
 </div>

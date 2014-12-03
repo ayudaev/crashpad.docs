@@ -4,6 +4,8 @@ var searchData=
   ['checkedrange',['CheckedRange',['../classcrashpad_1_1CheckedRange.html',1,'crashpad']]],
   ['checkedrange_3c_20uint32_5ft_20_3e',['CheckedRange&lt; uint32_t &gt;',['../classcrashpad_1_1CheckedRange.html',1,'crashpad']]],
   ['checkedrange_3c_20uint64_5ft_20_3e',['CheckedRange&lt; uint64_t &gt;',['../classcrashpad_1_1CheckedRange.html',1,'crashpad']]],
+  ['childporthandshake',['ChildPortHandshake',['../classcrashpad_1_1ChildPortHandshake.html',1,'crashpad']]],
+  ['childportserver',['ChildPortServer',['../classcrashpad_1_1ChildPortServer.html',1,'crashpad']]],
   ['compositehttpbodystream',['CompositeHTTPBodyStream',['../classcrashpad_1_1CompositeHTTPBodyStream.html',1,'crashpad']]],
   ['cpu_5finformation',['CPU_INFORMATION',['../unionCPU__INFORMATION.html',1,'']]],
   ['cpucontext',['CPUContext',['../structcrashpad_1_1CPUContext.html',1,'crashpad']]],

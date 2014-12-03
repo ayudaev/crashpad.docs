@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['effectivegroupid',['EffectiveGroupID',['../classcrashpad_1_1ProcessInfo.html#a46fb9f26c62589ed391f0ff82b219de6',1,'crashpad::ProcessInfo']]],
+  ['effectiveuserid',['EffectiveUserID',['../classcrashpad_1_1ProcessInfo.html#a53229dad086b70faf9c1d4528cb5d0fb',1,'crashpad::ProcessInfo']]],
   ['end',['End',['../classcrashpad_1_1CheckedMachAddressRange.html#a7d38a0f383f379414d8d86f4d9c7e705',1,'crashpad::CheckedMachAddressRange::End()'],['../classcrashpad_1_1CheckedRange.html#a8a544c6a002bc2e0ba12b9d12f716a77',1,'crashpad::CheckedRange::end()']]],
   ['errnomessage',['ErrnoMessage',['../namespacecrashpad_1_1test.html#ad9504862c089964763d7d362572c2ac6',1,'crashpad::test::ErrnoMessage(int err, const std::string &amp;base=std::string())'],['../namespacecrashpad_1_1test.html#a8d8e66fbc47a4f22a03710797f226238',1,'crashpad::test::ErrnoMessage(const std::string &amp;base=std::string())']]],
   ['exccrashrecoveroriginalexception',['ExcCrashRecoverOriginalException',['../namespacecrashpad.html#a830c754edaa401f7d866e69369f76ae1',1,'crashpad']]],
@@ -15,6 +17,7 @@ var searchData=
   ['exceptionports',['ExceptionPorts',['../classcrashpad_1_1ExceptionPorts.html#ae4f91b18d0e8b766acd2077103b1b091',1,'crashpad::ExceptionPorts']]],
   ['exceptiontostring',['ExceptionToString',['../namespacecrashpad.html#a05296bfd23550f42639067355410811e',1,'crashpad']]],
   ['excmaskall',['ExcMaskAll',['../namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941',1,'crashpad']]],
+  ['excserver',['ExcServer',['../classcrashpad_1_1internal_1_1ExcServer.html#aeb1c72e39e2e1d665ad576c4c5598dd8',1,'crashpad::internal::ExcServer']]],
   ['excserversuccessfulreturnvalue',['ExcServerSuccessfulReturnValue',['../namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e',1,'crashpad']]],
   ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]],
   ['executesynchronously',['ExecuteSynchronously',['../classcrashpad_1_1HTTPTransport.html#a496e377eebc6eccfcd51283cdaafa745',1,'crashpad::HTTPTransport']]],

@@ -113,6 +113,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CheckedRange.html">CheckedRange</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures that a range, composed of a base and size, does not overflow its data type.  <a href="classcrashpad_1_1CheckedRange.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortHandshake.html">ChildPortHandshake</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a handshake protocol that allows a parent process to obtain a Mach port right from a child process.  <a href="classcrashpad_1_1ChildPortHandshake.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer.html">ChildPortServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A server interface for the <code>child_port</code> Mach subsystem.  <a href="classcrashpad_1_1ChildPortServer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CompositeHTTPBodyStream.html">CompositeHTTPBodyStream</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> that combines an array of several other <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> objects into a single, unified stream.  <a href="classcrashpad_1_1CompositeHTTPBodyStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -281,6 +287,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1PointerContainer.html">PointerContainer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows a standard container to “own” pointer elements stored in it.  <a href="classcrashpad_1_1PointerContainer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessInfo.html">ProcessInfo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses information about another process, identified by a Mach task.  <a href="classcrashpad_1_1ProcessReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -350,6 +358,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>MinidumpUTF8StringLi
 <tr class="memitem:ae426d8c91f5448aaf543f91478d831da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae426d8c91f5448aaf543f91478d831da">MinidumpThreadIDMap</a> = std::map&lt; uint64_t, uint32_t &gt;</td></tr>
 <tr class="memdesc:ae426d8c91f5448aaf543f91478d831da"><td class="mdescLeft">&#160;</td><td class="mdescRight">A map that connects 64-bit snapshot thread IDs to 32-bit minidump thread IDs.  <a href="#ae426d8c91f5448aaf543f91478d831da">More...</a><br /></td></tr>
 <tr class="separator:ae426d8c91f5448aaf543f91478d831da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f36473e385b19eb229798ab2f7210c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a> = uint64_t</td></tr>
+<tr class="memdesc:a34f36473e385b19eb229798ab2f7210c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time before which a <a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> call should complete.  <a href="#a34f36473e385b19eb229798ab2f7210c">More...</a><br /></td></tr>
+<tr class="separator:a34f36473e385b19eb229798ab2f7210c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f13feba965ef7750b3d49064936e5ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f13feba965ef7750b3d49064936e5ee"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a0f13feba965ef7750b3d49064936e5ee">SymbolicConstantToStringOptions</a> = unsigned int</td></tr>
 <tr class="memdesc:a0f13feba965ef7750b3d49064936e5ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">A bitfield containing values of <a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed" title="Options for various *ToString functions in symbolic_constants_* files. ">SymbolicConstantToStringOptionBits</a>. <br /></td></tr>
@@ -393,6 +404,9 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a270e290ba558e948eb6690bd217cbb71"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71">CPUArchitecture</a> </td></tr>
 <tr class="memdesc:a270e290ba558e948eb6690bd217cbb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">A system’s CPU architecture.  <a href="namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71">More...</a><br /></td></tr>
 <tr class="separator:a270e290ba558e948eb6690bd217cbb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29922e06af1f003146f8890f477cd72"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: MachMessageDeadline </td></tr>
+<tr class="memdesc:ab29922e06af1f003146f8890f477cd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special constants used as MachMessageDeadline values.  <a href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72">More...</a><br /></td></tr>
+<tr class="separator:ab29922e06af1f003146f8890f477cd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7856b82b71167792ea6103debb5105ed"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed">SymbolicConstantToStringOptionBits</a> </td></tr>
 <tr class="memdesc:a7856b82b71167792ea6103debb5105ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for various <code>*ToString</code> functions in <code>symbolic_constants_*</code> files.  <a href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed">More...</a><br /></td></tr>
 <tr class="separator:a7856b82b71167792ea6103debb5105ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -417,6 +431,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a480d7affe0cf4c704f154084fb33f289"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289">WriteFD</a> (int fd, const void *buffer, size_t size)</td></tr>
 <tr class="memdesc:a480d7affe0cf4c704f154084fb33f289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>write()</code>, retrying when interrupted or following a short write.  <a href="#a480d7affe0cf4c704f154084fb33f289">More...</a><br /></td></tr>
 <tr class="separator:a480d7affe0cf4c704f154084fb33f289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3aced43ef89d93a2192d088d7bd5937"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad3aced43ef89d93a2192d088d7bd5937">LoggingReadFD</a> (int fd, void *buffer, size_t size)</td></tr>
+<tr class="memdesc:ad3aced43ef89d93a2192d088d7bd5937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that exactly <em>size</em> bytes are read.  <a href="#ad3aced43ef89d93a2192d088d7bd5937">More...</a><br /></td></tr>
+<tr class="separator:ad3aced43ef89d93a2192d088d7bd5937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8705d3993a81dab0420aa50e5aae7b87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a8705d3993a81dab0420aa50e5aae7b87">LoggingWriteFD</a> (int fd, const void *buffer, size_t size)</td></tr>
+<tr class="memdesc:a8705d3993a81dab0420aa50e5aae7b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a>, ensuring that exactly <em>size</em> bytes are written.  <a href="#a8705d3993a81dab0420aa50e5aae7b87">More...</a><br /></td></tr>
+<tr class="separator:a8705d3993a81dab0420aa50e5aae7b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de81c40a75cca5b99b108a1b1fda599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599">CheckedReadFD</a> (int fd, void *buffer, size_t size)</td></tr>
 <tr class="memdesc:a3de81c40a75cca5b99b108a1b1fda599"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that exactly <em>size</em> bytes are read.  <a href="#a3de81c40a75cca5b99b108a1b1fda599">More...</a><br /></td></tr>
 <tr class="separator:a3de81c40a75cca5b99b108a1b1fda599"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -429,6 +449,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad13b814e72f00373b39ed10923689781"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad13b814e72f00373b39ed10923689781">LoggingCloseFD</a> (int fd)</td></tr>
 <tr class="memdesc:ad13b814e72f00373b39ed10923689781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>close()</code>, logging an error if the operation fails.  <a href="#ad13b814e72f00373b39ed10923689781">More...</a><br /></td></tr>
 <tr class="separator:ad13b814e72f00373b39ed10923689781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cbad180af95a2eb2f6add1aab1fb93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad8cbad180af95a2eb2f6add1aab1fb93">CheckedCloseFD</a> (int fd)</td></tr>
+<tr class="memdesc:ad8cbad180af95a2eb2f6add1aab1fb93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>close()</code>, ensuring that it succeeds.  <a href="#ad8cbad180af95a2eb2f6add1aab1fb93">More...</a><br /></td></tr>
+<tr class="separator:ad8cbad180af95a2eb2f6add1aab1fb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memItemLeft" align="right" valign="top">launch_data_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c">CFPropertyToLaunchData</a> (CFPropertyListRef property_cf)</td></tr>
 <tr class="memdesc:a616ed0784021ecbd2f0f14b7e75c068c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Core Foundation-type property list to a launchd-type <code>launch_data_t</code>.  <a href="#a616ed0784021ecbd2f0f14b7e75c068c">More...</a><br /></td></tr>
 <tr class="separator:a616ed0784021ecbd2f0f14b7e75c068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -480,6 +503,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a194e0575e09db56e4107e1c41b27c941"><td class="memItemLeft" align="right" valign="top">exception_mask_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941">ExcMaskAll</a> ()</td></tr>
 <tr class="memdesc:a194e0575e09db56e4107e1c41b27c941"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time.  <a href="#a194e0575e09db56e4107e1c41b27c941">More...</a><br /></td></tr>
 <tr class="separator:a194e0575e09db56e4107e1c41b27c941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa31f495c675536bcb30d1267c3a9b696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aa31f495c675536bcb30d1267c3a9b696">MachMessageDeadlineFromTimeout</a> (mach_msg_timeout_t timeout_ms)</td></tr>
+<tr class="memdesc:aa31f495c675536bcb30d1267c3a9b696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the deadline for a specified timeout value.  <a href="#aa31f495c675536bcb30d1267c3a9b696">More...</a><br /></td></tr>
+<tr class="separator:aa31f495c675536bcb30d1267c3a9b696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35293418a0b7637a00631807ac4b431e"><td class="memItemLeft" align="right" valign="top">mach_msg_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e">MachMessageWithDeadline</a> (mach_msg_header_t *message, mach_msg_option_t options, mach_msg_size_t receive_size, mach_port_name_t receive_port, <a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a> deadline, mach_port_name_t notify_port, bool run_even_if_expired)</td></tr>
+<tr class="memdesc:a35293418a0b7637a00631807ac4b431e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs <code>mach_msg()</code> with a deadline, as opposed to a timeout.  <a href="#a35293418a0b7637a00631807ac4b431e">More...</a><br /></td></tr>
+<tr class="separator:a35293418a0b7637a00631807ac4b431e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2274adc0459f68b93ffe51d8f975f14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2274adc0459f68b93ffe51d8f975f14e">PrepareMIGReplyFromRequest</a> (const mach_msg_header_t *in_header, mach_msg_header_t *out_header)</td></tr>
+<tr class="memdesc:a2274adc0459f68b93ffe51d8f975f14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a reply message for a MIG server routine based on its corresponding request.  <a href="#a2274adc0459f68b93ffe51d8f975f14e">More...</a><br /></td></tr>
+<tr class="separator:a2274adc0459f68b93ffe51d8f975f14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa023691aedd4f3e6faa923e8d2095947"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aa023691aedd4f3e6faa923e8d2095947">SetMIGReplyError</a> (mach_msg_header_t *out_header, kern_return_t error)</td></tr>
+<tr class="memdesc:aa023691aedd4f3e6faa923e8d2095947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the error code in a reply message for a MIG server routine.  <a href="#aa023691aedd4f3e6faa923e8d2095947">More...</a><br /></td></tr>
+<tr class="separator:aa023691aedd4f3e6faa923e8d2095947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979ca1d327dcf56488d3304efa9680eb"><td class="memItemLeft" align="right" valign="top">const mach_msg_trailer_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a979ca1d327dcf56488d3304efa9680eb">MachMessageTrailerFromHeader</a> (const mach_msg_header_t *header)</td></tr>
+<tr class="memdesc:a979ca1d327dcf56488d3304efa9680eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Mach message trailer for a message that has been received.  <a href="#a979ca1d327dcf56488d3304efa9680eb">More...</a><br /></td></tr>
+<tr class="separator:a979ca1d327dcf56488d3304efa9680eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05296bfd23550f42639067355410811e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a05296bfd23550f42639067355410811e">ExceptionToString</a> (exception_type_t exception, <a class="el" href="namespacecrashpad.html#a0f13feba965ef7750b3d49064936e5ee">SymbolicConstantToStringOptions</a> options)</td></tr>
 <tr class="memdesc:a05296bfd23550f42639067355410811e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Mach exception value to a textual representation.  <a href="#a05296bfd23550f42639067355410811e">More...</a><br /></td></tr>
 <tr class="separator:a05296bfd23550f42639067355410811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -504,6 +542,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a2fdb1f659a2813e80d5b644020a44208"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2fdb1f659a2813e80d5b644020a44208">StringToThreadStateFlavor</a> (const base::StringPiece &amp;string, <a class="el" href="namespacecrashpad.html#a14f1de509869f929122998a2f88f08a6">StringToSymbolicConstantOptions</a> options, thread_state_flavor_t *flavor)</td></tr>
 <tr class="memdesc:a2fdb1f659a2813e80d5b644020a44208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to its corresponding thread state flavor value.  <a href="#a2fdb1f659a2813e80d5b644020a44208">More...</a><br /></td></tr>
 <tr class="separator:a2fdb1f659a2813e80d5b644020a44208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeff94a266a84248b3ff0defae01efd8d"><td class="memItemLeft" align="right" valign="top">task_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aeff94a266a84248b3ff0defae01efd8d">TaskForPID</a> (pid_t pid)</td></tr>
+<tr class="memdesc:aeff94a266a84248b3ff0defae01efd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>task_for_pid()</code>.  <a href="#aeff94a266a84248b3ff0defae01efd8d">More...</a><br /></td></tr>
+<tr class="separator:aeff94a266a84248b3ff0defae01efd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93af751a4a09c316fb3de1a90e03fe8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aa93af751a4a09c316fb3de1a90e03fe8">ClockMonotonicNanoseconds</a> ()</td></tr>
 <tr class="memdesc:aa93af751a4a09c316fb3de1a90e03fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the system’s monotonic clock.  <a href="#aa93af751a4a09c316fb3de1a90e03fe8">More...</a><br /></td></tr>
 <tr class="separator:aa93af751a4a09c316fb3de1a90e03fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,9 +559,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aeb040202b4562c8c4087b9c9db2ce430"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430">AssignIfInRange</a> (Destination *destination, Source source)</td></tr>
 <tr class="memdesc:aeb040202b4562c8c4087b9c9db2ce430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs an assignment if it can be done safely, and signals if it cannot be done safely.  <a href="#aeb040202b4562c8c4087b9c9db2ce430">More...</a><br /></td></tr>
 <tr class="separator:aeb040202b4562c8c4087b9c9db2ce430"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7fc31e646135cd40892e03dfbb0f9b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac7fc31e646135cd40892e03dfbb0f9b9">ProcessArgumentsForPID</a> (pid_t pid, std::vector&lt; std::string &gt; *argv)</td></tr>
-<tr class="memdesc:ac7fc31e646135cd40892e03dfbb0f9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the arguments used to launch a process.  <a href="#ac7fc31e646135cd40892e03dfbb0f9b9">More...</a><br /></td></tr>
-<tr class="separator:ac7fc31e646135cd40892e03dfbb0f9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5ee7c62768446ceb8fa8a76db99952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a5e5ee7c62768446ceb8fa8a76db99952">DropPrivileges</a> ()</td></tr>
+<tr class="memdesc:a5e5ee7c62768446ceb8fa8a76db99952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permanently drops privileges conferred by being a setuid or setgid executable.  <a href="#a5e5ee7c62768446ceb8fa8a76db99952">More...</a><br /></td></tr>
+<tr class="separator:a5e5ee7c62768446ceb8fa8a76db99952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97b946d80de148d1fd2452af38b220f4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a97b946d80de148d1fd2452af38b220f4">SignalToString</a> (int signal, <a class="el" href="namespacecrashpad.html#a0f13feba965ef7750b3d49064936e5ee">SymbolicConstantToStringOptions</a> options)</td></tr>
 <tr class="memdesc:a97b946d80de148d1fd2452af38b220f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a POSIX signal value to a textual representation.  <a href="#a97b946d80de148d1fd2452af38b220f4">More...</a><br /></td></tr>
 <tr class="separator:a97b946d80de148d1fd2452af38b220f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -571,6 +612,22 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main namespace. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a34f36473e385b19eb229798ab2f7210c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">crashpad::MachMessageDeadline</a> = typedef uint64_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The time before which a <a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> call should complete. </p>
+<p>A value of this type may be one of the special constants <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageNonblocking</a> or <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a44c9571ed98d5c5c0b18afde0a4b68f1" title="MachMessageWithDeadline() should wait indefinitely for the requested operation to complete...">kMachMessageWaitIndefinitely</a>. Any other values should be produced by calling <a class="el" href="namespacecrashpad.html#aa31f495c675536bcb30d1267c3a9b696" title="Computes the deadline for a specified timeout value. ">MachMessageDeadlineFromTimeout()</a>.</p>
+<p>Internally, these are currently specified on the same time base as <a class="el" href="namespacecrashpad.html#aa93af751a4a09c316fb3de1a90e03fe8" title="Returns the value of the system’s monotonic clock. ">ClockMonotonicNanoseconds()</a>, although this is an implementation detail. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8d36dc682bbe4711cfebb885e3ab2666"></a>
 <div class="memitem">
 <div class="memproto">
@@ -638,6 +695,28 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ab29922e06af1f003146f8890f477cd72"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : <a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Special constants used as <a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a> values. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2"></a>kMachMessageNonblocking&#160;</td><td class="fielddoc">
+<p><a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> should not block at all in its operation. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ab29922e06af1f003146f8890f477cd72a44c9571ed98d5c5c0b18afde0a4b68f1"></a>kMachMessageWaitIndefinitely&#160;</td><td class="fielddoc">
+<p><a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> should wait indefinitely for the requested operation to complete. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="a270e290ba558e948eb6690bd217cbb71"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1200,6 +1279,25 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ad8cbad180af95a2eb2f6add1aab1fb93"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CheckedCloseFD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <code>close()</code>, ensuring that it succeeds. </p>
+<p>If <code>close()</code> fails, this function causes execution to terminate without returning. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3de81c40a75cca5b99b108a1b1fda599"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1235,6 +1333,8 @@ template&lt;typename Destination , typename Source &gt; </div>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a9488e7217c47cc3cdcbe281ed5d9a83f" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">CheckedWriteFD</a> </dd>
 <dd>
 <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#ad3aced43ef89d93a2192d088d7bd5937" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">LoggingReadFD</a> </dd>
 <dd>
 <a class="el" href="namespacecrashpad.html#a954515a7d1318ae79d54e2667a99a723" title="Wraps ReadFD(), ensuring that it indicates end-of-file. ">CheckedReadFDAtEOF</a> </dd></dl>
 
@@ -1296,7 +1396,9 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>If <em>size</em> is out of the range of possible <code>write()</code> return values, if the underlying <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a> fails, or if other than <em>size</em> bytes were written, this function causes execution to terminate without returning.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">CheckedReadFD</a> </dd>
 <dd>
-<a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd></dl>
+<a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a8705d3993a81dab0420aa50e5aae7b87" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">LoggingWriteFD</a> </dd></dl>
 
 </div>
 </div>
@@ -1353,6 +1455,26 @@ template&lt;typename Destination , typename Source &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e5ee7c62768446ceb8fa8a76db99952"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::DropPrivileges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permanently drops privileges conferred by being a setuid or setgid executable. </p>
+<p>The effective user ID and saved set-user ID are set to the real user ID, negating any effects of being a setuid executable. The effective group ID and saved set-group ID are set to the real group ID, negating any effects of being a setgid executable. Because the saved set-user ID and saved set-group ID are reset, there is no way to restore the prior privileges, and the drop is permanent.</p>
+<p>This function drops privileges correctly when running setuid root and in other circumstances, including when running setuid non-root. If the program is not a setuid or setgid executable, this function has no effect.</p>
+<p>No changes are made to the supplementary group list, which is normally not altered for setuid or setgid executables. </p>
 
 </div>
 </div>
@@ -1664,7 +1786,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>This function is useful even for <code>EXC_CRASH</code> handlers, where returning <code>KERN_SUCCESS</code> and allowing the kernel to set a new thread state has been observed to cause a perceptible and unnecessary waste of time. The victim task in an <code>EXC_CRASH</code> handler is already being terminated and is no longer schedulable, so there is no point in setting the states of any of its threads.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The behavior of the exception handler as invoked. This may be taken directly from the <em>behavior</em> parameter of <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer_1_1Interface.html#ae3623312dd5e1dcdac65638771d69ea3" title="Handles exceptions raised by exception_raise(), exception_raise_state(), and exception_raise_state_id...">internal::SimplifiedExcServer::Interface::CatchException()</a>, for example. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The behavior of the exception handler as invoked. This may be taken directly from the <em>behavior</em> parameter of <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer_1_1Interface.html#ad61bc7e12446ce83470bcbf6b4cbd2a4" title="Handles exceptions raised by exception_raise(), exception_raise_state(), and exception_raise_state_id...">internal::SimplifiedExcServer::Interface::CatchException()</a>, for example. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">set_thread_state</td><td><code>true</code> if the handler would like its caller to set the new thread state using the <em>flavor</em>, <em>new_state</em>, and <em>new_state_count</em> out parameters. This can only happen when <em>behavior</em> is a state-carrying behavior.</td></tr>
   </table>
   </dd>
@@ -1727,6 +1849,207 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 <p>Wraps <code>close()</code>, logging an error if the operation fails. </p>
 <dl class="section return"><dt>Returns</dt><dd>On success, <code>true</code> is returned. On failure, an error is logged and <code>false</code> is returned. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad3aced43ef89d93a2192d088d7bd5937"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::LoggingReadFD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a>, ensuring that exactly <em>size</em> bytes are read. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. If <em>size</em> is out of the range of possible <code>read()</code> return values, if the underlying <a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD()</a> fails, or if other than <em>size</em> bytes were read, this function logs a message and returns <code>false</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a8705d3993a81dab0420aa50e5aae7b87" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">LoggingWriteFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">CheckedReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a954515a7d1318ae79d54e2667a99a723" title="Wraps ReadFD(), ensuring that it indicates end-of-file. ">CheckedReadFDAtEOF</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8705d3993a81dab0420aa50e5aae7b87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::LoggingWriteFD </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a>, ensuring that exactly <em>size</em> bytes are written. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success. If <em>size</em> is out of the range of possible <code>write()</code> return values, if the underlying <a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD()</a> fails, or if other than <em>size</em> bytes were written, this function logs a message and returns <code>false</code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#ad3aced43ef89d93a2192d088d7bd5937" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">LoggingReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a9488e7217c47cc3cdcbe281ed5d9a83f" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">CheckedWriteFD</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa31f495c675536bcb30d1267c3a9b696"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a> crashpad::MachMessageDeadlineFromTimeout </td>
+          <td>(</td>
+          <td class="paramtype">mach_msg_timeout_t&#160;</td>
+          <td class="paramname"><em>timeout_ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the deadline for a specified timeout value. </p>
+<p>While deadlines exist on an absolute time scale, timeouts are relative. This function calculates the deadline as <em>timeout_ms</em> milliseconds after it executes.</p>
+<p>If <em>timeout_ms</em> is <code>0</code>, this function will return <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageNonblocking</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a979ca1d327dcf56488d3304efa9680eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const mach_msg_trailer_t * crashpad::MachMessageTrailerFromHeader </td>
+          <td>(</td>
+          <td class="paramtype">const mach_msg_header_t *&#160;</td>
+          <td class="paramname"><em>header</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Mach message trailer for a message that has been received. </p>
+<p>This function must only be called on Mach messages that have been received via the Mach messaging interface, such as <code>mach_msg()</code>. Messages constructed for sending do not contain trailers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">header</td><td>A pointer to a received Mach message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the trailer following the received Mach message’s body. The contents of the trailer depend on the options provided to <code>mach_msg()</code> or a similar function when the message was received. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a35293418a0b7637a00631807ac4b431e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mach_msg_return_t crashpad::MachMessageWithDeadline </td>
+          <td>(</td>
+          <td class="paramtype">mach_msg_header_t *&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_option_t&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_size_t&#160;</td>
+          <td class="paramname"><em>receive_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_port_name_t&#160;</td>
+          <td class="paramname"><em>receive_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MachMessageDeadline&#160;</td>
+          <td class="paramname"><em>deadline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_port_name_t&#160;</td>
+          <td class="paramname"><em>notify_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>run_even_if_expired</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs <code>mach_msg()</code> with a deadline, as opposed to a timeout. </p>
+<p>This function is similar to <code>mach_msg()</code>, with the following differences:</p><ul>
+<li>The <code>timeout</code> parameter has been replaced by <em>deadline</em>. The deadline applies uniformly to a call that is requested to both send and receive a message.</li>
+<li>The <code>MACH_SEND_TIMEOUT</code> and <code>MACH_RCV_TIMEOUT</code> bits in <em>options</em> are not used. Timeouts are specified by the <em>deadline</em> argument.</li>
+<li>The <code>send_size</code> parameter has been removed. Its value is implied by <em>message</em> when <em>options</em> contains <code>MACH_SEND_MSG</code>.</li>
+<li>The <em>run_even_if_expired</em> parameter has been added.</li>
+</ul>
+<p>Like the <code>mach_msg()</code> wrapper in <code>libsyscall</code>, this function will retry operations when experiencing <code>MACH_SEND_INTERRUPTED</code> and <code>MACH_RCV_INTERRUPTED</code>, unless <em>options</em> contains <code>MACH_SEND_INTERRUPT</code> or <code>MACH_RCV_INTERRUPT</code>. Unlike <code>mach_msg()</code>, which restarts the call with the full timeout when this occurs, this function continues enforcing the user-specified <em>deadline</em>.</p>
+<p>Except as noted, the parameters and return value are identical to those of <code>mach_msg()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">deadline</td><td>The time by which this call should complete. If the deadline is exceeded, this call will return <code>MACH_SEND_TIMED_OUT</code> or <code>MACH_RCV_TIMED_OUT</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">run_even_if_expired</td><td>If <code>true</code>, a deadline that is expired when this function is called will be treated as though a deadline of <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageNonblocking</a> had been specified. When <code>false</code>, an expired deadline will result in a <code>MACH_SEND_TIMED_OUT</code> or <code>MACH_RCV_TIMED_OUT</code> return value, even if the deadline is already expired when the function is called. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1870,21 +2193,21 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac7fc31e646135cd40892e03dfbb0f9b9"></a>
+<a class="anchor" id="a2274adc0459f68b93ffe51d8f975f14e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool crashpad::ProcessArgumentsForPID </td>
+          <td class="memname">void crashpad::PrepareMIGReplyFromRequest </td>
           <td>(</td>
-          <td class="paramtype">pid_t&#160;</td>
-          <td class="paramname"><em>pid</em>, </td>
+          <td class="paramtype">const mach_msg_header_t *&#160;</td>
+          <td class="paramname"><em>in_header</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::string &gt; *&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
+          <td class="paramtype">mach_msg_header_t *&#160;</td>
+          <td class="paramname"><em>out_header</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1894,16 +2217,15 @@ template&lt;typename Destination , typename Source &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Obtains the arguments used to launch a process. </p>
+<p>Initializes a reply message for a MIG server routine based on its corresponding request. </p>
+<p>If a request is handled by a server routine, it may be necessary to revise some of the fields set by this function, such as <code>msgh_size</code> and any fields defined in a routine’s reply structure type.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>The process ID of the process to examine. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">argv</td><td>The process’ arguments as passed to its <code>main()</code> function as the <em>argv</em> parameter, possibly modified by the process.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in_header</td><td>The request message to base the reply on. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out_header</td><td>The reply message to initialize. <em>out_header</em> will be treated as a <code>mig_reply_error_t*</code> and all of its fields will be set except for <code>RetCode</code>, which must be set by <a class="el" href="namespacecrashpad.html#aa023691aedd4f3e6faa923e8d2095947" title="Sets the error code in a reply message for a MIG server routine. ">SetMIGReplyError()</a>. This argument is accepted as a <code>mach_msg_header_t*</code> instead of a <code>mig_reply_error_t*</code> because that is the type that callers are expected to possess in the C API. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, with <em>argv</em> populated appropriately. Otherwise, <code>false</code>.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This function may spuriously return <code>false</code> when used to examine a process that it is calling <code>exec()</code>. If examining such a process, call this function in a retry loop with a small (100ns) delay to avoid an erroneous assumption that <em>pid</em> is not running. </dd></dl>
 
 </div>
 </div>
@@ -1941,6 +2263,8 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>This function reads into <em>buffer</em>, stopping only when <em>size</em> bytes have been read or when <code>read()</code> returns 0, indicating that end-of-file has been reached.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes read and placed into <em>buffer</em>, or <code>-1</code> on error, with <code>errno</code> set appropriately. On error, a portion of <em>fd</em> may have been read into <em>buffer</em>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a480d7affe0cf4c704f154084fb33f289" title="Wraps write(), retrying when interrupted or following a short write. ">WriteFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#ad3aced43ef89d93a2192d088d7bd5937" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">LoggingReadFD</a> </dd>
 <dd>
 <a class="el" href="namespacecrashpad.html#a3de81c40a75cca5b99b108a1b1fda599" title="Wraps ReadFD(), ensuring that exactly size bytes are read. ">CheckedReadFD</a> </dd>
 <dd>
@@ -2062,6 +2386,42 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the job was submitted successfully, otherwise <code>false</code>.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function is provided because <code>SMJobSubmit()</code> is deprecated in Mac OS X 10.10. It may or may not be implemented using <code>SMJobSubmit()</code> from <code>ServiceManagement.framework</code>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa023691aedd4f3e6faa923e8d2095947"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::SetMIGReplyError </td>
+          <td>(</td>
+          <td class="paramtype">mach_msg_header_t *&#160;</td>
+          <td class="paramname"><em>out_header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">kern_return_t&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the error code in a reply message for a MIG server routine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">out_header</td><td>The reply message to operate on. <em>out_header</em> will be treated as a <code>mig_reply_error_t*</code> and its <code>RetCode</code> field will be set. This argument is accepted as a <code>mach_msg_header_t*</code> instead of a <code>mig_reply_error_t*</code> because that is the type that callers are expected to possess in the C API. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>The error code to store in <em>out_header</em>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a2274adc0459f68b93ffe51d8f975f14e" title="Initializes a reply message for a MIG server routine based on its corresponding request. ">PrepareMIGReplyFromRequest()</a> </dd></dl>
 
 </div>
 </div>
@@ -2489,6 +2849,35 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 
 </div>
 </div>
+<a class="anchor" id="aeff94a266a84248b3ff0defae01efd8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">task_t crashpad::TaskForPID </td>
+          <td>(</td>
+          <td class="paramtype">pid_t&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wraps <code>task_for_pid()</code>. </p>
+<p>This function exists to support <code>task_for_pid()</code> access checks in a setuid environment. Normally, <code>task_for_pid()</code> can only return an arbitrary task’s port when running as root or when taskgated(8) approves. When not running as root, a series of access checks are perfomed to ensure that the running process has permission to obtain the other process’ task port.</p>
+<p>It is possible to make an executable setuid root to give it broader <code>task_for_pid()</code> access by bypassing taskgated(8) checks, but this also has the effect of bypassing the access checks, allowing any process’ task port to be obtained. In most situations, these access checks are desirable to prevent security and privacy breaches.</p>
+<p>When running as setuid root, this function wraps <code>task_for_pid()</code>, reimplementing those access checks. A process whose effective user ID is 0 and whose real user ID is nonzero is understood to be running setuid root. In this case, the requested task’s real, effective, and saved set-user IDs must all equal the running process’ real user ID, the requested task must not have changed privileges, and the requested task’s set of all group IDs (including its real, effective, and saved set-group IDs and supplementary group list) must be a subset of the running process’ set of all group IDs. These access checks mimic those that the kernel performs.</p>
+<p>When not running as setuid root, <code>task_for_pid()</code> is called directly, without imposing any additional checks beyond what the kernel does.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>The process ID of the task whose task port is desired.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A send right to the task port if it could be obtained, or <code>TASK_NULL</code> otherwise, with an error message logged. If a send right is returned, the caller takes ownership of it. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a857f6b2f39cb21b22891242df26757e0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2660,6 +3049,8 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 <p>This function writes to <em>fd</em>, stopping only when <em>size</em> bytes have been written.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes written from <em>buffer</em>, or <code>-1</code> on error, with <code>errno</code> set appropriately. On error, a portion of <em>buffer</em> may have been written to <em>fd</em>.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#a86c787f550c9e9d966d9f7dddc0653b4" title="Wraps read(), retrying when interrupted or following a short read. ">ReadFD</a> </dd>
+<dd>
+<a class="el" href="namespacecrashpad.html#a8705d3993a81dab0420aa50e5aae7b87" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">LoggingWriteFD</a> </dd>
 <dd>
 <a class="el" href="namespacecrashpad.html#a9488e7217c47cc3cdcbe281ed5d9a83f" title="Wraps WriteFD(), ensuring that exactly size bytes are written. ">CheckedWriteFD</a> </dd></dl>
 

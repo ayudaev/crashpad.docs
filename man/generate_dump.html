@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>generate_dump</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div xml:lang="en" class="refentry" lang="en"><a></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>generate_dump — Generate a minidump file containing a snapshot of a running process</p></div><div class="refsynopsisdiv"><a id="_synopsis"></a><h2>Synopsis</h2><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p><span class="strong"><strong>generate_dump</strong></span> [<span class="emphasis"><em>OPTION…</em></span>] <span class="emphasis"><em>PID</em></span></p></div></blockquote></div></div><div class="refsect1"><a id="_description"></a><h2>Description</h2><p>Generates a minidump file containing a snapshot of a running process whose
+process identifier is <span class="emphasis"><em>PID</em></span>. By default, the target process will be suspended
+while the minidump is generated, and the minidump file will be written to
+<code class="literal">minidump.PID</code>. After the minidump file is generated, the target process resumes
+running.</p><p>The minidump file will contain information about the process, its threads, its
+modules, and the system. It will not contain any exception information because
+it will be generated from a live running process, not as a result of an
+exception occurring.</p><p>This program uses <code class="literal">task_for_pid()</code> to access the process’ task port. This
+operation may be restricted to use by the superuser or processes permitted by
+taskgated(8). Consequently, this program must normally be invoked by root. It is
+possible to install this program as a setuid root executable to overcome this
+limitation.</p><p>This program is similar to the gcore(1) program available on some operating
+systems.</p></div><div class="refsect1"><a id="_options"></a><h2>Options</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong"><strong>-r</strong></span>, <span class="strong"><strong>--no_suspend</strong></span>
+</span></dt><dd><p class="simpara">
+The target process will continue running while the minidump file is generated.
+Normally, the target process is suspended during this operation, which
+guarantees that the minidump file will contain an atomic snapshot of the
+process.
+</p><p class="simpara">This option may be useful when attempting to generate a minidump from a process
+that dump generation has an interprocess dependency on, such as a system server
+like launchd(8) or opendirectoryd(8). Deadlock could occur if any portion of the
+dump generation operation blocks while waiting for a response from one of these
+servers while they are suspended.</p></dd><dt><span class="term">
+<span class="strong"><strong>-o</strong></span>, <span class="strong"><strong>--output</strong></span>=<span class="emphasis"><em>FILE</em></span>
+</span></dt><dd>
+The minidump will be written to <span class="emphasis"><em>FILE</em></span> instead of <code class="literal">minidump.PID</code>.
+</dd><dt><span class="term">
+<span class="strong"><strong>--help</strong></span>
+</span></dt><dd>
+Display help and exit.
+</dd><dt><span class="term">
+<span class="strong"><strong>--version</strong></span>
+</span></dt><dd>
+Output version information and exit.
+</dd></dl></div></div><div class="refsect1"><a id="_examples"></a><h2>Examples</h2><p>Generate a minidump file in <code class="literal">/tmp/minidump</code> containing a snapshot of the process
+with PID 1234.</p><pre class="screen">$ <span class="strong"><strong>generate_dump --output=/tmp/minidump 1234</strong></span></pre></div><div class="refsect1"><a id="_exit_status"></a><h2>Exit Status</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+<span class="strong"><strong>0</strong></span>
+</span></dt><dd>
+Success.
+</dd><dt><span class="term">
+<span class="strong"><strong>1</strong></span>
+</span></dt><dd>
+Failure, with a message printed to the standard error stream.
+</dd></dl></div></div><div class="refsect1"><a id="_see_also"></a><h2>See Also</h2><p>catch_exception_tool(1)</p></div><div class="refsect1"><a id="_resources"></a><h2>Resources</h2><p>Crashpad home page: <a class="ulink" href="https://crashpad.googlecode.com/" target="_top">https://crashpad.googlecode.com/</a>.</p><p>Report bugs at <a class="ulink" href="https://code.google.com/p/crashpad/issues/entry" target="_top">https://code.google.com/p/crashpad/issues/entry</a>.</p></div><div class="refsect1"><a id="_copyright"></a><h2>Copyright</h2><p>Copyright 2014
+<a class="ulink" href="https://chromium.googlesource.com/crashpad/crashpad/+/master/AUTHORS" target="_top">The
+Crashpad Authors</a>.</p></div><div class="refsect1"><a id="_license"></a><h2>License</h2><p>Licensed under the Apache License, Version 2.0 (the “License”);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p><pre class="literallayout"><a class="ulink" href="http://www.apache.org/licenses/LICENSE-2.0" target="_top">http://www.apache.org/licenses/LICENSE-2.0</a></pre><p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an “AS IS” BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p></div></div></body></html>

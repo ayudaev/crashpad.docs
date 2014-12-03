@@ -119,8 +119,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acf18c07952c206483f1fdf2658ffe52e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf18c07952c206483f1fdf2658ffe52e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MachExcServer</b> (<a class="el" href="classcrashpad_1_1internal_1_1MachExcServer_1_1Interface.html">Interface</a> *interface)</td></tr>
+<tr class="memitem:acf18c07952c206483f1fdf2658ffe52e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#acf18c07952c206483f1fdf2658ffe52e">MachExcServer</a> (<a class="el" href="classcrashpad_1_1internal_1_1MachExcServer_1_1Interface.html">Interface</a> *interface)</td></tr>
+<tr class="memdesc:acf18c07952c206483f1fdf2658ffe52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an object of this class.  <a href="#acf18c07952c206483f1fdf2658ffe52e">More...</a><br /></td></tr>
 <tr class="separator:acf18c07952c206483f1fdf2658ffe52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b20535513ade68101a8ec8d455b766"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a98b20535513ade68101a8ec8d455b766">MachMessageServerFunction</a> (const mach_msg_header_t *in_header, mach_msg_header_t *out_header, bool *destroy_complex_request) override</td></tr>
 <tr class="memdesc:a98b20535513ade68101a8ec8d455b766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#a98b20535513ade68101a8ec8d455b766">More...</a><br /></td></tr>
@@ -132,7 +132,40 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A server interface for the <code>mach_exc</code> Mach subsystem. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="acf18c07952c206483f1fdf2658ffe52e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">crashpad::internal::MachExcServer::MachExcServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer_1_1Interface.html">MachExcServer::Interface</a> *&#160;</td>
+          <td class="paramname"><em>interface</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an object of this class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">interface</td><td>The interface to dispatch requests to. Weak. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a98b20535513ade68101a8ec8d455b766"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +210,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">in</td><td>The request message, received as a Mach message. Note that this interface uses a <code>const</code> parameter for this purpose, whereas MIG-generated “demux” functions do not. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>The reply message. The caller allocates storage, and the callee is expected to populate the reply message appropriately. After returning, the caller will send this reply as a Mach message via the message’s reply port. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">destroy_complex_request</td><td><code>true</code> if a complex request message is to be destroyed even when handled successfully, <code>false</code> otherwise. The traditional behavior is <code>false</code>. In this case, the caller only destroys the request message in <em>in</em> when the reply message in <em>out</em> is not complex and when it indicates a return code other than <code>KERN_SUCCESS</code> or <code>MIG_NO_REPLY</code>. The assumption is that the rights or out-of-line data carried in a complex message may be retained by the server in this situation, and that it is the responsibility of the server to release these resources as needed. However, in many cases, these resources are not needed beyond the duration of a request-reply transaction, and in such cases, it is less error-prone to always have the caller, <a class="el" href="classcrashpad_1_1MachMessageServer.html#aca8309cb5b4722d9f55bee54e0a1997d" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">MachMessageServer::Run()</a>, destroy complex request messages. To choose this behavior, this parameter should be set to <code>true</code>.</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">destroy_complex_request</td><td><code>true</code> if a complex request message is to be destroyed even when handled successfully, <code>false</code> otherwise. The traditional behavior is <code>false</code>. In this case, the caller only destroys the request message in <em>in</em> when the reply message in <em>out</em> is not complex and when it indicates a return code other than <code>KERN_SUCCESS</code> or <code>MIG_NO_REPLY</code>. The assumption is that the rights or out-of-line data carried in a complex message may be retained by the server in this situation, and that it is the responsibility of the server to release these resources as needed. However, in many cases, these resources are not needed beyond the duration of a request-reply transaction, and in such cases, it is less error-prone to always have the caller, <a class="el" href="classcrashpad_1_1MachMessageServer.html#a3dbd0990051b69e022bcb68a90258922" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">MachMessageServer::Run()</a>, destroy complex request messages. To choose this behavior, this parameter should be set to <code>true</code>.</td></tr>
   </table>
   </dd>
 </dl>

@@ -12,6 +12,7 @@ var searchData=
   ['pointercontainer_3c_20internal_3a_3aminidumpstreamwriter_20_3e',['PointerContainer&lt; internal::MinidumpStreamWriter &gt;',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],
   ['pointercontainer_3c_20internal_3a_3amodulesnapshotmac_20_3e',['PointerContainer&lt; internal::ModuleSnapshotMac &gt;',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],
   ['pointercontainer_3c_20internal_3a_3athreadsnapshotmac_20_3e',['PointerContainer&lt; internal::ThreadSnapshotMac &gt;',['../classcrashpad_1_1PointerContainer.html',1,'crashpad']]],
+  ['processinfo',['ProcessInfo',['../classcrashpad_1_1ProcessInfo.html',1,'crashpad']]],
   ['processreader',['ProcessReader',['../classcrashpad_1_1ProcessReader.html',1,'crashpad']]],
   ['processsnapshot',['ProcessSnapshot',['../classcrashpad_1_1ProcessSnapshot.html',1,'crashpad']]],
   ['processsnapshotmac',['ProcessSnapshotMac',['../classcrashpad_1_1ProcessSnapshotMac.html',1,'crashpad']]]
