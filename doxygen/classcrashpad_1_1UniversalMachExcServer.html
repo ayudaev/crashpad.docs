@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classcrashpad_1_1UniversalMachExcServer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -111,15 +112,22 @@ Inheritance diagram for crashpad::UniversalMachExcServer:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer_1_1Interface.html">Interface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface that the different request messages that are a part of the <code>exc</code> and <code>mach_exc</code> Mach subsystems can be dispatched to.  <a href="classcrashpad_1_1UniversalMachExcServer_1_1Interface.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae9181a6059ac6d572d11302f91b4fe7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9181a6059ac6d572d11302f91b4fe7f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ae9181a6059ac6d572d11302f91b4fe7f">UniversalMachExcServer</a> ()</td></tr>
-<tr class="memdesc:ae9181a6059ac6d572d11302f91b4fe7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an object of this class. <br /></td></tr>
-<tr class="separator:ae9181a6059ac6d572d11302f91b4fe7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bf6aa6e6e692e998a8ba2d6b5a6c95"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a05bf6aa6e6e692e998a8ba2d6b5a6c95">UniversalMachExcServer</a> (<a class="el" href="classcrashpad_1_1UniversalMachExcServer_1_1Interface.html">Interface</a> *interface)</td></tr>
+<tr class="memdesc:a05bf6aa6e6e692e998a8ba2d6b5a6c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an object of this class.  <a href="#a05bf6aa6e6e692e998a8ba2d6b5a6c95">More...</a><br /></td></tr>
+<tr class="separator:a05bf6aa6e6e692e998a8ba2d6b5a6c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a113ce518d5412e2cf352eb7f857fa9fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a113ce518d5412e2cf352eb7f857fa9fb">MachMessageServerFunction</a> (const mach_msg_header_t *in_header, mach_msg_header_t *out_header, bool *destroy_complex_request) override</td></tr>
 <tr class="memdesc:a113ce518d5412e2cf352eb7f857fa9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#a113ce518d5412e2cf352eb7f857fa9fb">More...</a><br /></td></tr>
 <tr class="separator:a113ce518d5412e2cf352eb7f857fa9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f192938859fb4b0fa637bf34ab0a1c"><td class="memItemLeft" align="right" valign="top">std::set&lt; mach_msg_id_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ab9f192938859fb4b0fa637bf34ab0a1c">MachMessageServerRequestIDs</a> () override</td></tr>
+<tr class="separator:ab9f192938859fb4b0fa637bf34ab0a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae700d18241f2eb3c7d755ad8c909ecec"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ae700d18241f2eb3c7d755ad8c909ecec">MachMessageServerRequestSize</a> () override</td></tr>
 <tr class="separator:ae700d18241f2eb3c7d755ad8c909ecec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eeb93504e604f53fc5c9cf1c66d838c"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a1eeb93504e604f53fc5c9cf1c66d838c">MachMessageServerReplySize</a> () override</td></tr>
@@ -127,15 +135,47 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7d070ac9f173b04cd21ef6795271c11"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ae7d070ac9f173b04cd21ef6795271c11">CatchException</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer, bool *destroy_complex_request) override</td></tr>
 <tr class="memdesc:ae7d070ac9f173b04cd21ef6795271c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise()</code>, <code>exception_raise_state()</code>, and <code>exception_raise_state_identity()</code>.  <a href="#ae7d070ac9f173b04cd21ef6795271c11">More...</a><br /></td></tr>
 <tr class="separator:ae7d070ac9f173b04cd21ef6795271c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface.html">crashpad::internal::SimplifiedMachExcServer::Interface</a></td></tr>
-<tr class="memitem:a37e10edca495a79d143c0420f858f974 inherit pub_methods_classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface.html#a37e10edca495a79d143c0420f858f974">CatchMachException</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer, bool *destroy_complex_request)=0</td></tr>
-<tr class="memdesc:a37e10edca495a79d143c0420f858f974 inherit pub_methods_classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>.  <a href="#a37e10edca495a79d143c0420f858f974">More...</a><br /></td></tr>
-<tr class="separator:a37e10edca495a79d143c0420f858f974 inherit pub_methods_classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c583fb43fcdfac40cb0e841080de9c6"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a8c583fb43fcdfac40cb0e841080de9c6">CatchMachException</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer, bool *destroy_complex_request) override</td></tr>
+<tr class="memdesc:a8c583fb43fcdfac40cb0e841080de9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>.  <a href="#a8c583fb43fcdfac40cb0e841080de9c6">More...</a><br /></td></tr>
+<tr class="separator:a8c583fb43fcdfac40cb0e841080de9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A server interface for the <code>exc</code> and <code>mach_exc</code> Mach subsystems, unified to handle exceptions delivered to either subsystem, and simplified to have only a single interface method needing implementation. </p>
 <p><a class="el" href="classcrashpad_1_1UniversalMachExcServer.html" title="A server interface for the exc and mach_exc Mach subsystems, unified to handle exceptions delivered t...">UniversalMachExcServer</a> operates by translating messages received in the <code>exc</code> subsystem to a variant that is compatible with the <code>mach_exc</code> subsystem. This involves changing the format of <em>code</em>, the exception code field, from <code>exception_data_type_t</code> to <code>mach_exception_data_type_t</code>. This is achieved by implementing SimplifiedExcServer::Interface and having it forward translated messages to SimplifiedMachExcServer::Interface, which is left unimplemented here so that users of this class can provide their own implementations. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a05bf6aa6e6e692e998a8ba2d6b5a6c95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">crashpad::UniversalMachExcServer::UniversalMachExcServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcrashpad_1_1UniversalMachExcServer_1_1Interface.html">UniversalMachExcServer::Interface</a> *&#160;</td>
+          <td class="paramname"><em>interface</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an object of this class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">interface</td><td>The interface to dispatch requests to. Weak. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae7d070ac9f173b04cd21ef6795271c11"></a>
 <div class="memitem">
 <div class="memproto">
@@ -254,6 +294,124 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8c583fb43fcdfac40cb0e841080de9c6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">kern_return_t crashpad::UniversalMachExcServer::CatchMachException </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_handler_t&#160;</td>
+          <td class="paramname"><em>exception_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_t&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">task_t&#160;</td>
+          <td class="paramname"><em>task</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_type_t&#160;</td>
+          <td class="paramname"><em>exception</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mach_exception_data_type_t *&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t&#160;</td>
+          <td class="paramname"><em>code_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_state_flavor_t *&#160;</td>
+          <td class="paramname"><em>flavor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramname"><em>old_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t&#160;</td>
+          <td class="paramname"><em>old_state_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_state_t&#160;</td>
+          <td class="paramname"><em>new_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t *&#160;</td>
+          <td class="paramname"><em>new_state_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const mach_msg_trailer_t *&#160;</td>
+          <td class="paramname"><em>trailer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>destroy_complex_request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles exceptions raised by <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>. </p>
+<p>For convenience in implementation, these different “behaviors” of exception messages are all mapped to a single interface method. The exception’s original “behavior” is specified in the <em>behavior</em> parameter. Only parameters that were supplied in the request message are populated, other parameters are set to reasonable default values.</p>
+<p>The meanings of most parameters are identical to that of MachExcServer::Interface::CatchMachExceptionRaiseStateIdentity().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td><code>MACH_EXCEPTION_CODES | EXCEPTION_DEFAULT</code>, <code>MACH_EXCEPTION_CODES | EXCEPTION_STATE</code>, or <code>MACH_EXCEPTION_CODES | EXCEPTION_STATE_IDENTITY</code>, identifying which exception request message was processed and thus which other parameters are valid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedMachExcServer_1_1Interface.html#a37e10edca495a79d143c0420f858f974">crashpad::internal::SimplifiedMachExcServer::Interface</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a113ce518d5412e2cf352eb7f857fa9fb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -331,6 +489,32 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a113ce518d5412e2cf352eb7f857fa9fb" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5">crashpad::MachMessageServer::Interface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab9f192938859fb4b0fa637bf34ab0a1c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; mach_msg_id_t &gt; crashpad::UniversalMachExcServer::MachMessageServerRequestIDs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The set of request message Mach message IDs that <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a113ce518d5412e2cf352eb7f857fa9fb" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a> is able to handle. </dd></dl>
+
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#af0a4b1e3b83c7226604837b32ef6428e">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>

@@ -125,6 +125,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a98b20535513ade68101a8ec8d455b766"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a98b20535513ade68101a8ec8d455b766">MachMessageServerFunction</a> (const mach_msg_header_t *in_header, mach_msg_header_t *out_header, bool *destroy_complex_request) override</td></tr>
 <tr class="memdesc:a98b20535513ade68101a8ec8d455b766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#a98b20535513ade68101a8ec8d455b766">More...</a><br /></td></tr>
 <tr class="separator:a98b20535513ade68101a8ec8d455b766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee78e4212e5a1426106fbd3f949ec05"><td class="memItemLeft" align="right" valign="top">std::set&lt; mach_msg_id_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#acee78e4212e5a1426106fbd3f949ec05">MachMessageServerRequestIDs</a> () override</td></tr>
+<tr class="separator:acee78e4212e5a1426106fbd3f949ec05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a651d63a9e52824b6651a54599821e5f9"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a651d63a9e52824b6651a54599821e5f9">MachMessageServerRequestSize</a> () override</td></tr>
 <tr class="separator:a651d63a9e52824b6651a54599821e5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4a8ecb78f249016dd07582ca4c0ea0"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a9f4a8ecb78f249016dd07582ca4c0ea0">MachMessageServerReplySize</a> () override</td></tr>
@@ -243,6 +245,32 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a98b20535513ade68101a8ec8d455b766" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5">crashpad::MachMessageServer::Interface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acee78e4212e5a1426106fbd3f949ec05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; mach_msg_id_t &gt; crashpad::internal::MachExcServer::MachMessageServerRequestIDs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The set of request message Mach message IDs that <a class="el" href="classcrashpad_1_1internal_1_1MachExcServer.html#a98b20535513ade68101a8ec8d455b766" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a> is able to handle. </dd></dl>
+
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#af0a4b1e3b83c7226604837b32ef6428e">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>

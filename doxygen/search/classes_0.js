@@ -7,6 +7,7 @@ var searchData=
   ['childporthandshake',['ChildPortHandshake',['../classcrashpad_1_1ChildPortHandshake.html',1,'crashpad']]],
   ['childportserver',['ChildPortServer',['../classcrashpad_1_1ChildPortServer.html',1,'crashpad']]],
   ['compositehttpbodystream',['CompositeHTTPBodyStream',['../classcrashpad_1_1CompositeHTTPBodyStream.html',1,'crashpad']]],
+  ['compositemachmessageserver',['CompositeMachMessageServer',['../classcrashpad_1_1CompositeMachMessageServer.html',1,'crashpad']]],
   ['cpu_5finformation',['CPU_INFORMATION',['../unionCPU__INFORMATION.html',1,'']]],
   ['cpucontext',['CPUContext',['../structcrashpad_1_1CPUContext.html',1,'crashpad']]],
   ['cpucontextx86',['CPUContextX86',['../structcrashpad_1_1CPUContextX86.html',1,'crashpad']]],

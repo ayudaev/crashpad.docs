@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2674dc86acce27d76f5725148ebeddd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer.html#a2674dc86acce27d76f5725148ebeddd7">MachMessageServerFunction</a> (const mach_msg_header_t *in_header, mach_msg_header_t *out_header, bool *destroy_complex_request) override</td></tr>
 <tr class="memdesc:a2674dc86acce27d76f5725148ebeddd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#a2674dc86acce27d76f5725148ebeddd7">More...</a><br /></td></tr>
 <tr class="separator:a2674dc86acce27d76f5725148ebeddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3846e6e964464e734944c002c8848c2e"><td class="memItemLeft" align="right" valign="top">std::set&lt; mach_msg_id_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer.html#a3846e6e964464e734944c002c8848c2e">MachMessageServerRequestIDs</a> () override</td></tr>
+<tr class="separator:a3846e6e964464e734944c002c8848c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeda618e34b96c5d044d41d301fa72fad"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer.html#aeda618e34b96c5d044d41d301fa72fad">MachMessageServerRequestSize</a> () override</td></tr>
 <tr class="separator:aeda618e34b96c5d044d41d301fa72fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0086fca5ea9a836565f981f92448094"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer.html#ae0086fca5ea9a836565f981f92448094">MachMessageServerReplySize</a> () override</td></tr>
@@ -242,6 +244,32 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1ChildPortServer.html#a2674dc86acce27d76f5725148ebeddd7" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5">crashpad::MachMessageServer::Interface</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3846e6e964464e734944c002c8848c2e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; mach_msg_id_t &gt; crashpad::ChildPortServer::MachMessageServerRequestIDs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The set of request message Mach message IDs that <a class="el" href="classcrashpad_1_1ChildPortServer.html#a2674dc86acce27d76f5725148ebeddd7" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a> is able to handle. </dd></dl>
+
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#af0a4b1e3b83c7226604837b32ef6428e">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>

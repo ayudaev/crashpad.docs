@@ -1,7 +1,7 @@
 var searchData=
 [
   ['universalexceptionraise',['UniversalExceptionRaise',['../namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281',1,'crashpad']]],
-  ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html#ae9181a6059ac6d572d11302f91b4fe7f',1,'crashpad::UniversalMachExcServer']]],
+  ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html#a05bf6aa6e6e692e998a8ba2d6b5a6c95',1,'crashpad::UniversalMachExcServer']]],
   ['usagehint',['UsageHint',['../classcrashpad_1_1ToolSupport.html#a3c77b3d1dd6ed4ac5f4022a6de2ddbcd',1,'crashpad::ToolSupport']]],
   ['usagetail',['UsageTail',['../classcrashpad_1_1ToolSupport.html#a7fb0d86380fee44d2089bbf82bd22d27',1,'crashpad::ToolSupport']]],
   ['utf8',['UTF8',['../classcrashpad_1_1internal_1_1MinidumpUTF8StringWriter.html#af1fcd3b9fd56ce2557fd8201fa544748',1,'crashpad::internal::MinidumpUTF8StringWriter']]],

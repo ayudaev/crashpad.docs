@@ -8,7 +8,7 @@
 Information about the exception will be appended to <span class="emphasis"><em>FILE</em></span> instead of the
 standard output stream.
 </dd><dt><span class="term">
-<span class="strong"><strong>-m</strong></span>, <span class="strong"><strong>--mach_service</strong></span>=<span class="emphasis"><em>SERVICE</em></span>
+<span class="strong"><strong>-m</strong></span>, <span class="strong"><strong>--mach-service</strong></span>=<span class="emphasis"><em>SERVICE</em></span>
 </span></dt><dd>
 Check in with the bootstrap server under the name <span class="emphasis"><em>SERVICE</em></span>. This service name
 may already be reserved with the bootstrap server in cases where this tool is
@@ -42,11 +42,11 @@ Display help and exit.
 </span></dt><dd>
 Output version information and exit.
 </dd></dl></div></div><div class="refsect1"><a id="_examples"></a><h2>Examples</h2><p>Run a one-shot blocking exception server registered with the bootstrap server
-under the name <code class="literal">svc</code>:</p><pre class="screen">$ <span class="strong"><strong>catch_exception_tool --mach_service=svc --file=out &amp;</strong></span>
+under the name <code class="literal">svc</code>:</p><pre class="screen">$ <span class="strong"><strong>catch_exception_tool --mach-service=svc --file=out &amp;</strong></span>
 [1] 1233
-$ <span class="strong"><strong>exception_port_tool --set_handler=handler=bootstrap:svc crasher</strong></span>
+$ <span class="strong"><strong>exception_port_tool --set-handler=handler=bootstrap:svc crasher</strong></span>
 Illegal instruction: 4
-[1]+  Done    catch_exception_tool --mach_service=svc --file=out
+[1]+  Done    catch_exception_tool --mach-service=svc --file=out
 $ <span class="strong"><strong>cat out</strong></span>
 catch_exception_tool:
 behavior EXCEPTION_DEFAULT|MACH_EXCEPTION_CODES,
@@ -54,10 +54,10 @@ pid 1234, thread 56789, exception EXC_CRASH, codes[2] 0x4200001, 0,
 original exception EXC_BAD_INSTRUCTION, original code[0] 1,
 signal SIGILL</pre><p>Run an on-demand exception server started by launchd(5) available via the
 bootstrap server under the name <code class="literal">svc</code>:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --load --label=catch_exception \
-      --mach_service=svc \
-      $(which catch_exception_tool) --mach_service=svc \
+      --mach-service=svc \
+      $(which catch_exception_tool) --mach-service=svc \
       --file=/tmp/out --nonblocking --persistent</strong></span>
-$ <span class="strong"><strong>exception_port_tool --set_handler=handler=bootstrap:svc crasher</strong></span>
+$ <span class="strong"><strong>exception_port_tool --set-handler=handler=bootstrap:svc crasher</strong></span>
 Illegal instruction: 4
 $ <span class="strong"><strong>on_demand_service_tool --unload --label=catch_exception</strong></span>
 $ <span class="strong"><strong>cat /tmp/out</strong></span>

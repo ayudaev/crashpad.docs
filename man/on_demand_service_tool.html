@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>on_demand_service_tool</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /></head><body><div xml:lang="en" class="refentry" lang="en"><a></a><div class="titlepage"></div><div class="refnamediv"><h2>Name</h2><p>on_demand_service_tool — Load and unload on-demand Mach services registered with launchd(8)</p></div><div class="refsynopsisdiv"><a id="_synopsis"></a><h2>Synopsis</h2><div class="blockquote"><blockquote class="blockquote"><div class="literallayout"><p><span class="strong"><strong>on_demand_service_tool</strong></span> <span class="strong"><strong>-L</strong></span> <span class="strong"><strong>-l</strong></span> <span class="emphasis"><em>LABEL</em></span> [<span class="emphasis"><em>OPTION…</em></span>] <span class="emphasis"><em>COMMAND</em></span> [<span class="emphasis"><em>ARG…</em></span>]<br />
 <span class="strong"><strong>on_demand_service_tool</strong></span> <span class="strong"><strong>-U</strong></span> <span class="strong"><strong>-l</strong></span> <span class="emphasis"><em>LABEL</em></span></p></div></blockquote></div></div><div class="refsect1"><a id="_description"></a><h2>Description</h2><p>On-demand services may be registered with launchd(8) by using the <span class="strong"><strong>--load</strong></span> form.
 One or more service names may be registered with the bootstrap server by
-specifying <span class="strong"><strong>--mach_service</strong></span>. When a Mach message is sent to any of these
+specifying <span class="strong"><strong>--mach-service</strong></span>. When a Mach message is sent to any of these
 services, launchd(8) will invoke <span class="emphasis"><em>COMMAND</em></span> along with any arguments specified
 (<span class="emphasis"><em>ARG…</em></span>). <span class="emphasis"><em>COMMAND</em></span> must be an absolute pathname.</p><p>The <span class="strong"><strong>--unload</strong></span> form unregisters jobs registered with launchd(8).</p></div><div class="refsect1"><a id="_options"></a><h2>Options</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
 <span class="strong"><strong>-L</strong></span>, <span class="strong"><strong>--load</strong></span>
@@ -20,7 +20,7 @@ may also be referred to as “unload” or “remove”.
 <span class="emphasis"><em>LABEL</em></span> is used as the job label to identify the job to launchd(8). <span class="emphasis"><em>LABEL</em></span> must
 be unique within a launchd(8) context.
 </dd><dt><span class="term">
-<span class="strong"><strong>-m</strong></span>, <span class="strong"><strong>--mach_service</strong></span>=<span class="emphasis"><em>SERVICE</em></span>
+<span class="strong"><strong>-m</strong></span>, <span class="strong"><strong>--mach-service</strong></span>=<span class="emphasis"><em>SERVICE</em></span>
 </span></dt><dd>
 In conjunction with <span class="strong"><strong>--load</strong></span>, registers <span class="emphasis"><em>SERVICE</em></span> with the bootstrap server.
 Clients will be able to obtain a send right by looking up the <span class="emphasis"><em>SERVICE</em></span> name
@@ -40,8 +40,8 @@ Output version information and exit.
 </dd></dl></div></div><div class="refsect1"><a id="_examples"></a><h2>Examples</h2><p>Registers an on-demand server that will execute catch_exception_tool(1) when a
 Mach message is sent to a Mach port obtained from the bootstrap server by
 looking up the name <code class="literal">svc</code>:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --load --label=catch_exception \
-      --mach_service=svc \
-      $(which catch_exception_tool) --mach_service=svc \
+      --mach-service=svc \
+      $(which catch_exception_tool) --mach-service=svc \
       --file=/tmp/out --nonblocking --persistent</strong></span></pre><p>Unregisters the on-demand server installed above:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --unload --label=catch_exception</strong></span></pre></div><div class="refsect1"><a id="_exit_status"></a><h2>Exit Status</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
 <span class="strong"><strong>0</strong></span>
 </span></dt><dd>
