@@ -162,9 +162,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9f5bbb381b32ca4c5276a5aacbef1c5f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcrashpad_1_1MinidumpUTF8String.html">MinidumpUTF8String</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a9f5bbb381b32ca4c5276a5aacbef1c5f">MinidumpUTF8StringAtRVA</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
 <tr class="memdesc:a9f5bbb381b32ca4c5276a5aacbef1c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structcrashpad_1_1MinidumpUTF8String.html" title="A variable-length UTF-8-encoded string carried within a minidump file. ">MinidumpUTF8String</a> located within a minidump file’s contents.  <a href="#a9f5bbb381b32ca4c5276a5aacbef1c5f">More...</a><br /></td></tr>
 <tr class="separator:a9f5bbb381b32ca4c5276a5aacbef1c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66fcb1e0262b9ba52b37037a9233ffa0"><td class="memItemLeft" align="right" valign="top">string16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a66fcb1e0262b9ba52b37037a9233ffa0">MinidumpStringAtRVAAsString</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
-<tr class="memdesc:a66fcb1e0262b9ba52b37037a9233ffa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of a <a class="el" href="structMINIDUMP__STRING.html" title="A variable-length UTF-16-encoded string carried within a minidump file. ">MINIDUMP_STRING</a> as a <code>string16</code>.  <a href="#a66fcb1e0262b9ba52b37037a9233ffa0">More...</a><br /></td></tr>
-<tr class="separator:a66fcb1e0262b9ba52b37037a9233ffa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2276ff84807d40b2fc4f7fd2ccc8b743"><td class="memItemLeft" align="right" valign="top">base::string16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a2276ff84807d40b2fc4f7fd2ccc8b743">MinidumpStringAtRVAAsString</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
+<tr class="memdesc:a2276ff84807d40b2fc4f7fd2ccc8b743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of a <a class="el" href="structMINIDUMP__STRING.html" title="A variable-length UTF-16-encoded string carried within a minidump file. ">MINIDUMP_STRING</a> as a <code>string16</code>.  <a href="#a2276ff84807d40b2fc4f7fd2ccc8b743">More...</a><br /></td></tr>
+<tr class="separator:a2276ff84807d40b2fc4f7fd2ccc8b743"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d8f1de3f021881b6464a1fedbddf956"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a4d8f1de3f021881b6464a1fedbddf956">MinidumpUTF8StringAtRVAAsString</a> (const std::string &amp;file_contents, <a class="el" href="dbghelp_8h.html#acf465a1a77ecf067a9d946583bc6a3f8">RVA</a> rva)</td></tr>
 <tr class="memdesc:a4d8f1de3f021881b6464a1fedbddf956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the contents of a <a class="el" href="structcrashpad_1_1MinidumpUTF8String.html" title="A variable-length UTF-8-encoded string carried within a minidump file. ">MinidumpUTF8String</a> as a <code>std::string</code>.  <a href="#a4d8f1de3f021881b6464a1fedbddf956">More...</a><br /></td></tr>
 <tr class="separator:a4d8f1de3f021881b6464a1fedbddf956"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -989,18 +989,18 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, a pointer to the <a class="el" href="structMINIDUMP__STRING.html" title="A variable-length UTF-16-encoded string carried within a minidump file. ">MINIDUMP_STRING</a> in <em>file_contents</em>. On failure, raises a gtest assertion and returns <code>nullptr</code>.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a66fcb1e0262b9ba52b37037a9233ffa0" title="Returns the contents of a MINIDUMP_STRING as a string16. ">MinidumpStringAtRVAAsString()</a> </dd>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a2276ff84807d40b2fc4f7fd2ccc8b743" title="Returns the contents of a MINIDUMP_STRING as a string16. ">MinidumpStringAtRVAAsString()</a> </dd>
 <dd>
 <a class="el" href="namespacecrashpad_1_1test.html#a9f5bbb381b32ca4c5276a5aacbef1c5f" title="Returns a MinidumpUTF8String located within a minidump file’s contents. ">MinidumpUTF8StringAtRVA()</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a66fcb1e0262b9ba52b37037a9233ffa0"></a>
+<a class="anchor" id="a2276ff84807d40b2fc4f7fd2ccc8b743"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string16 crashpad::test::MinidumpStringAtRVAAsString </td>
+          <td class="memname">base::string16 crashpad::test::MinidumpStringAtRVAAsString </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file_contents</em>, </td>
@@ -1107,7 +1107,7 @@ base::FilePath&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success, the string read from <em>file_writer</em> at offset <em>rva</em>. On failure, raises a gtest assertion and returns an empty string.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a66fcb1e0262b9ba52b37037a9233ffa0" title="Returns the contents of a MINIDUMP_STRING as a string16. ">MinidumpStringAtRVAAsString()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad_1_1test.html#a2276ff84807d40b2fc4f7fd2ccc8b743" title="Returns the contents of a MINIDUMP_STRING as a string16. ">MinidumpStringAtRVAAsString()</a> </dd></dl>
 
 </div>
 </div>

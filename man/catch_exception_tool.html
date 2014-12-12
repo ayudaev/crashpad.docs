@@ -16,12 +16,6 @@ started by launchd(8) as a result of a message being sent to a service declared
 in a job’s <code class="literal">MachServices</code> dictionary (see launchd.plist(5)). The service name
 may also be completely unknown to the system.
 </dd><dt><span class="term">
-<span class="strong"><strong>-n</strong></span>, <span class="strong"><strong>--nonblocking</strong></span>
-</span></dt><dd>
-Don’t wait for an exception to occur if one is not received immediately. In
-nonblocking mode, this tool exits immediately if no exception is received. The
-default mode is blocking.
-</dd><dt><span class="term">
 <span class="strong"><strong>-p</strong></span>, <span class="strong"><strong>--persistent</strong></span>
 </span></dt><dd>
 Continue processing exceptions after the first one. The default mode is
@@ -29,10 +23,11 @@ one-shot, where this tool exits after processing the first exception.
 </dd><dt><span class="term">
 <span class="strong"><strong>-t</strong></span>, <span class="strong"><strong>--timeout</strong></span>=<span class="emphasis"><em>TIMEOUT</em></span>
 </span></dt><dd>
-Run for a maximum of <span class="emphasis"><em>TIMEOUT</em></span> seconds. This option only has an effect in
-blocking mode (when <span class="strong"><strong>--nonblocking</strong></span> is not specified). In <span class="strong"><strong>--persistent</strong></span> mode,
-<span class="emphasis"><em>TIMEOUT</em></span> applies to the overall duration that this tool will run, not to the
-processing of individual exceptions.
+Run for a maximum of <span class="emphasis"><em>TIMEOUT</em></span> seconds. Specify <code class="literal">0</code> to request non-blocking
+operation, in which the tool exits immediately if no exception is received. In
+<span class="strong"><strong>--persistent</strong></span> mode, <span class="emphasis"><em>TIMEOUT</em></span> applies to the overall duration that this tool
+will run, not to the processing of individual exceptions. When <span class="strong"><strong>--timeout</strong></span> is
+not specified, this tool will block indefinitely while waiting for an exception.
 </dd><dt><span class="term">
 <span class="strong"><strong>--help</strong></span>
 </span></dt><dd>
@@ -56,7 +51,7 @@ signal SIGILL</pre><p>Run an on-demand exception server started by launchd(5) av
 bootstrap server under the name <code class="literal">svc</code>:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --load --label=catch_exception \
       --mach-service=svc \
       $(which catch_exception_tool) --mach-service=svc \
-      --file=/tmp/out --nonblocking --persistent</strong></span>
+      --file=/tmp/out --persistent --timeout=0</strong></span>
 $ <span class="strong"><strong>exception_port_tool --set-handler=handler=bootstrap:svc crasher</strong></span>
 Illegal instruction: 4
 $ <span class="strong"><strong>on_demand_service_tool --unload --label=catch_exception</strong></span>

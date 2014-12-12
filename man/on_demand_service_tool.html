@@ -42,7 +42,7 @@ Mach message is sent to a Mach port obtained from the bootstrap server by
 looking up the name <code class="literal">svc</code>:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --load --label=catch_exception \
       --mach-service=svc \
       $(which catch_exception_tool) --mach-service=svc \
-      --file=/tmp/out --nonblocking --persistent</strong></span></pre><p>Unregisters the on-demand server installed above:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --unload --label=catch_exception</strong></span></pre></div><div class="refsect1"><a id="_exit_status"></a><h2>Exit Status</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
+      --file=/tmp/out --persistent --timeout=0</strong></span></pre><p>Unregisters the on-demand server installed above:</p><pre class="screen">$ <span class="strong"><strong>on_demand_service_tool --unload --label=catch_exception</strong></span></pre></div><div class="refsect1"><a id="_exit_status"></a><h2>Exit Status</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
 <span class="strong"><strong>0</strong></span>
 </span></dt><dd>
 Success.

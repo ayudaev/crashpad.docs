@@ -123,7 +123,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> that combines an array of several other <a class="el" href="classcrashpad_1_1HTTPBodyStream.html" title="An interface to a stream that can be used for an HTTP request body. ">HTTPBodyStream</a> objects into a single, unified stream.  <a href="classcrashpad_1_1CompositeHTTPBodyStream.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CompositeMachMessageServer.html">CompositeMachMessageServer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapts multiple <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html" title="A Mach RPC callback interface, called by Run(). ">MachMessageServer::Interface</a> implementations for simultaneous use in a single <a class="el" href="classcrashpad_1_1MachMessageServer.html#a3dbd0990051b69e022bcb68a90258922" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">MachMessageServer::Run()</a> call.  <a href="classcrashpad_1_1CompositeMachMessageServer.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapts multiple <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html" title="A Mach RPC callback interface, called by Run(). ">MachMessageServer::Interface</a> implementations for simultaneous use in a single <a class="el" href="classcrashpad_1_1MachMessageServer.html#ace981f2e495984f119aa074f7d33bff6" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">MachMessageServer::Run()</a> call.  <a href="classcrashpad_1_1CompositeMachMessageServer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1CPUContext.html">CPUContext</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A context structure capable of carrying the context of any supported CPU architecture.  <a href="structcrashpad_1_1CPUContext.html#details">More...</a><br /></td></tr>
@@ -407,9 +407,12 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a270e290ba558e948eb6690bd217cbb71"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71">CPUArchitecture</a> </td></tr>
 <tr class="memdesc:a270e290ba558e948eb6690bd217cbb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">A system’s CPU architecture.  <a href="namespacecrashpad.html#a270e290ba558e948eb6690bd217cbb71">More...</a><br /></td></tr>
 <tr class="separator:a270e290ba558e948eb6690bd217cbb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29922e06af1f003146f8890f477cd72"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: MachMessageDeadline </td></tr>
-<tr class="memdesc:ab29922e06af1f003146f8890f477cd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special constants used as MachMessageDeadline values.  <a href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72">More...</a><br /></td></tr>
-<tr class="separator:ab29922e06af1f003146f8890f477cd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7dbab315f69561bf3dc621a036c2f95"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: mach_msg_timeout_t </td></tr>
+<tr class="memdesc:aa7dbab315f69561bf3dc621a036c2f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special constants used as <code>mach_msg_timeout_t</code> values.  <a href="namespacecrashpad.html#aa7dbab315f69561bf3dc621a036c2f95">More...</a><br /></td></tr>
+<tr class="separator:aa7dbab315f69561bf3dc621a036c2f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a0aded59b1f1aad3aff210b482cc7a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: MachMessageDeadline </td></tr>
+<tr class="memdesc:a86a0aded59b1f1aad3aff210b482cc7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special constants used as MachMessageDeadline values.  <a href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7a">More...</a><br /></td></tr>
+<tr class="separator:a86a0aded59b1f1aad3aff210b482cc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7856b82b71167792ea6103debb5105ed"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed">SymbolicConstantToStringOptionBits</a> </td></tr>
 <tr class="memdesc:a7856b82b71167792ea6103debb5105ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for various <code>*ToString</code> functions in <code>symbolic_constants_*</code> files.  <a href="namespacecrashpad.html#a7856b82b71167792ea6103debb5105ed">More...</a><br /></td></tr>
 <tr class="separator:a7856b82b71167792ea6103debb5105ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -571,9 +574,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6249dd58c6a81b300d64b25a943fa25c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a6249dd58c6a81b300d64b25a943fa25c">StringToSignal</a> (const base::StringPiece &amp;string, <a class="el" href="namespacecrashpad.html#a14f1de509869f929122998a2f88f08a6">StringToSymbolicConstantOptions</a> options, int *signal)</td></tr>
 <tr class="memdesc:a6249dd58c6a81b300d64b25a943fa25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a string to its corresponding POSIX signal value.  <a href="#a6249dd58c6a81b300d64b25a943fa25c">More...</a><br /></td></tr>
 <tr class="separator:a6249dd58c6a81b300d64b25a943fa25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a7c3ab35e044bf1a3b3f48e8b457a5429">c16lcpy</a> (char16 *destination, const char16 *source, size_t length)</td></tr>
-<tr class="memdesc:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a <code>NUL</code>-terminated char16-based string to a fixed-size buffer.  <a href="#a7c3ab35e044bf1a3b3f48e8b457a5429">More...</a><br /></td></tr>
-<tr class="separator:a7c3ab35e044bf1a3b3f48e8b457a5429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42fe62040bb628fb134573bb2131955"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab42fe62040bb628fb134573bb2131955">c16lcpy</a> (base::char16 *destination, const base::char16 *source, size_t length)</td></tr>
+<tr class="memdesc:ab42fe62040bb628fb134573bb2131955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a <code>NUL</code>-terminated char16-based string to a fixed-size buffer.  <a href="#ab42fe62040bb628fb134573bb2131955">More...</a><br /></td></tr>
+<tr class="separator:ab42fe62040bb628fb134573bb2131955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8605dea4710c2630ccdd21439e05999"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac8605dea4710c2630ccdd21439e05999">strnlen</a> (const char *string, size_t max_length)</td></tr>
 <tr class="memdesc:ac8605dea4710c2630ccdd21439e05999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a string, not to exceed a maximum.  <a href="#ac8605dea4710c2630ccdd21439e05999">More...</a><br /></td></tr>
 <tr class="separator:ac8605dea4710c2630ccdd21439e05999"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -626,7 +629,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><div class="memdoc">
 
 <p>The time before which a <a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> call should complete. </p>
-<p>A value of this type may be one of the special constants <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageNonblocking</a> or <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a44c9571ed98d5c5c0b18afde0a4b68f1" title="MachMessageWithDeadline() should wait indefinitely for the requested operation to complete...">kMachMessageWaitIndefinitely</a>. Any other values should be produced by calling <a class="el" href="namespacecrashpad.html#aa31f495c675536bcb30d1267c3a9b696" title="Computes the deadline for a specified timeout value. ">MachMessageDeadlineFromTimeout()</a>.</p>
+<p>A value of this type may be one of the special constants <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa6461bf9de012b5f2305fb3da6d0f82d5" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageDeadlineNonblocking</a> or <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa848a739b3c252f4565161a6bd3f070d6" title="MachMessageWithDeadline() should wait indefinitely for the requested operation to complete...">kMachMessageDeadlineWaitIndefinitely</a>. Any other values should be produced by calling <a class="el" href="namespacecrashpad.html#aa31f495c675536bcb30d1267c3a9b696" title="Computes the deadline for a specified timeout value. ">MachMessageDeadlineFromTimeout()</a>.</p>
 <p>Internally, these are currently specified on the same time base as <a class="el" href="namespacecrashpad.html#aa93af751a4a09c316fb3de1a90e03fe8" title="Returns the value of the system’s monotonic clock. ">ClockMonotonicNanoseconds()</a>, although this is an implementation detail. </p>
 
 </div>
@@ -698,7 +701,29 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="ab29922e06af1f003146f8890f477cd72"></a>
+<a class="anchor" id="aa7dbab315f69561bf3dc621a036c2f95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : mach_msg_timeout_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Special constants used as <code>mach_msg_timeout_t</code> values. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa7dbab315f69561bf3dc621a036c2f95a15aaf8991271871ab08493449c00a048"></a>kMachMessageTimeoutNonblocking&#160;</td><td class="fielddoc">
+<p>When passed to <a class="el" href="namespacecrashpad.html#aa31f495c675536bcb30d1267c3a9b696" title="Computes the deadline for a specified timeout value. ">MachMessageDeadlineFromTimeout()</a>, that function will return <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa6461bf9de012b5f2305fb3da6d0f82d5" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageDeadlineNonblocking</a>. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa7dbab315f69561bf3dc621a036c2f95aaf4f2c8a649ea6bcfe896e77c312315f"></a>kMachMessageTimeoutWaitIndefinitely&#160;</td><td class="fielddoc">
+<p>When passed to <a class="el" href="namespacecrashpad.html#aa31f495c675536bcb30d1267c3a9b696" title="Computes the deadline for a specified timeout value. ">MachMessageDeadlineFromTimeout()</a>, that function will return <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa848a739b3c252f4565161a6bd3f070d6" title="MachMessageWithDeadline() should wait indefinitely for the requested operation to complete...">kMachMessageDeadlineWaitIndefinitely</a>. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a86a0aded59b1f1aad3aff210b482cc7a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -710,10 +735,10 @@ template&lt;typename T &gt; </div>
 
 <p>Special constants used as <a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a> values. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2"></a>kMachMessageNonblocking&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a86a0aded59b1f1aad3aff210b482cc7aa6461bf9de012b5f2305fb3da6d0f82d5"></a>kMachMessageDeadlineNonblocking&#160;</td><td class="fielddoc">
 <p><a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> should not block at all in its operation. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="ab29922e06af1f003146f8890f477cd72a44c9571ed98d5c5c0b18afde0a4b68f1"></a>kMachMessageWaitIndefinitely&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a86a0aded59b1f1aad3aff210b482cc7aa848a739b3c252f4565161a6bd3f070d6"></a>kMachMessageDeadlineWaitIndefinitely&#160;</td><td class="fielddoc">
 <p><a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> should wait indefinitely for the requested operation to complete. </p>
 </td></tr>
 </table>
@@ -1184,20 +1209,20 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a7c3ab35e044bf1a3b3f48e8b457a5429"></a>
+<a class="anchor" id="ab42fe62040bb628fb134573bb2131955"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">size_t crashpad::c16lcpy </td>
           <td>(</td>
-          <td class="paramtype">char16 *&#160;</td>
+          <td class="paramtype">base::char16 *&#160;</td>
           <td class="paramname"><em>destination</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char16 *&#160;</td>
+          <td class="paramtype">const base::char16 *&#160;</td>
           <td class="paramname"><em>source</em>, </td>
         </tr>
         <tr>
@@ -1789,7 +1814,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>This function is useful even for <code>EXC_CRASH</code> handlers, where returning <code>KERN_SUCCESS</code> and allowing the kernel to set a new thread state has been observed to cause a perceptible and unnecessary waste of time. The victim task in an <code>EXC_CRASH</code> handler is already being terminated and is no longer schedulable, so there is no point in setting the states of any of its threads.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The behavior of the exception handler as invoked. This may be taken directly from the <em>behavior</em> parameter of <a class="el" href="classcrashpad_1_1internal_1_1SimplifiedExcServer_1_1Interface.html#ad61bc7e12446ce83470bcbf6b4cbd2a4" title="Handles exceptions raised by exception_raise(), exception_raise_state(), and exception_raise_state_id...">internal::SimplifiedExcServer::Interface::CatchException()</a>, for example. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The behavior of the exception handler as invoked. This may be taken directly from the <em>behavior</em> parameter of internal::SimplifiedExcServer::Interface::CatchException(), for example. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">set_thread_state</td><td><code>true</code> if the handler would like its caller to set the new thread state using the <em>flavor</em>, <em>new_state</em>, and <em>new_state_count</em> out parameters. This can only happen when <em>behavior</em> is a state-carrying behavior.</td></tr>
   </table>
   </dd>
@@ -1953,7 +1978,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 <p>Computes the deadline for a specified timeout value. </p>
 <p>While deadlines exist on an absolute time scale, timeouts are relative. This function calculates the deadline as <em>timeout_ms</em> milliseconds after it executes.</p>
-<p>If <em>timeout_ms</em> is <code>0</code>, this function will return <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageNonblocking</a>. </p>
+<p>If <em>timeout_ms</em> is <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa6461bf9de012b5f2305fb3da6d0f82d5" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageDeadlineNonblocking</a>, this function will return <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa6461bf9de012b5f2305fb3da6d0f82d5" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageDeadlineNonblocking</a>. If <em>timeout_ms</em> is <a class="el" href="namespacecrashpad.html#aa7dbab315f69561bf3dc621a036c2f95aaf4f2c8a649ea6bcfe896e77c312315f" title="When passed to MachMessageDeadlineFromTimeout(), that function will return kMachMessageDeadlineWaitIn...">kMachMessageTimeoutWaitIndefinitely</a>, this function will return <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa848a739b3c252f4565161a6bd3f070d6" title="MachMessageWithDeadline() should wait indefinitely for the requested operation to complete...">kMachMessageDeadlineWaitIndefinitely</a>. </p>
 
 </div>
 </div>
@@ -2049,7 +2074,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">deadline</td><td>The time by which this call should complete. If the deadline is exceeded, this call will return <code>MACH_SEND_TIMED_OUT</code> or <code>MACH_RCV_TIMED_OUT</code>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">run_even_if_expired</td><td>If <code>true</code>, a deadline that is expired when this function is called will be treated as though a deadline of <a class="el" href="namespacecrashpad.html#ab29922e06af1f003146f8890f477cd72a5fb04410bd366d01fcc21d81f78cfbd2" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageNonblocking</a> had been specified. When <code>false</code>, an expired deadline will result in a <code>MACH_SEND_TIMED_OUT</code> or <code>MACH_RCV_TIMED_OUT</code> return value, even if the deadline is already expired when the function is called. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">run_even_if_expired</td><td>If <code>true</code>, a deadline that is expired when this function is called will be treated as though a deadline of <a class="el" href="namespacecrashpad.html#a86a0aded59b1f1aad3aff210b482cc7aa6461bf9de012b5f2305fb3da6d0f82d5" title="MachMessageWithDeadline() should not block at all in its operation. ">kMachMessageDeadlineNonblocking</a> had been specified. When <code>false</code>, an expired deadline will result in a <code>MACH_SEND_TIMED_OUT</code> or <code>MACH_RCV_TIMED_OUT</code> return value, even if the deadline is already expired when the function is called. </td></tr>
   </table>
   </dd>
 </dl>

@@ -105,12 +105,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adf79feb4d657af5606d77a040b80c0a3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#adf79feb4d657af5606d77a040b80c0a3">AssignTimeT</a> (uint32_t *destination, time_t source)</td></tr>
 <tr class="memdesc:adf79feb4d657af5606d77a040b80c0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a <code>time_t</code> value, logging a warning if the result overflows the destination buffer and will be truncated.  <a href="#adf79feb4d657af5606d77a040b80c0a3">More...</a><br /></td></tr>
 <tr class="separator:adf79feb4d657af5606d77a040b80c0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd232020d5c34894ca7fd87809d5f895"><td class="memItemLeft" align="right" valign="top">static string16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#abd232020d5c34894ca7fd87809d5f895">ConvertUTF8ToUTF16</a> (const std::string &amp;utf8)</td></tr>
-<tr class="memdesc:abd232020d5c34894ca7fd87809d5f895"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a UTF-8 string to UTF-16 and returns it. If the string cannot be converted losslessly, indicating that the input is not well-formed UTF-8, a warning is logged.  <a href="#abd232020d5c34894ca7fd87809d5f895">More...</a><br /></td></tr>
-<tr class="separator:abd232020d5c34894ca7fd87809d5f895"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f54dde78a0822cdf26efb59299ec8bd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a6f54dde78a0822cdf26efb59299ec8bd">AssignUTF8ToUTF16</a> (char16 *destination, size_t destination_size, const std::string &amp;source)</td></tr>
-<tr class="memdesc:a6f54dde78a0822cdf26efb59299ec8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a UTF-8 string to UTF-16 and places it into a buffer of fixed size, taking care to <code>NUL</code>-terminate the buffer and not to overflow it. If the string will be truncated or if it cannot be converted losslessly, a warning is logged.  <a href="#a6f54dde78a0822cdf26efb59299ec8bd">More...</a><br /></td></tr>
-<tr class="separator:a6f54dde78a0822cdf26efb59299ec8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b0a78e6ca458d986024a21d94ca70b"><td class="memItemLeft" align="right" valign="top">static base::string16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a61b0a78e6ca458d986024a21d94ca70b">ConvertUTF8ToUTF16</a> (const std::string &amp;utf8)</td></tr>
+<tr class="memdesc:a61b0a78e6ca458d986024a21d94ca70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a UTF-8 string to UTF-16 and returns it. If the string cannot be converted losslessly, indicating that the input is not well-formed UTF-8, a warning is logged.  <a href="#a61b0a78e6ca458d986024a21d94ca70b">More...</a><br /></td></tr>
+<tr class="separator:a61b0a78e6ca458d986024a21d94ca70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8050fbfd03eaf9c799001d37f417adec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a8050fbfd03eaf9c799001d37f417adec">AssignUTF8ToUTF16</a> (base::char16 *destination, size_t destination_size, const std::string &amp;source)</td></tr>
+<tr class="memdesc:a8050fbfd03eaf9c799001d37f417adec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a UTF-8 string to UTF-16 and places it into a buffer of fixed size, taking care to <code>NUL</code>-terminate the buffer and not to overflow it. If the string will be truncated or if it cannot be converted losslessly, a warning is logged.  <a href="#a8050fbfd03eaf9c799001d37f417adec">More...</a><br /></td></tr>
+<tr class="separator:a8050fbfd03eaf9c799001d37f417adec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A collection of utility functions used by the <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">MinidumpWritable</a> family of classes. </p>
@@ -160,7 +160,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6f54dde78a0822cdf26efb59299ec8bd"></a>
+<a class="anchor" id="a8050fbfd03eaf9c799001d37f417adec"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -170,7 +170,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void crashpad::internal::MinidumpWriterUtil::AssignUTF8ToUTF16 </td>
           <td>(</td>
-          <td class="paramtype">char16 *&#160;</td>
+          <td class="paramtype">base::char16 *&#160;</td>
           <td class="paramname"><em>destination</em>, </td>
         </tr>
         <tr>
@@ -212,7 +212,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abd232020d5c34894ca7fd87809d5f895"></a>
+<a class="anchor" id="a61b0a78e6ca458d986024a21d94ca70b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -220,7 +220,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">string16 crashpad::internal::MinidumpWriterUtil::ConvertUTF8ToUTF16 </td>
+          <td class="memname">base::string16 crashpad::internal::MinidumpWriterUtil::ConvertUTF8ToUTF16 </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>utf8</em></td><td>)</td>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['machexcserver',['MachExcServer',['../classcrashpad_1_1internal_1_1MachExcServer.html',1,'crashpad::internal']]],
   ['machmessageserver',['MachMessageServer',['../classcrashpad_1_1MachMessageServer.html',1,'crashpad']]],
   ['machmultiprocess',['MachMultiprocess',['../classcrashpad_1_1test_1_1MachMultiprocess.html',1,'crashpad::test']]],
   ['machmultiprocessinfo',['MachMultiprocessInfo',['../structcrashpad_1_1test_1_1internal_1_1MachMultiprocessInfo.html',1,'crashpad::test::internal']]],

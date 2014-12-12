@@ -29,8 +29,6 @@ var searchData=
   ['exceptionstream',['ExceptionStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08a5ddc831e2440dfcfd112cb19401bbd60',1,'dbghelp.h']]],
   ['exceptiontostring',['ExceptionToString',['../namespacecrashpad.html#a05296bfd23550f42639067355410811e',1,'crashpad']]],
   ['excmaskall',['ExcMaskAll',['../namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941',1,'crashpad']]],
-  ['excserver',['ExcServer',['../classcrashpad_1_1internal_1_1ExcServer.html#aeb1c72e39e2e1d665ad576c4c5598dd8',1,'crashpad::internal::ExcServer']]],
-  ['excserver',['ExcServer',['../classcrashpad_1_1internal_1_1ExcServer.html',1,'crashpad::internal']]],
   ['excserversuccessfulreturnvalue',['ExcServerSuccessfulReturnValue',['../namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e',1,'crashpad']]],
   ['executablepath',['ExecutablePath',['../namespacecrashpad_1_1test.html#add7175585896e66e21a9a6d5a7e8907c',1,'crashpad::test']]],
   ['executesynchronously',['ExecuteSynchronously',['../classcrashpad_1_1HTTPTransport.html#a496e377eebc6eccfcd51283cdaafa745',1,'crashpad::HTTPTransport']]],
