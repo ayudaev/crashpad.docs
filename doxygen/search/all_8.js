@@ -23,6 +23,7 @@ var searchData=
   ['initializeminidumpcontextx86',['InitializeMinidumpContextX86',['../namespacecrashpad_1_1test.html#afefac1494b6a67c50a254c75a8caccf1',1,'crashpad::test']]],
   ['inrangecast',['InRangeCast',['../namespacecrashpad.html#a6e1b1c536af301cd418dad62348b1d29',1,'crashpad']]],
   ['instructionpointer',['InstructionPointer',['../structcrashpad_1_1CPUContext.html#af87233023c9ef6acadeb42b6ab093816',1,'crashpad::CPUContext']]],
+  ['interface',['Interface',['../classcrashpad_1_1NotifyServer_1_1Interface.html',1,'crashpad::NotifyServer']]],
   ['interface',['Interface',['../classcrashpad_1_1UniversalMachExcServer_1_1Interface.html',1,'crashpad::UniversalMachExcServer']]],
   ['interface',['Interface',['../classcrashpad_1_1MachMessageServer_1_1Interface.html',1,'crashpad::MachMessageServer']]],
   ['interface',['Interface',['../classcrashpad_1_1ChildPortServer_1_1Interface.html',1,'crashpad::ChildPortServer']]],

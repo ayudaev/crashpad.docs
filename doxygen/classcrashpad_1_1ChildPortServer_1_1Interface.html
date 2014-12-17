@@ -111,14 +111,14 @@ Inheritance diagram for crashpad::ChildPortServer::Interface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abdcf1a52578c2c848846cdd1c6d798a9"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer_1_1Interface.html#abdcf1a52578c2c848846cdd1c6d798a9">HandleChildPortCheckIn</a> (child_port_server_t server, const child_port_token_t token, mach_port_t port, mach_msg_type_name_t right_type, const mach_msg_trailer_t *trailer, bool *destroy_complex_request)=0</td></tr>
-<tr class="memdesc:abdcf1a52578c2c848846cdd1c6d798a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles check-ins sent by <code>child_port_check_in()</code>.  <a href="#abdcf1a52578c2c848846cdd1c6d798a9">More...</a><br /></td></tr>
-<tr class="separator:abdcf1a52578c2c848846cdd1c6d798a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ecd466de45fe69854d37980b7373369"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortServer_1_1Interface.html#a5ecd466de45fe69854d37980b7373369">HandleChildPortCheckIn</a> (child_port_server_t server, const child_port_token_t token, mach_port_t port, mach_msg_type_name_t right_type, const mach_msg_trailer_t *trailer, bool *destroy_request)=0</td></tr>
+<tr class="memdesc:a5ecd466de45fe69854d37980b7373369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles check-ins sent by <code>child_port_check_in()</code>.  <a href="#a5ecd466de45fe69854d37980b7373369">More...</a><br /></td></tr>
+<tr class="separator:a5ecd466de45fe69854d37980b7373369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface that the request message that is a part of the <code>child_port</code> Mach subsystem can be dispatched to. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abdcf1a52578c2c848846cdd1c6d798a9"></a>
+<a class="anchor" id="a5ecd466de45fe69854d37980b7373369"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -159,7 +159,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>destroy_complex_request</em>&#160;</td>
+          <td class="paramname"><em>destroy_request</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -184,7 +184,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1ChildPortHandshake.html#a0e4c3eb95194c8f942fff40838dbff3a">crashpad::ChildPortHandshake</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1ChildPortHandshake.html#a756cb29fcc496c457c1df79a6c188849">crashpad::ChildPortHandshake</a>.</p>
 
 </div>
 </div>

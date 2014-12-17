@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>Crashpad: crashpad::MachMessageServer::Interface Class Reference</title>
+<title>Crashpad: crashpad::NotifyServer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,52 +83,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacecrashpad.html">crashpad</a></li><li class="navelem"><a class="el" href="classcrashpad_1_1MachMessageServer.html">MachMessageServer</a></li><li class="navelem"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html">Interface</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacecrashpad.html">crashpad</a></li><li class="navelem"><a class="el" href="classcrashpad_1_1NotifyServer.html">NotifyServer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classcrashpad_1_1MachMessageServer_1_1Interface-members.html">List of all members</a>  </div>
+<a href="classcrashpad_1_1NotifyServer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">crashpad::MachMessageServer::Interface Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">crashpad::NotifyServer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>A Mach RPC callback interface, called by <a class="el" href="classcrashpad_1_1MachMessageServer.html#ace981f2e495984f119aa074f7d33bff6" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">Run()</a>.  
- <a href="classcrashpad_1_1MachMessageServer_1_1Interface.html#details">More...</a></p>
+<p>A server interface for the <code>notify</code> Mach subsystem.  
+ <a href="classcrashpad_1_1NotifyServer.html#details">More...</a></p>
 
-<p><code>#include &quot;util/mach/mach_message_server.h&quot;</code></p>
+<p><code>#include &quot;util/mach/notify_server.h&quot;</code></p>
 <div class="dynheader">
-Inheritance diagram for crashpad::MachMessageServer::Interface:</div>
+Inheritance diagram for crashpad::NotifyServer:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classcrashpad_1_1MachMessageServer_1_1Interface.png" usemap="#crashpad::MachMessageServer::Interface_map" alt=""/>
-  <map id="crashpad::MachMessageServer::Interface_map" name="crashpad::MachMessageServer::Interface_map">
-<area href="classcrashpad_1_1ChildPortServer.html" title="A server interface for the child_port Mach subsystem. " alt="crashpad::ChildPortServer" shape="rect" coords="0,56,286,80"/>
-<area href="classcrashpad_1_1CompositeMachMessageServer.html" title="Adapts multiple MachMessageServer::Interface implementations for simultaneous use in a single MachMes..." alt="crashpad::CompositeMachMessageServer" shape="rect" coords="296,56,582,80"/>
-<area href="classcrashpad_1_1NotifyServer.html" title="A server interface for the notify Mach subsystem. " alt="crashpad::NotifyServer" shape="rect" coords="592,56,878,80"/>
-<area href="classcrashpad_1_1UniversalMachExcServer.html" title="A server interface for the exc and mach_exc Mach subsystems, unified to handle exceptions delivered t..." alt="crashpad::UniversalMachExcServer" shape="rect" coords="888,56,1174,80"/>
-<area href="classcrashpad_1_1internal_1_1UniversalMachExcServerImpl.html" alt="crashpad::internal::UniversalMachExcServerImpl" shape="rect" coords="296,112,582,136"/>
+  <img src="classcrashpad_1_1NotifyServer.png" usemap="#crashpad::NotifyServer_map" alt=""/>
+  <map id="crashpad::NotifyServer_map" name="crashpad::NotifyServer_map">
+<area href="classcrashpad_1_1MachMessageServer_1_1Interface.html" title="A Mach RPC callback interface, called by Run(). " alt="crashpad::MachMessageServer::Interface" shape="rect" coords="0,0,249,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1NotifyServer_1_1Interface.html">Interface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface that the different request messages that are a part of the <code>notify</code> Mach subsystem can be dispatched to.  <a href="classcrashpad_1_1NotifyServer_1_1Interface.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad1632cba188c113600abc94d1b45efe6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6">MachMessageServerFunction</a> (const mach_msg_header_t *in, mach_msg_header_t *out, bool *destroy_complex_request)=0</td></tr>
-<tr class="memdesc:ad1632cba188c113600abc94d1b45efe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#ad1632cba188c113600abc94d1b45efe6">More...</a><br /></td></tr>
-<tr class="separator:ad1632cba188c113600abc94d1b45efe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0a4b1e3b83c7226604837b32ef6428e"><td class="memItemLeft" align="right" valign="top">virtual std::set&lt; mach_msg_id_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#af0a4b1e3b83c7226604837b32ef6428e">MachMessageServerRequestIDs</a> ()=0</td></tr>
-<tr class="separator:af0a4b1e3b83c7226604837b32ef6428e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a319dd9279e87b4407cee3c8feca405ab"><td class="memItemLeft" align="right" valign="top">virtual mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#a319dd9279e87b4407cee3c8feca405ab">MachMessageServerRequestSize</a> ()=0</td></tr>
-<tr class="separator:a319dd9279e87b4407cee3c8feca405ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4e6169aeb91074d573e77b9a47266c5"><td class="memItemLeft" align="right" valign="top">virtual mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5">MachMessageServerReplySize</a> ()=0</td></tr>
-<tr class="separator:ad4e6169aeb91074d573e77b9a47266c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c2780f12f549e8b7d6c4b9177bca40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1NotifyServer.html#aa0c2780f12f549e8b7d6c4b9177bca40">NotifyServer</a> (<a class="el" href="classcrashpad_1_1NotifyServer_1_1Interface.html">Interface</a> *interface)</td></tr>
+<tr class="memdesc:aa0c2780f12f549e8b7d6c4b9177bca40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an object of this class.  <a href="#aa0c2780f12f549e8b7d6c4b9177bca40">More...</a><br /></td></tr>
+<tr class="separator:aa0c2780f12f549e8b7d6c4b9177bca40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96630849312a63d91f0d94a5618803a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1NotifyServer.html#a96630849312a63d91f0d94a5618803a3">MachMessageServerFunction</a> (const mach_msg_header_t *in_header, mach_msg_header_t *out_header, bool *destroy_complex_request) override</td></tr>
+<tr class="memdesc:a96630849312a63d91f0d94a5618803a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles a Mach RPC request.  <a href="#a96630849312a63d91f0d94a5618803a3">More...</a><br /></td></tr>
+<tr class="separator:a96630849312a63d91f0d94a5618803a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedce681312094a8ed81f5275d2f70070"><td class="memItemLeft" align="right" valign="top">std::set&lt; mach_msg_id_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1NotifyServer.html#aedce681312094a8ed81f5275d2f70070">MachMessageServerRequestIDs</a> () override</td></tr>
+<tr class="separator:aedce681312094a8ed81f5275d2f70070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a08edc6b102a6c36cad7f5f38290540"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1NotifyServer.html#a4a08edc6b102a6c36cad7f5f38290540">MachMessageServerRequestSize</a> () override</td></tr>
+<tr class="separator:a4a08edc6b102a6c36cad7f5f38290540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af824bc4888e15ed26769d0ff8571fc38"><td class="memItemLeft" align="right" valign="top">mach_msg_size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1NotifyServer.html#af824bc4888e15ed26769d0ff8571fc38">MachMessageServerReplySize</a> () override</td></tr>
+<tr class="separator:af824bc4888e15ed26769d0ff8571fc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A Mach RPC callback interface, called by <a class="el" href="classcrashpad_1_1MachMessageServer.html#ace981f2e495984f119aa074f7d33bff6" title="Runs a Mach message server to handle a Mach RPC request for MIG servers. ">Run()</a>. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ad1632cba188c113600abc94d1b45efe6"></a>
+<div class="textblock"><p>A server interface for the <code>notify</code> Mach subsystem. </p>
+<p>The <a href="https://lists.apple.com/archives/darwin-development/2001/Sep/msg00451.html">mach port notifications</a> thread on the <a href="https://lists.apple.com/archives/darwin-development/">darwin-development</a> mailing list (now known as <a href="https://lists.apple.com/mailman/listinfo/darwin-dev">darwin-dev</a>) is good background for the various notification types. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa0c2780f12f549e8b7d6c4b9177bca40"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -136,7 +143,40 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool crashpad::MachMessageServer::Interface::MachMessageServerFunction </td>
+          <td class="memname">crashpad::NotifyServer::NotifyServer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcrashpad_1_1NotifyServer_1_1Interface.html">NotifyServer::Interface</a> *&#160;</td>
+          <td class="paramname"><em>interface</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an object of this class. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">interface</td><td>The interface to dispatch requests to. Weak. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a96630849312a63d91f0d94a5618803a3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::NotifyServer::MachMessageServerFunction </td>
           <td>(</td>
           <td class="paramtype">const mach_msg_header_t *&#160;</td>
           <td class="paramname"><em>in</em>, </td>
@@ -161,7 +201,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -178,11 +218,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success and <code>false</code> on failure, although the caller ignores the return value. However, the return code to be included in the reply message should be set as <code>mig_reply_error_t::RetCode</code>. The non-<code>void</code> return value is used for increased compatibility with MIG-generated functions. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1NotifyServer.html#a96630849312a63d91f0d94a5618803a3">crashpad::NotifyServer</a>, <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a113ce518d5412e2cf352eb7f857fa9fb">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1CompositeMachMessageServer.html#afe10dd1d12e4cbfe57e040b6939d7f15">crashpad::CompositeMachMessageServer</a>, and <a class="el" href="classcrashpad_1_1ChildPortServer.html#a2674dc86acce27d76f5725148ebeddd7">crashpad::ChildPortServer</a>.</p>
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad4e6169aeb91074d573e77b9a47266c5"></a>
+<a class="anchor" id="af824bc4888e15ed26769d0ff8571fc38"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -190,7 +230,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual mach_msg_size_t crashpad::MachMessageServer::Interface::MachMessageServerReplySize </td>
+          <td class="memname">mach_msg_size_t crashpad::NotifyServer::MachMessageServerReplySize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -198,17 +238,17 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The maximum size, in bytes, of a reply message to be sent via the <em>out</em> parameter of <a class="el" href="classcrashpad_1_1NotifyServer.html#a96630849312a63d91f0d94a5618803a3" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. This value does not need to include the size of any trailer to be sent with the message. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1NotifyServer.html#af824bc4888e15ed26769d0ff8571fc38">crashpad::NotifyServer</a>, <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#a1eeb93504e604f53fc5c9cf1c66d838c">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1CompositeMachMessageServer.html#a0d96bb825abf09c76e75ebe9262581fc">crashpad::CompositeMachMessageServer</a>, and <a class="el" href="classcrashpad_1_1ChildPortServer.html#ae0086fca5ea9a836565f981f92448094">crashpad::ChildPortServer</a>.</p>
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad4e6169aeb91074d573e77b9a47266c5">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af0a4b1e3b83c7226604837b32ef6428e"></a>
+<a class="anchor" id="aedce681312094a8ed81f5275d2f70070"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -216,7 +256,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::set&lt;mach_msg_id_t&gt; crashpad::MachMessageServer::Interface::MachMessageServerRequestIDs </td>
+          <td class="memname">std::set&lt; mach_msg_id_t &gt; crashpad::NotifyServer::MachMessageServerRequestIDs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -224,17 +264,17 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The set of request message Mach message IDs that <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a> is able to handle. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The set of request message Mach message IDs that <a class="el" href="classcrashpad_1_1NotifyServer.html#a96630849312a63d91f0d94a5618803a3" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a> is able to handle. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1NotifyServer.html#aedce681312094a8ed81f5275d2f70070">crashpad::NotifyServer</a>, <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ab9f192938859fb4b0fa637bf34ab0a1c">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1CompositeMachMessageServer.html#ac0782632280317be75ff7064b7854579">crashpad::CompositeMachMessageServer</a>, and <a class="el" href="classcrashpad_1_1ChildPortServer.html#a3846e6e964464e734944c002c8848c2e">crashpad::ChildPortServer</a>.</p>
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#af0a4b1e3b83c7226604837b32ef6428e">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a319dd9279e87b4407cee3c8feca405ab"></a>
+<a class="anchor" id="a4a08edc6b102a6c36cad7f5f38290540"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -242,7 +282,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual mach_msg_size_t crashpad::MachMessageServer::Interface::MachMessageServerRequestSize </td>
+          <td class="memname">mach_msg_size_t crashpad::NotifyServer::MachMessageServerRequestSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -250,18 +290,19 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>The expected or maximum size, in bytes, of a request message to be received as the <em>in</em> parameter of <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#ad1632cba188c113600abc94d1b45efe6" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The expected or maximum size, in bytes, of a request message to be received as the <em>in</em> parameter of <a class="el" href="classcrashpad_1_1NotifyServer.html#a96630849312a63d91f0d94a5618803a3" title="Handles a Mach RPC request. ">MachMessageServerFunction()</a>. </dd></dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1NotifyServer.html#a4a08edc6b102a6c36cad7f5f38290540">crashpad::NotifyServer</a>, <a class="el" href="classcrashpad_1_1UniversalMachExcServer.html#ae700d18241f2eb3c7d755ad8c909ecec">crashpad::UniversalMachExcServer</a>, <a class="el" href="classcrashpad_1_1CompositeMachMessageServer.html#ad45773f4a12149f52e42787c6a102dd4">crashpad::CompositeMachMessageServer</a>, and <a class="el" href="classcrashpad_1_1ChildPortServer.html#aeda618e34b96c5d044d41d301fa72fad">crashpad::ChildPortServer</a>.</p>
+<p>Implements <a class="el" href="classcrashpad_1_1MachMessageServer_1_1Interface.html#a319dd9279e87b4407cee3c8feca405ab">crashpad::MachMessageServer::Interface</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>util/mach/mach_message_server.h</li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>util/mach/notify_server.h</li>
+<li>util/mach/notify_server.cc</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

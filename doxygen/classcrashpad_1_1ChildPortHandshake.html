@@ -122,9 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afd67dca5fc51170a919501fdbcf0fd32"><td class="memItemLeft" align="right" valign="top">mach_port_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortHandshake.html#afd67dca5fc51170a919501fdbcf0fd32">RunServer</a> ()</td></tr>
 <tr class="memdesc:afd67dca5fc51170a919501fdbcf0fd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the server.  <a href="#afd67dca5fc51170a919501fdbcf0fd32">More...</a><br /></td></tr>
 <tr class="separator:afd67dca5fc51170a919501fdbcf0fd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e4c3eb95194c8f942fff40838dbff3a"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortHandshake.html#a0e4c3eb95194c8f942fff40838dbff3a">HandleChildPortCheckIn</a> (child_port_server_t server, child_port_token_t token, mach_port_t port, mach_msg_type_name_t right_type, const mach_msg_trailer_t *trailer, bool *destroy_complex_request) override</td></tr>
-<tr class="memdesc:a0e4c3eb95194c8f942fff40838dbff3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles check-ins sent by <code>child_port_check_in()</code>.  <a href="#a0e4c3eb95194c8f942fff40838dbff3a">More...</a><br /></td></tr>
-<tr class="separator:a0e4c3eb95194c8f942fff40838dbff3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a756cb29fcc496c457c1df79a6c188849"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ChildPortHandshake.html#a756cb29fcc496c457c1df79a6c188849">HandleChildPortCheckIn</a> (child_port_server_t server, child_port_token_t token, mach_port_t port, mach_msg_type_name_t right_type, const mach_msg_trailer_t *trailer, bool *destroy_request) override</td></tr>
+<tr class="memdesc:a756cb29fcc496c457c1df79a6c188849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles check-ins sent by <code>child_port_check_in()</code>.  <a href="#a756cb29fcc496c457c1df79a6c188849">More...</a><br /></td></tr>
+<tr class="separator:a756cb29fcc496c457c1df79a6c188849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -165,7 +165,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>test::ChildPortHands
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0e4c3eb95194c8f942fff40838dbff3a"></a>
+<a class="anchor" id="a756cb29fcc496c457c1df79a6c188849"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -206,7 +206,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>test::ChildPortHands
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool *&#160;</td>
-          <td class="paramname"><em>destroy_complex_request</em>&#160;</td>
+          <td class="paramname"><em>destroy_request</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -231,7 +231,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>test::ChildPortHands
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classcrashpad_1_1ChildPortServer_1_1Interface.html#abdcf1a52578c2c848846cdd1c6d798a9">crashpad::ChildPortServer::Interface</a>.</p>
+<p>Implements <a class="el" href="classcrashpad_1_1ChildPortServer_1_1Interface.html#a5ecd466de45fe69854d37980b7373369">crashpad::ChildPortServer::Interface</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>test::ChildPortHands
 <li>Creates a random token and sends it via the pipe.</li>
 <li>Checks its service in with the bootstrap server, and sends the name of its bootstrap service mapping via the pipe.</li>
 <li>Simultaneously receives messages on its Mach server and monitors the pipe for end-of-file. This is a blocking operation.</li>
-<li>When a Mach message is received, calls <a class="el" href="classcrashpad_1_1ChildPortHandshake.html#a0e4c3eb95194c8f942fff40838dbff3a" title="Handles check-ins sent by child_port_check_in(). ">HandleChildPortCheckIn()</a> to interpret and validate it, and if the message is valid, returns the port right extracted from the message. If the message is not valid, this method will continue waiting for a valid message. Valid messages are properly formatted and have the correct token. If a valid message carries a send or send-once right, it will be returned. If a valid message contains a receive right, it will be destroyed and <code>MACH_PORT_NULL</code> will be returned. If a message is not valid, this method will continue waiting for pipe EOF or a valid message.</li>
+<li>When a Mach message is received, calls <a class="el" href="classcrashpad_1_1ChildPortHandshake.html#a756cb29fcc496c457c1df79a6c188849" title="Handles check-ins sent by child_port_check_in(). ">HandleChildPortCheckIn()</a> to interpret and validate it, and if the message is valid, returns the port right extracted from the message. If the message is not valid, this method will continue waiting for a valid message. Valid messages are properly formatted and have the correct token. If a valid message carries a send or send-once right, it will be returned. If a valid message contains a receive right, it will be destroyed and <code>MACH_PORT_NULL</code> will be returned. If a message is not valid, this method will continue waiting for pipe EOF or a valid message.</li>
 <li>When notified of pipe EOF, returns <code>MACH_PORT_NULL</code>.</li>
 <li>Regardless of return value, destroys the server’s receive right and closes the pipe.</li>
 </ul>
