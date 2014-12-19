@@ -1,6 +1,7 @@
 var searchData=
 [
   ['name',['name',['../structcrashpad_1_1ProcessReader_1_1Module.html#af3802ec0731bda1cf066b050b23debf7',1,'crashpad::ProcessReader::Module::name()'],['../classcrashpad_1_1MachOImageSegmentReader.html#a91a34630f9a16d273ff4b1db1da5ceb6',1,'crashpad::MachOImageSegmentReader::Name()'],['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html#a445022c35e9f2d196c24172208b0dab6',1,'crashpad::internal::ModuleSnapshotMac::Name()'],['../classcrashpad_1_1ModuleSnapshot.html#aa0ab6a719fbb6f63d73e05086fe4a314',1,'crashpad::ModuleSnapshot::Name()'],['../classcrashpad_1_1test_1_1TestModuleSnapshot.html#a4af9e8247af0fb77827293ebd29a16bc',1,'crashpad::test::TestModuleSnapshot::Name()']]],
+  ['newmachport',['NewMachPort',['../namespacecrashpad.html#a9c9bc6ad9973f794c425707617b63278',1,'crashpad']]],
   ['next',['Next',['../classcrashpad_1_1TSimpleStringDictionary_1_1Iterator.html#afbc84491b65539ff4d250f9d7122a4c4',1,'crashpad::TSimpleStringDictionary::Iterator']]],
   ['notifyserver',['NotifyServer',['../classcrashpad_1_1NotifyServer.html',1,'crashpad']]],
   ['notifyserver',['NotifyServer',['../classcrashpad_1_1NotifyServer.html#aa0c2780f12f549e8b7d6c4b9177bca40',1,'crashpad::NotifyServer']]],

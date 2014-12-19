@@ -105,7 +105,7 @@ Inheritance diagram for crashpad::StringFileWriter:</div>
  <div class="center">
   <img src="classcrashpad_1_1StringFileWriter.png" usemap="#crashpad::StringFileWriter_map" alt=""/>
   <map id="crashpad::StringFileWriter_map" name="crashpad::StringFileWriter_map">
-<area href="classcrashpad_1_1FileWriterInterface.html" title="An interface to write to files and other file-like objects with POSIX semantics. " alt="crashpad::FileWriterInterface" shape="rect" coords="0,0,176,24"/>
+<area href="classcrashpad_1_1FileWriterInterface.html" title="An interface to write to files and other file-like objects with semantics matching the underlying pla..." alt="crashpad::FileWriterInterface" shape="rect" coords="0,0,176,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -120,20 +120,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a52846d4b864ef90d65ff24bb1a1cfecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the virtual file’s contents to be empty, and resets its file position to <code>0</code>. <br /></td></tr>
 <tr class="separator:a52846d4b864ef90d65ff24bb1a1cfecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b03562721c560c3270ac229766b7639"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1StringFileWriter.html#a5b03562721c560c3270ac229766b7639">Write</a> (const void *data, size_t size) override</td></tr>
-<tr class="memdesc:a5b03562721c560c3270ac229766b7639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>write()</code> or provides an alternate implementation with identical semantics. This method will write the entire buffer, continuing after a short write or after being interrupted.  <a href="#a5b03562721c560c3270ac229766b7639">More...</a><br /></td></tr>
+<tr class="memdesc:a5b03562721c560c3270ac229766b7639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="namespacecrashpad.html#a58d321f56b7052dfa4eafeb66e329611" title="Writes to a file, retrying when interrupted or following a short write on POSIX. ">WriteFile()</a>, or provides an implementation with identical semantics.  <a href="#a5b03562721c560c3270ac229766b7639">More...</a><br /></td></tr>
 <tr class="separator:a5b03562721c560c3270ac229766b7639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3789bba6bfa78680c1d70886c51734ae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1StringFileWriter.html#a3789bba6bfa78680c1d70886c51734ae">WriteIoVec</a> (std::vector&lt; <a class="el" href="structcrashpad_1_1WritableIoVec.html">WritableIoVec</a> &gt; *iovecs) override</td></tr>
-<tr class="memdesc:a3789bba6bfa78680c1d70886c51734ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>writev()</code> or provides an alternate implementation with identical semantics. This method will write the entire buffer, continuing after a short write or after being interrupted.  <a href="#a3789bba6bfa78680c1d70886c51734ae">More...</a><br /></td></tr>
+<tr class="memdesc:a3789bba6bfa78680c1d70886c51734ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>writev()</code> on POSIX or provides an alternate implementation with identical semantics. This method will write entire buffers, continuing after a short write or after being interrupted. On non-POSIX this is a simple wrapper around <a class="el" href="classcrashpad_1_1StringFileWriter.html#a5b03562721c560c3270ac229766b7639" title="Wraps WriteFile(), or provides an implementation with identical semantics. ">Write()</a>.  <a href="#a3789bba6bfa78680c1d70886c51734ae">More...</a><br /></td></tr>
 <tr class="separator:a3789bba6bfa78680c1d70886c51734ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4772b735b5df75d6a6d32b656cdd8b0f"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1StringFileWriter.html#a4772b735b5df75d6a6d32b656cdd8b0f">Seek</a> (off_t offset, int whence) override</td></tr>
-<tr class="memdesc:a4772b735b5df75d6a6d32b656cdd8b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>lseek()</code> or provides an alternate implementation with identical semantics.  <a href="#a4772b735b5df75d6a6d32b656cdd8b0f">More...</a><br /></td></tr>
-<tr class="separator:a4772b735b5df75d6a6d32b656cdd8b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7165da6174f80f7c8d2857d9012fc525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2">FileOffset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1StringFileWriter.html#a7165da6174f80f7c8d2857d9012fc525">Seek</a> (<a class="el" href="namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2">FileOffset</a> offset, int whence) override</td></tr>
+<tr class="memdesc:a7165da6174f80f7c8d2857d9012fc525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps LoggingFileSeek() or provides an alternate implementation with identical semantics.  <a href="#a7165da6174f80f7c8d2857d9012fc525">More...</a><br /></td></tr>
+<tr class="separator:a7165da6174f80f7c8d2857d9012fc525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A file writer backed by a virtual file, as opposed to a file on disk or other operating system file descriptor-based file. </p>
 <p>The virtual file is a buffer in memory. This class is convenient for use with other code that normally expects to write files, when it is impractical or inconvenient to write a file. It is expected that tests, in particular, will benefit from using this class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4772b735b5df75d6a6d32b656cdd8b0f"></a>
+<a class="anchor" id="a7165da6174f80f7c8d2857d9012fc525"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -141,9 +141,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">off_t crashpad::StringFileWriter::Seek </td>
+          <td class="memname"><a class="el" href="namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2">FileOffset</a> crashpad::StringFileWriter::Seek </td>
           <td>(</td>
-          <td class="paramtype">off_t&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2">FileOffset</a>&#160;</td>
           <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
@@ -165,10 +165,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 
-<p>Wraps <code>lseek()</code> or provides an alternate implementation with identical semantics. </p>
-<dl class="section return"><dt>Returns</dt><dd>The return value of <code>lseek()</code>. <code>-1</code> on failure, with an error message logged. </dd></dl>
+<p>Wraps LoggingFileSeek() or provides an alternate implementation with identical semantics. </p>
+<dl class="section return"><dt>Returns</dt><dd>The return value of LoggingFileSeek(). <code>-1</code> on failure, with an error message logged. </dd></dl>
 
-<p>Implements <a class="el" href="classcrashpad_1_1FileWriterInterface.html#a16e675d536c3622be62591492b51fac8">crashpad::FileWriterInterface</a>.</p>
+<p>Implements <a class="el" href="classcrashpad_1_1FileWriterInterface.html#a91a1415f2653c54911b8d2955193cfd2">crashpad::FileWriterInterface</a>.</p>
 
 </div>
 </div>
@@ -204,7 +204,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 
-<p>Wraps <code>write()</code> or provides an alternate implementation with identical semantics. This method will write the entire buffer, continuing after a short write or after being interrupted. </p>
+<p>Wraps <a class="el" href="namespacecrashpad.html#a58d321f56b7052dfa4eafeb66e329611" title="Writes to a file, retrying when interrupted or following a short write on POSIX. ">WriteFile()</a>, or provides an implementation with identical semantics. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the operation succeeded, <code>false</code> if it failed, with an error message logged. </dd></dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1FileWriterInterface.html#a34e3a6edac09771c7746901b77acc5b1">crashpad::FileWriterInterface</a>.</p>
@@ -233,7 +233,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 
-<p>Wraps <code>writev()</code> or provides an alternate implementation with identical semantics. This method will write the entire buffer, continuing after a short write or after being interrupted. </p>
+<p>Wraps <code>writev()</code> on POSIX or provides an alternate implementation with identical semantics. This method will write entire buffers, continuing after a short write or after being interrupted. On non-POSIX this is a simple wrapper around <a class="el" href="classcrashpad_1_1StringFileWriter.html#a5b03562721c560c3270ac229766b7639" title="Wraps WriteFile(), or provides an implementation with identical semantics. ">Write()</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the operation succeeded, <code>false</code> if it failed, with an error message logged.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>The contents of <em>iovecs</em> are undefined when this method returns. </dd></dl>
 

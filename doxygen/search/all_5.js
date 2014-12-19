@@ -1,11 +1,15 @@
 var searchData=
 [
   ['featureinformation',['FeatureInformation',['../unionCPU__INFORMATION.html#a044a13c077ea0b3834dd33e4a48027cc',1,'CPU_INFORMATION']]],
+  ['filehandle',['FileHandle',['../namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a',1,'crashpad']]],
   ['filehttpbodystream',['FileHTTPBodyStream',['../classcrashpad_1_1FileHTTPBodyStream.html',1,'crashpad']]],
   ['filehttpbodystream',['FileHTTPBodyStream',['../classcrashpad_1_1FileHTTPBodyStream.html#acd103e1d8dd909c4487f55ddc41297f1',1,'crashpad::FileHTTPBodyStream']]],
   ['fileoff',['fileoff',['../classcrashpad_1_1MachOImageSegmentReader.html#ac4a7d2fda6f9dec11ba50e7a68325539',1,'crashpad::MachOImageSegmentReader']]],
+  ['fileoffset',['FileOffset',['../namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2',1,'crashpad']]],
+  ['filepermissions',['FilePermissions',['../namespacecrashpad.html#a034ccc90eb0d1f587ee89275d822175d',1,'crashpad']]],
   ['filetype',['FileType',['../classcrashpad_1_1MachOImageReader.html#ad736a3c7949921796231f8cf6f02f93b',1,'crashpad::MachOImageReader']]],
   ['fileversion',['FileVersion',['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html#ab124235bd262034c5ec432f663ee7967',1,'crashpad::internal::ModuleSnapshotMac::FileVersion()'],['../classcrashpad_1_1ModuleSnapshot.html#a6b3f4831720290e2ab5460ef21ff7443',1,'crashpad::ModuleSnapshot::FileVersion()'],['../classcrashpad_1_1test_1_1TestModuleSnapshot.html#ae82618e4945d0fa2f5e735578be3aa55',1,'crashpad::test::TestModuleSnapshot::FileVersion()']]],
+  ['filewritemode',['FileWriteMode',['../namespacecrashpad.html#afa69b0967d9a6df659ff5d2a02ff3e51',1,'crashpad']]],
   ['filewriter',['FileWriter',['../classcrashpad_1_1FileWriter.html',1,'crashpad']]],
   ['filewriterinterface',['FileWriterInterface',['../classcrashpad_1_1FileWriterInterface.html',1,'crashpad']]],
   ['flags',['Flags',['../structMINIDUMP__HEADER.html#a052f2280538826d030c4cb5154963e27',1,'MINIDUMP_HEADER']]],
