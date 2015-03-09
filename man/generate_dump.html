@@ -7,10 +7,11 @@ running.</p><p>The minidump file will contain information about the process, its
 modules, and the system. It will not contain any exception information because
 it will be generated from a live running process, not as a result of an
 exception occurring.</p><p>This program uses <code class="literal">task_for_pid()</code> to access the process’ task port. This
-operation may be restricted to use by the superuser or processes permitted by
-taskgated(8). Consequently, this program must normally be invoked by root. It is
-possible to install this program as a setuid root executable to overcome this
-limitation.</p><p>This program is similar to the gcore(1) program available on some operating
+operation may be restricted to use by the superuser, executables signed by an
+authority trusted by the system, and processes otherwise permitted by
+taskgated(8). Consequently, this program must normally either be signed or be
+invoked by root. It is possible to install this program as a setuid root
+executable to overcome this limitation.</p><p>This program is similar to the gcore(1) program available on some operating
 systems.</p></div><div class="refsect1"><a id="_options"></a><h2>Options</h2><div class="variablelist"><dl class="variablelist"><dt><span class="term">
 <span class="strong"><strong>-r</strong></span>, <span class="strong"><strong>--no-suspend</strong></span>
 </span></dt><dd><p class="simpara">

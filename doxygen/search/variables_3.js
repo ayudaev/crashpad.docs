@@ -7,7 +7,6 @@ var searchData=
   ['daylightdate',['DaylightDate',['../structTIME__ZONE__INFORMATION.html#aa8615f1d1c4d13e8b2b46ec0ae205624',1,'TIME_ZONE_INFORMATION']]],
   ['daylightname',['DaylightName',['../structTIME__ZONE__INFORMATION.html#a02d029c6e3f27d196f7c5e7eef84a357',1,'TIME_ZONE_INFORMATION']]],
   ['dbgbldstr',['DbgBldStr',['../structMINIDUMP__MISC__INFO__4.html#a75b120e8a596ddc38c414a317da33132',1,'MINIDUMP_MISC_INFO_4']]],
-  ['debug_5fcontrol',['debug_control',['../structcrashpad_1_1MinidumpContextAMD64.html#a65f302dd9d5ad77f4fca9cb0b176ac91',1,'crashpad::MinidumpContextAMD64']]],
   ['dwfiledatels',['dwFileDateLS',['../structVS__FIXEDFILEINFO.html#a9941cc13c4ebf36c267765bd62c16cd3',1,'VS_FIXEDFILEINFO']]],
   ['dwfiledatems',['dwFileDateMS',['../structVS__FIXEDFILEINFO.html#ab7d5db03c9f65acf75b2681a391ee341',1,'VS_FIXEDFILEINFO']]],
   ['dwfileflags',['dwFileFlags',['../structVS__FIXEDFILEINFO.html#a1ecf0351f90806354f987321c4d1ce0e',1,'VS_FIXEDFILEINFO']]],

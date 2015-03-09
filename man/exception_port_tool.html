@@ -67,10 +67,11 @@ to <span class="strong"><strong>task</strong></span>, <span class="strong"><stro
 with process id <span class="emphasis"><em>PID</em></span> instead of the current task associated with the tool. When
 this option is supplied, <span class="emphasis"><em>COMMAND</em></span> must not be specified.
 </p><p class="simpara">This option uses <code class="literal">task_for_pid()</code> to access the process’ task port. This
-operation may be restricted to use by the superuser or processes permitted by
-taskgated(8). Consequently, this program must normally be invoked by root to use
-this option. It is possible to install this program as a setuid root executable
-to overcome this limitation.</p></dd><dt><span class="term">
+operation may be restricted to use by the superuser, executables signed by an
+authority trusted by the system, and processes otherwise permitted by
+taskgated(8). Consequently, this program must normally either be signed or be
+invoked by root to use this option. It is possible to install this program as a
+setuid root executable to overcome this limitation.</p></dd><dt><span class="term">
 <span class="strong"><strong>-h</strong></span>, <span class="strong"><strong>--show-host</strong></span>
 </span></dt><dd>
 Shows the original host exception ports before making any changes requested by

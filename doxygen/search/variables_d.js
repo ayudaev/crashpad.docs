@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['p1_5fhome',['p1_home',['../structcrashpad_1_1MinidumpContextAMD64.html#a271872f6ec607dd3a8d97a9bfcefbe13',1,'crashpad::MinidumpContextAMD64']]],
-  ['p2_5fhome',['p2_home',['../structcrashpad_1_1MinidumpContextAMD64.html#aa548961f860ebd3d074d72dfcf237cd6',1,'crashpad::MinidumpContextAMD64']]],
-  ['p3_5fhome',['p3_home',['../structcrashpad_1_1MinidumpContextAMD64.html#ad3d714fb27531dc884be11e6f58404cd',1,'crashpad::MinidumpContextAMD64']]],
-  ['p4_5fhome',['p4_home',['../structcrashpad_1_1MinidumpContextAMD64.html#a99325e3ed2c5dde13cb746e4464a6d67',1,'crashpad::MinidumpContextAMD64']]],
-  ['p5_5fhome',['p5_home',['../structcrashpad_1_1MinidumpContextAMD64.html#a885ad96bcc6d7506490062255132bb14',1,'crashpad::MinidumpContextAMD64']]],
-  ['p6_5fhome',['p6_home',['../structcrashpad_1_1MinidumpContextAMD64.html#ae6afc90e3d597f7db2f24b5a613e2490',1,'crashpad::MinidumpContextAMD64']]],
+  ['path',['path',['../structcrashpad_1_1CrashReportDatabase_1_1NewReport.html#aef12e5af9f053a8f75bc3fc81c178189',1,'crashpad::CrashReportDatabase::NewReport']]],
   ['pdb_5fname',['pdb_name',['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB20.html#a12f15e85410d19a6fcbe1beedbb3156b',1,'crashpad::MinidumpModuleCodeViewRecordPDB20::pdb_name()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a7d46faf35e79580fbd16c3d5822c9330',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::pdb_name()']]],
   ['platformid',['PlatformId',['../structMINIDUMP__SYSTEM__INFO.html#a214e7bd61a89343a80a3c9a265fbbe96',1,'MINIDUMP_SYSTEM_INFO']]],
   ['port',['port',['../structcrashpad_1_1ExceptionPorts_1_1ExceptionHandler.html#a49e5ff609eb445e649fed720978c56d0',1,'crashpad::ExceptionPorts::ExceptionHandler']]],

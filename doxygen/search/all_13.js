@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['value',['value',['../structcrashpad_1_1TSimpleStringDictionary_1_1Entry.html#af7fa75c478ce69d42354a046327fe658',1,'crashpad::TSimpleStringDictionary::Entry::value()'],['../structcrashpad_1_1MinidumpSimpleStringDictionaryEntry.html#a90c3c20c4ae9af6db225682427c1f314',1,'crashpad::MinidumpSimpleStringDictionaryEntry::value()'],['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html#a91405f79a8b62e3fb3de4e8c66fee952',1,'crashpad::MachOImageSymbolTableReader::SymbolInformation::value()']]],
-  ['value_5fsize',['value_size',['../classcrashpad_1_1TSimpleStringDictionary.html#a1176a981ba33d55f9b0a5f22e7fe4171',1,'crashpad::TSimpleStringDictionary']]],
-  ['vector',['Vector',['../classcrashpad_1_1MachOImageAnnotationsReader.html#a937a51a14181f6496b8d4bda2e828761',1,'crashpad::MachOImageAnnotationsReader']]],
-  ['vendorid',['VendorId',['../unionCPU__INFORMATION.html#af239b99d9ef6b86fb04ffeabd85831c6',1,'CPU_INFORMATION']]],
-  ['verifyminidumpheader',['VerifyMinidumpHeader',['../namespacecrashpad_1_1test.html#a5e604ee6a23070a89e2a0015eb2854a9',1,'crashpad::test']]],
-  ['verrsrc_2eh',['verrsrc.h',['../verrsrc_8h.html',1,'']]],
-  ['version',['Version',['../structMINIDUMP__HEADER.html#a7ea8d51f5ca990eec9eb0b3643c6b406',1,'MINIDUMP_HEADER::Version()'],['../classcrashpad_1_1ToolSupport.html#ab9d46f634c4fdd9b23a572e7db69661c',1,'crashpad::ToolSupport::Version()'],['../structcrashpad_1_1MinidumpModuleCrashpadInfo.html#ace07d8872cdaa53ca20a04513deb56c3',1,'crashpad::MinidumpModuleCrashpadInfo::version()'],['../structcrashpad_1_1MinidumpCrashpadInfo.html#a481042efad46164dc43d9c824df9e6cf',1,'crashpad::MinidumpCrashpadInfo::version()']]],
-  ['versioninfo',['VersionInfo',['../structMINIDUMP__MODULE.html#ac2babe58e6418124599ea2821f30bb84',1,'MINIDUMP_MODULE']]],
-  ['versioninformation',['VersionInformation',['../unionCPU__INFORMATION.html#a6b072a6cae2e065111ef20acf21e355a',1,'CPU_INFORMATION']]],
-  ['vmaddr',['vmaddr',['../classcrashpad_1_1MachOImageSegmentReader.html#aa8f6959eb785b54ee34911011c52a5c2',1,'crashpad::MachOImageSegmentReader']]],
-  ['vmsize',['vmsize',['../classcrashpad_1_1MachOImageSegmentReader.html#a987726b50e845b6a8b9b9260775df171',1,'crashpad::MachOImageSegmentReader']]],
-  ['vs_5fffi_5fsignature',['VS_FFI_SIGNATURE',['../verrsrc_8h.html#a323849bf0740c974e68b19ae551e1a18',1,'verrsrc.h']]],
-  ['vs_5fffi_5fstrucversion',['VS_FFI_STRUCVERSION',['../verrsrc_8h.html#a5d5a4b05d359ca879b652292498d49b9',1,'verrsrc.h']]],
-  ['vs_5ffixedfileinfo',['VS_FIXEDFILEINFO',['../structVS__FIXEDFILEINFO.html',1,'']]]
+  ['uint128_5fstruct',['uint128_struct',['../structcrashpad_1_1uint128__struct.html',1,'crashpad']]],
+  ['unicode',['Unicode',['../structIMAGE__DEBUG__MISC.html#ad570f3c73a4ea54c2620dd33a0d39cd9',1,'IMAGE_DEBUG_MISC']]],
+  ['universalexceptionraise',['UniversalExceptionRaise',['../namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281',1,'crashpad']]],
+  ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html',1,'crashpad']]],
+  ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html#a05bf6aa6e6e692e998a8ba2d6b5a6c95',1,'crashpad::UniversalMachExcServer']]],
+  ['universalmachexcserverimpl',['UniversalMachExcServerImpl',['../classcrashpad_1_1internal_1_1UniversalMachExcServerImpl.html',1,'crashpad::internal']]],
+  ['upload_5fattempts',['upload_attempts',['../structcrashpad_1_1CrashReportDatabase_1_1Report.html#ab334defe82bcced14b194e9102fefd8a',1,'crashpad::CrashReportDatabase::Report']]],
+  ['uploaded',['uploaded',['../structcrashpad_1_1CrashReportDatabase_1_1Report.html#a79ec88ad330fc2aae8049c6b3c0ee380',1,'crashpad::CrashReportDatabase::Report']]],
+  ['usagehint',['UsageHint',['../classcrashpad_1_1ToolSupport.html#a3c77b3d1dd6ed4ac5f4022a6de2ddbcd',1,'crashpad::ToolSupport']]],
+  ['usagetail',['UsageTail',['../classcrashpad_1_1ToolSupport.html#a7fb0d86380fee44d2089bbf82bd22d27',1,'crashpad::ToolSupport']]],
+  ['usehandler',['UseHandler',['../classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e',1,'crashpad::CrashpadClient']]],
+  ['utf8',['UTF8',['../classcrashpad_1_1internal_1_1MinidumpUTF8StringWriter.html#af1fcd3b9fd56ce2557fd8201fa544748',1,'crashpad::internal::MinidumpUTF8StringWriter']]],
+  ['uuid',['uuid',['../structcrashpad_1_1CrashReportDatabase_1_1Report.html#afab0cc6f40b7ca127ecddd4625284a86',1,'crashpad::CrashReportDatabase::Report::uuid()'],['../structcrashpad_1_1MinidumpModuleCodeViewRecordPDB70.html#a4f2443c852e1cd97ca6c47f0ba7ffb32',1,'crashpad::MinidumpModuleCodeViewRecordPDB70::uuid()'],['../classcrashpad_1_1MachOImageReader.html#ae3478d0dd59d9a226b525529968f2f04',1,'crashpad::MachOImageReader::UUID()'],['../classcrashpad_1_1internal_1_1ModuleSnapshotMac.html#a926b8fb41ff115085d2118d54a2580ad',1,'crashpad::internal::ModuleSnapshotMac::UUID()'],['../classcrashpad_1_1internal_1_1ModuleSnapshotMinidump.html#aa9c70e3ae61087d8197d48b5e1d697f3',1,'crashpad::internal::ModuleSnapshotMinidump::UUID()'],['../classcrashpad_1_1ModuleSnapshot.html#abe496c52eb77c0dced87a644331ea9b1',1,'crashpad::ModuleSnapshot::UUID()'],['../classcrashpad_1_1test_1_1TestModuleSnapshot.html#af1420f760358c7946669c9ed46e5b3a4',1,'crashpad::test::TestModuleSnapshot::UUID()'],['../structcrashpad_1_1UUID.html#a8e9aa2f5c0496c220dfe05f9c64284b1',1,'crashpad::UUID::UUID()'],['../structcrashpad_1_1UUID.html#a3f009620a21ceead5be155368b261030',1,'crashpad::UUID::UUID(const uint8_t *bytes)']]],
+  ['uuid',['UUID',['../structcrashpad_1_1UUID.html',1,'crashpad']]]
 ];
