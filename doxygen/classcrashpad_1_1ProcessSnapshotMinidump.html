@@ -132,6 +132,9 @@ pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:a08d363f93f87c7173c1f03a247054168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessSnapshotMinidump.html#a08d363f93f87c7173c1f03a247054168">ProcessCPUTimes</a> (<a class="el" href="structtimeval.html">timeval</a> *user_time, <a class="el" href="structtimeval.html">timeval</a> *system_time) const override</td></tr>
 <tr class="memdesc:a08d363f93f87c7173c1f03a247054168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the snapshot process’ CPU usage times in <em>user_time</em> and <em>system_time</em>.  <a href="#a08d363f93f87c7173c1f03a247054168">More...</a><br /></td></tr>
 <tr class="separator:a08d363f93f87c7173c1f03a247054168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85538c374ee62566620f2ab2cc720668"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessSnapshotMinidump.html#a85538c374ee62566620f2ab2cc720668">ClientID</a> (<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *client_id) const override</td></tr>
+<tr class="memdesc:a85538c374ee62566620f2ab2cc720668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a UUID identifying the client that the snapshot represents.  <a href="#a85538c374ee62566620f2ab2cc720668">More...</a><br /></td></tr>
+<tr class="separator:a85538c374ee62566620f2ab2cc720668"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13ec8cce7d92dccebe6c4ab61ec20e9"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessSnapshotMinidump.html#af13ec8cce7d92dccebe6c4ab61ec20e9">AnnotationsSimpleMap</a> () const override</td></tr>
 <tr class="memdesc:af13ec8cce7d92dccebe6c4ab61ec20e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns key-value string annotations recorded for the process, system, or snapshot producer.  <a href="#af13ec8cce7d92dccebe6c4ab61ec20e9">More...</a><br /></td></tr>
 <tr class="separator:af13ec8cce7d92dccebe6c4ab61ec20e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,6 +181,36 @@ pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <p>Additional per-module annotations may be obtained by calling <a class="el" href="classcrashpad_1_1ModuleSnapshot.html#a4d1328fda3e91a4c25369b5fcc4cf2f6" title="Returns key-value string annotations recorded in the module. ">ModuleSnapshot::AnnotationsSimpleMap()</a>. </p>
 
 <p>Implements <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a7f39b29ec055fb4235e5156d55e066cb">crashpad::ProcessSnapshot</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85538c374ee62566620f2ab2cc720668"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::ProcessSnapshotMinidump::ClientID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a UUID identifying the client that the snapshot represents. </p>
+<p>Client identification is within the scope of the application, but it is expected that the identifier will be unique for an instance of Crashpad monitoring an application or set of applications for a user. The identifier shall remain stable over time.</p>
+<p>If no identifier is available, this field will contain zeroes. </p>
+
+<p>Implements <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a1415886b55df0daef8e217254c3f2291">crashpad::ProcessSnapshot</a>.</p>
 
 </div>
 </div>

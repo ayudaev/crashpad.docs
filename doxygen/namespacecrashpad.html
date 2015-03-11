@@ -141,6 +141,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1CrashpadInfo.html">CrashpadInfo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad crash handler.  <a href="structcrashpad_1_1CrashpadInfo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1CrashpadInfoClientOptions.html">CrashpadInfoClientOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options represented in a client’s <a class="el" href="structcrashpad_1_1CrashpadInfo.html" title="A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad cra...">CrashpadInfo</a> structure.  <a href="structcrashpad_1_1CrashpadInfoClientOptions.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CrashReportDatabase.html">CrashReportDatabase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface for managing a collection of crash report files and metadata associated with the crash reports.  <a href="classcrashpad_1_1CrashReportDatabase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,6 +324,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1Semaphore.html">Semaphore</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An anonymous in-process counting sempahore.  <a href="classcrashpad_1_1Semaphore.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1Settings.html">Settings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An interface for accessing and modifying the settings of a <a class="el" href="classcrashpad_1_1CrashReportDatabase.html" title="An interface for managing a collection of crash report files and metadata associated with the crash r...">CrashReportDatabase</a>.  <a href="classcrashpad_1_1Settings.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1StringFile.html">StringFile</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A file reader and writer backed by a virtual file, as opposed to a file on disk or other operating system file descriptor-based file.  <a href="classcrashpad_1_1StringFile.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -415,6 +421,8 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>ScopedKernelHANDLE</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:a018d96d71b99a541bc86a30e4b0a18b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a018d96d71b99a541bc86a30e4b0a18b8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Options</b> : uint32_t </td></tr>
+<tr class="separator:a018d96d71b99a541bc86a30e4b0a18b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a835e6bd6cb3f97c99c572596878c1573"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a835e6bd6cb3f97c99c572596878c1573">MinidumpContextFlags</a> : uint32_t </td></tr>
 <tr class="memdesc:a835e6bd6cb3f97c99c572596878c1573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Architecture-independent flags for <code>context_flags</code> fields in Minidump context structures.  <a href="namespacecrashpad.html#a835e6bd6cb3f97c99c572596878c1573">More...</a><br /></td></tr>
 <tr class="separator:a835e6bd6cb3f97c99c572596878c1573"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -460,12 +468,18 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a8387ad067a7e6a1735ab97a1af450d2b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2b">StringToSymbolicConstantOptionBits</a> </td></tr>
 <tr class="memdesc:a8387ad067a7e6a1735ab97a1af450d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for various <code>StringTo*</code> functions in <code>symbolic_constants_*</code> files.  <a href="namespacecrashpad.html#a8387ad067a7e6a1735ab97a1af450d2b">More...</a><br /></td></tr>
 <tr class="separator:a8387ad067a7e6a1735ab97a1af450d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b405c19a5787fabcfba96001d49f292"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292">TriState</a> : uint8_t </td></tr>
+<tr class="memdesc:a3b405c19a5787fabcfba96001d49f292"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tri-state value that can be unset, on, or off.  <a href="namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292">More...</a><br /></td></tr>
+<tr class="separator:a3b405c19a5787fabcfba96001d49f292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac25486c6b4c38fc7c7868e978094edcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac25486c6b4c38fc7c7868e978094edcf">CaptureContext</a> (NativeCPUContext *cpu_context)</td></tr>
 <tr class="memdesc:ac25486c6b4c38fc7c7868e978094edcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the CPU context.  <a href="#ac25486c6b4c38fc7c7868e978094edcf">More...</a><br /></td></tr>
 <tr class="separator:ac25486c6b4c38fc7c7868e978094edcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee6d8b9a54a21b5e0f13a81e6a94406"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adee6d8b9a54a21b5e0f13a81e6a94406"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Data</b> ()</td></tr>
+<tr class="separator:adee6d8b9a54a21b5e0f13a81e6a94406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a022902840a0224b9599fc14b0b19e7cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a022902840a0224b9599fc14b0b19e7cf">SimulateCrash</a> (const NativeCPUContext *cpu_context)</td></tr>
 <tr class="memdesc:a022902840a0224b9599fc14b0b19e7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates a exception without crashing.  <a href="#a022902840a0224b9599fc14b0b19e7cf">More...</a><br /></td></tr>
 <tr class="separator:a022902840a0224b9599fc14b0b19e7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -672,6 +686,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ac8605dea4710c2630ccdd21439e05999"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac8605dea4710c2630ccdd21439e05999">strnlen</a> (const char *string, size_t max_length)</td></tr>
 <tr class="memdesc:ac8605dea4710c2630ccdd21439e05999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a string, not to exceed a maximum.  <a href="#ac8605dea4710c2630ccdd21439e05999">More...</a><br /></td></tr>
 <tr class="separator:ac8605dea4710c2630ccdd21439e05999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c30c2842b336f05c6c40ffc6dae8050"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2c30c2842b336f05c6c40ffc6dae8050"></a>
+template&lt;class Traits &gt; </td></tr>
+<tr class="memitem:a2c30c2842b336f05c6c40ffc6dae8050"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ReadProcessData</b> (HANDLE process, uintptr_t peb_address_uintptr, <a class="el" href="classcrashpad_1_1ProcessInfo.html">ProcessInfo</a> *process_info)</td></tr>
+<tr class="separator:a2c30c2842b336f05c6c40ffc6dae8050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad150794de658f3bec7f37aa33ac521c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad150794de658f3bec7f37aa33ac521c4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad150794de658f3bec7f37aa33ac521c4">GetTimeOfDay</a> (<a class="el" href="structtimeval.html">timeval</a> *tv)</td></tr>
 <tr class="memdesc:ad150794de658f3bec7f37aa33ac521c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Similar to POSIX gettimeofday(), gets the current system time in UTC. <br /></td></tr>
@@ -753,6 +771,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aea3f46c7dabdfc2f53f8f52c4c8629a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea3f46c7dabdfc2f53f8f52c4c8629a3"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
+<tr class="separator:aea3f46c7dabdfc2f53f8f52c4c8629a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f61695b8bcea110f21fa0d73293e80a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f61695b8bcea110f21fa0d73293e80a"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>options</b></td></tr>
+<tr class="separator:a7f61695b8bcea110f21fa0d73293e80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752aa68028bd945a731b1a69c119ba58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752aa68028bd945a731b1a69c119ba58"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>last_upload_attempt_time</b></td></tr>
+<tr class="separator:a752aa68028bd945a731b1a69c119ba58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cba20deb0ffec627eaa55c3a06ed496"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cba20deb0ffec627eaa55c3a06ed496"></a>
+<a class="el" href="structcrashpad_1_1UUID.html">UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><b>client_id</b></td></tr>
+<tr class="separator:a1cba20deb0ffec627eaa55c3a06ed496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add54baa0f53825b93f3aab2fcafce367"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add54baa0f53825b93f3aab2fcafce367"></a>
 const <a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#add54baa0f53825b93f3aab2fcafce367">kInvalidFileHandle</a> = -1</td></tr>
 <tr class="memdesc:add54baa0f53825b93f3aab2fcafce367"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value that can never be a valid FileHandle. <br /></td></tr>
@@ -1341,6 +1371,40 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a3b405c19a5787fabcfba96001d49f292"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292">crashpad::TriState</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A tri-state value that can be unset, on, or off. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3b405c19a5787fabcfba96001d49f292ac69d34d47bfd5244204004878441d53f"></a>kUnset&#160;</td><td class="fielddoc">
+<p>The value has not explicitly been set. </p>
+<p>To allow a zero-initialized value to have this behavior, this must have the value <code>0</code>. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3b405c19a5787fabcfba96001d49f292ade1ec1870756a80dffbdc4cda53153e0"></a>kEnabled&#160;</td><td class="fielddoc">
+<p>The value has explicitly been set to on, or a behavior has explicitly been enabled. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3b405c19a5787fabcfba96001d49f292a7b04d8795f5fd03c761ce70dab985fee"></a>kDisabled&#160;</td><td class="fielddoc">
+<p>The value has explicitly been set to off, or a behavior has explicitly been disabled. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="a589b4d9bd6f2233b67148ab6793c3c13"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1435,6 +1499,10 @@ template&lt;typename T &gt; </div>
 <p>The structure’s version number.</p>
 <p>Readers can use this field to determine which other fields in the structure are valid. Upon encountering a value greater than #kVersion, a reader should assume that the structure’s layout is compatible with the structure defined as having value #kVersion.</p>
 <p>Writers may produce values less than #kVersion in this field if there is no need for any fields present in later versions.</p>
+<p>A UUID identifying the client that crashed.</p>
+<p>Client identification is within the scope of the application, but it is expected that the identifier will be unique for an instance of Crashpad monitoring an application or set of applications for a user. The identifier shall remain stable over time.</p>
+<p>If no identifier is available, this field will contain zeroes.</p>
+<p>This field is present when #version is at least <code>1</code>.</p>
 <p>A MinidumpSimpleStringDictionary pointing to strings interpreted as key-value pairs.</p>
 <p>These key-value pairs correspond to <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a7f39b29ec055fb4235e5156d55e066cb" title="Returns key-value string annotations recorded for the process, system, or snapshot producer...">ProcessSnapshot::AnnotationsSimpleMap()</a>.</p>
 <p>This field is present when #version is at least <code>1</code>.</p>
@@ -1468,6 +1536,10 @@ template&lt;typename T &gt; </div>
 <p>The structure’s version number.</p>
 <p>Readers can use this field to determine which other fields in the structure are valid. Upon encountering a value greater than #kVersion, a reader should assume that the structure’s layout is compatible with the structure defined as having value #kVersion.</p>
 <p>Writers may produce values less than #kVersion in this field if there is no need for any fields present in later versions.</p>
+<p>A UUID identifying the client that crashed.</p>
+<p>Client identification is within the scope of the application, but it is expected that the identifier will be unique for an instance of Crashpad monitoring an application or set of applications for a user. The identifier shall remain stable over time.</p>
+<p>If no identifier is available, this field will contain zeroes.</p>
+<p>This field is present when #version is at least <code>1</code>.</p>
 <p>A MinidumpSimpleStringDictionary pointing to strings interpreted as key-value pairs.</p>
 <p>These key-value pairs correspond to <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a7f39b29ec055fb4235e5156d55e066cb" title="Returns key-value string annotations recorded for the process, system, or snapshot producer...">ProcessSnapshot::AnnotationsSimpleMap()</a>.</p>
 <p>This field is present when #version is at least <code>1</code>.</p>

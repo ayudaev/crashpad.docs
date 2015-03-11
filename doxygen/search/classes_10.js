@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['x87ormmxregister',['X87OrMMXRegister',['../unioncrashpad_1_1CPUContextX86_1_1X87OrMMXRegister.html',1,'crashpad::CPUContextX86']]]
+  ['weakfilehandlefilereader',['WeakFileHandleFileReader',['../classcrashpad_1_1WeakFileHandleFileReader.html',1,'crashpad']]],
+  ['weakfilehandlefilewriter',['WeakFileHandleFileWriter',['../classcrashpad_1_1WeakFileHandleFileWriter.html',1,'crashpad']]],
+  ['writableiovec',['WritableIoVec',['../structcrashpad_1_1WritableIoVec.html',1,'crashpad']]]
 ];

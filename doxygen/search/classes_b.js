@@ -1,16 +1,6 @@
 var searchData=
 [
-  ['scopedfilehandleclosetraits',['ScopedFileHANDLECloseTraits',['../structcrashpad_1_1internal_1_1ScopedFileHANDLECloseTraits.html',1,'crashpad::internal']]],
-  ['scopedforbidreturn',['ScopedForbidReturn',['../classcrashpad_1_1ScopedForbidReturn.html',1,'crashpad']]],
-  ['scopedkernelhandleclosetraits',['ScopedKernelHANDLECloseTraits',['../structcrashpad_1_1internal_1_1ScopedKernelHANDLECloseTraits.html',1,'crashpad::internal']]],
-  ['scopedtasksuspend',['ScopedTaskSuspend',['../classcrashpad_1_1ScopedTaskSuspend.html',1,'crashpad']]],
-  ['scopedtempdir',['ScopedTempDir',['../classcrashpad_1_1test_1_1ScopedTempDir.html',1,'crashpad::test']]],
-  ['semaphore',['Semaphore',['../classcrashpad_1_1Semaphore.html',1,'crashpad']]],
-  ['stringfile',['StringFile',['../classcrashpad_1_1StringFile.html',1,'crashpad']]],
-  ['stringhttpbodystream',['StringHTTPBodyStream',['../classcrashpad_1_1StringHTTPBodyStream.html',1,'crashpad']]],
-  ['symbolinformation',['SymbolInformation',['../structcrashpad_1_1MachOImageSymbolTableReader_1_1SymbolInformation.html',1,'crashpad::MachOImageSymbolTableReader']]],
-  ['systemsnapshot',['SystemSnapshot',['../classcrashpad_1_1SystemSnapshot.html',1,'crashpad']]],
-  ['systemsnapshotmac',['SystemSnapshotMac',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html',1,'crashpad::internal']]],
-  ['systemsnapshotwin',['SystemSnapshotWin',['../classcrashpad_1_1internal_1_1SystemSnapshotWin.html',1,'crashpad::internal']]],
-  ['systemtime',['SYSTEMTIME',['../structSYSTEMTIME.html',1,'']]]
+  ['report',['Report',['../structcrashpad_1_1CrashReportDatabase_1_1Report.html',1,'crashpad::CrashReportDatabase']]],
+  ['rtl_5fdrive_5fletter_5fcurdir',['RTL_DRIVE_LETTER_CURDIR',['../structcrashpad_1_1process__types_1_1RTL__DRIVE__LETTER__CURDIR.html',1,'crashpad::process_types']]],
+  ['rtl_5fuser_5fprocess_5fparameters',['RTL_USER_PROCESS_PARAMETERS',['../structcrashpad_1_1process__types_1_1RTL__USER__PROCESS__PARAMETERS.html',1,'crashpad::process_types']]]
 ];

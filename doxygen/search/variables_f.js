@@ -12,5 +12,6 @@ var searchData=
   ['streamdirectoryrva',['StreamDirectoryRva',['../structMINIDUMP__HEADER.html#afc88b1f46827fbeae6ef6e0718a23b57',1,'MINIDUMP_HEADER']]],
   ['streamtype',['StreamType',['../structMINIDUMP__DIRECTORY.html#a425b8b68da6810a126c759c5f5a94f7d',1,'MINIDUMP_DIRECTORY']]],
   ['suitemask',['SuiteMask',['../structMINIDUMP__SYSTEM__INFO.html#a8b9c73ce707c57a0280a395051f67945',1,'MINIDUMP_SYSTEM_INFO']]],
-  ['suspendcount',['SuspendCount',['../structMINIDUMP__THREAD.html#a3ab33039a1c9f00facc2a137a74cbc06',1,'MINIDUMP_THREAD']]]
+  ['suspendcount',['SuspendCount',['../structMINIDUMP__THREAD.html#a3ab33039a1c9f00facc2a137a74cbc06',1,'MINIDUMP_THREAD']]],
+  ['system_5fcrash_5freporter_5fforwarding',['system_crash_reporter_forwarding',['../structcrashpad_1_1CrashpadInfoClientOptions.html#a7813481d6849f01b15a1d8ba0e984587',1,'crashpad::CrashpadInfoClientOptions']]]
 ];

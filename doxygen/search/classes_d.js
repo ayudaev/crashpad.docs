@@ -1,7 +1,21 @@
 var searchData=
 [
-  ['uint128_5fstruct',['uint128_struct',['../structcrashpad_1_1uint128__struct.html',1,'crashpad']]],
-  ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html',1,'crashpad']]],
-  ['universalmachexcserverimpl',['UniversalMachExcServerImpl',['../classcrashpad_1_1internal_1_1UniversalMachExcServerImpl.html',1,'crashpad::internal']]],
-  ['uuid',['UUID',['../structcrashpad_1_1UUID.html',1,'crashpad']]]
+  ['taskmemory',['TaskMemory',['../classcrashpad_1_1TaskMemory.html',1,'crashpad']]],
+  ['testexceptionsnapshot',['TestExceptionSnapshot',['../classcrashpad_1_1test_1_1TestExceptionSnapshot.html',1,'crashpad::test']]],
+  ['testmemorysnapshot',['TestMemorySnapshot',['../classcrashpad_1_1test_1_1TestMemorySnapshot.html',1,'crashpad::test']]],
+  ['testminidumpmemorywriter',['TestMinidumpMemoryWriter',['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html',1,'crashpad::test']]],
+  ['testmodulesnapshot',['TestModuleSnapshot',['../classcrashpad_1_1test_1_1TestModuleSnapshot.html',1,'crashpad::test']]],
+  ['testprocesssnapshot',['TestProcessSnapshot',['../classcrashpad_1_1test_1_1TestProcessSnapshot.html',1,'crashpad::test']]],
+  ['testsystemsnapshot',['TestSystemSnapshot',['../classcrashpad_1_1test_1_1TestSystemSnapshot.html',1,'crashpad::test']]],
+  ['testthreadsnapshot',['TestThreadSnapshot',['../classcrashpad_1_1test_1_1TestThreadSnapshot.html',1,'crashpad::test']]],
+  ['testuint32minidumpwritable',['TestUInt32MinidumpWritable',['../classcrashpad_1_1test_1_1TestUInt32MinidumpWritable.html',1,'crashpad::test']]],
+  ['thread',['Thread',['../structcrashpad_1_1ProcessReader_1_1Thread.html',1,'crashpad::ProcessReader']]],
+  ['threadsnapshot',['ThreadSnapshot',['../classcrashpad_1_1ThreadSnapshot.html',1,'crashpad']]],
+  ['threadsnapshotmac',['ThreadSnapshotMac',['../classcrashpad_1_1internal_1_1ThreadSnapshotMac.html',1,'crashpad::internal']]],
+  ['time_5fzone_5finformation',['TIME_ZONE_INFORMATION',['../structTIME__ZONE__INFORMATION.html',1,'']]],
+  ['timeval',['timeval',['../structtimeval.html',1,'']]],
+  ['toolsupport',['ToolSupport',['../classcrashpad_1_1ToolSupport.html',1,'crashpad']]],
+  ['traits32',['Traits32',['../structcrashpad_1_1process__types_1_1internal_1_1Traits32.html',1,'crashpad::process_types::internal']]],
+  ['traits64',['Traits64',['../structcrashpad_1_1process__types_1_1internal_1_1Traits64.html',1,'crashpad::process_types::internal']]],
+  ['tsimplestringdictionary',['TSimpleStringDictionary',['../classcrashpad_1_1TSimpleStringDictionary.html',1,'crashpad']]]
 ];

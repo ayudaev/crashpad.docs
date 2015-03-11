@@ -127,6 +127,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProcessStartTime</
 <tr class="memitem:a8c8ad8cd4de60248b1fa98baed0a7b9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c8ad8cd4de60248b1fa98baed0a7b9c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProcessCPUTimes</b> (const <a class="el" href="structtimeval.html">timeval</a> &amp;user_time, const <a class="el" href="structtimeval.html">timeval</a> &amp;system_time)</td></tr>
 <tr class="separator:a8c8ad8cd4de60248b1fa98baed0a7b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f4d1f43ee52fc1dcbaf4c5bc1a78f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2f4d1f43ee52fc1dcbaf4c5bc1a78f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetClientID</b> (const <a class="el" href="structcrashpad_1_1UUID.html">UUID</a> &amp;client_id)</td></tr>
+<tr class="separator:ab2f4d1f43ee52fc1dcbaf4c5bc1a78f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa35c22f1573a1dfa4a7de9f6fd0dacb1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa35c22f1573a1dfa4a7de9f6fd0dacb1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAnnotationsSimpleMap</b> (const std::map&lt; std::string, std::string &gt; &amp;annotations_simple_map)</td></tr>
 <tr class="separator:aa35c22f1573a1dfa4a7de9f6fd0dacb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +162,9 @@ pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:ad608647c26f108ba2712b791b4365589"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#ad608647c26f108ba2712b791b4365589">ProcessCPUTimes</a> (<a class="el" href="structtimeval.html">timeval</a> *user_time, <a class="el" href="structtimeval.html">timeval</a> *system_time) const override</td></tr>
 <tr class="memdesc:ad608647c26f108ba2712b791b4365589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the snapshot process’ CPU usage times in <em>user_time</em> and <em>system_time</em>.  <a href="#ad608647c26f108ba2712b791b4365589">More...</a><br /></td></tr>
 <tr class="separator:ad608647c26f108ba2712b791b4365589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eb9bf88dc221ccc3f891f3259621c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a6eb9bf88dc221ccc3f891f3259621c79">ClientID</a> (<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *client_id) const override</td></tr>
+<tr class="memdesc:a6eb9bf88dc221ccc3f891f3259621c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a UUID identifying the client that the snapshot represents.  <a href="#a6eb9bf88dc221ccc3f891f3259621c79">More...</a><br /></td></tr>
+<tr class="separator:a6eb9bf88dc221ccc3f891f3259621c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec23063142af82dcef82d52cfc0774a0"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#aec23063142af82dcef82d52cfc0774a0">AnnotationsSimpleMap</a> () const override</td></tr>
 <tr class="memdesc:aec23063142af82dcef82d52cfc0774a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns key-value string annotations recorded for the process, system, or snapshot producer.  <a href="#aec23063142af82dcef82d52cfc0774a0">More...</a><br /></td></tr>
 <tr class="separator:aec23063142af82dcef82d52cfc0774a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,6 +275,36 @@ pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <p>Additional per-module annotations may be obtained by calling <a class="el" href="classcrashpad_1_1ModuleSnapshot.html#a4d1328fda3e91a4c25369b5fcc4cf2f6" title="Returns key-value string annotations recorded in the module. ">ModuleSnapshot::AnnotationsSimpleMap()</a>. </p>
 
 <p>Implements <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a7f39b29ec055fb4235e5156d55e066cb">crashpad::ProcessSnapshot</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6eb9bf88dc221ccc3f891f3259621c79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::TestProcessSnapshot::ClientID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a UUID identifying the client that the snapshot represents. </p>
+<p>Client identification is within the scope of the application, but it is expected that the identifier will be unique for an instance of Crashpad monitoring an application or set of applications for a user. The identifier shall remain stable over time.</p>
+<p>If no identifier is available, this field will contain zeroes. </p>
+
+<p>Implements <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a1415886b55df0daef8e217254c3f2291">crashpad::ProcessSnapshot</a>.</p>
 
 </div>
 </div>

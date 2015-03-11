@@ -14,5 +14,6 @@ var searchData=
   ['timezone',['TimeZone',['../classcrashpad_1_1internal_1_1SystemSnapshotMac.html#a44c833dd1344a4020ff36fbe2fe33e87',1,'crashpad::internal::SystemSnapshotMac::TimeZone()'],['../classcrashpad_1_1SystemSnapshot.html#ab3af063628dcf35890ca77c19bb71ccf',1,'crashpad::SystemSnapshot::TimeZone()'],['../classcrashpad_1_1internal_1_1SystemSnapshotWin.html#a891f3627dc14992dd898fe4eda5726c9',1,'crashpad::internal::SystemSnapshotWin::TimeZone()']]],
   ['tminidumpwritableatlocationdescriptor',['TMinidumpWritableAtLocationDescriptor',['../namespacecrashpad_1_1test.html#abda65d4c6e9c710f32fcbd9af6a03357',1,'crashpad::test']]],
   ['tostring',['ToString',['../structcrashpad_1_1UUID.html#a1e4728f499a21c7f2f0037f514960165',1,'crashpad::UUID']]],
+  ['tristatefromcrashpadinfo',['TriStateFromCrashpadInfo',['../structcrashpad_1_1CrashpadInfoClientOptions.html#a51b98eb48cf16507c075ba96611e30c2',1,'crashpad::CrashpadInfoClientOptions']]],
   ['tsimplestringdictionary',['TSimpleStringDictionary',['../classcrashpad_1_1TSimpleStringDictionary.html#a0a13b2f67b82411fc1d07f9fb6677b4b',1,'crashpad::TSimpleStringDictionary']]]
 ];
