@@ -624,6 +624,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a979ca1d327dcf56488d3304efa9680eb"><td class="memItemLeft" align="right" valign="top">const mach_msg_trailer_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a979ca1d327dcf56488d3304efa9680eb">MachMessageTrailerFromHeader</a> (const mach_msg_header_t *header)</td></tr>
 <tr class="memdesc:a979ca1d327dcf56488d3304efa9680eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Mach message trailer for a message that has been received.  <a href="#a979ca1d327dcf56488d3304efa9680eb">More...</a><br /></td></tr>
 <tr class="separator:a979ca1d327dcf56488d3304efa9680eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c18eae8148ec3304733581a28c2da3b"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2c18eae8148ec3304733581a28c2da3b">AuditPIDFromMachMessageTrailer</a> (const mach_msg_trailer_t *trailer)</td></tr>
+<tr class="memdesc:a2c18eae8148ec3304733581a28c2da3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the process ID of a Mach message’s sender from its audit trailer.  <a href="#a2c18eae8148ec3304733581a28c2da3b">More...</a><br /></td></tr>
+<tr class="separator:a2c18eae8148ec3304733581a28c2da3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05296bfd23550f42639067355410811e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a05296bfd23550f42639067355410811e">ExceptionToString</a> (exception_type_t exception, <a class="el" href="namespacecrashpad.html#a0f13feba965ef7750b3d49064936e5ee">SymbolicConstantToStringOptions</a> options)</td></tr>
 <tr class="memdesc:a05296bfd23550f42639067355410811e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a Mach exception value to a textual representation.  <a href="#a05296bfd23550f42639067355410811e">More...</a><br /></td></tr>
 <tr class="separator:a05296bfd23550f42639067355410811e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -686,6 +689,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac8605dea4710c2630ccdd21439e05999"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac8605dea4710c2630ccdd21439e05999">strnlen</a> (const char *string, size_t max_length)</td></tr>
 <tr class="memdesc:ac8605dea4710c2630ccdd21439e05999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a string, not to exceed a maximum.  <a href="#ac8605dea4710c2630ccdd21439e05999">More...</a><br /></td></tr>
 <tr class="separator:ac8605dea4710c2630ccdd21439e05999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a4473e9e1e2b019ce76182c2052b05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a79a4473e9e1e2b019ce76182c2052b05">SplitString</a> (const std::string &amp;string, char delimiter, std::string *left, std::string *right)</td></tr>
+<tr class="memdesc:a79a4473e9e1e2b019ce76182c2052b05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string into two parts at the first delimiter found.  <a href="#a79a4473e9e1e2b019ce76182c2052b05">More...</a><br /></td></tr>
+<tr class="separator:a79a4473e9e1e2b019ce76182c2052b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c30c2842b336f05c6c40ffc6dae8050"><td class="memTemplParams" colspan="2"><a class="anchor" id="a2c30c2842b336f05c6c40ffc6dae8050"></a>
 template&lt;class Traits &gt; </td></tr>
 <tr class="memitem:a2c30c2842b336f05c6c40ffc6dae8050"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>ReadProcessData</b> (HANDLE process, uintptr_t peb_address_uintptr, <a class="el" href="classcrashpad_1_1ProcessInfo.html">ProcessInfo</a> *process_info)</td></tr>
@@ -771,12 +777,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a4bb800b906b4f5a5269ec7fe3ae8b7b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bb800b906b4f5a5269ec7fe3ae8b7b3"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>magic</b></td></tr>
+<tr class="separator:a4bb800b906b4f5a5269ec7fe3ae8b7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea3f46c7dabdfc2f53f8f52c4c8629a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea3f46c7dabdfc2f53f8f52c4c8629a3"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
 <tr class="separator:aea3f46c7dabdfc2f53f8f52c4c8629a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f61695b8bcea110f21fa0d73293e80a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f61695b8bcea110f21fa0d73293e80a"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>options</b></td></tr>
 <tr class="separator:a7f61695b8bcea110f21fa0d73293e80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5584809638dcaf225e5f1fa5b042c09a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5584809638dcaf225e5f1fa5b042c09a"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>padding_0</b></td></tr>
+<tr class="separator:a5584809638dcaf225e5f1fa5b042c09a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a752aa68028bd945a731b1a69c119ba58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752aa68028bd945a731b1a69c119ba58"></a>
 uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>last_upload_attempt_time</b></td></tr>
 <tr class="separator:a752aa68028bd945a731b1a69c119ba58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,6 +809,9 @@ const <a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e4
 const exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ad22bbde846a82173474ba002116c325c">kMachExceptionSimulated</a> = 'CPsx'</td></tr>
 <tr class="memdesc:ad22bbde846a82173474ba002116c325c"><td class="mdescLeft">&#160;</td><td class="mdescRight">An exception type to use for simulated exceptions. <br /></td></tr>
 <tr class="separator:ad22bbde846a82173474ba002116c325c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2673983f0177685e048be73ee578eddb"><td class="memItemLeft" align="right" valign="top">const mach_msg_option_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2673983f0177685e048be73ee578eddb">kMachMessageReceiveAuditTrailer</a></td></tr>
+<tr class="memdesc:a2673983f0177685e048be73ee578eddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Mach message option specifying that an audit trailer should be delivered during a receive operation.  <a href="#a2673983f0177685e048be73ee578eddb">More...</a><br /></td></tr>
+<tr class="separator:a2673983f0177685e048be73ee578eddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0af855b48de54cc50ef186da37cb769"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0af855b48de54cc50ef186da37cb769"></a>
 const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae0af855b48de54cc50ef186da37cb769">kContentType</a> [] = &quot;Content-Type&quot;</td></tr>
 <tr class="memdesc:ae0af855b48de54cc50ef186da37cb769"><td class="mdescLeft">&#160;</td><td class="mdescRight">The header name <code>"Content-Type"</code>. <br /></td></tr>
@@ -1605,6 +1620,33 @@ template&lt;typename Destination , typename Source &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>source</em> is in the range supported by the type of <em>*destination</em>, with the assignment to <em>*destination</em> having been performed. <code>false</code> if the assignment cannot be completed safely because <em>source</em> is outside of this range. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c18eae8148ec3304733581a28c2da3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pid_t crashpad::AuditPIDFromMachMessageTrailer </td>
+          <td>(</td>
+          <td class="paramtype">const mach_msg_trailer_t *&#160;</td>
+          <td class="paramname"><em>trailer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the process ID of a Mach message’s sender from its audit trailer. </p>
+<p>For the audit trailer to be present, the message must have been received with <a class="el" href="namespacecrashpad.html#a2673983f0177685e048be73ee578eddb" title="A Mach message option specifying that an audit trailer should be delivered during a receive operation...">kMachMessageReceiveAuditTrailer</a> or its macro equivalent specified in the receive options.</p>
+<p>If the kernel is the message’s sender, a process ID of <code>0</code> will be returned.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trailer</td><td>The trailer received with a Mach message.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The process ID of the message’s sender, or <code>-1</code> on failure with a message logged. It is considered a failure for <em>trailer</em> to not contain audit information. </dd></dl>
 
 </div>
 </div>
@@ -3949,6 +3991,56 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 
 </div>
 </div>
+<a class="anchor" id="a79a4473e9e1e2b019ce76182c2052b05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::SplitString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>delimiter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>left</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>right</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Splits a string into two parts at the first delimiter found. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string to split. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delimiter</td><td>The delimiter to split at. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">left</td><td>The portion of <em>string</em> up to, but not including, the first <em>delimiter</em> character. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">right</td><td>The portion of <em>string</em> after the first <em>delimiter</em> character.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <em>string</em> was split successfully. <code>false</code> if <em>string</em> did not contain a  character or began with a  character. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a229a9b5ddd24c6722e413e6132d0acf0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4677,6 +4769,24 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 
 <p><code>MACH_EXCEPTION_CODES</code> with the correct type for a Mach exception behavior, <code>exception_behavior_t</code>. </p>
 <p>Signedness problems can occur when ORing <code>MACH_EXCEPTION_CODES</code> as a signed integer, because a signed integer overflow results. This constant can be used instead of <code>MACH_EXCEPTION_CODES</code> in such cases. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2673983f0177685e048be73ee578eddb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const mach_msg_option_t crashpad::kMachMessageReceiveAuditTrailer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    MACH_RCV_TRAILER_TYPE(MACH_MSG_TRAILER_FORMAT_0) |</div>
+<div class="line">    MACH_RCV_TRAILER_ELEMENTS(MACH_RCV_TRAILER_AUDIT)</div>
+</div><!-- fragment -->
+<p>A Mach message option specifying that an audit trailer should be delivered during a receive operation. </p>
+<p>This constant is provided because the macros normally used to request this behavior are cumbersome. </p>
 
 </div>
 </div>

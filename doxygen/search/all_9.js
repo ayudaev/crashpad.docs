@@ -25,6 +25,7 @@ var searchData=
   ['kmachexceptionsimulated',['kMachExceptionSimulated',['../namespacecrashpad.html#ad22bbde846a82173474ba002116c325c',1,'crashpad']]],
   ['kmachmessagedeadlinenonblocking',['kMachMessageDeadlineNonblocking',['../namespacecrashpad.html#a1dc9188d8ccdc722ca71f486353fc5a1a6461bf9de012b5f2305fb3da6d0f82d5',1,'crashpad']]],
   ['kmachmessagedeadlinewaitindefinitely',['kMachMessageDeadlineWaitIndefinitely',['../namespacecrashpad.html#a1dc9188d8ccdc722ca71f486353fc5a1a848a739b3c252f4565161a6bd3f070d6',1,'crashpad']]],
+  ['kmachmessagereceiveaudittrailer',['kMachMessageReceiveAuditTrailer',['../namespacecrashpad.html#a2673983f0177685e048be73ee578eddb',1,'crashpad']]],
   ['kmachmessagetimeoutnonblocking',['kMachMessageTimeoutNonblocking',['../namespacecrashpad.html#a2e85b5813931eb7c7ddf61e5e991dc8aa15aaf8991271871ab08493449c00a048',1,'crashpad']]],
   ['kmachmessagetimeoutwaitindefinitely',['kMachMessageTimeoutWaitIndefinitely',['../namespacecrashpad.html#a2e85b5813931eb7c7ddf61e5e991dc8aaaf4f2c8a649ea6bcfe896e77c312315f',1,'crashpad']]],
   ['kmachportnull',['kMachPortNull',['../namespacecrashpad.html#a7c7b6c8b4f44c95c7f0fb70a56342277',1,'crashpad']]],

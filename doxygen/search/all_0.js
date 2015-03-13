@@ -24,5 +24,6 @@ var searchData=
   ['assert_5fdeath_5fcheck',['ASSERT_DEATH_CHECK',['../gtest__death__check_8h.html#a11ab1a718cd7a7ed56b7e2fbd2c36f74',1,'gtest_death_check.h']]],
   ['assignifinrange',['AssignIfInRange',['../namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430',1,'crashpad']]],
   ['assigntimet',['AssignTimeT',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#adf79feb4d657af5606d77a040b80c0a3',1,'crashpad::internal::MinidumpWriterUtil']]],
-  ['assignutf8toutf16',['AssignUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a8050fbfd03eaf9c799001d37f417adec',1,'crashpad::internal::MinidumpWriterUtil']]]
+  ['assignutf8toutf16',['AssignUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a8050fbfd03eaf9c799001d37f417adec',1,'crashpad::internal::MinidumpWriterUtil']]],
+  ['auditpidfrommachmessagetrailer',['AuditPIDFromMachMessageTrailer',['../namespacecrashpad.html#a2c18eae8148ec3304733581a28c2da3b',1,'crashpad']]]
 ];

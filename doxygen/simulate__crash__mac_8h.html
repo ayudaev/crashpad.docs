@@ -129,7 +129,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                      \</div>
-<div class="line">    NativeCPUContext cpu_context;           \</div>
+<div class="line">    crashpad::NativeCPUContext cpu_context; \</div>
 <div class="line">    crashpad::CaptureContext(&amp;cpu_context); \</div>
 <div class="line">    crashpad::SimulateCrash(&amp;cpu_context);  \</div>
 <div class="line">  } <span class="keywordflow">while</span> (<span class="keyword">false</span>)</div>

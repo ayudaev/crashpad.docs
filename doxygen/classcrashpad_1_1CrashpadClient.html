@@ -103,9 +103,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeab6de322736f061658b5b850cb43402"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CrashpadClient.html#aeab6de322736f061658b5b850cb43402">StartHandler</a> (const base::FilePath &amp;handler, const std::vector&lt; std::string &gt; &amp;handler_arguments)</td></tr>
-<tr class="memdesc:aeab6de322736f061658b5b850cb43402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a Crashpad handler process, performing any necessary handshake to configure it.  <a href="#aeab6de322736f061658b5b850cb43402">More...</a><br /></td></tr>
-<tr class="separator:aeab6de322736f061658b5b850cb43402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff59b81264227e71e3b5d205e9bd517a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CrashpadClient.html#aff59b81264227e71e3b5d205e9bd517a">StartHandler</a> (const base::FilePath &amp;handler, const base::FilePath &amp;database, const std::string &amp;url, const std::map&lt; std::string, std::string &gt; &amp;annotations, const std::vector&lt; std::string &gt; &amp;arguments)</td></tr>
+<tr class="memdesc:aff59b81264227e71e3b5d205e9bd517a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a Crashpad handler process, performing any necessary handshake to configure it.  <a href="#aff59b81264227e71e3b5d205e9bd517a">More...</a><br /></td></tr>
+<tr class="separator:aff59b81264227e71e3b5d205e9bd517a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58476a5f7a1910ad67ba2bce69ead38e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e">UseHandler</a> ()</td></tr>
 <tr class="memdesc:a58476a5f7a1910ad67ba2bce69ead38e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures the process to direct its crashes to a Crashpad handler.  <a href="#a58476a5f7a1910ad67ba2bce69ead38e">More...</a><br /></td></tr>
 <tr class="separator:a58476a5f7a1910ad67ba2bce69ead38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The primary interface for an application to have Crashpad monitor it for crashes. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aeab6de322736f061658b5b850cb43402"></a>
+<a class="anchor" id="aff59b81264227e71e3b5d205e9bd517a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -126,8 +126,26 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const base::FilePath &amp;&#160;</td>
+          <td class="paramname"><em>database</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>annotations</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>handler_arguments</em>&#160;</td>
+          <td class="paramname"><em>arguments</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -143,7 +161,10 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">handler</td><td>The path to a Crashpad handler executable. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">handler_arguments</td><td>Arguments to pass to the Crashpad handler. Arguments required to perform the handshake are the responsibility of this method, and must not be specified in this parameter.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">database</td><td>The path to a Crashpad database. The handler will be started with this path as its <code>--database</code> argument. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The URL of an upload server. The handler will be started with this URL as its <code>--url</code> argument. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">annotations</td><td>Process annotations to set in each crash report. The handler will be started with an <code>--annotation</code> argument for each element in this map. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">arguments</td><td>Additional arguments to pass to the Crashpad handler. Arguments passed in other parameters and arguments required to perform the handshake are the responsibility of this method, and must not be specified in this parameter.</td></tr>
   </table>
   </dd>
 </dl>
@@ -165,8 +186,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configures the process to direct its crashes to a Crashpad handler. </p>
-<p>The Crashpad handler must previously have been started by <a class="el" href="classcrashpad_1_1CrashpadClient.html#aeab6de322736f061658b5b850cb43402" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a>.</p>
-<p>On Mac OS X, this method sets the task’s exception port for <code>EXC_CRASH</code>, <code>EXC_RESOURCE</code>, and <code>EXC_GUARD</code> exceptions to the Mach send right obtained by <a class="el" href="classcrashpad_1_1CrashpadClient.html#aeab6de322736f061658b5b850cb43402" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a>. The handler will be installed with behavior <code>EXCEPTION_STATE_IDENTITY | MACH_EXCEPTION_CODES</code> and thread state flavor <code>MACHINE_THREAD_STATE</code>. Exception ports are inherited, so a Crashpad handler chosen by <a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e" title="Configures the process to direct its crashes to a Crashpad handler. ">UseHandler()</a> will remain the handler for any child processes created after <a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e" title="Configures the process to direct its crashes to a Crashpad handler. ">UseHandler()</a> is called. Child processes do not need to call <a class="el" href="classcrashpad_1_1CrashpadClient.html#aeab6de322736f061658b5b850cb43402" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a> or <a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e" title="Configures the process to direct its crashes to a Crashpad handler. ">UseHandler()</a> or be aware of Crashpad in any way. The Crashpad handler will receive crashes from child processes that have inherited it as their exception handler even after the process that called <a class="el" href="classcrashpad_1_1CrashpadClient.html#aeab6de322736f061658b5b850cb43402" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a> exits.</p>
+<p>The Crashpad handler must previously have been started by <a class="el" href="classcrashpad_1_1CrashpadClient.html#aff59b81264227e71e3b5d205e9bd517a" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a>.</p>
+<p>On Mac OS X, this method sets the task’s exception port for <code>EXC_CRASH</code>, <code>EXC_RESOURCE</code>, and <code>EXC_GUARD</code> exceptions to the Mach send right obtained by <a class="el" href="classcrashpad_1_1CrashpadClient.html#aff59b81264227e71e3b5d205e9bd517a" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a>. The handler will be installed with behavior <code>EXCEPTION_STATE_IDENTITY | MACH_EXCEPTION_CODES</code> and thread state flavor <code>MACHINE_THREAD_STATE</code>. Exception ports are inherited, so a Crashpad handler chosen by <a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e" title="Configures the process to direct its crashes to a Crashpad handler. ">UseHandler()</a> will remain the handler for any child processes created after <a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e" title="Configures the process to direct its crashes to a Crashpad handler. ">UseHandler()</a> is called. Child processes do not need to call <a class="el" href="classcrashpad_1_1CrashpadClient.html#aff59b81264227e71e3b5d205e9bd517a" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a> or <a class="el" href="classcrashpad_1_1CrashpadClient.html#a58476a5f7a1910ad67ba2bce69ead38e" title="Configures the process to direct its crashes to a Crashpad handler. ">UseHandler()</a> or be aware of Crashpad in any way. The Crashpad handler will receive crashes from child processes that have inherited it as their exception handler even after the process that called <a class="el" href="classcrashpad_1_1CrashpadClient.html#aff59b81264227e71e3b5d205e9bd517a" title="Starts a Crashpad handler process, performing any necessary handshake to configure it...">StartHandler()</a> exits.</p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, <code>false</code> on failure with a message logged. </dd></dl>
 
 </div>

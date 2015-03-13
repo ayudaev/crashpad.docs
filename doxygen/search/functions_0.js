@@ -20,5 +20,6 @@ var searchData=
   ['arm',['Arm',['../classcrashpad_1_1ScopedForbidReturn.html#aa2e81b3c70f574d8be67d50cf5fc2951',1,'crashpad::ScopedForbidReturn']]],
   ['assignifinrange',['AssignIfInRange',['../namespacecrashpad.html#aeb040202b4562c8c4087b9c9db2ce430',1,'crashpad']]],
   ['assigntimet',['AssignTimeT',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#adf79feb4d657af5606d77a040b80c0a3',1,'crashpad::internal::MinidumpWriterUtil']]],
-  ['assignutf8toutf16',['AssignUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a8050fbfd03eaf9c799001d37f417adec',1,'crashpad::internal::MinidumpWriterUtil']]]
+  ['assignutf8toutf16',['AssignUTF8ToUTF16',['../classcrashpad_1_1internal_1_1MinidumpWriterUtil.html#a8050fbfd03eaf9c799001d37f417adec',1,'crashpad::internal::MinidumpWriterUtil']]],
+  ['auditpidfrommachmessagetrailer',['AuditPIDFromMachMessageTrailer',['../namespacecrashpad.html#a2c18eae8148ec3304733581a28c2da3b',1,'crashpad']]]
 ];
