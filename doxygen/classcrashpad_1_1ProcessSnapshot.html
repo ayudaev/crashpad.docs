@@ -131,6 +131,9 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memitem:a9a2b61c60114c5ed6cac278496979575"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a9a2b61c60114c5ed6cac278496979575">ProcessCPUTimes</a> (<a class="el" href="structtimeval.html">timeval</a> *user_time, <a class="el" href="structtimeval.html">timeval</a> *system_time) const =0</td></tr>
 <tr class="memdesc:a9a2b61c60114c5ed6cac278496979575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the snapshot process’ CPU usage times in <em>user_time</em> and <em>system_time</em>.  <a href="#a9a2b61c60114c5ed6cac278496979575">More...</a><br /></td></tr>
 <tr class="separator:a9a2b61c60114c5ed6cac278496979575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e40c11c938d180ffe13d7e407a5fbb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessSnapshot.html#ae0e40c11c938d180ffe13d7e407a5fbb">ReportID</a> (<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *client_id) const =0</td></tr>
+<tr class="memdesc:ae0e40c11c938d180ffe13d7e407a5fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a UUID identifying the event that the snapshot describes.  <a href="#ae0e40c11c938d180ffe13d7e407a5fbb">More...</a><br /></td></tr>
+<tr class="separator:ae0e40c11c938d180ffe13d7e407a5fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1415886b55df0daef8e217254c3f2291"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a1415886b55df0daef8e217254c3f2291">ClientID</a> (<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *client_id) const =0</td></tr>
 <tr class="memdesc:a1415886b55df0daef8e217254c3f2291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a UUID identifying the client that the snapshot represents.  <a href="#a1415886b55df0daef8e217254c3f2291">More...</a><br /></td></tr>
 <tr class="separator:a1415886b55df0daef8e217254c3f2291"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -347,6 +350,36 @@ virtual pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </dl>
 
 <p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#ac319ebbd8ec9b81c3861c70afe9403d1">crashpad::ProcessSnapshotMac</a>, <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a32792c433f88bf0f2499c00d9769e5aa">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMinidump.html#a3be1cc1efd90feede4c1761f4f78f6a8">crashpad::ProcessSnapshotMinidump</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0e40c11c938d180ffe13d7e407a5fbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void crashpad::ProcessSnapshot::ReportID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a UUID identifying the event that the snapshot describes. </p>
+<p>This provides a stable identifier for a crash even as the report is converted to different formats, provided that all formats support storing a crash report ID. When a report is originally created, a report ID should be assigned. From that point on, any operations involving the same report should preserve the same report ID.</p>
+<p>If no identifier is available, this field will contain zeroes. </p>
+
+<p>Implemented in <a class="el" href="classcrashpad_1_1ProcessSnapshotMac.html#a0fd584f7a00e5f027bfba24cf5cc9d3b">crashpad::ProcessSnapshotMac</a>, <a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a4f62d1d10c6baaa3b9c4f2c08762f708">crashpad::test::TestProcessSnapshot</a>, and <a class="el" href="classcrashpad_1_1ProcessSnapshotMinidump.html#ad246ff4d8e140ed917c2a5b92a5b4441">crashpad::ProcessSnapshotMinidump</a>.</p>
 
 </div>
 </div>

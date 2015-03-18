@@ -127,6 +127,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProcessStartTime</
 <tr class="memitem:a8c8ad8cd4de60248b1fa98baed0a7b9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c8ad8cd4de60248b1fa98baed0a7b9c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetProcessCPUTimes</b> (const <a class="el" href="structtimeval.html">timeval</a> &amp;user_time, const <a class="el" href="structtimeval.html">timeval</a> &amp;system_time)</td></tr>
 <tr class="separator:a8c8ad8cd4de60248b1fa98baed0a7b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acb9fb3b3f3b6f90e78ec6c8cae4733"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5acb9fb3b3f3b6f90e78ec6c8cae4733"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetReportID</b> (const <a class="el" href="structcrashpad_1_1UUID.html">UUID</a> &amp;report_id)</td></tr>
+<tr class="separator:a5acb9fb3b3f3b6f90e78ec6c8cae4733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f4d1f43ee52fc1dcbaf4c5bc1a78f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2f4d1f43ee52fc1dcbaf4c5bc1a78f7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetClientID</b> (const <a class="el" href="structcrashpad_1_1UUID.html">UUID</a> &amp;client_id)</td></tr>
 <tr class="separator:ab2f4d1f43ee52fc1dcbaf4c5bc1a78f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +165,9 @@ pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="memitem:ad608647c26f108ba2712b791b4365589"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#ad608647c26f108ba2712b791b4365589">ProcessCPUTimes</a> (<a class="el" href="structtimeval.html">timeval</a> *user_time, <a class="el" href="structtimeval.html">timeval</a> *system_time) const override</td></tr>
 <tr class="memdesc:ad608647c26f108ba2712b791b4365589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the snapshot process’ CPU usage times in <em>user_time</em> and <em>system_time</em>.  <a href="#ad608647c26f108ba2712b791b4365589">More...</a><br /></td></tr>
 <tr class="separator:ad608647c26f108ba2712b791b4365589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f62d1d10c6baaa3b9c4f2c08762f708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a4f62d1d10c6baaa3b9c4f2c08762f708">ReportID</a> (<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *report_id) const override</td></tr>
+<tr class="memdesc:a4f62d1d10c6baaa3b9c4f2c08762f708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a UUID identifying the event that the snapshot describes.  <a href="#a4f62d1d10c6baaa3b9c4f2c08762f708">More...</a><br /></td></tr>
+<tr class="separator:a4f62d1d10c6baaa3b9c4f2c08762f708"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eb9bf88dc221ccc3f891f3259621c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestProcessSnapshot.html#a6eb9bf88dc221ccc3f891f3259621c79">ClientID</a> (<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *client_id) const override</td></tr>
 <tr class="memdesc:a6eb9bf88dc221ccc3f891f3259621c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a UUID identifying the client that the snapshot represents.  <a href="#a6eb9bf88dc221ccc3f891f3259621c79">More...</a><br /></td></tr>
 <tr class="separator:a6eb9bf88dc221ccc3f891f3259621c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -441,6 +447,36 @@ pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 </dl>
 
 <p>Implements <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#a13e296954660e175812f99a21e1e2671">crashpad::ProcessSnapshot</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4f62d1d10c6baaa3b9c4f2c08762f708"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::test::TestProcessSnapshot::ReportID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a UUID identifying the event that the snapshot describes. </p>
+<p>This provides a stable identifier for a crash even as the report is converted to different formats, provided that all formats support storing a crash report ID. When a report is originally created, a report ID should be assigned. From that point on, any operations involving the same report should preserve the same report ID.</p>
+<p>If no identifier is available, this field will contain zeroes. </p>
+
+<p>Implements <a class="el" href="classcrashpad_1_1ProcessSnapshot.html#ae0e40c11c938d180ffe13d7e407a5fbb">crashpad::ProcessSnapshot</a>.</p>
 
 </div>
 </div>

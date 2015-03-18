@@ -29,6 +29,7 @@ var searchData=
   ['removekey',['RemoveKey',['../classcrashpad_1_1TSimpleStringDictionary.html#ad50991fd8714c8bef7820482c7729efb',1,'crashpad::TSimpleStringDictionary']]],
   ['rename',['Rename',['../classcrashpad_1_1test_1_1ScopedTempDir.html#a6556ca006142c5ef03ff8f349ceaa014',1,'crashpad::test::ScopedTempDir']]],
   ['report',['Report',['../structcrashpad_1_1CrashReportDatabase_1_1Report.html',1,'crashpad::CrashReportDatabase']]],
+  ['reportid',['ReportID',['../classcrashpad_1_1ProcessSnapshotMac.html#a0fd584f7a00e5f027bfba24cf5cc9d3b',1,'crashpad::ProcessSnapshotMac::ReportID()'],['../classcrashpad_1_1ProcessSnapshotMinidump.html#ad246ff4d8e140ed917c2a5b92a5b4441',1,'crashpad::ProcessSnapshotMinidump::ReportID()'],['../classcrashpad_1_1ProcessSnapshot.html#ae0e40c11c938d180ffe13d7e407a5fbb',1,'crashpad::ProcessSnapshot::ReportID()'],['../classcrashpad_1_1test_1_1TestProcessSnapshot.html#a4f62d1d10c6baaa3b9c4f2c08762f708',1,'crashpad::test::TestProcessSnapshot::ReportID()']]],
   ['reportpending',['ReportPending',['../classcrashpad_1_1CrashReportUploadThread.html#affea498106bb97435e17d109dfdbfded',1,'crashpad::CrashReportUploadThread']]],
   ['reset',['Reset',['../classcrashpad_1_1StringFile.html#acc9180465c3147b38c6d6aa4049f8958',1,'crashpad::StringFile']]],
   ['rtl_5fdrive_5fletter_5fcurdir',['RTL_DRIVE_LETTER_CURDIR',['../structcrashpad_1_1process__types_1_1RTL__DRIVE__LETTER__CURDIR.html',1,'crashpad::process_types']]],

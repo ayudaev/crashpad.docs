@@ -123,9 +123,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memitem:ac048cf2b1060c2203897c03858377184"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1UUID.html#ac048cf2b1060c2203897c03858377184">InitializeFromString</a> (const base::StringPiece &amp;string)</td></tr>
 <tr class="memdesc:ac048cf2b1060c2203897c03858377184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the UUID from a RFC 4122 §3 formatted string.  <a href="#ac048cf2b1060c2203897c03858377184">More...</a><br /></td></tr>
 <tr class="separator:ac048cf2b1060c2203897c03858377184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06925d567ffcc907c4cd6adc2c86ff96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1UUID.html#a06925d567ffcc907c4cd6adc2c86ff96">InitializeFromSystemUUID</a> (const ::<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *system_uuid)</td></tr>
+<tr class="memdesc:a06925d567ffcc907c4cd6adc2c86ff96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the UUID from a system <code><a class="el" href="structcrashpad_1_1UUID.html" title="A universally unique identifier (UUID). ">UUID</a></code> or <code>GUID</code> structure.  <a href="#a06925d567ffcc907c4cd6adc2c86ff96">More...</a><br /></td></tr>
+<tr class="separator:a06925d567ffcc907c4cd6adc2c86ff96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e4728f499a21c7f2f0037f514960165"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1UUID.html#a1e4728f499a21c7f2f0037f514960165">ToString</a> () const </td></tr>
 <tr class="memdesc:a1e4728f499a21c7f2f0037f514960165"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats the UUID per RFC 4122 §3.  <a href="#a1e4728f499a21c7f2f0037f514960165">More...</a><br /></td></tr>
 <tr class="separator:a1e4728f499a21c7f2f0037f514960165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e10050de9041b631bb2848caf1a000d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e10050de9041b631bb2848caf1a000d"></a>
+base::string16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1UUID.html#a1e10050de9041b631bb2848caf1a000d">ToString16</a> () const </td></tr>
+<tr class="memdesc:a1e10050de9041b631bb2848caf1a000d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The same as ToString, but returned as a string16. <br /></td></tr>
+<tr class="separator:a1e10050de9041b631bb2848caf1a000d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -232,6 +239,30 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>data_5</b> [6]</td
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the string was formatted correctly and the object has been initialized with the data. <code>false</code> if the string could not be parsed, with the object state untouched. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a06925d567ffcc907c4cd6adc2c86ff96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::UUID::InitializeFromSystemUUID </td>
+          <td>(</td>
+          <td class="paramtype">const ::<a class="el" href="structcrashpad_1_1UUID.html">UUID</a> *&#160;</td>
+          <td class="paramname"><em>system_uuid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the UUID from a system <code><a class="el" href="structcrashpad_1_1UUID.html" title="A universally unique identifier (UUID). ">UUID</a></code> or <code>GUID</code> structure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">system_uuid</td><td>A system <code><a class="el" href="structcrashpad_1_1UUID.html" title="A universally unique identifier (UUID). ">UUID</a></code> or <code>GUID</code> structure. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

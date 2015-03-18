@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.9">
-<title>catch_exception_tool(1)</title>
+<title>crashpad_handler(8)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -753,12 +753,12 @@ asciidoc.install();
 <body class="manpage">
 <div id="header">
 <h1>
-catch_exception_tool(1) Manual Page
+crashpad_handler(8) Manual Page
 </h1>
 <h2>NAME</h2>
 <div class="sectionbody">
-<p>catch_exception_tool -
-   Catch Mach exceptions and display information about them
+<p>crashpad_handler -
+   Crashpad’s exception handler server
 </p>
 </div>
 </div>
@@ -767,7 +767,7 @@ catch_exception_tool(1) Manual Page
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="verseblock">
-<pre class="content"><strong>catch_exception_tool</strong> <strong>-m</strong> <em>SERVICE</em> [<em>OPTION…</em>]</pre>
+<pre class="content"><strong>crashpad_handler</strong> [<em>OPTION…</em>]</pre>
 <div class="attribution">
 </div></div>
 </div>
@@ -775,10 +775,23 @@ catch_exception_tool(1) Manual Page
 <div class="sect1">
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Runs a Mach exception server registered with the bootstrap server under the name
-<em>SERVICE</em>. The exception server is capable of receiving exceptions for
-“behavior” values of <span class="monospaced">EXCEPTION_DEFAULT</span>, <span class="monospaced">EXCEPTION_STATE</span>, and
-<span class="monospaced">EXCEPTION_STATE_IDENTITY</span>, with or without <span class="monospaced">MACH_EXCEPTION_CODES</span> set.</p></div>
+<div class="paragraph"><p>This program is Crashpad’s main exception-handling server. It is responsible for
+catching exceptions, writing crash reports, and uploading them to a crash report
+collection server. Uploads are disabled by default, and can only be enabled by a
+Crashpad client using the Crashpad client library, typically in response to a
+user requesting this behavior.</p></div>
+<div class="paragraph"><p>This server is normally started by its initial client, and it performs a
+handshake with this client via a pipe established by the client that is
+inherited by the server, referenced by the <strong>--handshake-fd</strong> argument. During the
+handshake, the server furnishes the client with a send right that the client may
+use as an exception port. The server retains the corresponding receive right,
+which it monitors for exception messages. When the receive right loses all
+senders, the server exits after allowing any upload in progress to complete.</p></div>
+<div class="paragraph"><p>It is not normally appropriate to invoke this program directly. Usually, it will
+be invoked by a Crashpad client using the Crashpad client library. Arbitrary
+programs may be run with a Crashpad handler by using
+<a href="run_with_crashpad.html">run_with_crashpad(1)</a> to establish the Crashpad client environment
+before running a program.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -786,45 +799,57 @@ catch_exception_tool(1) Manual Page
 <div class="sectionbody">
 <div class="dlist"><dl>
 <dt class="hdlist1">
-<strong>-f</strong>, <strong>--file</strong>=<em>FILE</em>
+<strong>--annotation</strong>=<em>KEY=VALUE</em>
 </dt>
 <dd>
 <p>
-Information about the exception will be appended to <em>FILE</em> instead of the
-standard output stream.
+Sets a process-level annotation mapping <em>KEY</em> to <em>VALUE</em> in each crash report
+that is written. This option may appear zero, one, or multiple times.
+</p>
+<div class="paragraph"><p>Most annotations should be provided by the Crashpad client as module-level
+annotations instead of process-level annotations. Module-level annotations are
+more flexible in that they can be modified and cleared during the client
+program’s lifetime. Module-level annotations can be set via the Crashpad client
+library. Process-level annotations are useful for annotations that the
+collection server requires be present, that have fixed values, and for cases
+where a program that does not use the Crashpad client library is being
+monitored.</p></div>
+<div class="paragraph"><p>Breakpad-type collection servers only require the <span class="monospaced">"prod"</span> and <span class="monospaced">"ver"</span>
+annotations, which should be set to the product name or identifier and product
+version, respectively. It is unusual to specify other annotations as
+process-level annotations via this argument.</p></div>
+</dd>
+<dt class="hdlist1">
+<strong>--database</strong>=<em>PATH</em>
+</dt>
+<dd>
+<p>
+Use <em>PATH</em> as the path to the Crashpad crash report database. This option is
+required. Crash reports are written to this database, and if uploads are
+enabled, uploaded from this database to a crash report collection server. If the
+database does not exist, it will be created, provided that the parent directory
+of <em>PATH</em> exists.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-m</strong>, <strong>--mach-service</strong>=<em>SERVICE</em>
+<strong>--handshake-fd</strong>=<em>FD</em>
 </dt>
 <dd>
 <p>
-Check in with the bootstrap server under the name <em>SERVICE</em>. This service name
-may already be reserved with the bootstrap server in cases where this tool is
-started by launchd(8) as a result of a message being sent to a service declared
-in a job’s <span class="monospaced">MachServices</span> dictionary (see launchd.plist(5)). The service name
-may also be completely unknown to the system.
+Perform the handshake with the initial client on the file descriptor at <em>FD</em>.
+This option is required.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>-p</strong>, <strong>--persistent</strong>
+<strong>--url</strong>=<em>URL</em>
 </dt>
 <dd>
 <p>
-Continue processing exceptions after the first one. The default mode is
-one-shot, where this tool exits after processing the first exception.
-</p>
-</dd>
-<dt class="hdlist1">
-<strong>-t</strong>, <strong>--timeout</strong>=<em>TIMEOUT</em>
-</dt>
-<dd>
-<p>
-Run for a maximum of <em>TIMEOUT</em> seconds. Specify <span class="monospaced">0</span> to request non-blocking
-operation, in which the tool exits immediately if no exception is received. In
-<strong>--persistent</strong> mode, <em>TIMEOUT</em> applies to the overall duration that this tool
-will run, not to the processing of individual exceptions. When <strong>--timeout</strong> is
-not specified, this tool will block indefinitely while waiting for an exception.
+If uploads are enabled, sends crash reports to the Breakpad-type crash report
+collection server at <em>URL</em>. Uploads are disabled by default, and can only be
+enabled for a database by a Crashpad client using the Crashpad client library,
+typically in response to a user requesting this behavior. If this option is not
+specified, this program will behave as if uploads are disabled.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -847,45 +872,6 @@ Output version information and exit.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_examples">Examples</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Run a one-shot blocking exception server registered with the bootstrap server
-under the name <span class="monospaced">svc</span>:</p></div>
-<div class="listingblock">
-<div class="content monospaced">
-<pre>$ <strong>catch_exception_tool --mach-service=svc --file=out &amp;</strong>
-[1] 1233
-$ <strong>exception_port_tool --set-handler=handler=bootstrap:svc crasher</strong>
-Illegal instruction: 4
-[1]+  Done    catch_exception_tool --mach-service=svc --file=out
-$ <strong>cat out</strong>
-catch_exception_tool:
-behavior EXCEPTION_DEFAULT|MACH_EXCEPTION_CODES,
-pid 1234, thread 56789, exception EXC_CRASH, codes[2] 0x4200001, 0,
-original exception EXC_BAD_INSTRUCTION, original code[0] 1,
-signal SIGILL</pre>
-</div></div>
-<div class="paragraph"><p>Run an on-demand exception server started by launchd(5) available via the
-bootstrap server under the name <span class="monospaced">svc</span>:</p></div>
-<div class="listingblock">
-<div class="content monospaced">
-<pre>$ <strong>on_demand_service_tool --load --label=catch_exception \
-      --mach-service=svc \
-      $(which catch_exception_tool) --mach-service=svc \
-      --file=/tmp/out --persistent --timeout=0</strong>
-$ <strong>exception_port_tool --set-handler=handler=bootstrap:svc crasher</strong>
-Illegal instruction: 4
-$ <strong>on_demand_service_tool --unload --label=catch_exception</strong>
-$ <strong>cat /tmp/out</strong>
-catch_exception_tool:
-behavior EXCEPTION_DEFAULT|MACH_EXCEPTION_CODES,
-pid 2468, thread 13579, exception EXC_CRASH, codes[2] 0x4200001, 0,
-original exception EXC_BAD_INSTRUCTION, original code[0] 1,
-signal SIGILL</pre>
-</div></div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_exit_status">Exit Status</h2>
 <div class="sectionbody">
 <div class="dlist"><dl>
@@ -894,8 +880,7 @@ signal SIGILL</pre>
 </dt>
 <dd>
 <p>
-Success. In <strong>--persistent</strong> mode with a <strong>--timeout</strong> set, it is considered
-successful if at least one exception was caught when the timer expires.
+Success.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -912,8 +897,9 @@ Failure, with a message printed to the standard error stream.
 <div class="sect1">
 <h2 id="_see_also">See Also</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><a href="exception_port_tool.html">exception_port_tool(1)</a>,
-<a href="on_demand_service_tool.html">on_demand_service_tool(1)</a></p></div>
+<div class="paragraph"><p><a href="catch_exception_tool.html">catch_exception_tool(1)</a>,
+<a href="generate_dump.html">generate_dump(1)</a>,
+<a href="run_with_crashpad.html">run_with_crashpad(1)</a></p></div>
 </div>
 </div>
 <div class="sect1">

@@ -37,6 +37,7 @@ var searchData=
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['toolsupport',['ToolSupport',['../classcrashpad_1_1ToolSupport.html',1,'crashpad']]],
   ['tostring',['ToString',['../structcrashpad_1_1UUID.html#a1e4728f499a21c7f2f0037f514960165',1,'crashpad::UUID']]],
+  ['tostring16',['ToString16',['../structcrashpad_1_1UUID.html#a1e10050de9041b631bb2848caf1a000d',1,'crashpad::UUID']]],
   ['traits32',['Traits32',['../structcrashpad_1_1process__types_1_1internal_1_1Traits32.html',1,'crashpad::process_types::internal']]],
   ['traits64',['Traits64',['../structcrashpad_1_1process__types_1_1internal_1_1Traits64.html',1,'crashpad::process_types::internal']]],
   ['tristate',['TriState',['../namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292',1,'crashpad']]],
