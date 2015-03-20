@@ -453,6 +453,9 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a034ccc90eb0d1f587ee89275d822175d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a034ccc90eb0d1f587ee89275d822175d">FilePermissions</a> : bool </td></tr>
 <tr class="memdesc:a034ccc90eb0d1f587ee89275d822175d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the permissions bits for files created on POSIX systems.  <a href="namespacecrashpad.html#a034ccc90eb0d1f587ee89275d822175d">More...</a><br /></td></tr>
 <tr class="separator:a034ccc90eb0d1f587ee89275d822175d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3753a95b02e5c96c6e20017e467cef07"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07">FileLocking</a> : bool </td></tr>
+<tr class="memdesc:a3753a95b02e5c96c6e20017e467cef07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines the locking mode that LoggingLockFile() uses.  <a href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07">More...</a><br /></td></tr>
+<tr class="separator:a3753a95b02e5c96c6e20017e467cef07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a589b4d9bd6f2233b67148ab6793c3c13"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a589b4d9bd6f2233b67148ab6793c3c13">XattrStatus</a> </td></tr>
 <tr class="memdesc:a589b4d9bd6f2233b67148ab6793c3c13"><td class="mdescLeft">&#160;</td><td class="mdescRight">The result code for a ReadXattr operation.  <a href="namespacecrashpad.html#a589b4d9bd6f2233b67148ab6793c3c13">More...</a><br /></td></tr>
 <tr class="separator:a589b4d9bd6f2233b67148ab6793c3c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -525,6 +528,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a04cb0f20b53ef546e4c49f3e01e40503"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a04cb0f20b53ef546e4c49f3e01e40503">LoggingOpenFileForWrite</a> (const base::FilePath &amp;path, <a class="el" href="namespacecrashpad.html#afa69b0967d9a6df659ff5d2a02ff3e51">FileWriteMode</a> write_mode, <a class="el" href="namespacecrashpad.html#a034ccc90eb0d1f587ee89275d822175d">FilePermissions</a> permissions)</td></tr>
 <tr class="memdesc:a04cb0f20b53ef546e4c49f3e01e40503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>open()</code> or <code>CreateFile()</code>, creating a file for output. Logs an error if the operation fails.  <a href="#a04cb0f20b53ef546e4c49f3e01e40503">More...</a><br /></td></tr>
 <tr class="separator:a04cb0f20b53ef546e4c49f3e01e40503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd02263566d8c43fc7886f88a13b364f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#acd02263566d8c43fc7886f88a13b364f">LoggingLockFile</a> (<a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a> file, <a class="el" href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07">FileLocking</a> locking)</td></tr>
+<tr class="memdesc:acd02263566d8c43fc7886f88a13b364f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks the given <em>file</em> using <code>flock()</code> on POSIX or <code>LockFileEx()</code> on Windows.  <a href="#acd02263566d8c43fc7886f88a13b364f">More...</a><br /></td></tr>
+<tr class="separator:acd02263566d8c43fc7886f88a13b364f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c1f3a2c6f04e944fdca12e22b0cb6e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a15c1f3a2c6f04e944fdca12e22b0cb6e">LoggingUnlockFile</a> (<a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a> file)</td></tr>
+<tr class="memdesc:a15c1f3a2c6f04e944fdca12e22b0cb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks a file previously locked with <a class="el" href="namespacecrashpad.html#acd02263566d8c43fc7886f88a13b364f" title="Locks the given file using flock() on POSIX or LockFileEx() on Windows. ">LoggingLockFile()</a>.  <a href="#a15c1f3a2c6f04e944fdca12e22b0cb6e">More...</a><br /></td></tr>
+<tr class="separator:a15c1f3a2c6f04e944fdca12e22b0cb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d6cedc10e24145d4a0c1000c33f8a10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2">FileOffset</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a3d6cedc10e24145d4a0c1000c33f8a10">LoggingSeekFile</a> (<a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a> file, <a class="el" href="namespacecrashpad.html#a1e53a1957d9edcba8b406ea632b6daf2">FileOffset</a> offset, int whence)</td></tr>
 <tr class="memdesc:a3d6cedc10e24145d4a0c1000c33f8a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <code>lseek()</code> or <code>SetFilePointerEx()</code>. Logs an error if the operation fails.  <a href="#a3d6cedc10e24145d4a0c1000c33f8a10">More...</a><br /></td></tr>
 <tr class="separator:a3d6cedc10e24145d4a0c1000c33f8a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -955,6 +964,36 @@ template&lt;typename T &gt; </div>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a270e290ba558e948eb6690bd217cbb71addee685df867aea490719783e56baf0a"></a>kCPUArchitectureX86_64&#160;</td><td class="fielddoc">
 <p>x86_64. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="a3753a95b02e5c96c6e20017e467cef07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07">crashpad::FileLocking</a> : bool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determines the locking mode that <a class="el" href="namespacecrashpad.html#acd02263566d8c43fc7886f88a13b364f" title="Locks the given file using flock() on POSIX or LockFileEx() on Windows. ">LoggingLockFile()</a> uses. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3753a95b02e5c96c6e20017e467cef07a767e1337acb2aa20d7ce4e903a75ca16"></a>kShared&#160;</td><td class="fielddoc">
+<p>Equivalent to <code>flock()</code> with <code>LOCK_SH</code>. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3753a95b02e5c96c6e20017e467cef07a9d38b79e17ebc3239ca19ba517174b5b"></a>kExclusive&#160;</td><td class="fielddoc">
+<p>Equivalent to <code>flock()</code> with <code>LOCK_EX</code>. </p>
 </td></tr>
 </table>
 
@@ -3042,6 +3081,44 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="acd02263566d8c43fc7886f88a13b364f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::LoggingLockFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a>&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07">FileLocking</a>&#160;</td>
+          <td class="paramname"><em>locking</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Locks the given <em>file</em> using <code>flock()</code> on POSIX or <code>LockFileEx()</code> on Windows. </p>
+<p>It is an error to attempt to lock a file in a different mode when it is already locked. This call will block until the lock is acquired. The entire file is locked.</p>
+<p>If <em>locking</em> is <a class="el" href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07a767e1337acb2aa20d7ce4e903a75ca16" title="Equivalent to flock() with LOCK_SH. ">FileLocking::kShared</a>, <em>file</em> must have been opened for reading, and if it's <a class="el" href="namespacecrashpad.html#a3753a95b02e5c96c6e20017e467cef07a9d38b79e17ebc3239ca19ba517174b5b" title="Equivalent to flock() with LOCK_EX. ">FileLocking::kExclusive</a>, <em>file</em> must have been opened for writing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The open file handle to be locked. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">locking</td><td>Controls whether the lock is a shared reader lock, or an exclusive writer lock.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, or <code>false</code> and a message will be logged. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ab3712d59104f641109b170c78a912b4d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3093,7 +3170,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 </div><div class="memdoc">
 
 <p>Wraps <code>open()</code> or <code>CreateFile()</code>, creating a file for output. Logs an error if the operation fails. </p>
-<p><em>write_mode</em> determines the style (truncate, reuse, etc.) that is used to open the file. On POSIX, <em>permissions</em> determines the value that is passed as <code>mode</code> to <code>open()</code>. On Windows, the file is always opened in binary mode (that is, no CRLF translation).</p>
+<p><em>write_mode</em> determines the style (truncate, reuse, etc.) that is used to open the file. On POSIX, <em>permissions</em> determines the value that is passed as <code>mode</code> to <code>open()</code>. On Windows, the file is always opened in binary mode (that is, no CRLF translation). On Windows, the file is opened for sharing, see <a class="el" href="namespacecrashpad.html#acd02263566d8c43fc7886f88a13b364f" title="Locks the given file using flock() on POSIX or LockFileEx() on Windows. ">LoggingLockFile()</a> and <a class="el" href="namespacecrashpad.html#a15c1f3a2c6f04e944fdca12e22b0cb6e" title="Unlocks a file previously locked with LoggingLockFile(). ">LoggingUnlockFile()</a> to control concurrent access.</p>
 <dl class="section return"><dt>Returns</dt><dd>The newly opened FileHandle, or an invalid FileHandle on failure.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecrashpad.html#afa69b0967d9a6df659ff5d2a02ff3e51" title="Determines the mode that LoggingOpenFileForWrite() uses. ">FileWriteMode</a> </dd>
 <dd>
@@ -3178,6 +3255,32 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>Wraps <code>lseek()</code> or <code>SetFilePointerEx()</code>. Logs an error if the operation fails. </p>
 <p>Repositions the offset of the open <em>file</em> to the specified <em>offset</em>, relative to <em>whence</em>. <em>whence</em> must be one of <code>SEEK_SET</code>, <code>SEEK_CUR</code>, or <code>SEEK_END</code>, and is interpreted in the usual way.</p>
 <dl class="section return"><dt>Returns</dt><dd>The resulting offset in bytes from the beginning of the file, or <code>-1</code> on failure. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a15c1f3a2c6f04e944fdca12e22b0cb6e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crashpad::LoggingUnlockFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a07f8e33c4fdeba3783277f9f2563e48a">FileHandle</a>&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unlocks a file previously locked with <a class="el" href="namespacecrashpad.html#acd02263566d8c43fc7886f88a13b364f" title="Locks the given file using flock() on POSIX or LockFileEx() on Windows. ">LoggingLockFile()</a>. </p>
+<p>It is an error to attempt to unlock a file that was not previously locked. A previously-locked file should be unlocked before closing the file handle, otherwise on some OSs the lock may not be released immediately.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The open locked file handle to be unlocked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> on success, or <code>false</code> and a message will be logged. </dd></dl>
 
 </div>
 </div>

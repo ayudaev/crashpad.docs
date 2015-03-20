@@ -1,17 +1,8 @@
 var searchData=
 [
   ['wait',['Wait',['../classcrashpad_1_1Semaphore.html#ade6db63246c9d6f3a36f3631b04c2bfd',1,'crashpad::Semaphore']]],
-  ['wday',['wDay',['../structSYSTEMTIME.html#aa95bbc66d8f19c5edf20d124faa61181',1,'SYSTEMTIME']]],
-  ['wdayofweek',['wDayOfWeek',['../structSYSTEMTIME.html#a9cb5a6b5c30455a545091ce4c382f1c4',1,'SYSTEMTIME']]],
-  ['weakfilehandlefilereader',['WeakFileHandleFileReader',['../classcrashpad_1_1WeakFileHandleFileReader.html',1,'crashpad']]],
-  ['weakfilehandlefilewriter',['WeakFileHandleFileWriter',['../classcrashpad_1_1WeakFileHandleFileWriter.html',1,'crashpad']]],
-  ['whour',['wHour',['../structSYSTEMTIME.html#aaa06cb27275799b23d2df01b6cc5cdfe',1,'SYSTEMTIME']]],
   ['willwriteatoffset',['WillWriteAtOffset',['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a712fac2ada227f53c55eb0c4d042f239',1,'crashpad::internal::MinidumpWritable']]],
   ['willwriteatoffsetimpl',['WillWriteAtOffsetImpl',['../classcrashpad_1_1MinidumpFileWriter.html#ae9b7cef2c519dfdd5a7a06ecdd9766cc',1,'crashpad::MinidumpFileWriter::WillWriteAtOffsetImpl()'],['../classcrashpad_1_1MinidumpMemoryWriter.html#adec74e1cb2d532422d8c1384049f7217',1,'crashpad::MinidumpMemoryWriter::WillWriteAtOffsetImpl()'],['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a2416cb821816b769d95b92e486713ebf',1,'crashpad::internal::MinidumpWritable::WillWriteAtOffsetImpl()'],['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html#a3764ed18a98d9ea979a7f0494eb19bbf',1,'crashpad::test::TestMinidumpMemoryWriter::WillWriteAtOffsetImpl()']]],
-  ['wmilliseconds',['wMilliseconds',['../structSYSTEMTIME.html#ab4d8077b6cc2f87ec05b6f198b6832d5',1,'SYSTEMTIME']]],
-  ['wminute',['wMinute',['../structSYSTEMTIME.html#a57505f81325b68b765d0781ab1dcab36',1,'SYSTEMTIME']]],
-  ['wmonth',['wMonth',['../structSYSTEMTIME.html#abbdde81c9b865df6e9def49b80a8966f',1,'SYSTEMTIME']]],
-  ['writableiovec',['WritableIoVec',['../structcrashpad_1_1WritableIoVec.html',1,'crashpad']]],
   ['write',['Write',['../classcrashpad_1_1FileWriterInterface.html#a34e3a6edac09771c7746901b77acc5b1',1,'crashpad::FileWriterInterface::Write()'],['../classcrashpad_1_1WeakFileHandleFileWriter.html#a8caefa3cd0fbd84fa79695cbe3e13d94',1,'crashpad::WeakFileHandleFileWriter::Write()'],['../classcrashpad_1_1FileWriter.html#a88df535e600f9c9b57a44130de1d0eb0',1,'crashpad::FileWriter::Write()'],['../classcrashpad_1_1StringFile.html#aa7e22ad48bbedf3e1e6a257cfba0c137',1,'crashpad::StringFile::Write()']]],
   ['writeeverything',['WriteEverything',['../classcrashpad_1_1MinidumpFileWriter.html#ad8eeea6397f565a17455c091b0a3f6a6',1,'crashpad::MinidumpFileWriter::WriteEverything()'],['../classcrashpad_1_1internal_1_1MinidumpWritable.html#a24507e918299cb566c7f15207de83a7f',1,'crashpad::internal::MinidumpWritable::WriteEverything()']]],
   ['writefile',['WriteFile',['../namespacecrashpad.html#a58d321f56b7052dfa4eafeb66e329611',1,'crashpad']]],
@@ -23,7 +14,5 @@ var searchData=
   ['writexattr',['WriteXattr',['../namespacecrashpad.html#a6842e0ae3110f04477765c771c04dc60',1,'crashpad']]],
   ['writexattrbool',['WriteXattrBool',['../namespacecrashpad.html#ae086861e350e7225e4ea065d941e664f',1,'crashpad']]],
   ['writexattrint',['WriteXattrInt',['../namespacecrashpad.html#a85a3551184d900a1d970bd8fa0be0ec3',1,'crashpad']]],
-  ['writexattrtimet',['WriteXattrTimeT',['../namespacecrashpad.html#ae63f9a1eeeec00b78c216f72b1ca1327',1,'crashpad']]],
-  ['wsecond',['wSecond',['../structSYSTEMTIME.html#a2364ae35105e5ea7b1dc2dc6d92064da',1,'SYSTEMTIME']]],
-  ['wyear',['wYear',['../structSYSTEMTIME.html#a5efac2653e32ef7b2523d7856b21691a',1,'SYSTEMTIME']]]
+  ['writexattrtimet',['WriteXattrTimeT',['../namespacecrashpad.html#ae63f9a1eeeec00b78c216f72b1ca1327',1,'crashpad']]]
 ];

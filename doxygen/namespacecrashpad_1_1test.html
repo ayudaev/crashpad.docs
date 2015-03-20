@@ -141,6 +141,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1TestUInt32MinidumpWritable.html">TestUInt32MinidumpWritable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An <a class="el" href="classcrashpad_1_1internal_1_1MinidumpWritable.html" title="The base class for all content that might be written to a minidump file. ">internal::MinidumpWritable</a> that carries a <code>uint32_t</code> for testing.  <a href="classcrashpad_1_1test_1_1TestUInt32MinidumpWritable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1test_1_1Thread.html">Thread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic thread abstraction for testing. Users should derive from this class and implement ThreadMain().  <a href="classcrashpad_1_1test_1_1Thread.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -273,6 +276,9 @@ template&lt;&gt; </td></tr>
 <tr class="memitem:a8d8e66fbc47a4f22a03710797f226238"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a8d8e66fbc47a4f22a03710797f226238">ErrnoMessage</a> (const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:a8d8e66fbc47a4f22a03710797f226238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an error message using <code>errno</code>.  <a href="#a8d8e66fbc47a4f22a03710797f226238">More...</a><br /></td></tr>
 <tr class="separator:a8d8e66fbc47a4f22a03710797f226238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d079e80aa56bc0840f1c0b944e01bfb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a2d079e80aa56bc0840f1c0b944e01bfb">ErrorMessage</a> (const std::string &amp;base=std::string())</td></tr>
+<tr class="memdesc:a2d079e80aa56bc0840f1c0b944e01bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats an error message using <code>GetLastError()</code>.  <a href="#a2d079e80aa56bc0840f1c0b944e01bfb">More...</a><br /></td></tr>
+<tr class="separator:a2d079e80aa56bc0840f1c0b944e01bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49a7a2461cf4e1f674eac147c19d9483"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad_1_1test.html#a49a7a2461cf4e1f674eac147c19d9483">MachErrorMessage</a> (mach_error_t mach_err, const std::string &amp;base=std::string())</td></tr>
 <tr class="memdesc:a49a7a2461cf4e1f674eac147c19d9483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formats a Mach error message.  <a href="#a49a7a2461cf4e1f674eac147c19d9483">More...</a><br /></td></tr>
 <tr class="separator:a49a7a2461cf4e1f674eac147c19d9483"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,6 +416,25 @@ template&lt;&gt; </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string of the format <code>"Operation not permitted (1)"</code> if <code>errno</code> has the value <code>EPERM</code> on a system where this is defined to be <code>1</code>. If <em>base</em> is not empty, it will be prepended to this string, separated by a colon. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2d079e80aa56bc0840f1c0b944e01bfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string crashpad::test::ErrorMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>base</em> = <code>std::string()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Formats an error message using <code>GetLastError()</code>. </p>
+<p>The returned string will combine the <em>base</em> string, if supplied, with a a textual and numeric description of the error. The format is the same as the <code>PLOG()</code> formatting in base. </p>
 
 </div>
 </div>
