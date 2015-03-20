@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.9">
-<title>crashpad_handler(8)</title>
+<title>crashpad_database_util(1)</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -753,12 +753,12 @@ asciidoc.install();
 <body class="manpage">
 <div id="header">
 <h1>
-crashpad_handler(8) Manual Page
+crashpad_database_util(1) Manual Page
 </h1>
 <h2>NAME</h2>
 <div class="sectionbody">
-<p>crashpad_handler -
-   Crashpad’s exception handler server
+<p>crashpad_database_util -
+   Operate on Crashpad crash report databases
 </p>
 </div>
 </div>
@@ -767,7 +767,7 @@ crashpad_handler(8) Manual Page
 <h2 id="_synopsis">Synopsis</h2>
 <div class="sectionbody">
 <div class="verseblock">
-<pre class="content"><strong>crashpad_handler</strong> [<em>OPTION…</em>]</pre>
+<pre class="content"><strong>crashpad_database_util</strong> [<em>OPTION…</em>]</pre>
 <div class="attribution">
 </div></div>
 </div>
@@ -775,23 +775,16 @@ crashpad_handler(8) Manual Page
 <div class="sect1">
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>This program is Crashpad’s main exception-handling server. It is responsible for
-catching exceptions, writing crash reports, and uploading them to a crash report
-collection server. Uploads are disabled by default, and can only be enabled by a
-Crashpad client using the Crashpad client library, typically in response to a
-user requesting this behavior.</p></div>
-<div class="paragraph"><p>This server is normally started by its initial client, and it performs a
-handshake with this client via a pipe established by the client that is
-inherited by the server, referenced by the <strong>--handshake-fd</strong> argument. During the
-handshake, the server furnishes the client with a send right that the client may
-use as an exception port. The server retains the corresponding receive right,
-which it monitors for exception messages. When the receive right loses all
-senders, the server exits after allowing any upload in progress to complete.</p></div>
-<div class="paragraph"><p>It is not normally appropriate to invoke this program directly. Usually, it will
-be invoked by a Crashpad client using the Crashpad client library. Arbitrary
-programs may be run with a Crashpad handler by using
-<a href="run_with_crashpad.html">run_with_crashpad(1)</a> to establish the Crashpad client environment
-before running a program.</p></div>
+<div class="paragraph"><p>Operates on Crashpad crash report databases. The database’s settings can be
+queried and modified, and information about crash reports stored in the
+database can be displayed.</p></div>
+<div class="paragraph"><p>When this program is requested to both show and set information in a single
+invocation, all “show” operations will be completed prior to beginning any “set”
+operation.</p></div>
+<div class="paragraph"><p>Programs that use the Crashpad client library directly will not normally use
+this tool, but may use the database through the programmatic interfaces in the
+client library. This tool exists to allow developers to manipulate a Crashpad
+database.</p></div>
 </div>
 </div>
 <div class="sect1">
@@ -799,57 +792,119 @@ before running a program.</p></div>
 <div class="sectionbody">
 <div class="dlist"><dl>
 <dt class="hdlist1">
-<strong>--annotation</strong>=<em>KEY=VALUE</em>
-</dt>
-<dd>
-<p>
-Sets a process-level annotation mapping <em>KEY</em> to <em>VALUE</em> in each crash report
-that is written. This option may appear zero, one, or multiple times.
-</p>
-<div class="paragraph"><p>Most annotations should be provided by the Crashpad client as module-level
-annotations instead of process-level annotations. Module-level annotations are
-more flexible in that they can be modified and cleared during the client
-program’s lifetime. Module-level annotations can be set via the Crashpad client
-library. Process-level annotations are useful for annotations that the
-collection server requires be present, that have fixed values, and for cases
-where a program that does not use the Crashpad client library is being
-monitored.</p></div>
-<div class="paragraph"><p>Breakpad-type collection servers only require the <span class="monospaced">"prod"</span> and <span class="monospaced">"ver"</span>
-annotations, which should be set to the product name or identifier and product
-version, respectively. It is unusual to specify other annotations as
-process-level annotations via this argument.</p></div>
-</dd>
-<dt class="hdlist1">
-<strong>--database</strong>=<em>PATH</em>
+<strong>-d</strong>, <strong>--database</strong>=<em>PATH</em>
 </dt>
 <dd>
 <p>
 Use <em>PATH</em> as the path to the Crashpad crash report database. This option is
-required. Crash reports are written to this database, and if uploads are
-enabled, uploaded from this database to a crash report collection server. If the
-database does not exist, it will be created, provided that the parent directory
-of <em>PATH</em> exists.
+required. If the database does not exist, it will be created, provided that the
+parent directory of <em>PATH</em> exists.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--handshake-fd</strong>=<em>FD</em>
+<strong>--show-client-id</strong>
 </dt>
 <dd>
 <p>
-Perform the handshake with the initial client on the file descriptor at <em>FD</em>.
-This option is required.
+Show the client ID stored in the database’s settings. The client ID is formatted
+as a UUID. The client ID is set when the database is created.
 </p>
 </dd>
 <dt class="hdlist1">
-<strong>--url</strong>=<em>URL</em>
+<strong>--show-uploads-enabled</strong>
 </dt>
 <dd>
 <p>
-If uploads are enabled, sends crash reports to the Breakpad-type crash report
-collection server at <em>URL</em>. Uploads are disabled by default, and can only be
-enabled for a database by a Crashpad client using the Crashpad client library,
-typically in response to a user requesting this behavior. If this option is not
-specified, this program will behave as if uploads are disabled.
+Show the status of the uploads-enabled bit stored in the database’s settings.
+<a href="crashpad_handler.html">crashpad_handler(8)</a> does not upload reports when this bit is false.
+This bit is false when a database is created, and is under an application’s
+control via the Crashpad client library interface.
+</p>
+<div class="paragraph"><p>See also <strong>--set-uploads-enabled</strong>.</p></div>
+</dd>
+<dt class="hdlist1">
+<strong>--show-last-upload-attempt-time</strong>
+</dt>
+<dd>
+<p>
+Show the last-upload-attempt time stored in the database’s settings. This value
+is <span class="monospaced">0</span>, meaning “never,” when the database is created.
+<a href="crashpad_handler.html">crashpad_handler(8)</a> consults this value before attempting an upload to
+implement its rate-limiting behavior. The database updates this value whenever
+an upload is attempted.
+</p>
+<div class="paragraph"><p>See also <strong>--set-last-upload-attempt-time</strong>.</p></div>
+</dd>
+<dt class="hdlist1">
+<strong>--show-pending-reports</strong>
+</dt>
+<dd>
+<p>
+Show reports eligible for upload.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--show-completed-reports</strong>
+</dt>
+<dd>
+<p>
+Show reports not eligible for upload. A report is moved from the “pending” state
+to the “completed” state by <a href="crashpad_handler.html">crashpad_handler(8)</a>. This may happen when a
+report is successfully uploaded, when a report is not uploaded because uploads
+are disabled, or when a report upload attempt fails and will not be retried.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--show-all-report-info</strong>
+</dt>
+<dd>
+<p>
+With <strong>--show-pending-reports</strong> or <strong>--show-completed-reports</strong>, show all metadata
+for each report displayed. Without this option, only report IDs will be shown.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--show-report</strong>=<em>UUID</em>
+</dt>
+<dd>
+<p>
+Show a report from the database looked up by its identifier, <em>UUID</em>, which must
+be formatted in string representation per RFC 4122 §3. All metadata for each
+report found via a <strong>--show-report</strong> option will be shown. If <em>UUID</em> is not found,
+the string <span class="monospaced">"not found"</span> will be printed. If this program is only requested to
+show a single report and it is not found, it will treat this as a failure for
+the purposes of determining its exit status.
+</p>
+</dd>
+<dt class="hdlist1">
+<strong>--set-report-uploads-enabled</strong>=<em>BOOL</em>
+</dt>
+<dd>
+<p>
+Enable or disable report upload in the database’s settings. <em>BOOL</em> is a string
+representation of a boolean value, such as <span class="monospaced">"0"</span> or <span class="monospaced">"true"</span>.
+</p>
+<div class="paragraph"><p>See also <strong>--show-uploads-enabled</strong>.</p></div>
+</dd>
+<dt class="hdlist1">
+<strong>--set-last-upload-attempt-time</strong>=<em>TIME</em>
+</dt>
+<dd>
+<p>
+Set the last-upload-attempt time in the database’s settings. <em>TIME</em> is a string
+representation of a time, which may be in <em>yyyy-mm-dd hh:mm:ss</em> format, a
+numeric <span class="monospaced">time_t</span> value, or the special string <span class="monospaced">"never"</span>.
+</p>
+<div class="paragraph"><p>See also <strong>--show-last-upload-attempt-time</strong>.</p></div>
+</dd>
+<dt class="hdlist1">
+<strong>--utc</strong>
+</dt>
+<dd>
+<p>
+When showing times, do so in UTC as opposed to the local time zone. When setting
+times, interpret ambiguous time strings in UTC as opposed to the local time
+zone.
 </p>
 </dd>
 <dt class="hdlist1">
@@ -869,6 +924,31 @@ Output version information and exit.
 </p>
 </dd>
 </dl></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples">Examples</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Shows all crash reports in a crash report database that are in the “completed”
+state.</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>crashpad_database_util --database /tmp/crashpad_database \
+      --show-completed-reports</strong>
+23f9512b-63e1-4ead-9dcd-e2e21fbccc68
+4bfca440-039f-4bc6-bbd4-6933cef5efd4
+56caeff8-b61a-43b2-832d-9e796e6e4a50</pre>
+</div></div>
+<div class="paragraph"><p>Disables report upload in a crash report database’s settings, and then verifies
+that the change was made.</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>crashpad_database_util --database /tmp/crashpad_database \
+      --set-uploads-enabled false</strong>
+$ <strong>crashpad_database_util --database /tmp/crashpad_database \
+      --show-uploads-enabled</strong>
+false</pre>
+</div></div>
 </div>
 </div>
 <div class="sect1">
@@ -897,42 +977,7 @@ Failure, with a message printed to the standard error stream.
 <div class="sect1">
 <h2 id="_see_also">See Also</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><a href="catch_exception_tool.html">catch_exception_tool(1)</a>,
-<a href="crashpad_database_util.html">crashpad_database_util(1)</a>,
-<a href="generate_dump.html">generate_dump(1)</a>,
-<a href="run_with_crashpad.html">run_with_crashpad(1)</a></p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_resources">Resources</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Crashpad home page: <a href="https://crashpad.googlecode.com/">https://crashpad.googlecode.com/</a>.</p></div>
-<div class="paragraph"><p>Report bugs at <a href="https://code.google.com/p/crashpad/issues/entry">https://code.google.com/p/crashpad/issues/entry</a>.</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_copyright">Copyright</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Copyright 2014
-<a href="https://chromium.googlesource.com/crashpad/crashpad/+/master/AUTHORS">The
-Crashpad Authors</a>.</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_license">License</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p></div>
-<div class="literalblock">
-<div class="content monospaced">
-<pre><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></pre>
-</div></div>
-<div class="paragraph"><p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p></div>
+<div class="paragraph"><p><a href="crashpad_handler.html">crashpad_handler(8)</a></p></div>
 </div>
 </div>
 </div>

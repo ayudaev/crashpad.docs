@@ -105,8 +105,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a36ecf9db10bcc0714d9355c6b47f88df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36ecf9db10bcc0714d9355c6b47f88df"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_simple_annotations</b> (<a class="el" href="namespacecrashpad.html#ac21afdb4f6e3c57ccf3bd34ea8410978">SimpleStringDictionary</a> *simple_annotations)</td></tr>
+<tr class="memitem:a36ecf9db10bcc0714d9355c6b47f88df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1CrashpadInfo.html#a36ecf9db10bcc0714d9355c6b47f88df">set_simple_annotations</a> (<a class="el" href="namespacecrashpad.html#ac21afdb4f6e3c57ccf3bd34ea8410978">SimpleStringDictionary</a> *simple_annotations)</td></tr>
+<tr class="memdesc:a36ecf9db10bcc0714d9355c6b47f88df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the simple annotations dictionary.  <a href="#a36ecf9db10bcc0714d9355c6b47f88df">More...</a><br /></td></tr>
 <tr class="separator:a36ecf9db10bcc0714d9355c6b47f88df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa1b598fdd468a56d5cd1c7241ca85d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcrashpad_1_1CrashpadInfo.html#affa1b598fdd468a56d5cd1c7241ca85d">set_crashpad_handler_behavior</a> (<a class="el" href="namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292">TriState</a> crashpad_handler_behavior)</td></tr>
 <tr class="memdesc:affa1b598fdd468a56d5cd1c7241ca85d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables Crashpad handler processing.  <a href="#affa1b598fdd468a56d5cd1c7241ca85d">More...</a><br /></td></tr>
@@ -157,6 +157,40 @@ static const uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>kSig
 <p>Enables or disables Crashpad handler processing. </p>
 <p>When handling an exception, the Crashpad handler will scan all modules in a process. The first one that has a <a class="el" href="structcrashpad_1_1CrashpadInfo.html" title="A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad cra...">CrashpadInfo</a> structure populated with a value other than <a class="el" href="namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292ac69d34d47bfd5244204004878441d53f" title="The value has not explicitly been set. ">kUnset</a> for this field will dictate whether the handler is functional or not. If all modules with a <a class="el" href="structcrashpad_1_1CrashpadInfo.html" title="A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad cra...">CrashpadInfo</a> structure specify <a class="el" href="namespacecrashpad.html#a3b405c19a5787fabcfba96001d49f292ac69d34d47bfd5244204004878441d53f" title="The value has not explicitly been set. ">kUnset</a>, the handler will be enabled. If disabled, the Crashpad handler will still run and receive exceptions, but will not take any action on an exception on its own behalf, except for the action necessary to determine that it has been disabled.</p>
 <p>The Crashpad handler should not normally be disabled. More commonly, it is appropraite to disable crash report upload by calling <a class="el" href="classcrashpad_1_1Settings.html#a1af15625bc137e0a67f6f9fcf016382b" title="Sets the user’s preference for submitting crash reports to a collection server. ">Settings::SetUploadsEnabled()</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a36ecf9db10bcc0714d9355c6b47f88df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::CrashpadInfo::set_simple_annotations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#ac21afdb4f6e3c57ccf3bd34ea8410978">SimpleStringDictionary</a> *&#160;</td>
+          <td class="paramname"><em>simple_annotations</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the simple annotations dictionary. </p>
+<p>Simple annotations set on a <a class="el" href="structcrashpad_1_1CrashpadInfo.html" title="A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad cra...">CrashpadInfo</a> structure are interpreted by Crashpad as module-level annotations.</p>
+<p>Annotations may exist in <em>simple_annotations</em> at the time that this method is called, or they may be added, removed, or modified in <em>simple_annotations</em> after this method is called.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">simple_annotations</td><td>A dictionary that maps string keys to string values. The <a class="el" href="structcrashpad_1_1CrashpadInfo.html" title="A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad cra...">CrashpadInfo</a> object does not take ownership of the SimpleStringDictionary object. It is the caller’s responsibility to ensure that this pointer remains valid while it is in effect for a <a class="el" href="structcrashpad_1_1CrashpadInfo.html" title="A structure that can be used by a Crashpad-enabled program to provide information to the Crashpad cra...">CrashpadInfo</a> object. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
