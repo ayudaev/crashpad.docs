@@ -430,7 +430,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">process_reader</td><td>The reader for the remote process. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">address</td><td>The address, in the remote process’ address space, where the <code>mach_header</code> or <code>mach_header_64</code> at the beginning of the image to be read is located. This address can be determined by reading the remote process’ dyld information (see snapshot/mac/process_types/dyld_images.proctype). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The module’s name, a string to be used in logged messages. This string is for diagnostic purposes only, and may be empty.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The module’s name, a string to be used in logged messages. This string is for diagnostic purposes and to relax otherwise strict parsing rules for common modules with known defects.</td></tr>
   </table>
   </dd>
 </dl>

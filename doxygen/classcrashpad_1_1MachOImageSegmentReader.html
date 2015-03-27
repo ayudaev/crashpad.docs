@@ -113,9 +113,9 @@ Inheritance diagram for crashpad::MachOImageSegmentReader:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a262bc47bdb61b460f49e5170a47f7a59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a262bc47bdb61b460f49e5170a47f7a59">Initialize</a> (<a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *process_reader, mach_vm_address_t load_command_address, const std::string &amp;load_command_info)</td></tr>
-<tr class="memdesc:a262bc47bdb61b460f49e5170a47f7a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the segment load command from another process.  <a href="#a262bc47bdb61b460f49e5170a47f7a59">More...</a><br /></td></tr>
-<tr class="separator:a262bc47bdb61b460f49e5170a47f7a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fd9c08d2644ffb4331e33a09e80b67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a89fd9c08d2644ffb4331e33a09e80b67">Initialize</a> (<a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *process_reader, mach_vm_address_t load_command_address, const std::string &amp;load_command_info, const std::string &amp;module_name, uint32_t file_type)</td></tr>
+<tr class="memdesc:a89fd9c08d2644ffb4331e33a09e80b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the segment load command from another process.  <a href="#a89fd9c08d2644ffb4331e33a09e80b67">More...</a><br /></td></tr>
+<tr class="separator:a89fd9c08d2644ffb4331e33a09e80b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ebb278d318490b4ac6656f1911cf6ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a6ebb278d318490b4ac6656f1911cf6ad">SetSlide</a> (mach_vm_size_t slide)</td></tr>
 <tr class="memdesc:a6ebb278d318490b4ac6656f1911cf6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the image’s slide value.  <a href="#a6ebb278d318490b4ac6656f1911cf6ad">More...</a><br /></td></tr>
 <tr class="separator:a6ebb278d318490b4ac6656f1911cf6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,7 +285,7 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
 
 </div>
 </div>
-<a class="anchor" id="a262bc47bdb61b460f49e5170a47f7a59"></a>
+<a class="anchor" id="a89fd9c08d2644ffb4331e33a09e80b67"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -305,7 +305,19 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>load_command_info</em>&#160;</td>
+          <td class="paramname"><em>load_command_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>module_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>file_type</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -321,7 +333,9 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">process_reader</td><td>The reader for the remote process. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">load_command_address</td><td>The address, in the remote process’ address space, where the <code>LC_SEGMENT</code> or <code>LC_SEGMENT_64</code> load command to be read is located. This address is determined by a Mach-O image reader, such as <a class="el" href="classcrashpad_1_1MachOImageReader.html" title="A reader for Mach-O images mapped into another process. ">MachOImageReader</a>, as it walks Mach-O load commands. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">load_command_info</td><td>A string to be used in logged messages. This string is for diagnostic purposes only, and may be empty.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">load_command_info</td><td>A string to be used in logged messages. This string is for diagnostic purposes only, and may be empty. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">module_name</td><td>The path used to load the module. This string is used to relax otherwise strict parsing rules for common modules with known defects. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_type</td><td>The module’s Mach-O file type. This is used to relax otherwise strict parsing rules for common modules with known defects.</td></tr>
   </table>
   </dd>
 </dl>
@@ -497,8 +511,8 @@ Unlike <a class="el" href="classcrashpad_1_1MachOImageReader.html#a7703068b14568
 </div><div class="memdoc">
 
 <p>Sets the image’s slide value. </p>
-<p>This method must only be called once on an object, after <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a262bc47bdb61b460f49e5170a47f7a59" title="Reads the segment load command from another process. ">Initialize()</a> is called successfully. It must be called before <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a3b56a8467e8968807b4ce54ae6a5789c">Address()</a>, <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a6de1fcab9075308f13fae8e06edc008d">Size()</a>, <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#abc297551eb97541888fe9268e600514a" title="Obtain section information by section name. ">GetSectionByName()</a>, or <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e12741da1e7de053efdb0cc1de0" title="Obtain section information by section index. ">GetSectionAtIndex()</a> can be called.</p>
-<p>This method is provided because slide is a property of the image that cannot be determined until at least some segments have been read. As such, it is not necessarily known at the time that <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a262bc47bdb61b460f49e5170a47f7a59" title="Reads the segment load command from another process. ">Initialize()</a> is called. </p>
+<p>This method must only be called once on an object, after <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a89fd9c08d2644ffb4331e33a09e80b67" title="Reads the segment load command from another process. ">Initialize()</a> is called successfully. It must be called before <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a3b56a8467e8968807b4ce54ae6a5789c">Address()</a>, <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a6de1fcab9075308f13fae8e06edc008d">Size()</a>, <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#abc297551eb97541888fe9268e600514a" title="Obtain section information by section name. ">GetSectionByName()</a>, or <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#af52b9e12741da1e7de053efdb0cc1de0" title="Obtain section information by section index. ">GetSectionAtIndex()</a> can be called.</p>
+<p>This method is provided because slide is a property of the image that cannot be determined until at least some segments have been read. As such, it is not necessarily known at the time that <a class="el" href="classcrashpad_1_1MachOImageSegmentReader.html#a89fd9c08d2644ffb4331e33a09e80b67" title="Reads the segment load command from another process. ">Initialize()</a> is called. </p>
 
 </div>
 </div>
