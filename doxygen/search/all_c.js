@@ -25,6 +25,7 @@ var searchData=
   ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
   ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],
   ['majorversion',['MajorVersion',['../structMINIDUMP__SYSTEM__INFO.html#af657b2ed0798f5962ae59e459133d735',1,'MINIDUMP_SYSTEM_INFO']]],
+  ['mapinsertorreplace',['MapInsertOrReplace',['../namespacecrashpad.html#a0486df983d8e9cecbe1e46e0059806df',1,'crashpad']]],
   ['mappedmemory',['MappedMemory',['../classcrashpad_1_1TaskMemory_1_1MappedMemory.html',1,'crashpad::TaskMemory']]],
   ['mask',['mask',['../structcrashpad_1_1ExceptionPorts_1_1ExceptionHandler.html#aa7ce5b800c439f511278954f60f528b4',1,'crashpad::ExceptionPorts::ExceptionHandler']]],
   ['memory',['Memory',['../structMINIDUMP__MEMORY__DESCRIPTOR.html#a4ee410c410207ff4a18fddd82127a7e4',1,'MINIDUMP_MEMORY_DESCRIPTOR::Memory()'],['../classcrashpad_1_1ProcessReader.html#aec00777c3e77735f75fb176cb24f420d',1,'crashpad::ProcessReader::Memory()']]],

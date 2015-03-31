@@ -14,6 +14,7 @@ var searchData=
   ['macmodelandboard',['MacModelAndBoard',['../namespacecrashpad.html#a71c79500b827d06b190e30b7cc016c35',1,'crashpad']]],
   ['macosxminorversion',['MacOSXMinorVersion',['../namespacecrashpad.html#ab05052e02f3c3605fd7bae0f006d2cba',1,'crashpad']]],
   ['macosxversion',['MacOSXVersion',['../namespacecrashpad.html#a99a833f0c39ce203b49862367494a923',1,'crashpad']]],
+  ['mapinsertorreplace',['MapInsertOrReplace',['../namespacecrashpad.html#a0486df983d8e9cecbe1e46e0059806df',1,'crashpad']]],
   ['memory',['Memory',['../classcrashpad_1_1ProcessReader.html#aec00777c3e77735f75fb176cb24f420d',1,'crashpad::ProcessReader']]],
   ['memoryrangebaseaddress',['MemoryRangeBaseAddress',['../classcrashpad_1_1MinidumpMemoryWriter.html#ac55ff51ef6aecf63614b6a9e974d34c5',1,'crashpad::MinidumpMemoryWriter::MemoryRangeBaseAddress()'],['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html#a31bb4a8af5c29b36e1897ded97f2fac5',1,'crashpad::test::TestMinidumpMemoryWriter::MemoryRangeBaseAddress()']]],
   ['memoryrangesize',['MemoryRangeSize',['../classcrashpad_1_1MinidumpMemoryWriter.html#a5747ad90d9e9f4d6b2bc44231e677ea5',1,'crashpad::MinidumpMemoryWriter::MemoryRangeSize()'],['../classcrashpad_1_1test_1_1TestMinidumpMemoryWriter.html#a26617ee61b232ea4099300bbbe1460e7',1,'crashpad::test::TestMinidumpMemoryWriter::MemoryRangeSize()']]],
