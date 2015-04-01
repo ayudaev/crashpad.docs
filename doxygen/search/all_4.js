@@ -30,6 +30,7 @@ var searchData=
   ['exceptionstream',['ExceptionStream',['../dbghelp_8h.html#a64711234318a4a002f399dffb474ca08a5ddc831e2440dfcfd112cb19401bbd60',1,'dbghelp.h']]],
   ['exceptiontostring',['ExceptionToString',['../namespacecrashpad.html#a05296bfd23550f42639067355410811e',1,'crashpad']]],
   ['excmaskall',['ExcMaskAll',['../namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941',1,'crashpad']]],
+  ['excservercopystate',['ExcServerCopyState',['../namespacecrashpad.html#af1d0568e1ab35a8801507d70b5401988',1,'crashpad']]],
   ['excserversuccessfulreturnvalue',['ExcServerSuccessfulReturnValue',['../namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e',1,'crashpad']]],
   ['executable',['Executable',['../classcrashpad_1_1test_1_1Paths.html#a2181fa923a180e6db375cc2d03554a9f',1,'crashpad::test::Paths']]],
   ['executesynchronously',['ExecuteSynchronously',['../classcrashpad_1_1HTTPTransport.html#a08803c6c93750cbdc04c814a73a65efe',1,'crashpad::HTTPTransport']]],

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="generator" content="AsciiDoc 8.6.9">
-<title>on_demand_service_tool(1)</title>
+<title>Developing Crashpad</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -750,192 +750,230 @@ asciidoc.install();
 /*]]>*/
 </script>
 </head>
-<body class="manpage">
+<body class="article">
 <div id="header">
-<h1>
-on_demand_service_tool(1) Manual Page
-</h1>
-<h2>NAME</h2>
-<div class="sectionbody">
-<p>on_demand_service_tool -
-   Load and unload on-demand Mach services registered with launchd(8)
-</p>
-</div>
+<h1>Developing Crashpad</h1>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_synopsis">Synopsis</h2>
+<h2 id="_status">Status</h2>
 <div class="sectionbody">
-<div class="verseblock">
-<pre class="content"><strong>on_demand_service_tool</strong> <strong>-L</strong> <strong>-l</strong> <em>LABEL</em> [<em>OPTION…</em>] <em>COMMAND</em> [<em>ARG…</em>]
-<strong>on_demand_service_tool</strong> <strong>-U</strong> <strong>-l</strong> <em>LABEL</em></pre>
-<div class="attribution">
-</div></div>
+<div class="paragraph"><p><a href="status.html">Project status</a> information has moved to its own page.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_description">Description</h2>
+<h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>On-demand services may be registered with launchd(8) by using the <strong>--load</strong> form.
-One or more service names may be registered with the bootstrap server by
-specifying <strong>--mach-service</strong>. When a Mach message is sent to any of these
-services, launchd(8) will invoke <em>COMMAND</em> along with any arguments specified
-(<em>ARG…</em>). <em>COMMAND</em> must be an absolute pathname.</p></div>
-<div class="paragraph"><p>The <strong>--unload</strong> form unregisters jobs registered with launchd(8).</p></div>
+<div class="paragraph"><p>Crashpad is a <a href="https://dev.chromium.org/Home">Chromium project</a>. Most of
+its development practices follow Chromium’s. In order to function on its
+own in other projects, Crashpad uses
+<a href="https://chromium.googlesource.com/chromium/mini_chromium/">mini_chromium</a>,
+a small, self-contained library that provides many of Chromium’s useful
+low-level base routines.
+<a href="https://chromium.googlesource.com/chromium/mini_chromium/+/master/README">mini_chromium’s
+README</a> provides more detail.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_options">Options</h2>
+<h2 id="_prerequisites">Prerequisites</h2>
 <div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-<strong>-L</strong>, <strong>--load</strong>
-</dt>
-<dd>
+<div class="paragraph"><p>To develop Crashpad, the following tools are necessary, and must be
+present in the <span class="monospaced">$PATH</span> environment variable:</p></div>
+<div class="ulist"><ul>
+<li>
 <p>
-Registers a job with launchd(8). <strong>--label</strong>=<em>LABEL</em> and <em>COMMAND</em> are required.
-This operation may also be referred to as “load” or “submit”.
+Chromium’s
+   <a href="https://dev.chromium.org/developers/how-tos/depottools">depot_tools</a>.
 </p>
-</dd>
-<dt class="hdlist1">
-<strong>-U</strong>, <strong>--unload</strong>
-</dt>
-<dd>
+</li>
+<li>
 <p>
-Unregisters a job with launchd(8). <strong>--label</strong>=<em>LABEL</em> is required. This operation
-may also be referred to as “unload” or “remove”.
+<a href="http://git-scm.com/">Git</a>. This is provided by Xcode on Mac OS X and by
+   depot_tools on Windows.
 </p>
-</dd>
-<dt class="hdlist1">
-<strong>-l</strong>, <strong>--label</strong>=<em>LABEL</em>
-</dt>
-<dd>
+</li>
+<li>
 <p>
-<em>LABEL</em> is used as the job label to identify the job to launchd(8). <em>LABEL</em> must
-be unique within a launchd(8) context.
+<a href="https://www.python.org/">Python</a>. This is provided by the operating system on
+   Mac OS X, and by depot_tools on Windows.
 </p>
-</dd>
-<dt class="hdlist1">
-<strong>-m</strong>, <strong>--mach-service</strong>=<em>SERVICE</em>
-</dt>
-<dd>
+</li>
+<li>
 <p>
-In conjunction with <strong>--load</strong>, registers <em>SERVICE</em> with the bootstrap server.
-Clients will be able to obtain a send right by looking up the <em>SERVICE</em> name
-with the bootstrap server. When a message is sent to such a Mach port,
-launchd(8) will invoke <em>COMMAND</em> along with any arguments specified (<em>ARG…</em>) if
-it is not running. This forms the “on-demand” nature referenced by this tool’s
-name. This option may appear zero, one, or more times. <em>SERVICE</em> must be unique
-within a bootstrap context.
+Appropriate development tools. For Mac OS X, this is
+   <a href="https://developer.apple.com/xcode/">Xcode</a>, and for Windows, it’s
+   <a href="https://www.visualstudio.com/">Visual Studio</a>.
 </p>
-</dd>
-<dt class="hdlist1">
-<strong>--help</strong>
-</dt>
-<dd>
-<p>
-Display help and exit.
-</p>
-</dd>
-<dt class="hdlist1">
-<strong>--version</strong>
-</dt>
-<dd>
-<p>
-Output version information and exit.
-</p>
-</dd>
-</dl></div>
+</li>
+</ul></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_examples">Examples</h2>
+<h2 id="_getting_the_source_code">Getting the Source Code</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Registers an on-demand server that will execute <a href="catch_exception_tool.html">catch_exception_tool(1)</a>
-when a Mach message is sent to a Mach port obtained from the bootstrap server by
-looking up the name <span class="monospaced">svc</span>:</p></div>
+<div class="paragraph"><p>The main source code repository is a Git repository hosted at
+<a href="https://chromium.googlesource.com/crashpad/crashpad">https://chromium.googlesource.com/crashpad/crashpad</a>. Although it is possible to
+check out this repository directly with <span class="monospaced">git clone</span>, Crashpad’s dependencies are
+managed by
+<a href="https://dev.chromium.org/developers/how-tos/depottools#TOC-gclient"><span class="monospaced">gclient</span></a>
+instead of Git submodules, so to work on Crashpad, it is best to use <span class="monospaced">gclient</span>
+to get the source code.</p></div>
+<div class="paragraph"><p><span class="monospaced">gclient</span> is part of the
+<a href="https://dev.chromium.org/developers/how-tos/depottools">depot_tools</a>. There’s no
+need to install it separately.</p></div>
+<div class="sect2">
+<h3 id="_initial_checkout">Initial Checkout</h3>
 <div class="listingblock">
 <div class="content monospaced">
-<pre>$ <strong>on_demand_service_tool --load --label=catch_exception \
-      --mach-service=svc \
-      $(which catch_exception_tool) --mach-service=svc \
-      --file=/tmp/out --persistent --timeout=0</strong></pre>
+<pre>$ <strong>mkdir ~/crashpad</strong>
+$ <strong>cd ~/crashpad</strong>
+$ <strong>gclient config --unmanaged https://chromium.googlesource.com/crashpad/crashpad</strong>
+$ <strong>gclient sync</strong></pre>
 </div></div>
-<div class="paragraph"><p>Unregisters the on-demand server installed above:</p></div>
+</div>
+<div class="sect2">
+<h3 id="_subsequent_checkouts">Subsequent Checkouts</h3>
 <div class="listingblock">
 <div class="content monospaced">
-<pre>$ <strong>on_demand_service_tool --unload --label=catch_exception</strong></pre>
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>git pull -r</strong>
+$ <strong>gclient sync</strong></pre>
 </div></div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_exit_status">Exit Status</h2>
-<div class="sectionbody">
-<div class="dlist"><dl>
-<dt class="hdlist1">
-<strong>0</strong>
-</dt>
-<dd>
-<p>
-Success.
-</p>
-</dd>
-<dt class="hdlist1">
-<strong>1</strong>
-</dt>
-<dd>
-<p>
-Failure, with a message printed to the standard error stream.
-</p>
-</dd>
-</dl></div>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_see_also">See Also</h2>
+<h2 id="_building">Building</h2>
 <div class="sectionbody">
-<div class="paragraph"><p><a href="catch_exception_tool.html">catch_exception_tool(1)</a>,
-<a href="exception_port_tool.html">exception_port_tool(1)</a>,
-launchctl(1)</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_resources">Resources</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Crashpad home page: <a href="https://crashpad.googlecode.com/">https://crashpad.googlecode.com/</a>.</p></div>
-<div class="paragraph"><p>Report bugs at <a href="https://code.google.com/p/crashpad/issues/entry">https://code.google.com/p/crashpad/issues/entry</a>.</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_copyright">Copyright</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Copyright 2014
-<a href="https://chromium.googlesource.com/crashpad/crashpad/+/master/AUTHORS">The
-Crashpad Authors</a>.</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_license">License</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>Licensed under the Apache License, Version 2.0 (the “License”);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p></div>
-<div class="literalblock">
+<div class="paragraph"><p>Crashpad uses <a href="https://gyp.googlecode.com/">GYP</a> to generate
+<a href="https://martine.github.io/ninja/">Ninja</a> build files. The build is described by
+<span class="monospaced">.gyp</span> files throughout the Crashpad source code tree. The
+<span class="monospaced">build/gyp_crashpad.py</span> script runs GYP properly for Crashpad, and is also
+called when you run <span class="monospaced">gclient sync</span> or <span class="monospaced">gclient runhooks</span>.</p></div>
+<div class="paragraph"><p>The Ninja build files and build output are in the <span class="monospaced">out</span> directory. Both debug-
+and release-mode configurations are available. The examples below show the debug
+configuration. To build and test the release configuration, substitute <span class="monospaced">Release</span>
+for <span class="monospaced">Debug</span>.</p></div>
+<div class="listingblock">
 <div class="content monospaced">
-<pre><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></pre>
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>ninja -C out/Debug</strong></pre>
 </div></div>
-<div class="paragraph"><p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an “AS IS” BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p></div>
+<div class="paragraph"><p>Ninja is part of the
+<a href="https://dev.chromium.org/developers/how-tos/depottools">depot_tools</a>. There’s no
+need to install it separately.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing">Testing</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Crashpad uses <a href="https://googletest.googlecode.com/">Google Test</a> as its
+unit-testing framework, and some tests use
+<a href="https://googlemock.googlecode.com/">Google Mock</a> as well. Its tests are currently
+split up into several test executables, each dedicated to testing a different
+component. This may change in the future. After a successful build, the test
+executables will be found at <span class="monospaced">out/Debug/crashpad_*_test</span>.</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>out/Debug/crashpad_minidump_test</strong>
+$ <strong>out/Debug/crashpad_util_test</strong></pre>
+</div></div>
+<div class="paragraph"><p>A script is provided to run all of Crashpad’s tests. It accepts a single
+argument that tells it which configuration to test.</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>python build/run_tests.py Debug</strong></pre>
+</div></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contributing">Contributing</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Crashpad’s contribution process is very similar to
+<a href="https://dev.chromium.org/developers/contributing-code">Chromium’s contribution
+process</a>.</p></div>
+<div class="sect2">
+<h3 id="_code_review">Code Review</h3>
+<div class="paragraph"><p>A code review must be conducted for every change to Crashpad’s source code. Code
+review is conducted on <a href="https://codereview.chromium.org/">Chromium’s Rietveld</a>
+system, and all code reviews must be sent to an appropriate reviewer, with a Cc
+sent to
+<a href="https://groups.google.com/a/chromium.org/group/crashpad-dev">crashpad-dev</a>. The
+<span class="monospaced">codereview.settings</span> file specifies this environment to <span class="monospaced">git-cl</span>.</p></div>
+<div class="paragraph"><p><span class="monospaced">git-cl</span> is part of the
+<a href="https://dev.chromium.org/developers/how-tos/depottools">depot_tools</a>. There’s no
+need to install it separately.</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>git checkout -b work_branch origin/master</strong>
+<em>…do some work…</em>
+$ <strong>git add …</strong>
+$ <strong>git commit</strong>
+$ <strong>git cl upload</strong></pre>
+</div></div>
+<div class="paragraph"><p>Uploading a patch to Rietveld does not automatically request a review. You must
+select a reviewer and mail your request to them (with a Cc to crashpad-dev) from
+the Rietveld issue page after running <span class="monospaced">git cl upload</span>. If you have lost track of
+the issue page, <span class="monospaced">git cl issue</span> will remind you of its URL. Alternatively, you
+can request review when uploading to Rietveld by using <span class="monospaced">git cl upload
+--send-mail</span></p></div>
+<div class="paragraph"><p>Git branches maintain their association with Rietveld issues, so if you need to
+make changes based on review feedback, you can do so on the correct Git branch,
+committing your changes locally with <span class="monospaced">git commit</span>. You can then upload a new
+patch set with <span class="monospaced">git cl upload</span> and let your reviewer know you’ve addressed the
+feedback.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_landing_changes">Landing Changes</h3>
+<div class="paragraph"><p>After code review is complete and “LGTM” (“looks good to me”) has been received
+from all reviewers, project members can commit the patch themselves:</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>git checkout work_branch</strong>
+$ <strong>git cl land</strong></pre>
+</div></div>
+<div class="paragraph"><p>Crashpad does not currently have a
+<a href="https://dev.chromium.org/developers/testing/commit-queue">commit queue</a>, so
+contributors that are not project members will have to ask a project member to
+commit the patch for them. Project members can commit changes on behalf of
+external contributors by patching the change into a local branch and landing it:</p></div>
+<div class="listingblock">
+<div class="content monospaced">
+<pre>$ <strong>cd ~/crashpad/crashpad</strong>
+$ <strong>git checkout -b for_external_contributor origin/master</strong>
+$ <strong>git cl patch 12345678</strong>  <em># 12345678 is the Rietveld issue number</em>
+$ <strong>git cl land -c 'External Contributor &lt;external@contributor.org&gt;'</strong></pre>
+</div></div>
+</div>
+<div class="sect2">
+<h3 id="_external_contributions">External Contributions</h3>
+<div class="paragraph"><p>Copyright holders must complete the
+<a href="https://developers.google.com/open-source/cla/individual">Individual Contributor
+License Agreement</a> or
+<a href="https://developers.google.com/open-source/cla/corporate">Corporate Contributor
+License Agreement</a> as appropriate before any submission can be accepted, and
+must be listed in the <span class="monospaced">AUTHORS</span> file. Contributors may be listed in the
+<span class="monospaced">CONTRIBUTORS</span> file.</p></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_buildbot">Buildbot</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The <a href="https://build.chromium.org/p/client.crashpad/">Crashpad Buildbot</a> performs
+automated builds and tests of Crashpad. Before checking out or updating the
+Crashpad source code, and after checking in a new change, it is prudent to check
+the Buildbot to ensure that “the tree is green.”</p></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr></div>
 <div id="footer">
 <div id="footer-text">
-Crashpad 0.7.0<br>
 Last updated April 1, 2015
 </div>
 </div>

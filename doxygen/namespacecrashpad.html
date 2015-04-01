@@ -600,6 +600,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e">ExcServerSuccessfulReturnValue</a> (exception_behavior_t behavior, bool set_thread_state)</td></tr>
 <tr class="memdesc:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an approriate successful return value for an exception handler function.  <a href="#ab510cfef9eacb24a21eefcc36dc44f6e">More...</a><br /></td></tr>
 <tr class="separator:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d0568e1ab35a8801507d70b5401988"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#af1d0568e1ab35a8801507d70b5401988">ExcServerCopyState</a> (exception_behavior_t behavior, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
+<tr class="memdesc:af1d0568e1ab35a8801507d70b5401988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the old state to the new state for state-carrying exceptions.  <a href="#af1d0568e1ab35a8801507d70b5401988">More...</a><br /></td></tr>
+<tr class="separator:af1d0568e1ab35a8801507d70b5401988"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea6434eb784ccde471620e9d79ba8c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#acea6434eb784ccde471620e9d79ba8c1">ExceptionBehaviorHasState</a> (exception_behavior_t behavior)</td></tr>
 <tr class="memdesc:acea6434eb784ccde471620e9d79ba8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <em>behavior</em> indicates an exception behavior that carries thread state information.  <a href="#acea6434eb784ccde471620e9d79ba8c1">More...</a><br /></td></tr>
 <tr class="separator:acea6434eb784ccde471620e9d79ba8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2332,6 +2335,63 @@ template&lt;typename Destination , typename Source &gt; </div>
 <p>The value for <code>EXC_MASK_ALL</code> appropriate for the operating system at run time. </p>
 <p>The SDK’s definition of <code>EXC_MASK_ALL</code> has changed over time, with later versions containing more bits set than earlier versions. However, older kernels will reject exception masks that contain bits set that they don’t recognize. Calling this function will return a value for <code>EXC_MASK_ALL</code> appropriate for the system at run time.</p>
 <dl class="section note"><dt>Note</dt><dd><code>EXC_MASK_ALL</code> does not include the value of <code>EXC_MASK_CRASH</code>. Consumers that want <code>EXC_MASK_ALL</code> along with <code>EXC_MASK_CRASH</code> must use <a class="el" href="namespacecrashpad.html#a194e0575e09db56e4107e1c41b27c941" title="The value for EXC_MASK_ALL appropriate for the operating system at run time. ">ExcMaskAll()</a> | <code>EXC_MASK_CRASH</code> explicitly. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af1d0568e1ab35a8801507d70b5401988"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void crashpad::ExcServerCopyState </td>
+          <td>(</td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramname"><em>old_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t&#160;</td>
+          <td class="paramname"><em>old_state_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">thread_state_t&#160;</td>
+          <td class="paramname"><em>new_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mach_msg_type_number_t *&#160;</td>
+          <td class="paramname"><em>new_state_count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies the old state to the new state for state-carrying exceptions. </p>
+<p>When the kernel sends a state-carrying exception request and the response is successful (<code>MACH_MSG_SUCCESS</code>, a synonym for <code>KERN_SUCCESS</code>), it will set a new thread state based on <em>new_state</em> and <em>new_state_count</em>. To ease initialization of the new state, this function copies <em>old_state</em> and <em>old_state_count</em>. This is only done if <em>behavior</em> indicates a state-carrying exception.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">behavior</td><td>The behavior of the exception handler as invoked. This may be taken directly from the <em>behavior</em> parameter of internal::SimplifiedExcServer::Interface::CatchException(), for example. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">old_state</td><td>The original state value. This may be taken directly from the <em>old_state</em> parameter of internal::SimplifiedExcServer::Interface::CatchException(), for example. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">old_state_count</td><td>The number of significant <code>natural_t</code> words in <em>old_state</em>. This may be taken directly from the <em>old_state_count</em> parameter of internal::SimplifiedExcServer::Interface::CatchException(), for example. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">new_state</td><td>The state value to be set. This may be taken directly from the <em>new_state</em> parameter of internal::SimplifiedExcServer::Interface::CatchException(), for example. This parameter is untouched if <em>behavior</em> is not state-carrying. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">new_state_count</td><td>On entry, the number of <code>natural_t</code> words available to be written to in <em>new_state</em>. On return, the number of significant <code>natural_t</code> words in <em>new_state</em>. This may be taken directly from the <em>new_state_count</em> parameter of internal::SimplifiedExcServer::Interface::CatchException(), for example. This parameter is untouched if <em>behavior</em> is not state-carrying. If <em><em>behavior</em> is</em> state-carrying, this parameter should be at least as large as <em>old_state_count</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
