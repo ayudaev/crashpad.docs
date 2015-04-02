@@ -3,7 +3,7 @@ var searchData=
   ['uint128_5fstruct',['uint128_struct',['../structcrashpad_1_1uint128__struct.html',1,'crashpad']]],
   ['unicode',['Unicode',['../structIMAGE__DEBUG__MISC.html#ad570f3c73a4ea54c2620dd33a0d39cd9',1,'IMAGE_DEBUG_MISC']]],
   ['unicode_5fstring',['UNICODE_STRING',['../structcrashpad_1_1process__types_1_1UNICODE__STRING.html',1,'crashpad::process_types']]],
-  ['universalexceptionraise',['UniversalExceptionRaise',['../namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281',1,'crashpad']]],
+  ['universalexceptionraise',['UniversalExceptionRaise',['../namespacecrashpad.html#a34001ec0bfa5e0815fa478a8cf025c61',1,'crashpad']]],
   ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html',1,'crashpad']]],
   ['universalmachexcserver',['UniversalMachExcServer',['../classcrashpad_1_1UniversalMachExcServer.html#a05bf6aa6e6e692e998a8ba2d6b5a6c95',1,'crashpad::UniversalMachExcServer']]],
   ['universalmachexcserverimpl',['UniversalMachExcServerImpl',['../classcrashpad_1_1internal_1_1UniversalMachExcServerImpl.html',1,'crashpad::internal']]],

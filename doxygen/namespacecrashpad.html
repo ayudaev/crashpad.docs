@@ -396,6 +396,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nam
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a9daa1b956487883acd9f43d13cc77339">ScopedFileHandle</a> = base::ScopedFD</td></tr>
 <tr class="memdesc:a9daa1b956487883acd9f43d13cc77339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scoped wrapper of a FileHandle. <br /></td></tr>
 <tr class="separator:a9daa1b956487883acd9f43d13cc77339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72fa9ea632f7f1ec93ec3c1b1d300db6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a> = const natural_t *</td></tr>
+<tr class="memdesc:a72fa9ea632f7f1ec93ec3c1b1d300db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A const version of <code>thread_state_t</code>.  <a href="#a72fa9ea632f7f1ec93ec3c1b1d300db6">More...</a><br /></td></tr>
+<tr class="separator:a72fa9ea632f7f1ec93ec3c1b1d300db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f36473e385b19eb229798ab2f7210c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a34f36473e385b19eb229798ab2f7210c">MachMessageDeadline</a> = uint64_t</td></tr>
 <tr class="memdesc:a34f36473e385b19eb229798ab2f7210c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time before which a <a class="el" href="namespacecrashpad.html#a35293418a0b7637a00631807ac4b431e" title="Runs mach_msg() with a deadline, as opposed to a timeout. ">MachMessageWithDeadline()</a> call should complete.  <a href="#a34f36473e385b19eb229798ab2f7210c">More...</a><br /></td></tr>
 <tr class="separator:a34f36473e385b19eb229798ab2f7210c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -591,18 +594,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ae63f9a1eeeec00b78c216f72b1ca1327"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ae63f9a1eeeec00b78c216f72b1ca1327">WriteXattrTimeT</a> (const base::FilePath &amp;file, const base::StringPiece &amp;name, time_t value)</td></tr>
 <tr class="memdesc:ae63f9a1eeeec00b78c216f72b1ca1327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an extended attribute on a file.  <a href="#ae63f9a1eeeec00b78c216f72b1ca1327">More...</a><br /></td></tr>
 <tr class="separator:ae63f9a1eeeec00b78c216f72b1ca1327"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2282be6585d4ade8ddc9621234553281"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a2282be6585d4ade8ddc9621234553281">UniversalExceptionRaise</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
-<tr class="memdesc:a2282be6585d4ade8ddc9621234553281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>.  <a href="#a2282be6585d4ade8ddc9621234553281">More...</a><br /></td></tr>
-<tr class="separator:a2282be6585d4ade8ddc9621234553281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34001ec0bfa5e0815fa478a8cf025c61"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a34001ec0bfa5e0815fa478a8cf025c61">UniversalExceptionRaise</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, <a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a> old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
+<tr class="memdesc:a34001ec0bfa5e0815fa478a8cf025c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the appropriate <code>*exception_raise*()</code> function for the specified <em>behavior</em>.  <a href="#a34001ec0bfa5e0815fa478a8cf025c61">More...</a><br /></td></tr>
+<tr class="separator:a34001ec0bfa5e0815fa478a8cf025c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a830c754edaa401f7d866e69369f76ae1"><td class="memItemLeft" align="right" valign="top">exception_type_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#a830c754edaa401f7d866e69369f76ae1">ExcCrashRecoverOriginalException</a> (mach_exception_code_t code_0, mach_exception_code_t *original_code_0, int *signal)</td></tr>
 <tr class="memdesc:a830c754edaa401f7d866e69369f76ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recovers the original exception, first exception code, and signal from the encoded form of the first exception code delivered with <code>EXC_CRASH</code> exceptions.  <a href="#a830c754edaa401f7d866e69369f76ae1">More...</a><br /></td></tr>
 <tr class="separator:a830c754edaa401f7d866e69369f76ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memItemLeft" align="right" valign="top">kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ab510cfef9eacb24a21eefcc36dc44f6e">ExcServerSuccessfulReturnValue</a> (exception_behavior_t behavior, bool set_thread_state)</td></tr>
 <tr class="memdesc:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an approriate successful return value for an exception handler function.  <a href="#ab510cfef9eacb24a21eefcc36dc44f6e">More...</a><br /></td></tr>
 <tr class="separator:ab510cfef9eacb24a21eefcc36dc44f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1d0568e1ab35a8801507d70b5401988"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#af1d0568e1ab35a8801507d70b5401988">ExcServerCopyState</a> (exception_behavior_t behavior, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
-<tr class="memdesc:af1d0568e1ab35a8801507d70b5401988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the old state to the new state for state-carrying exceptions.  <a href="#af1d0568e1ab35a8801507d70b5401988">More...</a><br /></td></tr>
-<tr class="separator:af1d0568e1ab35a8801507d70b5401988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac192440e1d208f5dd348f0cba652d93a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#ac192440e1d208f5dd348f0cba652d93a">ExcServerCopyState</a> (exception_behavior_t behavior, <a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a> old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count)</td></tr>
+<tr class="memdesc:ac192440e1d208f5dd348f0cba652d93a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the old state to the new state for state-carrying exceptions.  <a href="#ac192440e1d208f5dd348f0cba652d93a">More...</a><br /></td></tr>
+<tr class="separator:ac192440e1d208f5dd348f0cba652d93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea6434eb784ccde471620e9d79ba8c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecrashpad.html#acea6434eb784ccde471620e9d79ba8c1">ExceptionBehaviorHasState</a> (exception_behavior_t behavior)</td></tr>
 <tr class="memdesc:acea6434eb784ccde471620e9d79ba8c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether <em>behavior</em> indicates an exception behavior that carries thread state information.  <a href="#acea6434eb784ccde471620e9d79ba8c1">More...</a><br /></td></tr>
 <tr class="separator:acea6434eb784ccde471620e9d79ba8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -843,6 +846,21 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main namespace. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a72fa9ea632f7f1ec93ec3c1b1d300db6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">crashpad::ConstThreadState</a> = typedef const natural_t*</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A const version of <code>thread_state_t</code>. </p>
+<p>This is useful as the <em>old_state</em> parameter to exception handler functions. Normally, these parameters are of type <code>thread_state_t</code>, but this allows modification of the state, which is conceptually <code>const</code>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a34f36473e385b19eb229798ab2f7210c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2338,7 +2356,7 @@ template&lt;typename Destination , typename Source &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="af1d0568e1ab35a8801507d70b5401988"></a>
+<a class="anchor" id="ac192440e1d208f5dd348f0cba652d93a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2351,7 +2369,7 @@ template&lt;typename Destination , typename Source &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a>&#160;</td>
           <td class="paramname"><em>old_state</em>, </td>
         </tr>
         <tr>
@@ -4673,7 +4691,7 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
 
 </div>
 </div>
-<a class="anchor" id="a2282be6585d4ade8ddc9621234553281"></a>
+<a class="anchor" id="a34001ec0bfa5e0815fa478a8cf025c61"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -4728,7 +4746,7 @@ This function is provided because <code>SMJobCopyDictionary()</code> is deprecat
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a>&#160;</td>
           <td class="paramname"><em>old_state</em>, </td>
         </tr>
         <tr>

@@ -112,14 +112,14 @@ Inheritance diagram for crashpad::UniversalMachExcServer::Interface:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8fca420c9bc90ee77b967c10c559336d"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer_1_1Interface.html#a8fca420c9bc90ee77b967c10c559336d">CatchMachException</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, const natural_t *old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer, bool *destroy_complex_request)=0</td></tr>
-<tr class="memdesc:a8fca420c9bc90ee77b967c10c559336d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise()</code>, <code>exception_raise_state()</code>, <code>exception_raise_state_identity()</code>, <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>.  <a href="#a8fca420c9bc90ee77b967c10c559336d">More...</a><br /></td></tr>
-<tr class="separator:a8fca420c9bc90ee77b967c10c559336d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d5a399d96f4142b97c50ea7390a4cc"><td class="memItemLeft" align="right" valign="top">virtual kern_return_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1UniversalMachExcServer_1_1Interface.html#a09d5a399d96f4142b97c50ea7390a4cc">CatchMachException</a> (exception_behavior_t behavior, exception_handler_t exception_port, thread_t thread, task_t task, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t *flavor, <a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a> old_state, mach_msg_type_number_t old_state_count, thread_state_t new_state, mach_msg_type_number_t *new_state_count, const mach_msg_trailer_t *trailer, bool *destroy_complex_request)=0</td></tr>
+<tr class="memdesc:a09d5a399d96f4142b97c50ea7390a4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles exceptions raised by <code>exception_raise()</code>, <code>exception_raise_state()</code>, <code>exception_raise_state_identity()</code>, <code>mach_exception_raise()</code>, <code>mach_exception_raise_state()</code>, and <code>mach_exception_raise_state_identity()</code>.  <a href="#a09d5a399d96f4142b97c50ea7390a4cc">More...</a><br /></td></tr>
+<tr class="separator:a09d5a399d96f4142b97c50ea7390a4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An interface that the different request messages that are a part of the <code>exc</code> and <code>mach_exc</code> Mach subsystems can be dispatched to. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8fca420c9bc90ee77b967c10c559336d"></a>
+<a class="anchor" id="a09d5a399d96f4142b97c50ea7390a4cc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -177,7 +177,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a>&#160;</td>
           <td class="paramname"><em>old_state</em>, </td>
         </tr>
         <tr>
@@ -235,7 +235,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classcrashpad_1_1CrashReportExceptionHandler.html#a8797d9f889ca8ea234c4679093f8a705">crashpad::CrashReportExceptionHandler</a>.</p>
+<p>Implemented in <a class="el" href="classcrashpad_1_1CrashReportExceptionHandler.html#a98ecf7abdf0a99fe30b6fa7116649bee">crashpad::CrashReportExceptionHandler</a>.</p>
 
 </div>
 </div>

@@ -112,9 +112,9 @@ Inheritance diagram for crashpad::internal::ExceptionSnapshotMac:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac76cbc2ad9c85dd416e42a61754af7a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExceptionSnapshotMac.html#ac76cbc2ad9c85dd416e42a61754af7a2">Initialize</a> (<a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *process_reader, thread_t exception_thread, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t flavor, const natural_t *state, mach_msg_type_number_t state_count)</td></tr>
-<tr class="memdesc:ac76cbc2ad9c85dd416e42a61754af7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the object.  <a href="#ac76cbc2ad9c85dd416e42a61754af7a2">More...</a><br /></td></tr>
-<tr class="separator:ac76cbc2ad9c85dd416e42a61754af7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3791f404814e931cf82a0020802b5ac3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExceptionSnapshotMac.html#a3791f404814e931cf82a0020802b5ac3">Initialize</a> (<a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *process_reader, exception_behavior_t behavior, thread_t exception_thread, exception_type_t exception, const mach_exception_data_type_t *code, mach_msg_type_number_t code_count, thread_state_flavor_t flavor, <a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a> state, mach_msg_type_number_t state_count)</td></tr>
+<tr class="memdesc:a3791f404814e931cf82a0020802b5ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the object.  <a href="#a3791f404814e931cf82a0020802b5ac3">More...</a><br /></td></tr>
+<tr class="separator:a3791f404814e931cf82a0020802b5ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeebb43d42ba7f1eacd06bc82399055cd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structcrashpad_1_1CPUContext.html">CPUContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcrashpad_1_1internal_1_1ExceptionSnapshotMac.html#aeebb43d42ba7f1eacd06bc82399055cd">Context</a> () const override</td></tr>
 <tr class="memdesc:aeebb43d42ba7f1eacd06bc82399055cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structcrashpad_1_1CPUContext.html" title="A context structure capable of carrying the context of any supported CPU architecture. ">CPUContext</a> object corresponding to the exception thread’s CPU context at the time of the exception.  <a href="#aeebb43d42ba7f1eacd06bc82399055cd">More...</a><br /></td></tr>
 <tr class="separator:aeebb43d42ba7f1eacd06bc82399055cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,13 +275,17 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns the second-level exception code identifying the exception. </p>
 <p>This is an operating system-specific value.</p>
-<p>For Mac OS X, this will be the value of the exception code at index 0 as received by a Mach exception handler. For <code>EXC_CRASH</code> exceptions generated from another preceding exception, the original exception code will appear here, not the code as received by the Mach exception handler. The code as it was received will appear at index 1 of <a class="el" href="classcrashpad_1_1internal_1_1ExceptionSnapshotMac.html#a3179b8de3f86e150cf6d1d3078dd8109" title="Returns a series of operating system-specific exception codes. ">Codes()</a>. </p>
+<p>For Mac OS X, this will be the value of the exception code at index 0 as received by a Mach exception handler, except:</p><ul>
+<li>For <code>EXC_CRASH</code> exceptions generated from another preceding exception, the original exception code will appear here, not the code as received by the Mach exception handler.</li>
+<li>For <code>EXC_RESOURCE</code> and <code>EXC_GUARD</code> exceptions, the high 32 bits of the exception code at index 0 will appear here.</li>
+</ul>
+<p>In all cases on Mac OS X, the full exception code at index 0 as it was received will appear at index 1 of <a class="el" href="classcrashpad_1_1internal_1_1ExceptionSnapshotMac.html#a3179b8de3f86e150cf6d1d3078dd8109" title="Returns a series of operating system-specific exception codes. ">Codes()</a>. </p>
 
 <p>Implements <a class="el" href="classcrashpad_1_1ExceptionSnapshot.html#ae1c97187c37fa378252415f7f3b4e6cb">crashpad::ExceptionSnapshot</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac76cbc2ad9c85dd416e42a61754af7a2"></a>
+<a class="anchor" id="a3791f404814e931cf82a0020802b5ac3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -290,6 +294,12 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcrashpad_1_1ProcessReader.html">ProcessReader</a> *&#160;</td>
           <td class="paramname"><em>process_reader</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">exception_behavior_t&#160;</td>
+          <td class="paramname"><em>behavior</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -324,7 +334,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const natural_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecrashpad.html#a72fa9ea632f7f1ec93ec3c1b1d300db6">ConstThreadState</a>&#160;</td>
           <td class="paramname"><em>state</em>, </td>
         </tr>
         <tr>

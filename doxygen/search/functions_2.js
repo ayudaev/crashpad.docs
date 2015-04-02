@@ -2,7 +2,7 @@ var searchData=
 [
   ['c16lcpy',['c16lcpy',['../namespacecrashpad.html#ab42fe62040bb628fb134573bb2131955',1,'crashpad']]],
   ['capturecontext',['CaptureContext',['../namespacecrashpad.html#ac25486c6b4c38fc7c7868e978094edcf',1,'crashpad']]],
-  ['catchmachexception',['CatchMachException',['../classcrashpad_1_1CrashReportExceptionHandler.html#a8797d9f889ca8ea234c4679093f8a705',1,'crashpad::CrashReportExceptionHandler::CatchMachException()'],['../classcrashpad_1_1UniversalMachExcServer_1_1Interface.html#a8fca420c9bc90ee77b967c10c559336d',1,'crashpad::UniversalMachExcServer::Interface::CatchMachException()']]],
+  ['catchmachexception',['CatchMachException',['../classcrashpad_1_1CrashReportExceptionHandler.html#a98ecf7abdf0a99fe30b6fa7116649bee',1,'crashpad::CrashReportExceptionHandler::CatchMachException()'],['../classcrashpad_1_1UniversalMachExcServer_1_1Interface.html#a09d5a399d96f4142b97c50ea7390a4cc',1,'crashpad::UniversalMachExcServer::Interface::CatchMachException()']]],
   ['cfpropertytolaunchdata',['CFPropertyToLaunchData',['../namespacecrashpad.html#a616ed0784021ecbd2f0f14b7e75c068c',1,'crashpad']]],
   ['checkedclosefile',['CheckedCloseFile',['../namespacecrashpad.html#ac7cb2e4837a6fda169cbe92d1603460f',1,'crashpad']]],
   ['checkedmachaddressrange',['CheckedMachAddressRange',['../classcrashpad_1_1CheckedMachAddressRange.html#a48262431b7a608505f112331fb901683',1,'crashpad::CheckedMachAddressRange::CheckedMachAddressRange()'],['../classcrashpad_1_1CheckedMachAddressRange.html#ae2bcc3637a40569f756ae7174ce69fd2',1,'crashpad::CheckedMachAddressRange::CheckedMachAddressRange(bool is_64_bit, mach_vm_address_t base, mach_vm_size_t size)']]],
